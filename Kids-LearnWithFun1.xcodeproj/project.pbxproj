@@ -1,0 +1,1119 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416E249E985D00AA3D1C /* Rhino.mp3 */; };
+		700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416F249E985D00AA3D1C /* Cheetah.mp3 */; };
+		700D417F249E986000AA3D1C /* Panda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4170249E985E00AA3D1C /* Panda.mp3 */; };
+		700D4181249E986000AA3D1C /* Bear.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4172249E985E00AA3D1C /* Bear.mp3 */; };
+		700D4182249E986000AA3D1C /* Fox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4173249E985E00AA3D1C /* Fox.mp3 */; };
+		700D4183249E986000AA3D1C /* Zebra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4174249E985E00AA3D1C /* Zebra.mp3 */; };
+		700D4184249E986000AA3D1C /* Giraffe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4175249E985E00AA3D1C /* Giraffe.mp3 */; };
+		700D4185249E986000AA3D1C /* Hippopotamus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4176249E985F00AA3D1C /* Hippopotamus.mp3 */; };
+		700D4186249E986000AA3D1C /* Deer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4177249E985F00AA3D1C /* Deer.mp3 */; };
+		700D4187249E986000AA3D1C /* Lion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4178249E985F00AA3D1C /* Lion.mp3 */; };
+		700D4188249E986000AA3D1C /* Tiger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4179249E985F00AA3D1C /* Tiger.mp3 */; };
+		700D418A249E986000AA3D1C /* Elephant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D417B249E985F00AA3D1C /* Elephant.mp3 */; };
+		700D418B249E986000AA3D1C /* Chimpanzee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D417C249E986000AA3D1C /* Chimpanzee.mp3 */; };
+		700D418D249E9AE400AA3D1C /* Kangaroo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D418C249E9AE400AA3D1C /* Kangaroo.mp3 */; };
+		700D418F249E9B2800AA3D1C /* Racoon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D418E249E9B2700AA3D1C /* Racoon.mp3 */; };
+		7014C1AE249F653200D0AB52 /* Wolf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1AD249F653200D0AB52 /* Wolf.mp3 */; };
+		7014C1BD249F73B000D0AB52 /* Goldfinch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B0249F73AF00D0AB52 /* Goldfinch.mp3 */; };
+		7014C1BE249F73B000D0AB52 /* Nightingale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B1249F73AF00D0AB52 /* Nightingale.mp3 */; };
+		7014C1BF249F73B000D0AB52 /* Kingfisher.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B2249F73AF00D0AB52 /* Kingfisher.mp3 */; };
+		7014C1C0249F73B000D0AB52 /* Sparrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B3249F73AF00D0AB52 /* Sparrow.mp3 */; };
+		7014C1C1249F73B000D0AB52 /* Penguin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B4249F73AF00D0AB52 /* Penguin.mp3 */; };
+		7014C1C2249F73B000D0AB52 /* Pigeon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B5249F73AF00D0AB52 /* Pigeon.mp3 */; };
+		7014C1C4249F73B000D0AB52 /* Ostrich.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B7249F73AF00D0AB52 /* Ostrich.mp3 */; };
+		7014C1C5249F73B000D0AB52 /* Owl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B8249F73AF00D0AB52 /* Owl.mp3 */; };
+		7014C1C6249F73B000D0AB52 /* Crow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1B9249F73AF00D0AB52 /* Crow.mp3 */; };
+		7014C1C7249F73B000D0AB52 /* Hummingbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1BA249F73AF00D0AB52 /* Hummingbird.mp3 */; };
+		7014C1C8249F73B000D0AB52 /* Peacock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1BB249F73AF00D0AB52 /* Peacock.mp3 */; };
+		7014C1C9249F73B000D0AB52 /* Cuckoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1BC249F73AF00D0AB52 /* Cuckoo.mp3 */; };
+		7014C1D9249F73B700D0AB52 /* Magnolia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1CB249F73B700D0AB52 /* Magnolia.mp3 */; };
+		7014C1DA249F73B700D0AB52 /* Bluebell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1CC249F73B700D0AB52 /* Bluebell.mp3 */; };
+		7014C1DB249F73B700D0AB52 /* Crossandra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1CD249F73B700D0AB52 /* Crossandra.mp3 */; };
+		7014C1DC249F73B700D0AB52 /* Catharanthus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1CE249F73B700D0AB52 /* Catharanthus.mp3 */; };
+		7014C1DD249F73B700D0AB52 /* Lotus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1CF249F73B700D0AB52 /* Lotus.mp3 */; };
+		7014C1DE249F73B700D0AB52 /* Tulip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D0249F73B700D0AB52 /* Tulip.mp3 */; };
+		7014C1DF249F73B700D0AB52 /* Orchid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D1249F73B700D0AB52 /* Orchid.mp3 */; };
+		7014C1E0249F73B700D0AB52 /* Jasmine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D2249F73B700D0AB52 /* Jasmine.mp3 */; };
+		7014C1E1249F73B700D0AB52 /* Lilly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D3249F73B700D0AB52 /* Lilly.mp3 */; };
+		7014C1E2249F73B700D0AB52 /* Daisy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D4249F73B700D0AB52 /* Daisy.mp3 */; };
+		7014C1E3249F73B700D0AB52 /* Hibiscus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D5249F73B700D0AB52 /* Hibiscus.mp3 */; };
+		7014C1E4249F73B700D0AB52 /* Sunflower.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D6249F73B700D0AB52 /* Sunflower.mp3 */; };
+		7014C1E5249F73B700D0AB52 /* Dahlia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D7249F73B700D0AB52 /* Dahlia.mp3 */; };
+		7014C1E6249F73B700D0AB52 /* Rose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1D8249F73B700D0AB52 /* Rose.mp3 */; };
+		7014C1F1249F73C600D0AB52 /* Goat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1E8249F73C600D0AB52 /* Goat.mp3 */; };
+		7014C1F2249F73C600D0AB52 /* Cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1E9249F73C600D0AB52 /* Cat.mp3 */; };
+		7014C1F3249F73C600D0AB52 /* Buffalo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1EA249F73C600D0AB52 /* Buffalo.mp3 */; };
+		7014C1F4249F73C600D0AB52 /* Sheep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1EB249F73C600D0AB52 /* Sheep.mp3 */; };
+		7014C1F5249F73C600D0AB52 /* Cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1EC249F73C600D0AB52 /* Cow.mp3 */; };
+		7014C1F6249F73C600D0AB52 /* Camel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1ED249F73C600D0AB52 /* Camel.mp3 */; };
+		7014C1F7249F73C600D0AB52 /* Horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1EE249F73C600D0AB52 /* Horse.mp3 */; };
+		7014C1F8249F73C600D0AB52 /* Dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1EF249F73C600D0AB52 /* Dog.mp3 */; };
+		7014C1F9249F73C600D0AB52 /* Rabbit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1F0249F73C600D0AB52 /* Rabbit.mp3 */; };
+		7014C1FB249F758600D0AB52 /* Chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FA249F758600D0AB52 /* Chicken.mp3 */; };
+		7014C1FD249F779200D0AB52 /* Donkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FC249F779200D0AB52 /* Donkey.mp3 */; };
+		7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FE249F781F00D0AB52 /* Pig.mp3 */; };
+		702F320F24992F65000F4867 /* flower.gif in Resources */ = {isa = PBXBuildFile; fileRef = 702F320E24992F5F000F4867 /* flower.gif */; };
+		702F32112499311E000F4867 /* 200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 702F32102499311E000F4867 /* 200.gif */; };
+		70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */; };
+		70631FED2497AA3000DAE930 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70631FEC2497AA3000DAE930 /* UIButtonExtension.swift */; };
+		70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70631FF12497F11B00DAE930 /* PictureCollectionCell.swift */; };
+		70631FF42497F11B00DAE930 /* PictureCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70631FF22497F11B00DAE930 /* PictureCollectionCell.xib */; };
+		707ECA22249CB3E10024D06C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707ECA21249CB3E10024D06C /* UIViewExtension.swift */; };
+		707ECA24249CD9A70024D06C /* darkwds1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA23249CD9A70024D06C /* darkwds1.wav */; };
+		707ECA26249CDAD80024D06C /* BgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA25249CDAD80024D06C /* BgMusic.mp3 */; };
+		707ECA28249CDFB80024D06C /* mixaund-happy-day.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA27249CDFB80024D06C /* mixaund-happy-day.mp3 */; };
+		707ECA2E249CE6250024D06C /* TigerGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA2D249CE6240024D06C /* TigerGif.gif */; };
+		707ECA30249CE78E0024D06C /* ElephantGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA2F249CE78E0024D06C /* ElephantGif.gif */; };
+		707ECA32249CE9A50024D06C /* HorseGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA31249CE9A40024D06C /* HorseGif.gif */; };
+		707ECA34249CF45F0024D06C /* bird1Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA33249CF45F0024D06C /* bird1Gif.gif */; };
+		707ECA36249CF4E10024D06C /* bird2Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 707ECA35249CF4E10024D06C /* bird2Gif.gif */; };
+		7095C2D3249AA2E400C1E220 /* garden.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7095C2D2249AA2E400C1E220 /* garden.gif */; };
+		709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */; };
+		70AF537924A0CCCF00AD4794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF090B24962D9B002861AE /* Main.storyboard */; };
+		70FF090624962D9B002861AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090524962D9B002861AE /* AppDelegate.swift */; };
+		70FF090824962D9B002861AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090724962D9B002861AE /* SceneDelegate.swift */; };
+		70FF090A24962D9B002861AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090924962D9B002861AE /* ViewController.swift */; };
+		70FF090F24962DB5002861AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FF090E24962DB5002861AE /* Assets.xcassets */; };
+		70FF091224962DB5002861AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF091024962DB5002861AE /* LaunchScreen.storyboard */; };
+		70FF091D24962DB5002861AE /* Kids_LearnWithFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF091C24962DB5002861AE /* Kids_LearnWithFunTests.swift */; };
+		70FF092824962DB5002861AE /* Kids_LearnWithFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF092724962DB5002861AE /* Kids_LearnWithFunUITests.swift */; };
+		70FF093724965879002861AE /* GIFSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093624965879002861AE /* GIFSwift.swift */; };
+		70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093B24966856002861AE /* UIImageviewExtension.swift */; };
+		70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70FF093F2496B43D002861AE /* Animated-bubbles.gif */; };
+		8A7A7416C3567F485DDBE8E5 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */; };
+		B33D7AA842F87C73192B57AD /* Pods_Kids_LearnWithFun1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5631CF156DFE5BE535C734 /* Pods_Kids_LearnWithFun1.framework */; };
+		E0F6A22BB4C54AA08CD4D653 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FAB8431D4E2C1E34D43FF3 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70FF091924962DB5002861AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70FF08FA24962D9B002861AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70FF090124962D9B002861AE;
+			remoteInfo = "Kids-LearnWithFun";
+		};
+		70FF092424962DB5002861AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70FF08FA24962D9B002861AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70FF090124962D9B002861AE;
+			remoteInfo = "Kids-LearnWithFun";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FECAC5356E391BB01986015 /* Pods-Kids-LearnWithFun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun/Pods-Kids-LearnWithFun.debug.xcconfig"; sourceTree = "<group>"; };
+		1D5631CF156DFE5BE535C734 /* Pods_Kids_LearnWithFun1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6D826C0F5FEBC5E32F5CFC /* Pods-Kids-LearnWithFunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFunTests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFunTests/Pods-Kids-LearnWithFunTests.release.xcconfig"; sourceTree = "<group>"; };
+		330855B7235C70D81BA9C8BA /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		506C3AC2C26BDD790042AD8E /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; sourceTree = "<group>"; };
+		700D416E249E985D00AA3D1C /* Rhino.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhino.mp3; sourceTree = "<group>"; };
+		700D416F249E985D00AA3D1C /* Cheetah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheetah.mp3; sourceTree = "<group>"; };
+		700D4170249E985E00AA3D1C /* Panda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Panda.mp3; sourceTree = "<group>"; };
+		700D4172249E985E00AA3D1C /* Bear.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bear.mp3; sourceTree = "<group>"; };
+		700D4173249E985E00AA3D1C /* Fox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fox.mp3; sourceTree = "<group>"; };
+		700D4174249E985E00AA3D1C /* Zebra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zebra.mp3; sourceTree = "<group>"; };
+		700D4175249E985E00AA3D1C /* Giraffe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Giraffe.mp3; sourceTree = "<group>"; };
+		700D4176249E985F00AA3D1C /* Hippopotamus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hippopotamus.mp3; sourceTree = "<group>"; };
+		700D4177249E985F00AA3D1C /* Deer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Deer.mp3; sourceTree = "<group>"; };
+		700D4178249E985F00AA3D1C /* Lion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lion.mp3; sourceTree = "<group>"; };
+		700D4179249E985F00AA3D1C /* Tiger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tiger.mp3; sourceTree = "<group>"; };
+		700D417B249E985F00AA3D1C /* Elephant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Elephant.mp3; sourceTree = "<group>"; };
+		700D417C249E986000AA3D1C /* Chimpanzee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimpanzee.mp3; sourceTree = "<group>"; };
+		700D418C249E9AE400AA3D1C /* Kangaroo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kangaroo.mp3; sourceTree = "<group>"; };
+		700D418E249E9B2700AA3D1C /* Racoon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Racoon.mp3; sourceTree = "<group>"; };
+		7014C1AD249F653200D0AB52 /* Wolf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wolf.mp3; sourceTree = "<group>"; };
+		7014C1B0249F73AF00D0AB52 /* Goldfinch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goldfinch.mp3; sourceTree = "<group>"; };
+		7014C1B1249F73AF00D0AB52 /* Nightingale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nightingale.mp3; sourceTree = "<group>"; };
+		7014C1B2249F73AF00D0AB52 /* Kingfisher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kingfisher.mp3; sourceTree = "<group>"; };
+		7014C1B3249F73AF00D0AB52 /* Sparrow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sparrow.mp3; sourceTree = "<group>"; };
+		7014C1B4249F73AF00D0AB52 /* Penguin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Penguin.mp3; sourceTree = "<group>"; };
+		7014C1B5249F73AF00D0AB52 /* Pigeon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pigeon.mp3; sourceTree = "<group>"; };
+		7014C1B7249F73AF00D0AB52 /* Ostrich.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ostrich.mp3; sourceTree = "<group>"; };
+		7014C1B8249F73AF00D0AB52 /* Owl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Owl.mp3; sourceTree = "<group>"; };
+		7014C1B9249F73AF00D0AB52 /* Crow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Crow.mp3; sourceTree = "<group>"; };
+		7014C1BA249F73AF00D0AB52 /* Hummingbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hummingbird.mp3; sourceTree = "<group>"; };
+		7014C1BB249F73AF00D0AB52 /* Peacock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Peacock.mp3; sourceTree = "<group>"; };
+		7014C1BC249F73AF00D0AB52 /* Cuckoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cuckoo.mp3; sourceTree = "<group>"; };
+		7014C1CB249F73B700D0AB52 /* Magnolia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Magnolia.mp3; sourceTree = "<group>"; };
+		7014C1CC249F73B700D0AB52 /* Bluebell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bluebell.mp3; sourceTree = "<group>"; };
+		7014C1CD249F73B700D0AB52 /* Crossandra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Crossandra.mp3; sourceTree = "<group>"; };
+		7014C1CE249F73B700D0AB52 /* Catharanthus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Catharanthus.mp3; sourceTree = "<group>"; };
+		7014C1CF249F73B700D0AB52 /* Lotus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lotus.mp3; sourceTree = "<group>"; };
+		7014C1D0249F73B700D0AB52 /* Tulip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tulip.mp3; sourceTree = "<group>"; };
+		7014C1D1249F73B700D0AB52 /* Orchid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Orchid.mp3; sourceTree = "<group>"; };
+		7014C1D2249F73B700D0AB52 /* Jasmine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jasmine.mp3; sourceTree = "<group>"; };
+		7014C1D3249F73B700D0AB52 /* Lilly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lilly.mp3; sourceTree = "<group>"; };
+		7014C1D4249F73B700D0AB52 /* Daisy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Daisy.mp3; sourceTree = "<group>"; };
+		7014C1D5249F73B700D0AB52 /* Hibiscus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hibiscus.mp3; sourceTree = "<group>"; };
+		7014C1D6249F73B700D0AB52 /* Sunflower.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sunflower.mp3; sourceTree = "<group>"; };
+		7014C1D7249F73B700D0AB52 /* Dahlia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dahlia.mp3; sourceTree = "<group>"; };
+		7014C1D8249F73B700D0AB52 /* Rose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rose.mp3; sourceTree = "<group>"; };
+		7014C1E8249F73C600D0AB52 /* Goat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goat.mp3; sourceTree = "<group>"; };
+		7014C1E9249F73C600D0AB52 /* Cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cat.mp3; sourceTree = "<group>"; };
+		7014C1EA249F73C600D0AB52 /* Buffalo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Buffalo.mp3; sourceTree = "<group>"; };
+		7014C1EB249F73C600D0AB52 /* Sheep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sheep.mp3; sourceTree = "<group>"; };
+		7014C1EC249F73C600D0AB52 /* Cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow.mp3; sourceTree = "<group>"; };
+		7014C1ED249F73C600D0AB52 /* Camel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel.mp3; sourceTree = "<group>"; };
+		7014C1EE249F73C600D0AB52 /* Horse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horse.mp3; sourceTree = "<group>"; };
+		7014C1EF249F73C600D0AB52 /* Dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dog.mp3; sourceTree = "<group>"; };
+		7014C1F0249F73C600D0AB52 /* Rabbit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rabbit.mp3; sourceTree = "<group>"; };
+		7014C1FA249F758600D0AB52 /* Chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chicken.mp3; sourceTree = "<group>"; };
+		7014C1FC249F779200D0AB52 /* Donkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Donkey.mp3; sourceTree = "<group>"; };
+		7014C1FE249F781F00D0AB52 /* Pig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pig.mp3; sourceTree = "<group>"; };
+		702F320E24992F5F000F4867 /* flower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = flower.gif; sourceTree = "<group>"; };
+		702F32102499311E000F4867 /* 200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200.gif; sourceTree = "<group>"; };
+		70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		70631FEC2497AA3000DAE930 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		70631FF12497F11B00DAE930 /* PictureCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionCell.swift; sourceTree = "<group>"; };
+		70631FF22497F11B00DAE930 /* PictureCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCollectionCell.xib; sourceTree = "<group>"; };
+		707ECA21249CB3E10024D06C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		707ECA23249CD9A70024D06C /* darkwds1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = darkwds1.wav; sourceTree = "<group>"; };
+		707ECA25249CDAD80024D06C /* BgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BgMusic.mp3; sourceTree = "<group>"; };
+		707ECA27249CDFB80024D06C /* mixaund-happy-day.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mixaund-happy-day.mp3"; sourceTree = "<group>"; };
+		707ECA2D249CE6240024D06C /* TigerGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TigerGif.gif; sourceTree = "<group>"; };
+		707ECA2F249CE78E0024D06C /* ElephantGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ElephantGif.gif; sourceTree = "<group>"; };
+		707ECA31249CE9A40024D06C /* HorseGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HorseGif.gif; sourceTree = "<group>"; };
+		707ECA33249CF45F0024D06C /* bird1Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bird1Gif.gif; sourceTree = "<group>"; };
+		707ECA35249CF4E10024D06C /* bird2Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bird2Gif.gif; sourceTree = "<group>"; };
+		7095C2D2249AA2E400C1E220 /* garden.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = garden.gif; sourceTree = "<group>"; };
+		709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiCollectionViewExtension.swift; sourceTree = "<group>"; };
+		70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids-LearnWithFun1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF090524962D9B002861AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70FF090724962D9B002861AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		70FF090924962D9B002861AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70FF090C24962D9B002861AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70FF090E24962DB5002861AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70FF091124962DB5002861AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70FF091324962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kids-LearnWithFun1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF091C24962DB5002861AE /* Kids_LearnWithFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids_LearnWithFunTests.swift; sourceTree = "<group>"; };
+		70FF091E24962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kids-LearnWithFun1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF092724962DB5002861AE /* Kids_LearnWithFunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids_LearnWithFunUITests.swift; sourceTree = "<group>"; };
+		70FF092924962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FF093624965879002861AE /* GIFSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GIFSwift.swift; path = "../../../Sharp-Kido/Sharp Kido/Sharp Kido/Third Party/GIFSwift.swift"; sourceTree = "<group>"; };
+		70FF093B24966856002861AE /* UIImageviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageviewExtension.swift; sourceTree = "<group>"; };
+		70FF093F2496B43D002861AE /* Animated-bubbles.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animated-bubbles.gif"; sourceTree = "<group>"; };
+		8977875AE3E6E097D3D020EC /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D3BEF9F8B28EAF75AE67232 /* Pods-Kids-LearnWithFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun/Pods-Kids-LearnWithFun.release.xcconfig"; sourceTree = "<group>"; };
+		9EA9145E6BC924594E5B9FB6 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		C33D639EEF0C79E3BC87916E /* Pods-Kids-LearnWithFun1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.debug.xcconfig"; sourceTree = "<group>"; };
+		D729217EDFF4CD2D8605F6C7 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E4C0226CB1A9572B0CB846CA /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F276F17DD9108EA06D006AE5 /* Pods-Kids-LearnWithFunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFunTests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFunTests/Pods-Kids-LearnWithFunTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7FAB8431D4E2C1E34D43FF3 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B4C9B26C8687A4FBFC3CF /* Pods-Kids-LearnWithFun1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70FF08FF24962D9B002861AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33D7AA842F87C73192B57AD /* Pods_Kids_LearnWithFun1.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF091524962DB5002861AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7A7416C3567F485DDBE8E5 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF092024962DB5002861AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F6A22BB4C54AA08CD4D653 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038CEF8D001E6A16FE323329 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D5631CF156DFE5BE535C734 /* Pods_Kids_LearnWithFun1.framework */,
+				F7FAB8431D4E2C1E34D43FF3 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */,
+				43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		700D416C249E980A00AA3D1C /* SoundFile */ = {
+			isa = PBXGroup;
+			children = (
+				7014C1E7249F73C600D0AB52 /* FarmAnimal */,
+				7014C1CA249F73B700D0AB52 /* FlowerSound */,
+				7014C1AF249F73AF00D0AB52 /* BirdSound */,
+				700D416D249E981400AA3D1C /* WildAnimalSound */,
+			);
+			path = SoundFile;
+			sourceTree = "<group>";
+		};
+		700D416D249E981400AA3D1C /* WildAnimalSound */ = {
+			isa = PBXGroup;
+			children = (
+				700D4172249E985E00AA3D1C /* Bear.mp3 */,
+				700D417C249E986000AA3D1C /* Chimpanzee.mp3 */,
+				700D416F249E985D00AA3D1C /* Cheetah.mp3 */,
+				700D4177249E985F00AA3D1C /* Deer.mp3 */,
+				700D417B249E985F00AA3D1C /* Elephant.mp3 */,
+				700D4173249E985E00AA3D1C /* Fox.mp3 */,
+				700D418E249E9B2700AA3D1C /* Racoon.mp3 */,
+				7014C1AD249F653200D0AB52 /* Wolf.mp3 */,
+				700D4175249E985E00AA3D1C /* Giraffe.mp3 */,
+				700D418C249E9AE400AA3D1C /* Kangaroo.mp3 */,
+				700D4176249E985F00AA3D1C /* Hippopotamus.mp3 */,
+				700D4178249E985F00AA3D1C /* Lion.mp3 */,
+				700D4170249E985E00AA3D1C /* Panda.mp3 */,
+				700D416E249E985D00AA3D1C /* Rhino.mp3 */,
+				700D4179249E985F00AA3D1C /* Tiger.mp3 */,
+				700D4174249E985E00AA3D1C /* Zebra.mp3 */,
+			);
+			path = WildAnimalSound;
+			sourceTree = "<group>";
+		};
+		7014C1AF249F73AF00D0AB52 /* BirdSound */ = {
+			isa = PBXGroup;
+			children = (
+				7014C1B0249F73AF00D0AB52 /* Goldfinch.mp3 */,
+				7014C1B1249F73AF00D0AB52 /* Nightingale.mp3 */,
+				7014C1B2249F73AF00D0AB52 /* Kingfisher.mp3 */,
+				7014C1B3249F73AF00D0AB52 /* Sparrow.mp3 */,
+				7014C1B4249F73AF00D0AB52 /* Penguin.mp3 */,
+				7014C1B5249F73AF00D0AB52 /* Pigeon.mp3 */,
+				7014C1B7249F73AF00D0AB52 /* Ostrich.mp3 */,
+				7014C1B8249F73AF00D0AB52 /* Owl.mp3 */,
+				7014C1FA249F758600D0AB52 /* Chicken.mp3 */,
+				7014C1B9249F73AF00D0AB52 /* Crow.mp3 */,
+				7014C1BA249F73AF00D0AB52 /* Hummingbird.mp3 */,
+				7014C1BB249F73AF00D0AB52 /* Peacock.mp3 */,
+				7014C1BC249F73AF00D0AB52 /* Cuckoo.mp3 */,
+			);
+			path = BirdSound;
+			sourceTree = "<group>";
+		};
+		7014C1CA249F73B700D0AB52 /* FlowerSound */ = {
+			isa = PBXGroup;
+			children = (
+				7014C1CB249F73B700D0AB52 /* Magnolia.mp3 */,
+				7014C1CC249F73B700D0AB52 /* Bluebell.mp3 */,
+				7014C1CD249F73B700D0AB52 /* Crossandra.mp3 */,
+				7014C1CE249F73B700D0AB52 /* Catharanthus.mp3 */,
+				7014C1CF249F73B700D0AB52 /* Lotus.mp3 */,
+				7014C1D0249F73B700D0AB52 /* Tulip.mp3 */,
+				7014C1D1249F73B700D0AB52 /* Orchid.mp3 */,
+				7014C1D2249F73B700D0AB52 /* Jasmine.mp3 */,
+				7014C1D3249F73B700D0AB52 /* Lilly.mp3 */,
+				7014C1D4249F73B700D0AB52 /* Daisy.mp3 */,
+				7014C1D5249F73B700D0AB52 /* Hibiscus.mp3 */,
+				7014C1D6249F73B700D0AB52 /* Sunflower.mp3 */,
+				7014C1D7249F73B700D0AB52 /* Dahlia.mp3 */,
+				7014C1D8249F73B700D0AB52 /* Rose.mp3 */,
+			);
+			path = FlowerSound;
+			sourceTree = "<group>";
+		};
+		7014C1E7249F73C600D0AB52 /* FarmAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				7014C1E8249F73C600D0AB52 /* Goat.mp3 */,
+				7014C1E9249F73C600D0AB52 /* Cat.mp3 */,
+				7014C1EA249F73C600D0AB52 /* Buffalo.mp3 */,
+				7014C1EB249F73C600D0AB52 /* Sheep.mp3 */,
+				7014C1EC249F73C600D0AB52 /* Cow.mp3 */,
+				7014C1ED249F73C600D0AB52 /* Camel.mp3 */,
+				7014C1FC249F779200D0AB52 /* Donkey.mp3 */,
+				7014C1EE249F73C600D0AB52 /* Horse.mp3 */,
+				7014C1FE249F781F00D0AB52 /* Pig.mp3 */,
+				7014C1EF249F73C600D0AB52 /* Dog.mp3 */,
+				7014C1F0249F73C600D0AB52 /* Rabbit.mp3 */,
+			);
+			path = FarmAnimal;
+			sourceTree = "<group>";
+		};
+		70631FEE2497ED5100DAE930 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				70631FF12497F11B00DAE930 /* PictureCollectionCell.swift */,
+				70631FF22497F11B00DAE930 /* PictureCollectionCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		70FF08F924962D9B002861AE = {
+			isa = PBXGroup;
+			children = (
+				70FF090424962D9B002861AE /* Kids-LearnWithFun1 */,
+				70FF091B24962DB5002861AE /* Kids-LearnWithFunTests */,
+				70FF092624962DB5002861AE /* Kids-LearnWithFunUITests */,
+				70FF090324962D9B002861AE /* Products */,
+				DF1EE3988B9B9140F9599561 /* Pods */,
+				038CEF8D001E6A16FE323329 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		70FF090324962D9B002861AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */,
+				70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */,
+				70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70FF090424962D9B002861AE /* Kids-LearnWithFun1 */ = {
+			isa = PBXGroup;
+			children = (
+				700D416C249E980A00AA3D1C /* SoundFile */,
+				70631FEE2497ED5100DAE930 /* CollectionCell */,
+				70FF093A2496682F002861AE /* Extension */,
+				70FF09352496450E002861AE /* Third Party */,
+				70FF090524962D9B002861AE /* AppDelegate.swift */,
+				70FF090724962D9B002861AE /* SceneDelegate.swift */,
+				70FF090924962D9B002861AE /* ViewController.swift */,
+				70FF090B24962D9B002861AE /* Main.storyboard */,
+				70FF090E24962DB5002861AE /* Assets.xcassets */,
+				70FF091024962DB5002861AE /* LaunchScreen.storyboard */,
+				70FF091324962DB5002861AE /* Info.plist */,
+				70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */,
+			);
+			path = "Kids-LearnWithFun1";
+			sourceTree = "<group>";
+		};
+		70FF091B24962DB5002861AE /* Kids-LearnWithFunTests */ = {
+			isa = PBXGroup;
+			children = (
+				70FF091C24962DB5002861AE /* Kids_LearnWithFunTests.swift */,
+				70FF091E24962DB5002861AE /* Info.plist */,
+			);
+			path = "Kids-LearnWithFunTests";
+			sourceTree = "<group>";
+		};
+		70FF092624962DB5002861AE /* Kids-LearnWithFunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70FF092724962DB5002861AE /* Kids_LearnWithFunUITests.swift */,
+				70FF092924962DB5002861AE /* Info.plist */,
+			);
+			path = "Kids-LearnWithFunUITests";
+			sourceTree = "<group>";
+		};
+		70FF09352496450E002861AE /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				707ECA23249CD9A70024D06C /* darkwds1.wav */,
+				707ECA31249CE9A40024D06C /* HorseGif.gif */,
+				707ECA2D249CE6240024D06C /* TigerGif.gif */,
+				707ECA33249CF45F0024D06C /* bird1Gif.gif */,
+				707ECA27249CDFB80024D06C /* mixaund-happy-day.mp3 */,
+				707ECA2F249CE78E0024D06C /* ElephantGif.gif */,
+				707ECA25249CDAD80024D06C /* BgMusic.mp3 */,
+				702F32102499311E000F4867 /* 200.gif */,
+				702F320E24992F5F000F4867 /* flower.gif */,
+				70FF093F2496B43D002861AE /* Animated-bubbles.gif */,
+				707ECA35249CF4E10024D06C /* bird2Gif.gif */,
+				7095C2D2249AA2E400C1E220 /* garden.gif */,
+				70FF093624965879002861AE /* GIFSwift.swift */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		70FF093A2496682F002861AE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				70FF093B24966856002861AE /* UIImageviewExtension.swift */,
+				70631FEC2497AA3000DAE930 /* UIButtonExtension.swift */,
+				709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */,
+				707ECA21249CB3E10024D06C /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DF1EE3988B9B9140F9599561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FECAC5356E391BB01986015 /* Pods-Kids-LearnWithFun.debug.xcconfig */,
+				8D3BEF9F8B28EAF75AE67232 /* Pods-Kids-LearnWithFun.release.xcconfig */,
+				330855B7235C70D81BA9C8BA /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig */,
+				506C3AC2C26BDD790042AD8E /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig */,
+				F276F17DD9108EA06D006AE5 /* Pods-Kids-LearnWithFunTests.debug.xcconfig */,
+				2B6D826C0F5FEBC5E32F5CFC /* Pods-Kids-LearnWithFunTests.release.xcconfig */,
+				C33D639EEF0C79E3BC87916E /* Pods-Kids-LearnWithFun1.debug.xcconfig */,
+				FD6B4C9B26C8687A4FBFC3CF /* Pods-Kids-LearnWithFun1.release.xcconfig */,
+				E4C0226CB1A9572B0CB846CA /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */,
+				9EA9145E6BC924594E5B9FB6 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */,
+				8977875AE3E6E097D3D020EC /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */,
+				D729217EDFF4CD2D8605F6C7 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70FF090124962D9B002861AE /* Kids-LearnWithFun1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */;
+			buildPhases = (
+				E2715DBA7F41857E793BD4CD /* [CP] Check Pods Manifest.lock */,
+				70FF08FE24962D9B002861AE /* Sources */,
+				70FF08FF24962D9B002861AE /* Frameworks */,
+				70FF090024962D9B002861AE /* Resources */,
+				ACC0192A4E246B95DF3277E0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kids-LearnWithFun1";
+			productName = "Kids-LearnWithFun";
+			productReference = 70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FF092F24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1Tests" */;
+			buildPhases = (
+				1C1A386C9531831038297636 /* [CP] Check Pods Manifest.lock */,
+				70FF091424962DB5002861AE /* Sources */,
+				70FF091524962DB5002861AE /* Frameworks */,
+				70FF091624962DB5002861AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70FF091A24962DB5002861AE /* PBXTargetDependency */,
+			);
+			name = "Kids-LearnWithFun1Tests";
+			productName = "Kids-LearnWithFunTests";
+			productReference = 70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70FF092224962DB5002861AE /* Kids-LearnWithFun1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FF093224962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1UITests" */;
+			buildPhases = (
+				FFEF53499C4693559D60728B /* [CP] Check Pods Manifest.lock */,
+				70FF091F24962DB5002861AE /* Sources */,
+				70FF092024962DB5002861AE /* Frameworks */,
+				70FF092124962DB5002861AE /* Resources */,
+				2BC076A4C7D2864897CBA259 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70FF092524962DB5002861AE /* PBXTargetDependency */,
+			);
+			name = "Kids-LearnWithFun1UITests";
+			productName = "Kids-LearnWithFunUITests";
+			productReference = 70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70FF08FA24962D9B002861AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "sheetal shinde";
+				TargetAttributes = {
+					70FF090124962D9B002861AE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					70FF091724962DB5002861AE = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 70FF090124962D9B002861AE;
+					};
+					70FF092224962DB5002861AE = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 70FF090124962D9B002861AE;
+					};
+				};
+			};
+			buildConfigurationList = 70FF08FD24962D9B002861AE /* Build configuration list for PBXProject "Kids-LearnWithFun1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70FF08F924962D9B002861AE;
+			productRefGroup = 70FF090324962D9B002861AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70FF090124962D9B002861AE /* Kids-LearnWithFun1 */,
+				70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */,
+				70FF092224962DB5002861AE /* Kids-LearnWithFun1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70FF090024962D9B002861AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700D418D249E9AE400AA3D1C /* Kangaroo.mp3 in Resources */,
+				700D4181249E986000AA3D1C /* Bear.mp3 in Resources */,
+				7014C1F7249F73C600D0AB52 /* Horse.mp3 in Resources */,
+				7014C1BD249F73B000D0AB52 /* Goldfinch.mp3 in Resources */,
+				7014C1F9249F73C600D0AB52 /* Rabbit.mp3 in Resources */,
+				7014C1DE249F73B700D0AB52 /* Tulip.mp3 in Resources */,
+				7014C1C8249F73B000D0AB52 /* Peacock.mp3 in Resources */,
+				707ECA2E249CE6250024D06C /* TigerGif.gif in Resources */,
+				7014C1C9249F73B000D0AB52 /* Cuckoo.mp3 in Resources */,
+				7014C1BF249F73B000D0AB52 /* Kingfisher.mp3 in Resources */,
+				7014C1C4249F73B000D0AB52 /* Ostrich.mp3 in Resources */,
+				700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */,
+				700D417F249E986000AA3D1C /* Panda.mp3 in Resources */,
+				7014C1E6249F73B700D0AB52 /* Rose.mp3 in Resources */,
+				70FF091224962DB5002861AE /* LaunchScreen.storyboard in Resources */,
+				700D418A249E986000AA3D1C /* Elephant.mp3 in Resources */,
+				7014C1DB249F73B700D0AB52 /* Crossandra.mp3 in Resources */,
+				700D4184249E986000AA3D1C /* Giraffe.mp3 in Resources */,
+				702F320F24992F65000F4867 /* flower.gif in Resources */,
+				7014C1C1249F73B000D0AB52 /* Penguin.mp3 in Resources */,
+				7014C1E4249F73B700D0AB52 /* Sunflower.mp3 in Resources */,
+				70AF537924A0CCCF00AD4794 /* Main.storyboard in Resources */,
+				70631FF42497F11B00DAE930 /* PictureCollectionCell.xib in Resources */,
+				707ECA26249CDAD80024D06C /* BgMusic.mp3 in Resources */,
+				700D4182249E986000AA3D1C /* Fox.mp3 in Resources */,
+				7014C1BE249F73B000D0AB52 /* Nightingale.mp3 in Resources */,
+				7014C1C0249F73B000D0AB52 /* Sparrow.mp3 in Resources */,
+				7014C1C7249F73B000D0AB52 /* Hummingbird.mp3 in Resources */,
+				7014C1C5249F73B000D0AB52 /* Owl.mp3 in Resources */,
+				7014C1F4249F73C600D0AB52 /* Sheep.mp3 in Resources */,
+				700D4188249E986000AA3D1C /* Tiger.mp3 in Resources */,
+				7014C1C2249F73B000D0AB52 /* Pigeon.mp3 in Resources */,
+				7014C1C6249F73B000D0AB52 /* Crow.mp3 in Resources */,
+				7014C1E1249F73B700D0AB52 /* Lilly.mp3 in Resources */,
+				707ECA28249CDFB80024D06C /* mixaund-happy-day.mp3 in Resources */,
+				7014C1D9249F73B700D0AB52 /* Magnolia.mp3 in Resources */,
+				7014C1DA249F73B700D0AB52 /* Bluebell.mp3 in Resources */,
+				707ECA32249CE9A50024D06C /* HorseGif.gif in Resources */,
+				700D4185249E986000AA3D1C /* Hippopotamus.mp3 in Resources */,
+				700D418F249E9B2800AA3D1C /* Racoon.mp3 in Resources */,
+				707ECA34249CF45F0024D06C /* bird1Gif.gif in Resources */,
+				700D4186249E986000AA3D1C /* Deer.mp3 in Resources */,
+				7014C1F3249F73C600D0AB52 /* Buffalo.mp3 in Resources */,
+				7095C2D3249AA2E400C1E220 /* garden.gif in Resources */,
+				707ECA36249CF4E10024D06C /* bird2Gif.gif in Resources */,
+				7014C1F2249F73C600D0AB52 /* Cat.mp3 in Resources */,
+				707ECA30249CE78E0024D06C /* ElephantGif.gif in Resources */,
+				700D4187249E986000AA3D1C /* Lion.mp3 in Resources */,
+				7014C1F8249F73C600D0AB52 /* Dog.mp3 in Resources */,
+				7014C1E5249F73B700D0AB52 /* Dahlia.mp3 in Resources */,
+				7014C1F5249F73C600D0AB52 /* Cow.mp3 in Resources */,
+				7014C1FB249F758600D0AB52 /* Chicken.mp3 in Resources */,
+				7014C1F6249F73C600D0AB52 /* Camel.mp3 in Resources */,
+				700D418B249E986000AA3D1C /* Chimpanzee.mp3 in Resources */,
+				7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */,
+				707ECA24249CD9A70024D06C /* darkwds1.wav in Resources */,
+				7014C1E2249F73B700D0AB52 /* Daisy.mp3 in Resources */,
+				70FF090F24962DB5002861AE /* Assets.xcassets in Resources */,
+				7014C1E3249F73B700D0AB52 /* Hibiscus.mp3 in Resources */,
+				7014C1FD249F779200D0AB52 /* Donkey.mp3 in Resources */,
+				7014C1DC249F73B700D0AB52 /* Catharanthus.mp3 in Resources */,
+				7014C1E0249F73B700D0AB52 /* Jasmine.mp3 in Resources */,
+				70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */,
+				700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */,
+				700D4183249E986000AA3D1C /* Zebra.mp3 in Resources */,
+				7014C1AE249F653200D0AB52 /* Wolf.mp3 in Resources */,
+				7014C1DF249F73B700D0AB52 /* Orchid.mp3 in Resources */,
+				7014C1F1249F73C600D0AB52 /* Goat.mp3 in Resources */,
+				7014C1DD249F73B700D0AB52 /* Lotus.mp3 in Resources */,
+				702F32112499311E000F4867 /* 200.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF091624962DB5002861AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF092124962DB5002861AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C1A386C9531831038297636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BC076A4C7D2864897CBA259 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC0192A4E246B95DF3277E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2715DBA7F41857E793BD4CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFEF53499C4693559D60728B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70FF08FE24962D9B002861AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707ECA22249CB3E10024D06C /* UIViewExtension.swift in Sources */,
+				70FF093724965879002861AE /* GIFSwift.swift in Sources */,
+				70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */,
+				70FF090A24962D9B002861AE /* ViewController.swift in Sources */,
+				70FF090624962D9B002861AE /* AppDelegate.swift in Sources */,
+				70631FED2497AA3000DAE930 /* UIButtonExtension.swift in Sources */,
+				709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */,
+				70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */,
+				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,
+				70FF090824962D9B002861AE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF091424962DB5002861AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FF091D24962DB5002861AE /* Kids_LearnWithFunTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FF091F24962DB5002861AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FF092824962DB5002861AE /* Kids_LearnWithFunUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70FF091A24962DB5002861AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			targetProxy = 70FF091924962DB5002861AE /* PBXContainerItemProxy */;
+		};
+		70FF092524962DB5002861AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			targetProxy = 70FF092424962DB5002861AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70FF090B24962D9B002861AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70FF090C24962D9B002861AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70FF091024962DB5002861AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70FF091124962DB5002861AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70FF092A24962DB5002861AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70FF092B24962DB5002861AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70FF092D24962DB5002861AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33D639EEF0C79E3BC87916E /* Pods-Kids-LearnWithFun1.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9C32R6P4U;
+				INFOPLIST_FILE = "Kids-LearnWithFun1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFun";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70FF092E24962DB5002861AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6B4C9B26C8687A4FBFC3CF /* Pods-Kids-LearnWithFun1.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9C32R6P4U;
+				INFOPLIST_FILE = "Kids-LearnWithFun1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFun";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		70FF093024962DB5002861AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8977875AE3E6E097D3D020EC /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kids-LearnWithFunTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kids-LearnWithFun1.app/Kids-LearnWithFun1";
+			};
+			name = Debug;
+		};
+		70FF093124962DB5002861AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D729217EDFF4CD2D8605F6C7 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kids-LearnWithFunTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kids-LearnWithFun1.app/Kids-LearnWithFun1";
+			};
+			name = Release;
+		};
+		70FF093324962DB5002861AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C0226CB1A9572B0CB846CA /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kids-LearnWithFunUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids-LearnWithFun";
+			};
+			name = Debug;
+		};
+		70FF093424962DB5002861AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA9145E6BC924594E5B9FB6 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Kids-LearnWithFunUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kids-LearnWithFun";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70FF08FD24962D9B002861AE /* Build configuration list for PBXProject "Kids-LearnWithFun1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF092A24962DB5002861AE /* Debug */,
+				70FF092B24962DB5002861AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF092D24962DB5002861AE /* Debug */,
+				70FF092E24962DB5002861AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70FF092F24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF093024962DB5002861AE /* Debug */,
+				70FF093124962DB5002861AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70FF093224962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FF093324962DB5002861AE /* Debug */,
+				70FF093424962DB5002861AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70FF08FA24962D9B002861AE /* Project object */;
+}

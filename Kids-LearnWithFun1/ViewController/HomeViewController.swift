@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Kids-LearnWithFun
 //
 //  Created by sheetal shinde on 14/06/20.
@@ -10,12 +10,14 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     @IBOutlet weak var bgScreen: UIImageView!
     @IBOutlet weak var imgVwWildAnimal: UIImageView!
     @IBOutlet weak var imgVwPetAnimal: UIImageView!
     @IBOutlet weak var imgVwBird: UIImageView!
     @IBOutlet weak var imgVwFlower: UIImageView!
+    @IBOutlet weak var imgVwTest: UIImageView!
+
 
     @IBOutlet weak var imgVwBird1Bottom: UIImageView!
     @IBOutlet weak var imgVwBird2Bottom: UIImageView!
@@ -142,13 +144,28 @@ class ViewController: UIViewController {
         imgVwFlower.tag = 4
         
         
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        let tapGestureRecognTest = UITapGestureRecognizer(target: self, action: #selector(testImageTapped(tapGestureRecognizer:)))
+        imgVwTest.addGestureRecognizer(tapGestureRecognTest)
+
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeFullBanner)
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+       // bannerView.load(GADRequest())
+//        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.alarmAlertActivate), userInfo: nil, repeats: true)
+        
+        
+        if ScreenSize.SCREEN_MAX_LENGTH < 812.0 {
+            self.imgVwWild3Bottom.isHidden = true
+        }
     }
-    
+    @objc func alarmAlertActivate(){
+        UIView.animate(withDuration: 0.7) {
+            self.imgVwTest.alpha = self.imgVwTest.alpha == 1.0 ? 0.0 : 1.0
+        }
+    }
+
     func addBannerViewToView(_ bannerView: GADBannerView) {
       bannerView.translatesAutoresizingMaskIntoConstraints = false
       view.addSubview(bannerView)
@@ -191,6 +208,12 @@ class ViewController: UIViewController {
         }
         self.navigationController?.pushViewController(setPictureVC, animated: true)
     }
+    
+    @objc func testImageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let setPictureVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
+        self.navigationController?.pushViewController(setPictureVC, animated: true)
+    }
+    
     func playBackgroundMusic() {
         let path = Bundle.main.path(forResource: "mixaund-happy-day", ofType : "mp3")!
         let url = URL(fileURLWithPath : path)
@@ -203,7 +226,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: GADBannerViewDelegate {
+extension HomeViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("adViewDidReceiveAd")
     }

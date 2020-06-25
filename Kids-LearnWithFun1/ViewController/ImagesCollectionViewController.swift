@@ -22,7 +22,8 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
 
     var imageArray : [UIImage] = []
     var imageNameArray : [String] = []
-    
+    var interstitial: GADInterstitial?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +108,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     // MARK: - User defined Functions
     
     @IBAction func funcGoToHome(_ sender: Any) {
+        //interstitial = createAndLoadInterstitial()
         navigationController?.popViewController(animated: true)
     }
 
@@ -194,6 +196,21 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             print ("There is an issue with this code!")
         }
     }
+    private func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+
+        guard let interstitial = interstitial else {
+            return nil
+        }
+
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
+        interstitial.load(request)
+        interstitial.delegate = self
+
+        return interstitial
+    }
 }
 extension ImagesCollectionViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -227,4 +244,21 @@ extension ImagesCollectionViewController: GADBannerViewDelegate {
     func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
       print("adViewWillLeaveApplication")
     }
+}
+extension ImagesCollectionViewController: GADInterstitialDelegate {
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        ad.present(fromRootViewController: self)
+        navigationController?.popViewController(animated: true)
+    }
+
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("Fail to receive interstitial")
+        navigationController?.popViewController(animated: true)
+    }
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        print("dismiss interstitial")
+    }
+    
+
 }

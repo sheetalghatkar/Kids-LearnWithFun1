@@ -41,8 +41,8 @@ private var _isShowShadow = false
     
     private func makeShodow() {
         if self.isShowShadow {
-//            self.layer.shadowColor = UIColor.black.cgColor
-            self.layer.shadowColor = UIColor.red.cgColor
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.highlightedTextColor = UIColor.red
             self.layer.shadowRadius = 3.0
             self.layer.shadowOpacity = 1.0
             self.layer.shadowOffset = CGSize(width: 4, height: 4)

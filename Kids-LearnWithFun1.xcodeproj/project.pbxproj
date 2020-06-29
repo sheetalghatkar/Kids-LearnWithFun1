@@ -64,6 +64,7 @@
 		701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EF78024A294C5006C0A36 /* UIExtension.swift */; };
 		70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70270FDA24A369A900EB8DAB /* TestViewController.swift */; };
 		70277DD224A4B59100072D57 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70277DD124A4B59100072D57 /* UILabelExtension.swift */; };
+		70277DD424A5273000072D57 /* Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70277DD324A5273000072D57 /* Test.gif */; };
 		702F320F24992F65000F4867 /* flower.gif in Resources */ = {isa = PBXBuildFile; fileRef = 702F320E24992F5F000F4867 /* flower.gif */; };
 		702F32112499311E000F4867 /* 200.gif in Resources */ = {isa = PBXBuildFile; fileRef = 702F32102499311E000F4867 /* 200.gif */; };
 		70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */; };
@@ -82,6 +83,7 @@
 		7095C2D3249AA2E400C1E220 /* garden.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7095C2D2249AA2E400C1E220 /* garden.gif */; };
 		709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */; };
 		70AF537924A0CCCF00AD4794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF090B24962D9B002861AE /* Main.storyboard */; };
+		70E468A524A8D0E2008C8FFB /* TestSolveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E468A424A8D0E2008C8FFB /* TestSolveViewController.swift */; };
 		70FF090624962D9B002861AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090524962D9B002861AE /* AppDelegate.swift */; };
 		70FF090824962D9B002861AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090724962D9B002861AE /* SceneDelegate.swift */; };
 		70FF090A24962D9B002861AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF090924962D9B002861AE /* HomeViewController.swift */; };
@@ -178,6 +180,7 @@
 		701EF78024A294C5006C0A36 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		70270FDA24A369A900EB8DAB /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		70277DD124A4B59100072D57 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		70277DD324A5273000072D57 /* Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Test.gif; sourceTree = "<group>"; };
 		702F320E24992F5F000F4867 /* flower.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = flower.gif; sourceTree = "<group>"; };
 		702F32102499311E000F4867 /* 200.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 200.gif; sourceTree = "<group>"; };
 		70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 		707ECA35249CF4E10024D06C /* bird2Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bird2Gif.gif; sourceTree = "<group>"; };
 		7095C2D2249AA2E400C1E220 /* garden.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = garden.gif; sourceTree = "<group>"; };
 		709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiCollectionViewExtension.swift; sourceTree = "<group>"; };
+		70E468A424A8D0E2008C8FFB /* TestSolveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSolveViewController.swift; sourceTree = "<group>"; };
 		70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids-LearnWithFun1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FF090524962D9B002861AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FF090724962D9B002861AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 				70FF090924962D9B002861AE /* HomeViewController.swift */,
 				70631FEA249776AB00DAE930 /* ImagesCollectionViewController.swift */,
 				70270FDA24A369A900EB8DAB /* TestViewController.swift */,
+				70E468A424A8D0E2008C8FFB /* TestSolveViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				707ECA2D249CE6240024D06C /* TigerGif.gif */,
 				707ECA33249CF45F0024D06C /* bird1Gif.gif */,
 				707ECA27249CDFB80024D06C /* mixaund-happy-day.mp3 */,
+				70277DD324A5273000072D57 /* Test.gif */,
 				707ECA2F249CE78E0024D06C /* ElephantGif.gif */,
 				707ECA25249CDAD80024D06C /* BgMusic.mp3 */,
 				702F32102499311E000F4867 /* 200.gif */,
@@ -625,6 +631,7 @@
 				700D4188249E986000AA3D1C /* Tiger.mp3 in Resources */,
 				7014C1C2249F73B000D0AB52 /* Pigeon.mp3 in Resources */,
 				7014C1C6249F73B000D0AB52 /* Crow.mp3 in Resources */,
+				70277DD424A5273000072D57 /* Test.gif in Resources */,
 				7014C1E1249F73B700D0AB52 /* Lilly.mp3 in Resources */,
 				707ECA28249CDFB80024D06C /* mixaund-happy-day.mp3 in Resources */,
 				7014C1D9249F73B700D0AB52 /* Magnolia.mp3 in Resources */,
@@ -795,6 +802,7 @@
 				70FF090A24962D9B002861AE /* HomeViewController.swift in Sources */,
 				70FF090624962D9B002861AE /* AppDelegate.swift in Sources */,
 				70631FED2497AA3000DAE930 /* UIButtonExtension.swift in Sources */,
+				70E468A524A8D0E2008C8FFB /* TestSolveViewController.swift in Sources */,
 				709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */,
 				70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */,
 				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,

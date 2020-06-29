@@ -118,12 +118,14 @@ class HomeViewController: UIViewController {
         let wildGif1 = UIImage.gifImageWithName("TigerGif")
         let wildGif2 = UIImage.gifImageWithName("ElephantGif")
         let wildGif3 = UIImage.gifImageWithName("HorseGif")
+    //    let testGif = UIImage.gifImageWithName("Test")
 
         self.imgVwBird1Bottom.image  = birdGif1
         self.imgVwBird2Bottom.image  = birdGif2
         self.imgVwWild1Bottom.image  = wildGif1
         self.imgVwWild2Bottom.image  = wildGif2
         self.imgVwWild3Bottom.image  = wildGif3
+       // self.imgVwTest.image  = testGif
 
         let tapGestureRecognWildAnimal = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imgVwWildAnimal.addGestureRecognizer(tapGestureRecognWildAnimal)
@@ -156,9 +158,9 @@ class HomeViewController: UIViewController {
 //        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.alarmAlertActivate), userInfo: nil, repeats: true)
         
         
-        if ScreenSize.SCREEN_MAX_LENGTH < 812.0 {
+      //  if ScreenSize.SCREEN_MAX_LENGTH < 812.0 {
             self.imgVwWild3Bottom.isHidden = true
-        }
+        //}
     }
     @objc func alarmAlertActivate(){
         UIView.animate(withDuration: 0.7) {

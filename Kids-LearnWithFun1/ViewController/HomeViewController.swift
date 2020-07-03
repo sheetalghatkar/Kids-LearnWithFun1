@@ -29,85 +29,12 @@ class HomeViewController: UIViewController {
     var bannerView: GADBannerView!
 
     //------------------------------------------------------------------------
-    var wildAnimalImageArray: [UIImage] = [
-        UIImage(named: "Tiger.png")!,
-        UIImage(named: "Lion.png")!,
-        UIImage(named: "Elephant.png")!,
-        UIImage(named: "Cheetah.png")!,
-        UIImage(named: "Rhinocero.png")!,
-        UIImage(named: "Bear.png")!,
-        UIImage(named: "Deer.png")!,
-        UIImage(named: "Zebra.png")!,
-        UIImage(named: "Giraffe.png")!,
-        UIImage(named: "Chimpanzee.png")!,
-        UIImage(named: "Fox.png")!,
-        UIImage(named: "Wolf.png")!,
-        UIImage(named: "Panda.png")!,
-        UIImage(named: "Hippopotamus.png")!,
-        UIImage(named: "Kangaroo.png")!,
-        UIImage(named: "Racoon.png")!
-    ]
-    var wildAnimalNameArray: [String] = ["Tiger","Lion",
-        "Elephant","Cheetah","Rhino","Bear","Deer","Zebra","Giraffe","Chimpanzee","Fox","Wolf","Panda","Hippopotamus","Kangaroo","Racoon"]
-    //------------------------------------------------------------------------
-    var domesticAnimalImageArray: [UIImage] = [
-        UIImage(named: "Horse.png")!,
-        UIImage(named: "Cow.png")!,
-        UIImage(named: "Buffalo.png")!,
-        UIImage(named: "Donkey.png")!,
-        UIImage(named: "Goat.png")!,
-        UIImage(named: "Sheep.png")!,
-        UIImage(named: "Camel.png")!,
-        UIImage(named: "Rabbit.png")!,
-        UIImage(named: "Pig.png")!,
-        UIImage(named: "Cat.png")!,
-        UIImage(named: "Dog.png")!
-    ]
-    var domesticAnimalNameArray: [String] = ["Horse","Cow",
-        "Buffalo","Donkey","Goat","Sheep","Camel","Rabbit","Pig","Cat","Dog"]
-    //------------------------------------------------------------------------
-    var birdImageArray: [UIImage] = [
-        UIImage(named: "Pigeon.png")!,
-        UIImage(named: "Owl.png")!,
-        UIImage(named: "Kingfisher.png")!,
-        UIImage(named: "Peacock.png")!,
-        UIImage(named: "Sparrow.png")!,
-        UIImage(named: "Crow.png")!,
-        UIImage(named: "Chicken.png")!,
-        UIImage(named: "Ostrich.png")!,
-        UIImage(named: "Cuckoo.png")!,
-        UIImage(named: "Hummingbird.png")!,
-        UIImage(named: "Penguin.png")!,
-        UIImage(named: "Nightingale.png")!,
-        UIImage(named: "American Goldfinch.png")!
-    ]
-    var birdNameArray: [String] = ["Pigeon",
-        "Owl","Kingfisher","Peacock","Sparrow","Crow","Chicken","Ostrich","Cuckoo","Hummingbird","Penguin","Nightingale","Goldfinch"]
-    //------------------------------------------------------------------------
-    var flowerImageArray: [UIImage] = [
-        UIImage(named: "Lotus.png")!,
-        UIImage(named: "Rose.png")!,
-        UIImage(named: "Lilly.png")!,
-        UIImage(named: "Jasmine.png")!,
-        UIImage(named: "Hibiscus.png")!,
-        UIImage(named: "Crossandra.png")!,
-        UIImage(named: "Tulip.png")!,
-        UIImage(named: "Orchid.png")!,
-        UIImage(named: "Sunflower.png")!,
-        UIImage(named: "Dahlia.png")!,
-        UIImage(named: "Daisy.png")!,
-        UIImage(named: "Bluebell.png")!,
-        UIImage(named: "Catharanthus.png")!,
-        UIImage(named: "Magnolia.png")!
-    ]
-    var flowerNameArray: [String] = ["Lotus","Rose","Lilly","Jasmine","Hibiscus","Crossandra","Tulip","Orchid","Sunflower","Dahlia","Daisy","Bluebell","Catharanthus","Magnolia"]
-    //------------------------------------------------------------------------
 
     override func viewDidAppear(_ animated: Bool) {
-        playBackgroundMusic()
+      //  playBackgroundMusic()
     }
     override func viewWillDisappear(_ animated: Bool) {
-        player.stop()
+       // player.stop()
     }
     
     override func viewDidLoad() {
@@ -193,20 +120,20 @@ class HomeViewController: UIViewController {
     {
         let setPictureVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImagesCollectionViewController") as! ImagesCollectionViewController
         if tapGestureRecognizer.view?.tag == 1 {
-            setPictureVC.imageArray = wildAnimalImageArray
-            setPictureVC.imageNameArray = wildAnimalNameArray
+            setPictureVC.imageArray = CommanArray.wildAnimalImageArray
+            setPictureVC.imageNameArray = CommanArray.wildAnimalNameArray
         }
         else if tapGestureRecognizer.view?.tag == 2 {
-            setPictureVC.imageArray = domesticAnimalImageArray
-            setPictureVC.imageNameArray = domesticAnimalNameArray
+            setPictureVC.imageArray = CommanArray.domesticAnimalImageArray
+            setPictureVC.imageNameArray = CommanArray.domesticAnimalNameArray
         }
         else if tapGestureRecognizer.view?.tag == 3 {
-            setPictureVC.imageArray = birdImageArray
-            setPictureVC.imageNameArray = birdNameArray
+            setPictureVC.imageArray = CommanArray.birdImageArray
+            setPictureVC.imageNameArray = CommanArray.birdNameArray
         }
         else if tapGestureRecognizer.view?.tag == 4 {
-            setPictureVC.imageArray = flowerImageArray
-            setPictureVC.imageNameArray = flowerNameArray
+            setPictureVC.imageArray = CommanArray.flowerImageArray
+            setPictureVC.imageNameArray = CommanArray.flowerNameArray
         }
         self.navigationController?.pushViewController(setPictureVC, animated: true)
     }

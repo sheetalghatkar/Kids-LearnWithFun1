@@ -463,6 +463,12 @@
                                     <action selector="funcGoToTestHome:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="gZb-Xv-Ncz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Dy7-R1-aVo">
+                                <rect key="frame" x="80" y="69" width="264" height="0.0"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVn-jN-vjJ" userLabel="BtnSound">
                                 <rect key="frame" x="354" y="54" width="40" height="40"/>
                                 <constraints>
@@ -478,8 +484,8 @@
                                 <rect key="frame" x="0.0" y="114" width="414" height="414"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="STg-pl-LbE">
-                                        <rect key="frame" x="20" y="20" width="374" height="374"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="10" y="10" width="394" height="394"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="STg-pl-LbE" secondAttribute="height" multiplier="1:1" id="5fr-zY-1K1"/>
                                         </constraints>
@@ -491,39 +497,87 @@
                                         </collectionViewFlowLayout>
                                         <cells/>
                                         <connections>
-                                            <outlet property="dataSource" destination="1hM-HW-ZOh" id="ec0-iE-ljH"/>
-                                            <outlet property="delegate" destination="1hM-HW-ZOh" id="maW-qk-W5S"/>
+                                            <outlet property="dataSource" destination="ZUf-gF-lCX" id="jBM-aa-yoW"/>
+                                            <outlet property="delegate" destination="ZUf-gF-lCX" id="JWf-76-yEg"/>
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5GS-wC-DeR" secondAttribute="height" multiplier="1:1" id="2x8-Mc-8ql"/>
-                                    <constraint firstItem="STg-pl-LbE" firstAttribute="top" secondItem="5GS-wC-DeR" secondAttribute="top" constant="20" symbolic="YES" id="UT9-LJ-qug"/>
-                                    <constraint firstItem="STg-pl-LbE" firstAttribute="leading" secondItem="5GS-wC-DeR" secondAttribute="leading" constant="20" symbolic="YES" id="VTf-BM-Egq"/>
-                                    <constraint firstAttribute="bottom" secondItem="STg-pl-LbE" secondAttribute="bottom" constant="20" symbolic="YES" id="b1W-aR-b6f"/>
-                                    <constraint firstAttribute="trailing" secondItem="STg-pl-LbE" secondAttribute="trailing" constant="20" symbolic="YES" id="rZ2-GA-Ixq"/>
+                                    <constraint firstItem="STg-pl-LbE" firstAttribute="top" secondItem="5GS-wC-DeR" secondAttribute="top" constant="10" id="An4-2U-LfP"/>
+                                    <constraint firstItem="STg-pl-LbE" firstAttribute="leading" secondItem="5GS-wC-DeR" secondAttribute="leading" constant="10" id="Qie-vw-BMy"/>
+                                    <constraint firstAttribute="trailing" secondItem="STg-pl-LbE" secondAttribute="trailing" constant="10" id="ob3-2o-NQC"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-5V-hFM" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                                <rect key="frame" x="20" y="548" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tS7-5V-hFM" secondAttribute="height" multiplier="1:1" id="FnH-EQ-8SC"/>
+                                    <constraint firstAttribute="height" constant="35" id="Mjc-5i-ZwW"/>
+                                </constraints>
+                                <state key="normal" image="Backward"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="funcBackwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="6Cf-Ho-l1I"/>
+                                    <action selector="funcBackwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="jM2-WO-Dj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-sN-VoN" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                                <rect key="frame" x="359" y="548" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uBz-sN-VoN" secondAttribute="height" multiplier="1:1" id="Kdy-hH-kJH"/>
+                                    <constraint firstAttribute="height" constant="35" id="qDV-iU-Htb"/>
+                                </constraints>
+                                <state key="normal" image="Forward"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="funcBackwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="4PD-S1-WGO"/>
+                                    <action selector="funcBackwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="KBe-uS-dOC"/>
+                                    <action selector="funcForwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="56M-YP-Dj4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="5GS-wC-DeR" secondAttribute="trailing" id="1Ig-Um-yrj"/>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="SJF-BJ-cLf" secondAttribute="trailing" id="45l-5a-ufe"/>
                             <constraint firstItem="5GS-wC-DeR" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="7HP-ma-UsB"/>
+                            <constraint firstItem="Dy7-R1-aVo" firstAttribute="centerY" secondItem="vWo-J7-g90" secondAttribute="centerY" id="7MA-Rx-Hhu"/>
+                            <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="uBz-sN-VoN" secondAttribute="trailing" constant="20" id="F99-VS-RmZ"/>
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="top" secondItem="kra-sA-SsD" secondAttribute="top" id="Iy0-zu-XeQ"/>
                             <constraint firstItem="5GS-wC-DeR" firstAttribute="top" secondItem="vWo-J7-g90" secondAttribute="bottom" constant="20" id="JjY-Pa-CnY"/>
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="Sd4-1N-CEp"/>
                             <constraint firstItem="vWo-J7-g90" firstAttribute="top" secondItem="t4u-4d-A2T" secondAttribute="top" id="Vfo-Xa-fjY"/>
                             <constraint firstAttribute="bottom" secondItem="SJF-BJ-cLf" secondAttribute="bottom" id="YBB-SS-xMy"/>
+                            <constraint firstItem="tS7-5V-hFM" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" constant="20" id="bCs-ec-k3y"/>
                             <constraint firstItem="vVn-jN-vjJ" firstAttribute="top" secondItem="t4u-4d-A2T" secondAttribute="top" constant="10" id="csc-Ou-SQj"/>
+                            <constraint firstItem="Dy7-R1-aVo" firstAttribute="leading" secondItem="vWo-J7-g90" secondAttribute="trailing" constant="10" id="fDI-Nn-2bk"/>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="vVn-jN-vjJ" secondAttribute="trailing" constant="20" id="fPx-Nt-NQ8"/>
                             <constraint firstItem="vWo-J7-g90" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" constant="20" id="gmO-nV-sm2"/>
+                            <constraint firstItem="uBz-sN-VoN" firstAttribute="top" secondItem="tS7-5V-hFM" secondAttribute="top" id="lE6-kJ-LBb"/>
+                            <constraint firstItem="uBz-sN-VoN" firstAttribute="width" secondItem="uBz-sN-VoN" secondAttribute="height" multiplier="1:1" id="uD8-cd-5iW"/>
+                            <constraint firstItem="tS7-5V-hFM" firstAttribute="top" secondItem="5GS-wC-DeR" secondAttribute="bottom" constant="20" id="uOF-11-jWR"/>
+                            <constraint firstItem="vVn-jN-vjJ" firstAttribute="leading" secondItem="Dy7-R1-aVo" secondAttribute="trailing" constant="10" id="z1u-4w-DGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t4u-4d-A2T"/>
                     </view>
                     <connections>
+                        <outlet property="btnBackward" destination="tS7-5V-hFM" id="pqT-kI-xfJ"/>
+                        <outlet property="btnForward" destination="uBz-sN-VoN" id="u9a-qb-8hF"/>
                         <outlet property="btnSound" destination="vVn-jN-vjJ" id="HsR-JN-cCK"/>
+                        <outlet property="collectionViewCard" destination="STg-pl-LbE" id="MwD-eO-KX1"/>
+                        <outlet property="lblQuestion" destination="Dy7-R1-aVo" id="HgU-Zi-59V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycG-ma-Jej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

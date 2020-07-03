@@ -111,7 +111,6 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         //interstitial = createAndLoadInterstitial()
         navigationController?.popViewController(animated: true)
     }
-
     
     @IBAction func funcForwardBtnClick(_ sender: Any)
     {

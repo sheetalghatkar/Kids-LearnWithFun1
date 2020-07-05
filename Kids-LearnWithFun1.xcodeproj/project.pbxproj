@@ -61,6 +61,33 @@
 		7014C1FB249F758600D0AB52 /* Chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FA249F758600D0AB52 /* Chicken.mp3 */; };
 		7014C1FD249F779200D0AB52 /* Donkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FC249F779200D0AB52 /* Donkey.mp3 */; };
 		7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FE249F781F00D0AB52 /* Pig.mp3 */; };
+		701D4D3A24B1DA3A00E642A6 /* Cow_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */; };
+		701D4D3B24B1DA3A00E642A6 /* Horse_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */; };
+		701D4D3D24B1DA3A00E642A6 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */; };
+		701D4D3E24B1DA3A00E642A6 /* Goat_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */; };
+		701D4D3F24B1DA3A00E642A6 /* Donkey_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */; };
+		701D4D4024B1DA3A00E642A6 /* Sheep_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3524B1DA3900E642A6 /* Sheep_Question.mp3 */; };
+		701D4D4124B1DA3A00E642A6 /* Pig_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3624B1DA3900E642A6 /* Pig_Question.mp3 */; };
+		701D4D4224B1DA3A00E642A6 /* Rabbit_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3724B1DA3900E642A6 /* Rabbit_Question.mp3 */; };
+		701D4D4324B1DA3A00E642A6 /* Cat_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3824B1DA3900E642A6 /* Cat_Question.mp3 */; };
+		701D4D4424B1DA3A00E642A6 /* Dog_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3924B1DA3A00E642A6 /* Dog_Question.mp3 */; };
+		701D4D5624B1DC6F00E642A6 /* Panda_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4624B1DC6D00E642A6 /* Panda_Question.mp3 */; };
+		701D4D5724B1DC6F00E642A6 /* Elephant_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4724B1DC6D00E642A6 /* Elephant_Question.mp3 */; };
+		701D4D5824B1DC6F00E642A6 /* Rhino_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4824B1DC6D00E642A6 /* Rhino_Question.mp3 */; };
+		701D4D5924B1DC6F00E642A6 /* Tiger_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4924B1DC6D00E642A6 /* Tiger_Question.mp3 */; };
+		701D4D5A24B1DC6F00E642A6 /* Wolf_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4A24B1DC6D00E642A6 /* Wolf_Question.mp3 */; };
+		701D4D5B24B1DC6F00E642A6 /* Bear_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4B24B1DC6D00E642A6 /* Bear_Question.mp3 */; };
+		701D4D5C24B1DC6F00E642A6 /* Fox_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4C24B1DC6E00E642A6 /* Fox_Question.mp3 */; };
+		701D4D5D24B1DC6F00E642A6 /* Hippopotamus_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4D24B1DC6E00E642A6 /* Hippopotamus_Question.mp3 */; };
+		701D4D5E24B1DC6F00E642A6 /* Racoon_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4E24B1DC6E00E642A6 /* Racoon_Question.mp3 */; };
+		701D4D5F24B1DC6F00E642A6 /* Kangaroo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D4F24B1DC6E00E642A6 /* Kangaroo_Question.mp3 */; };
+		701D4D6024B1DC6F00E642A6 /* Deer_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5024B1DC6E00E642A6 /* Deer_Question.mp3 */; };
+		701D4D6124B1DC6F00E642A6 /* Lion_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5124B1DC6E00E642A6 /* Lion_Question.mp3 */; };
+		701D4D6224B1DC6F00E642A6 /* Giraffe_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5224B1DC6E00E642A6 /* Giraffe_Question.mp3 */; };
+		701D4D6324B1DC6F00E642A6 /* Cheetah_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5324B1DC6E00E642A6 /* Cheetah_Question.mp3 */; };
+		701D4D6424B1DC6F00E642A6 /* Chimpanzee_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5424B1DC6E00E642A6 /* Chimpanzee_Question.mp3 */; };
+		701D4D6524B1DC6F00E642A6 /* Zebra_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D5524B1DC6F00E642A6 /* Zebra_Question.mp3 */; };
+		701D4D6724B237FD00E642A6 /* Buffalo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D6624B237FC00E642A6 /* Buffalo_Question.mp3 */; };
 		701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EF78024A294C5006C0A36 /* UIExtension.swift */; };
 		70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70270FDA24A369A900EB8DAB /* TestViewController.swift */; };
 		70277DD224A4B59100072D57 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70277DD124A4B59100072D57 /* UILabelExtension.swift */; };
@@ -86,6 +113,19 @@
 		7095C2D3249AA2E400C1E220 /* garden.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7095C2D2249AA2E400C1E220 /* garden.gif */; };
 		709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */; };
 		70AF537924A0CCCF00AD4794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FF090B24962D9B002861AE /* Main.storyboard */; };
+		70D8B14A24B0D4FE00AF3D34 /* Owl_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B13D24B0D4FC00AF3D34 /* Owl_Question.mp3 */; };
+		70D8B14B24B0D4FE00AF3D34 /* Crow_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B13E24B0D4FC00AF3D34 /* Crow_Question.mp3 */; };
+		70D8B14C24B0D4FE00AF3D34 /* Hummingbird_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B13F24B0D4FD00AF3D34 /* Hummingbird_Question.mp3 */; };
+		70D8B14D24B0D4FE00AF3D34 /* Kingfisher_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14024B0D4FD00AF3D34 /* Kingfisher_Question.mp3 */; };
+		70D8B14E24B0D4FE00AF3D34 /* Sparrow_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14124B0D4FD00AF3D34 /* Sparrow_Question.mp3 */; };
+		70D8B14F24B0D4FE00AF3D34 /* Ostrich_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14224B0D4FD00AF3D34 /* Ostrich_Question.mp3 */; };
+		70D8B15024B0D4FE00AF3D34 /* Chicken_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14324B0D4FD00AF3D34 /* Chicken_Question.mp3 */; };
+		70D8B15124B0D4FE00AF3D34 /* Peacock_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14424B0D4FD00AF3D34 /* Peacock_Question.mp3 */; };
+		70D8B15224B0D4FE00AF3D34 /* Penguin_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14524B0D4FD00AF3D34 /* Penguin_Question.mp3 */; };
+		70D8B15324B0D4FE00AF3D34 /* Pigeon_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14624B0D4FD00AF3D34 /* Pigeon_Question.mp3 */; };
+		70D8B15424B0D4FE00AF3D34 /* Goldfinch_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14724B0D4FE00AF3D34 /* Goldfinch_Question.mp3 */; };
+		70D8B15524B0D4FE00AF3D34 /* Nightingale_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14824B0D4FE00AF3D34 /* Nightingale_Question.mp3 */; };
+		70D8B15624B0D4FE00AF3D34 /* Cuckoo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70D8B14924B0D4FE00AF3D34 /* Cuckoo_Question.mp3 */; };
 		70E468A524A8D0E2008C8FFB /* TestSolveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E468A424A8D0E2008C8FFB /* TestSolveViewController.swift */; };
 		70F9022B24AF7E4A00A3AA12 /* Magnolia_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70F9021D24AF7E4800A3AA12 /* Magnolia_Question.mp3 */; };
 		70F9022C24AF7E4A00A3AA12 /* Orchid_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 70F9021E24AF7E4800A3AA12 /* Orchid_Question.mp3 */; };
@@ -199,6 +239,33 @@
 		7014C1FA249F758600D0AB52 /* Chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chicken.mp3; sourceTree = "<group>"; };
 		7014C1FC249F779200D0AB52 /* Donkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Donkey.mp3; sourceTree = "<group>"; };
 		7014C1FE249F781F00D0AB52 /* Pig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pig.mp3; sourceTree = "<group>"; };
+		701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow_Question.mp3; sourceTree = "<group>"; };
+		701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horse_Question.mp3; sourceTree = "<group>"; };
+		701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
+		701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goat_Question.mp3; sourceTree = "<group>"; };
+		701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Donkey_Question.mp3; sourceTree = "<group>"; };
+		701D4D3524B1DA3900E642A6 /* Sheep_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sheep_Question.mp3; sourceTree = "<group>"; };
+		701D4D3624B1DA3900E642A6 /* Pig_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pig_Question.mp3; sourceTree = "<group>"; };
+		701D4D3724B1DA3900E642A6 /* Rabbit_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rabbit_Question.mp3; sourceTree = "<group>"; };
+		701D4D3824B1DA3900E642A6 /* Cat_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cat_Question.mp3; sourceTree = "<group>"; };
+		701D4D3924B1DA3A00E642A6 /* Dog_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dog_Question.mp3; sourceTree = "<group>"; };
+		701D4D4624B1DC6D00E642A6 /* Panda_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Panda_Question.mp3; sourceTree = "<group>"; };
+		701D4D4724B1DC6D00E642A6 /* Elephant_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Elephant_Question.mp3; sourceTree = "<group>"; };
+		701D4D4824B1DC6D00E642A6 /* Rhino_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhino_Question.mp3; sourceTree = "<group>"; };
+		701D4D4924B1DC6D00E642A6 /* Tiger_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tiger_Question.mp3; sourceTree = "<group>"; };
+		701D4D4A24B1DC6D00E642A6 /* Wolf_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wolf_Question.mp3; sourceTree = "<group>"; };
+		701D4D4B24B1DC6D00E642A6 /* Bear_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bear_Question.mp3; sourceTree = "<group>"; };
+		701D4D4C24B1DC6E00E642A6 /* Fox_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fox_Question.mp3; sourceTree = "<group>"; };
+		701D4D4D24B1DC6E00E642A6 /* Hippopotamus_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hippopotamus_Question.mp3; sourceTree = "<group>"; };
+		701D4D4E24B1DC6E00E642A6 /* Racoon_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Racoon_Question.mp3; sourceTree = "<group>"; };
+		701D4D4F24B1DC6E00E642A6 /* Kangaroo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kangaroo_Question.mp3; sourceTree = "<group>"; };
+		701D4D5024B1DC6E00E642A6 /* Deer_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Deer_Question.mp3; sourceTree = "<group>"; };
+		701D4D5124B1DC6E00E642A6 /* Lion_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lion_Question.mp3; sourceTree = "<group>"; };
+		701D4D5224B1DC6E00E642A6 /* Giraffe_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Giraffe_Question.mp3; sourceTree = "<group>"; };
+		701D4D5324B1DC6E00E642A6 /* Cheetah_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheetah_Question.mp3; sourceTree = "<group>"; };
+		701D4D5424B1DC6E00E642A6 /* Chimpanzee_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chimpanzee_Question.mp3; sourceTree = "<group>"; };
+		701D4D5524B1DC6F00E642A6 /* Zebra_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zebra_Question.mp3; sourceTree = "<group>"; };
+		701D4D6624B237FC00E642A6 /* Buffalo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Buffalo_Question.mp3; sourceTree = "<group>"; };
 		701EF78024A294C5006C0A36 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		70270FDA24A369A900EB8DAB /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		70277DD124A4B59100072D57 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -223,6 +290,19 @@
 		707ECA35249CF4E10024D06C /* bird2Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bird2Gif.gif; sourceTree = "<group>"; };
 		7095C2D2249AA2E400C1E220 /* garden.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = garden.gif; sourceTree = "<group>"; };
 		709D3378249B712B002B1114 /* UiCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiCollectionViewExtension.swift; sourceTree = "<group>"; };
+		70D8B13D24B0D4FC00AF3D34 /* Owl_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Owl_Question.mp3; sourceTree = "<group>"; };
+		70D8B13E24B0D4FC00AF3D34 /* Crow_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Crow_Question.mp3; sourceTree = "<group>"; };
+		70D8B13F24B0D4FD00AF3D34 /* Hummingbird_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hummingbird_Question.mp3; sourceTree = "<group>"; };
+		70D8B14024B0D4FD00AF3D34 /* Kingfisher_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kingfisher_Question.mp3; sourceTree = "<group>"; };
+		70D8B14124B0D4FD00AF3D34 /* Sparrow_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sparrow_Question.mp3; sourceTree = "<group>"; };
+		70D8B14224B0D4FD00AF3D34 /* Ostrich_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ostrich_Question.mp3; sourceTree = "<group>"; };
+		70D8B14324B0D4FD00AF3D34 /* Chicken_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chicken_Question.mp3; sourceTree = "<group>"; };
+		70D8B14424B0D4FD00AF3D34 /* Peacock_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Peacock_Question.mp3; sourceTree = "<group>"; };
+		70D8B14524B0D4FD00AF3D34 /* Penguin_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Penguin_Question.mp3; sourceTree = "<group>"; };
+		70D8B14624B0D4FD00AF3D34 /* Pigeon_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pigeon_Question.mp3; sourceTree = "<group>"; };
+		70D8B14724B0D4FE00AF3D34 /* Goldfinch_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goldfinch_Question.mp3; sourceTree = "<group>"; };
+		70D8B14824B0D4FE00AF3D34 /* Nightingale_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nightingale_Question.mp3; sourceTree = "<group>"; };
+		70D8B14924B0D4FE00AF3D34 /* Cuckoo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cuckoo_Question.mp3; sourceTree = "<group>"; };
 		70E468A424A8D0E2008C8FFB /* TestSolveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSolveViewController.swift; sourceTree = "<group>"; };
 		70F9021D24AF7E4800A3AA12 /* Magnolia_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Magnolia_Question.mp3; sourceTree = "<group>"; };
 		70F9021E24AF7E4800A3AA12 /* Orchid_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Orchid_Question.mp3; sourceTree = "<group>"; };
@@ -328,6 +408,7 @@
 		700D416D249E981400AA3D1C /* WildAnimalSound */ = {
 			isa = PBXGroup;
 			children = (
+				701D4D4524B1DA6D00E642A6 /* WildAnimal _Question */,
 				700D4172249E985E00AA3D1C /* Bear.mp3 */,
 				700D417C249E986000AA3D1C /* Chimpanzee.mp3 */,
 				700D416F249E985D00AA3D1C /* Cheetah.mp3 */,
@@ -351,6 +432,7 @@
 		7014C1AF249F73AF00D0AB52 /* BirdSound */ = {
 			isa = PBXGroup;
 			children = (
+				70D8B13C24B0D4E300AF3D34 /* Bird_Question */,
 				7014C1B0249F73AF00D0AB52 /* Goldfinch.mp3 */,
 				7014C1B1249F73AF00D0AB52 /* Nightingale.mp3 */,
 				7014C1B2249F73AF00D0AB52 /* Kingfisher.mp3 */,
@@ -393,6 +475,7 @@
 		7014C1E7249F73C600D0AB52 /* FarmAnimal */ = {
 			isa = PBXGroup;
 			children = (
+				701D4D2E24B1DA1900E642A6 /* FarmAnimal_Question */,
 				7014C1E8249F73C600D0AB52 /* Goat.mp3 */,
 				7014C1E9249F73C600D0AB52 /* Cat.mp3 */,
 				7014C1EA249F73C600D0AB52 /* Buffalo.mp3 */,
@@ -406,6 +489,47 @@
 				7014C1F0249F73C600D0AB52 /* Rabbit.mp3 */,
 			);
 			path = FarmAnimal;
+			sourceTree = "<group>";
+		};
+		701D4D2E24B1DA1900E642A6 /* FarmAnimal_Question */ = {
+			isa = PBXGroup;
+			children = (
+				701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */,
+				701D4D3824B1DA3900E642A6 /* Cat_Question.mp3 */,
+				701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */,
+				701D4D6624B237FC00E642A6 /* Buffalo_Question.mp3 */,
+				701D4D3924B1DA3A00E642A6 /* Dog_Question.mp3 */,
+				701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */,
+				701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */,
+				701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */,
+				701D4D3624B1DA3900E642A6 /* Pig_Question.mp3 */,
+				701D4D3724B1DA3900E642A6 /* Rabbit_Question.mp3 */,
+				701D4D3524B1DA3900E642A6 /* Sheep_Question.mp3 */,
+			);
+			path = FarmAnimal_Question;
+			sourceTree = "<group>";
+		};
+		701D4D4524B1DA6D00E642A6 /* WildAnimal _Question */ = {
+			isa = PBXGroup;
+			children = (
+				701D4D4B24B1DC6D00E642A6 /* Bear_Question.mp3 */,
+				701D4D5324B1DC6E00E642A6 /* Cheetah_Question.mp3 */,
+				701D4D5424B1DC6E00E642A6 /* Chimpanzee_Question.mp3 */,
+				701D4D5024B1DC6E00E642A6 /* Deer_Question.mp3 */,
+				701D4D4724B1DC6D00E642A6 /* Elephant_Question.mp3 */,
+				701D4D4C24B1DC6E00E642A6 /* Fox_Question.mp3 */,
+				701D4D5224B1DC6E00E642A6 /* Giraffe_Question.mp3 */,
+				701D4D4D24B1DC6E00E642A6 /* Hippopotamus_Question.mp3 */,
+				701D4D4F24B1DC6E00E642A6 /* Kangaroo_Question.mp3 */,
+				701D4D5124B1DC6E00E642A6 /* Lion_Question.mp3 */,
+				701D4D4624B1DC6D00E642A6 /* Panda_Question.mp3 */,
+				701D4D4E24B1DC6E00E642A6 /* Racoon_Question.mp3 */,
+				701D4D4824B1DC6D00E642A6 /* Rhino_Question.mp3 */,
+				701D4D4924B1DC6D00E642A6 /* Tiger_Question.mp3 */,
+				701D4D4A24B1DC6D00E642A6 /* Wolf_Question.mp3 */,
+				701D4D5524B1DC6F00E642A6 /* Zebra_Question.mp3 */,
+			);
+			path = "WildAnimal _Question";
 			sourceTree = "<group>";
 		};
 		70270FD924A34F0300EB8DAB /* ViewController */ = {
@@ -428,6 +552,26 @@
 				7068EFD324AB5DCE00B448C3 /* TestSolveCollectionCell.xib */,
 			);
 			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		70D8B13C24B0D4E300AF3D34 /* Bird_Question */ = {
+			isa = PBXGroup;
+			children = (
+				70D8B14324B0D4FD00AF3D34 /* Chicken_Question.mp3 */,
+				70D8B13E24B0D4FC00AF3D34 /* Crow_Question.mp3 */,
+				70D8B14924B0D4FE00AF3D34 /* Cuckoo_Question.mp3 */,
+				70D8B14724B0D4FE00AF3D34 /* Goldfinch_Question.mp3 */,
+				70D8B13F24B0D4FD00AF3D34 /* Hummingbird_Question.mp3 */,
+				70D8B14024B0D4FD00AF3D34 /* Kingfisher_Question.mp3 */,
+				70D8B14824B0D4FE00AF3D34 /* Nightingale_Question.mp3 */,
+				70D8B14224B0D4FD00AF3D34 /* Ostrich_Question.mp3 */,
+				70D8B13D24B0D4FC00AF3D34 /* Owl_Question.mp3 */,
+				70D8B14424B0D4FD00AF3D34 /* Peacock_Question.mp3 */,
+				70D8B14524B0D4FD00AF3D34 /* Penguin_Question.mp3 */,
+				70D8B14624B0D4FD00AF3D34 /* Pigeon_Question.mp3 */,
+				70D8B14124B0D4FD00AF3D34 /* Sparrow_Question.mp3 */,
+			);
+			path = Bird_Question;
 			sourceTree = "<group>";
 		};
 		70F9021C24AF7E3000A3AA12 /* Flower_Question */ = {
@@ -677,6 +821,7 @@
 				700D4181249E986000AA3D1C /* Bear.mp3 in Resources */,
 				7014C1F7249F73C600D0AB52 /* Horse.mp3 in Resources */,
 				7014C1BD249F73B000D0AB52 /* Goldfinch.mp3 in Resources */,
+				701D4D4124B1DA3A00E642A6 /* Pig_Question.mp3 in Resources */,
 				7014C1F9249F73C600D0AB52 /* Rabbit.mp3 in Resources */,
 				7014C1DE249F73B700D0AB52 /* Tulip.mp3 in Resources */,
 				7014C1C8249F73B000D0AB52 /* Peacock.mp3 in Resources */,
@@ -685,16 +830,19 @@
 				7014C1BF249F73B000D0AB52 /* Kingfisher.mp3 in Resources */,
 				7014C1C4249F73B000D0AB52 /* Ostrich.mp3 in Resources */,
 				70F9023524AF7E4A00A3AA12 /* Tulip_Question.mp3 in Resources */,
+				701D4D4424B1DA3A00E642A6 /* Dog_Question.mp3 in Resources */,
 				700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */,
 				700D417F249E986000AA3D1C /* Panda.mp3 in Resources */,
 				7014C1E6249F73B700D0AB52 /* Rose.mp3 in Resources */,
 				70F9023324AF7E4A00A3AA12 /* Daisy_Question.mp3 in Resources */,
 				70FF091224962DB5002861AE /* LaunchScreen.storyboard in Resources */,
+				70D8B15024B0D4FE00AF3D34 /* Chicken_Question.mp3 in Resources */,
 				700D418A249E986000AA3D1C /* Elephant.mp3 in Resources */,
 				70F9024624AFAF5C00A3AA12 /* Wrong.mp3 in Resources */,
 				7014C1DB249F73B700D0AB52 /* Crossandra.mp3 in Resources */,
 				700D4184249E986000AA3D1C /* Giraffe.mp3 in Resources */,
 				702F320F24992F65000F4867 /* flower.gif in Resources */,
+				70D8B15124B0D4FE00AF3D34 /* Peacock_Question.mp3 in Resources */,
 				70F9023824AF7E4A00A3AA12 /* Sunflower_Question.mp3 in Resources */,
 				7014C1C1249F73B000D0AB52 /* Penguin.mp3 in Resources */,
 				7014C1E4249F73B700D0AB52 /* Sunflower.mp3 in Resources */,
@@ -706,6 +854,10 @@
 				707ECA26249CDAD80024D06C /* BgMusic.mp3 in Resources */,
 				700D4182249E986000AA3D1C /* Fox.mp3 in Resources */,
 				7014C1BE249F73B000D0AB52 /* Nightingale.mp3 in Resources */,
+				70D8B15624B0D4FE00AF3D34 /* Cuckoo_Question.mp3 in Resources */,
+				701D4D5D24B1DC6F00E642A6 /* Hippopotamus_Question.mp3 in Resources */,
+				701D4D3A24B1DA3A00E642A6 /* Cow_Question.mp3 in Resources */,
+				701D4D6324B1DC6F00E642A6 /* Cheetah_Question.mp3 in Resources */,
 				7014C1C0249F73B000D0AB52 /* Sparrow.mp3 in Resources */,
 				7014C1C7249F73B000D0AB52 /* Hummingbird.mp3 in Resources */,
 				7014C1C5249F73B000D0AB52 /* Owl.mp3 in Resources */,
@@ -713,38 +865,62 @@
 				700D4188249E986000AA3D1C /* Tiger.mp3 in Resources */,
 				70F9023424AF7E4A00A3AA12 /* Dahlia_Question.mp3 in Resources */,
 				70F9023A24AF81D000A3AA12 /* Lotus_Question.mp3 in Resources */,
+				701D4D3E24B1DA3A00E642A6 /* Goat_Question.mp3 in Resources */,
 				7014C1C2249F73B000D0AB52 /* Pigeon.mp3 in Resources */,
 				7014C1C6249F73B000D0AB52 /* Crow.mp3 in Resources */,
 				70277DD424A5273000072D57 /* Test.gif in Resources */,
 				7014C1E1249F73B700D0AB52 /* Lilly.mp3 in Resources */,
 				70F9023D24AF88A500A3AA12 /* No.mp3 in Resources */,
 				707ECA28249CDFB80024D06C /* mixaund-happy-day.mp3 in Resources */,
+				70D8B14C24B0D4FE00AF3D34 /* Hummingbird_Question.mp3 in Resources */,
+				701D4D5724B1DC6F00E642A6 /* Elephant_Question.mp3 in Resources */,
 				7014C1D9249F73B700D0AB52 /* Magnolia.mp3 in Resources */,
 				7014C1DA249F73B700D0AB52 /* Bluebell.mp3 in Resources */,
 				707ECA32249CE9A50024D06C /* HorseGif.gif in Resources */,
+				701D4D3F24B1DA3A00E642A6 /* Donkey_Question.mp3 in Resources */,
+				701D4D6224B1DC6F00E642A6 /* Giraffe_Question.mp3 in Resources */,
 				70F9022C24AF7E4A00A3AA12 /* Orchid_Question.mp3 in Resources */,
+				70D8B14A24B0D4FE00AF3D34 /* Owl_Question.mp3 in Resources */,
 				70F9022D24AF7E4A00A3AA12 /* Jasmine_Question.mp3 in Resources */,
 				700D4185249E986000AA3D1C /* Hippopotamus.mp3 in Resources */,
+				70D8B14E24B0D4FE00AF3D34 /* Sparrow_Question.mp3 in Resources */,
 				700D418F249E9B2800AA3D1C /* Racoon.mp3 in Resources */,
+				701D4D6124B1DC6F00E642A6 /* Lion_Question.mp3 in Resources */,
 				707ECA34249CF45F0024D06C /* bird1Gif.gif in Resources */,
+				701D4D3B24B1DA3A00E642A6 /* Horse_Question.mp3 in Resources */,
 				700D4186249E986000AA3D1C /* Deer.mp3 in Resources */,
+				701D4D6724B237FD00E642A6 /* Buffalo_Question.mp3 in Resources */,
+				70D8B14B24B0D4FE00AF3D34 /* Crow_Question.mp3 in Resources */,
+				701D4D5A24B1DC6F00E642A6 /* Wolf_Question.mp3 in Resources */,
 				7014C1F3249F73C600D0AB52 /* Buffalo.mp3 in Resources */,
 				7095C2D3249AA2E400C1E220 /* garden.gif in Resources */,
 				707ECA36249CF4E10024D06C /* bird2Gif.gif in Resources */,
+				701D4D5C24B1DC6F00E642A6 /* Fox_Question.mp3 in Resources */,
 				7014C1F2249F73C600D0AB52 /* Cat.mp3 in Resources */,
+				70D8B15524B0D4FE00AF3D34 /* Nightingale_Question.mp3 in Resources */,
 				707ECA30249CE78E0024D06C /* ElephantGif.gif in Resources */,
+				70D8B14F24B0D4FE00AF3D34 /* Ostrich_Question.mp3 in Resources */,
+				701D4D4224B1DA3A00E642A6 /* Rabbit_Question.mp3 in Resources */,
 				700D4187249E986000AA3D1C /* Lion.mp3 in Resources */,
+				701D4D6524B1DC6F00E642A6 /* Zebra_Question.mp3 in Resources */,
 				7014C1F8249F73C600D0AB52 /* Dog.mp3 in Resources */,
 				7014C1E5249F73B700D0AB52 /* Dahlia.mp3 in Resources */,
 				70F9023024AF7E4A00A3AA12 /* Catharanthus_Question.mp3 in Resources */,
+				701D4D4324B1DA3A00E642A6 /* Cat_Question.mp3 in Resources */,
 				7014C1F5249F73C600D0AB52 /* Cow.mp3 in Resources */,
 				7014C1FB249F758600D0AB52 /* Chicken.mp3 in Resources */,
 				70F9023624AF7E4A00A3AA12 /* Rose_Question.mp3 in Resources */,
+				701D4D6424B1DC6F00E642A6 /* Chimpanzee_Question.mp3 in Resources */,
+				701D4D4024B1DA3A00E642A6 /* Sheep_Question.mp3 in Resources */,
+				701D4D5E24B1DC6F00E642A6 /* Racoon_Question.mp3 in Resources */,
 				7014C1F6249F73C600D0AB52 /* Camel.mp3 in Resources */,
+				701D4D5624B1DC6F00E642A6 /* Panda_Question.mp3 in Resources */,
 				70F9023224AF7E4A00A3AA12 /* Lilly_Question.mp3 in Resources */,
 				700D418B249E986000AA3D1C /* Chimpanzee.mp3 in Resources */,
 				7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */,
+				70D8B14D24B0D4FE00AF3D34 /* Kingfisher_Question.mp3 in Resources */,
 				707ECA24249CD9A70024D06C /* darkwds1.wav in Resources */,
+				701D4D5B24B1DC6F00E642A6 /* Bear_Question.mp3 in Resources */,
 				7014C1E2249F73B700D0AB52 /* Daisy.mp3 in Resources */,
 				70FF090F24962DB5002861AE /* Assets.xcassets in Resources */,
 				7014C1E3249F73B700D0AB52 /* Hibiscus.mp3 in Resources */,
@@ -753,14 +929,22 @@
 				70F9024424AF88B900A3AA12 /* WellDone.mp3 in Resources */,
 				7014C1DC249F73B700D0AB52 /* Catharanthus.mp3 in Resources */,
 				7014C1E0249F73B700D0AB52 /* Jasmine.mp3 in Resources */,
+				701D4D5924B1DC6F00E642A6 /* Tiger_Question.mp3 in Resources */,
 				70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */,
+				701D4D5F24B1DC6F00E642A6 /* Kangaroo_Question.mp3 in Resources */,
+				70D8B15324B0D4FE00AF3D34 /* Pigeon_Question.mp3 in Resources */,
 				700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */,
+				70D8B15224B0D4FE00AF3D34 /* Penguin_Question.mp3 in Resources */,
+				701D4D3D24B1DA3A00E642A6 /* Camel_Question.mp3 in Resources */,
+				701D4D6024B1DC6F00E642A6 /* Deer_Question.mp3 in Resources */,
 				70F9022F24AF7E4A00A3AA12 /* Hibiscus_Question.mp3 in Resources */,
 				700D4183249E986000AA3D1C /* Zebra.mp3 in Resources */,
+				701D4D5824B1DC6F00E642A6 /* Rhino_Question.mp3 in Resources */,
 				7014C1AE249F653200D0AB52 /* Wolf.mp3 in Resources */,
 				70F9023724AF7E4A00A3AA12 /* Crossandra_Question.mp3 in Resources */,
 				7014C1DF249F73B700D0AB52 /* Orchid.mp3 in Resources */,
 				7014C1F1249F73C600D0AB52 /* Goat.mp3 in Resources */,
+				70D8B15424B0D4FE00AF3D34 /* Goldfinch_Question.mp3 in Resources */,
 				7014C1DD249F73B700D0AB52 /* Lotus.mp3 in Resources */,
 				702F32112499311E000F4867 /* 200.gif in Resources */,
 			);

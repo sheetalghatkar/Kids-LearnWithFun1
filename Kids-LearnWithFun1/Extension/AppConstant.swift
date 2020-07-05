@@ -15,7 +15,7 @@ class CommanArray {
         UIImage(named: "Lion.png")!,
         UIImage(named: "Elephant.png")!,
         UIImage(named: "Cheetah.png")!,
-        UIImage(named: "Rhinocero.png")!,
+        UIImage(named: "Rhino.png")!,
         UIImage(named: "Bear.png")!,
         UIImage(named: "Deer.png")!,
         UIImage(named: "Zebra.png")!,
@@ -60,7 +60,7 @@ class CommanArray {
         UIImage(named: "Hummingbird.png")!,
         UIImage(named: "Penguin.png")!,
         UIImage(named: "Nightingale.png")!,
-        UIImage(named: "American Goldfinch.png")!
+        UIImage(named: "Goldfinch.png")!
     ]
     static var birdNameArray: [String] = ["Pigeon",
         "Owl","Kingfisher","Peacock","Sparrow","Crow","Chicken","Ostrich","Cuckoo","Hummingbird","Penguin","Nightingale","Goldfinch"]

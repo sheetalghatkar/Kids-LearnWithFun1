@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */; };
 		700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416E249E985D00AA3D1C /* Rhino.mp3 */; };
 		700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416F249E985D00AA3D1C /* Cheetah.mp3 */; };
 		700D417F249E986000AA3D1C /* Panda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D4170249E985E00AA3D1C /* Panda.mp3 */; };
@@ -63,7 +64,6 @@
 		7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7014C1FE249F781F00D0AB52 /* Pig.mp3 */; };
 		701D4D3A24B1DA3A00E642A6 /* Cow_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */; };
 		701D4D3B24B1DA3A00E642A6 /* Horse_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */; };
-		701D4D3D24B1DA3A00E642A6 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */; };
 		701D4D3E24B1DA3A00E642A6 /* Goat_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */; };
 		701D4D3F24B1DA3A00E642A6 /* Donkey_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */; };
 		701D4D4024B1DA3A00E642A6 /* Sheep_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 701D4D3524B1DA3900E642A6 /* Sheep_Question.mp3 */; };
@@ -185,6 +185,7 @@
 		330855B7235C70D81BA9C8BA /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506C3AC2C26BDD790042AD8E /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
 		700D416E249E985D00AA3D1C /* Rhino.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhino.mp3; sourceTree = "<group>"; };
 		700D416F249E985D00AA3D1C /* Cheetah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cheetah.mp3; sourceTree = "<group>"; };
 		700D4170249E985E00AA3D1C /* Panda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Panda.mp3; sourceTree = "<group>"; };
@@ -241,7 +242,6 @@
 		7014C1FE249F781F00D0AB52 /* Pig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pig.mp3; sourceTree = "<group>"; };
 		701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cow_Question.mp3; sourceTree = "<group>"; };
 		701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horse_Question.mp3; sourceTree = "<group>"; };
-		701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
 		701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Goat_Question.mp3; sourceTree = "<group>"; };
 		701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Donkey_Question.mp3; sourceTree = "<group>"; };
 		701D4D3524B1DA3900E642A6 /* Sheep_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sheep_Question.mp3; sourceTree = "<group>"; };
@@ -494,11 +494,11 @@
 		701D4D2E24B1DA1900E642A6 /* FarmAnimal_Question */ = {
 			isa = PBXGroup;
 			children = (
-				701D4D3224B1DA3900E642A6 /* Camel_Question.mp3 */,
 				701D4D3824B1DA3900E642A6 /* Cat_Question.mp3 */,
 				701D4D2F24B1DA3800E642A6 /* Cow_Question.mp3 */,
 				701D4D6624B237FC00E642A6 /* Buffalo_Question.mp3 */,
 				701D4D3924B1DA3A00E642A6 /* Dog_Question.mp3 */,
+				7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */,
 				701D4D3424B1DA3900E642A6 /* Donkey_Question.mp3 */,
 				701D4D3324B1DA3900E642A6 /* Goat_Question.mp3 */,
 				701D4D3024B1DA3900E642A6 /* Horse_Question.mp3 */,
@@ -929,13 +929,13 @@
 				70F9024424AF88B900A3AA12 /* WellDone.mp3 in Resources */,
 				7014C1DC249F73B700D0AB52 /* Catharanthus.mp3 in Resources */,
 				7014C1E0249F73B700D0AB52 /* Jasmine.mp3 in Resources */,
+				7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */,
 				701D4D5924B1DC6F00E642A6 /* Tiger_Question.mp3 in Resources */,
 				70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */,
 				701D4D5F24B1DC6F00E642A6 /* Kangaroo_Question.mp3 in Resources */,
 				70D8B15324B0D4FE00AF3D34 /* Pigeon_Question.mp3 in Resources */,
 				700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */,
 				70D8B15224B0D4FE00AF3D34 /* Penguin_Question.mp3 in Resources */,
-				701D4D3D24B1DA3A00E642A6 /* Camel_Question.mp3 in Resources */,
 				701D4D6024B1DC6F00E642A6 /* Deer_Question.mp3 in Resources */,
 				70F9022F24AF7E4A00A3AA12 /* Hibiscus_Question.mp3 in Resources */,
 				700D4183249E986000AA3D1C /* Zebra.mp3 in Resources */,

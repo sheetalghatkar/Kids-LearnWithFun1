@@ -85,10 +85,8 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         soundStatus = !soundStatus
         if soundStatus {
             btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
-//            player.volume = 0.0
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
-          //  player.volume = 1.0
         }
     }
     @IBAction func funcForwardBtnClick(_ sender: Any)

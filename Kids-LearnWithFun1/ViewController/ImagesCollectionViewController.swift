@@ -17,12 +17,16 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     @IBOutlet weak var btnForward: UIButton!
     @IBOutlet weak var btnBackward: UIButton!
     @IBOutlet weak var lblCard: UILabel!
+    @IBOutlet weak var viewCollectionContainer: UIView!
+    @IBOutlet weak var btnSound: UIButton!
+
     var player = AVAudioPlayer()
     var bannerView: GADBannerView!
 
     var imageArray : [UIImage] = []
     var imageNameArray : [String] = []
     var interstitial: GADInterstitial?
+    var soundStatus:Bool = false
 
     
     override func viewDidLoad() {
@@ -30,6 +34,10 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         btnForward.layer.cornerRadius = 25.0
         btnBackward.layer.cornerRadius = 25.0
         btnBackward.isHidden = true
+        
+        viewCollectionContainer.layer.borderWidth = 1.5
+        viewCollectionContainer.layer.cornerRadius = 10.0
+        viewCollectionContainer.layer.borderColor = UIColor.red.cgColor
         collectionViewCard.register(UINib(nibName: "PictureCollectionCell", bundle: nil), forCellWithReuseIdentifier: "PictureCollectionCell")
         
         let layout = UICollectionViewFlowLayout()
@@ -106,6 +114,15 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         }
     }
     // MARK: - User defined Functions
+    
+    @IBAction func funcSound_ON_OFF(_ sender: Any) {
+        soundStatus = !soundStatus
+        if soundStatus {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+        } else {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+        }
+    }
     
     @IBAction func funcGoToHome(_ sender: Any) {
         //interstitial = createAndLoadInterstitial()
@@ -190,7 +207,9 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         let url = URL(fileURLWithPath : path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            player.play()
+            if !btnSound.currentBackgroundImage!.isEqual(UIImage(named: "Sound-Off.png")) {
+                player.play()
+            }
         } catch {
             print ("There is an issue with this code!")
         }

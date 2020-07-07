@@ -321,7 +321,19 @@
                                     <action selector="funcGoToHome:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="fE9-tg-EwW"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oy1-3L-C6Q" userLabel="viewCollectionContainer" customClass="UIViewExtend" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAN-y2-CdW" userLabel="BtnSound">
+                                <rect key="frame" x="354" y="49" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2jY-pO-1VU"/>
+                                    <constraint firstAttribute="width" secondItem="vAN-y2-CdW" secondAttribute="height" multiplier="1:1" id="dZt-5T-HIB"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Sound-On"/>
+                                <connections>
+                                    <action selector="funcSound_ON_OFF:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="c0Z-lq-cOk"/>
+                                    <action selector="funcSound_ON_OFF:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="iVS-vC-1cG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oy1-3L-C6Q" userLabel="viewCollectionContainer">
                                 <rect key="frame" x="10" y="114" width="394" height="454"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FDn-3d-xbu">
@@ -419,8 +431,10 @@
                             <constraint firstItem="xuo-Vu-ZmM" firstAttribute="leading" secondItem="InH-GA-ivG" secondAttribute="leading" id="QqH-3x-g5o"/>
                             <constraint firstItem="STt-11-OcE" firstAttribute="top" secondItem="InH-GA-ivG" secondAttribute="top" id="RAX-N6-pc3"/>
                             <constraint firstItem="Oy1-3L-C6Q" firstAttribute="top" secondItem="STt-11-OcE" secondAttribute="bottom" constant="20" id="RWG-AD-kFO"/>
+                            <constraint firstItem="vAN-y2-CdW" firstAttribute="centerY" secondItem="STt-11-OcE" secondAttribute="centerY" id="SRc-ep-3IS"/>
                             <constraint firstItem="xuo-Vu-ZmM" firstAttribute="top" secondItem="jqW-V0-aWO" secondAttribute="top" constant="-10" id="Uxd-S6-UPc"/>
                             <constraint firstAttribute="bottom" secondItem="xuo-Vu-ZmM" secondAttribute="bottom" id="ZIF-Bl-meF"/>
+                            <constraint firstItem="InH-GA-ivG" firstAttribute="trailing" secondItem="vAN-y2-CdW" secondAttribute="trailing" constant="20" id="eYM-Wz-EV1"/>
                             <constraint firstItem="InH-GA-ivG" firstAttribute="trailing" secondItem="xuo-Vu-ZmM" secondAttribute="trailing" id="ffA-M2-gB5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="InH-GA-ivG"/>
@@ -429,8 +443,10 @@
                         <outlet property="btnBackward" destination="b3s-cv-tM9" id="2Hi-VL-Fmv"/>
                         <outlet property="btnForward" destination="wlH-pm-T5X" id="oEJ-ZT-SyQ"/>
                         <outlet property="btnHome" destination="STt-11-OcE" id="GTc-UG-2gP"/>
+                        <outlet property="btnSound" destination="vAN-y2-CdW" id="8RU-PR-v9S"/>
                         <outlet property="collectionViewCard" destination="FDn-3d-xbu" id="h8l-YR-Eog"/>
                         <outlet property="lblCard" destination="vcF-od-evF" id="6ye-Cb-ZwX"/>
+                        <outlet property="viewCollectionContainer" destination="Oy1-3L-C6Q" id="krB-r6-eYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MZ-eY-GAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

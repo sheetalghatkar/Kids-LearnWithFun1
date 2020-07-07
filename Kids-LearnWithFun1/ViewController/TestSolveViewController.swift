@@ -53,27 +53,28 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         let url = URL(fileURLWithPath : path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if !btnSound.currentBackgroundImage!.isEqual(UIImage(named: "Sound-Off.png")) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.player.play()
+                }
+            }
+        } catch {
+            print ("There is an issue with this code!")
+        }
+    }
+    
+    func playSoundForImageStatus(getSound : String ) {
+        let path = Bundle.main.path(forResource: getSound, ofType : "mp3")!
+        let url = URL(fileURLWithPath : path)
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            if !btnSound.currentBackgroundImage!.isEqual(UIImage(named: "Sound-Off.png")) {
                 self.player.play()
             }
         } catch {
             print ("There is an issue with this code!")
         }
     }
-    func playSoundForImageStatus(getSound : String ) {
-        let path = Bundle.main.path(forResource: getSound, ofType : "mp3")!
-        let url = URL(fileURLWithPath : path)
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            self.player.play()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-
-            }
-        } catch {
-            print ("There is an issue with this code!")
-        }
-    }
-
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
         //interstitial = createAndLoadInterstitial()
@@ -84,8 +85,10 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         soundStatus = !soundStatus
         if soundStatus {
             btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+//            player.volume = 0.0
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+          //  player.volume = 1.0
         }
     }
     @IBAction func funcForwardBtnClick(_ sender: Any)

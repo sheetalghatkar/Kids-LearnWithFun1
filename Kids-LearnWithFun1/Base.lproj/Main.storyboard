@@ -449,13 +449,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWo-J7-g90" userLabel="BtnHome">
-                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <rect key="frame" x="20" y="54" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vWo-J7-g90" secondAttribute="height" multiplier="1:1" id="1m0-Ts-Wz0"/>
-                                    <constraint firstAttribute="height" constant="50" id="al0-nE-Dfc"/>
+                                    <constraint firstAttribute="height" constant="40" id="al0-nE-Dfc"/>
                                 </constraints>
-                                <state key="normal" image="Home_Back"/>
+                                <state key="normal" backgroundImage="BackButton"/>
                                 <connections>
                                     <action selector="funcGoToHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="65i-uK-jbJ"/>
                                     <action selector="funcGoToHome:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="MC8-0c-Irt"/>
@@ -464,7 +464,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Dy7-R1-aVo">
-                                <rect key="frame" x="80" y="69" width="264" height="0.0"/>
+                                <rect key="frame" x="70" y="74" width="274" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -558,7 +558,6 @@
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="top" secondItem="kra-sA-SsD" secondAttribute="top" id="Iy0-zu-XeQ"/>
                             <constraint firstItem="5GS-wC-DeR" firstAttribute="top" secondItem="vWo-J7-g90" secondAttribute="bottom" constant="20" id="JjY-Pa-CnY"/>
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="Sd4-1N-CEp"/>
-                            <constraint firstItem="vWo-J7-g90" firstAttribute="top" secondItem="t4u-4d-A2T" secondAttribute="top" id="Vfo-Xa-fjY"/>
                             <constraint firstAttribute="bottom" secondItem="SJF-BJ-cLf" secondAttribute="bottom" id="YBB-SS-xMy"/>
                             <constraint firstItem="tS7-5V-hFM" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" constant="20" id="bCs-ec-k3y"/>
                             <constraint firstItem="vVn-jN-vjJ" firstAttribute="top" secondItem="t4u-4d-A2T" secondAttribute="top" constant="10" id="csc-Ou-SQj"/>
@@ -568,6 +567,7 @@
                             <constraint firstItem="uBz-sN-VoN" firstAttribute="top" secondItem="tS7-5V-hFM" secondAttribute="top" id="lE6-kJ-LBb"/>
                             <constraint firstItem="uBz-sN-VoN" firstAttribute="width" secondItem="uBz-sN-VoN" secondAttribute="height" multiplier="1:1" id="uD8-cd-5iW"/>
                             <constraint firstItem="tS7-5V-hFM" firstAttribute="top" secondItem="5GS-wC-DeR" secondAttribute="bottom" constant="20" id="uOF-11-jWR"/>
+                            <constraint firstItem="vWo-J7-g90" firstAttribute="top" secondItem="vVn-jN-vjJ" secondAttribute="top" id="wel-Qs-m1P"/>
                             <constraint firstItem="vVn-jN-vjJ" firstAttribute="leading" secondItem="Dy7-R1-aVo" secondAttribute="trailing" constant="10" id="z1u-4w-DGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t4u-4d-A2T"/>
@@ -895,6 +895,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackButton" width="32" height="32"/>
         <image name="Backward" width="256" height="256"/>
         <image name="BirdIcon" width="187" height="169"/>
         <image name="Cartoon-Bird" width="225" height="217"/>

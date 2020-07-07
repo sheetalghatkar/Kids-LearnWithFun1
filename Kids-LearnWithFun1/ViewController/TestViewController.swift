@@ -149,7 +149,7 @@ class TestViewController: UIViewController {
             let solveTestArray = [
                   [
                      CommanArray.domesticAnimalNameArray[2]+"-"+"0",
-                     CommanArray.domesticAnimalNameArray[10]+"-"+"0",
+                     CommanArray.domesticAnimalNameArray[9]+"-"+"0",
                      CommanArray.domesticAnimalNameArray[0]+"-"+"1",
                      CommanArray.domesticAnimalNameArray[7]+"-"+"0"
                   ],
@@ -161,7 +161,7 @@ class TestViewController: UIViewController {
                   ],
                   [
                       CommanArray.domesticAnimalNameArray[2]+"-"+"1",
-                      CommanArray.domesticAnimalNameArray[0]+"-"+"0",
+                      CommanArray.domesticAnimalNameArray[8]+"-"+"0",
                       CommanArray.domesticAnimalNameArray[7]+"-"+"0",
                       CommanArray.domesticAnimalNameArray[10]+"-"+"0"
                   ],
@@ -204,7 +204,7 @@ class TestViewController: UIViewController {
                   [
                       CommanArray.domesticAnimalNameArray[0]+"-"+"0",
                       CommanArray.domesticAnimalNameArray[9]+"-"+"1",
-                      CommanArray.domesticAnimalNameArray[7]+"-"+"0",
+                      CommanArray.domesticAnimalNameArray[2]+"-"+"0",
                       CommanArray.domesticAnimalNameArray[3]+"-"+"0"
                   ],
                   [
@@ -223,17 +223,17 @@ class TestViewController: UIViewController {
                    CommanArray.birdNameArray[2]+"-"+"0",
                    CommanArray.birdNameArray[10]+"-"+"0",
                    CommanArray.birdNameArray[0]+"-"+"1",
-                   CommanArray.birdNameArray[7]+"-"+"0"
+                   CommanArray.birdNameArray[11]+"-"+"0"
                 ],
                 [
-                   CommanArray.birdNameArray[3]+"-"+"0",
+                   CommanArray.birdNameArray[8]+"-"+"0",
                    CommanArray.birdNameArray[1]+"-"+"1",
                    CommanArray.birdNameArray[5]+"-"+"0",
                    CommanArray.birdNameArray[9]+"-"+"0"
                 ],
                 [
                    CommanArray.birdNameArray[2]+"-"+"1",
-                   CommanArray.birdNameArray[0]+"-"+"0",
+                   CommanArray.birdNameArray[12]+"-"+"0",
                    CommanArray.birdNameArray[7]+"-"+"0",
                    CommanArray.birdNameArray[10]+"-"+"0"
                 ],
@@ -247,7 +247,7 @@ class TestViewController: UIViewController {
                    CommanArray.birdNameArray[8]+"-"+"0",
                    CommanArray.birdNameArray[4]+"-"+"1",
                    CommanArray.birdNameArray[7]+"-"+"0",
-                   CommanArray.birdNameArray[2]+"-"+"0"
+                   CommanArray.birdNameArray[11]+"-"+"0"
                 ],
                 [
                    CommanArray.birdNameArray[3]+"-"+"0",
@@ -259,7 +259,7 @@ class TestViewController: UIViewController {
                    CommanArray.birdNameArray[0]+"-"+"0",
                    CommanArray.birdNameArray[6]+"-"+"1",
                    CommanArray.birdNameArray[1]+"-"+"0",
-                   CommanArray.birdNameArray[10]+"-"+"0"
+                   CommanArray.birdNameArray[2]+"-"+"0"
                 ],
                 [
                    CommanArray.birdNameArray[11]+"-"+"0",
@@ -276,13 +276,13 @@ class TestViewController: UIViewController {
                 [
                    CommanArray.birdNameArray[0]+"-"+"0",
                    CommanArray.birdNameArray[9]+"-"+"1",
-                   CommanArray.birdNameArray[7]+"-"+"0",
+                   CommanArray.birdNameArray[4]+"-"+"0",
                    CommanArray.birdNameArray[12]+"-"+"0"
                 ],
                 [
                    CommanArray.birdNameArray[3]+"-"+"0",
                    CommanArray.birdNameArray[10]+"-"+"1",
-                   CommanArray.birdNameArray[11]+"-"+"0",
+                   CommanArray.birdNameArray[2]+"-"+"0",
                    CommanArray.birdNameArray[6]+"-"+"0"
                 ],
                 [
@@ -309,7 +309,7 @@ class TestViewController: UIViewController {
                     CommanArray.flowerNameArray[13]+"-"+"0"
                 ],
                [
-                       CommanArray.flowerNameArray[4]+"-"+"0",
+                       CommanArray.flowerNameArray[11]+"-"+"0",
                        CommanArray.flowerNameArray[1]+"-"+"1",
                        CommanArray.flowerNameArray[12]+"-"+"0",
                        CommanArray.flowerNameArray[9]+"-"+"0"
@@ -322,7 +322,7 @@ class TestViewController: UIViewController {
                    ],
                  [
                        CommanArray.flowerNameArray[13]+"-"+"0",
-                       CommanArray.flowerNameArray[11]+"-"+"0",
+                       CommanArray.flowerNameArray[6]+"-"+"0",
                        CommanArray.flowerNameArray[5]+"-"+"0",
                        CommanArray.flowerNameArray[3]+"-"+"1"
                    ],
@@ -352,7 +352,7 @@ class TestViewController: UIViewController {
                    ],
                 [
                        CommanArray.flowerNameArray[3]+"-"+"0",
-                       CommanArray.flowerNameArray[1]+"-"+"0",
+                       CommanArray.flowerNameArray[6]+"-"+"0",
                        CommanArray.flowerNameArray[5]+"-"+"0",
                        CommanArray.flowerNameArray[8]+"-"+"1"
                    ],
@@ -365,12 +365,12 @@ class TestViewController: UIViewController {
                  [
                        CommanArray.flowerNameArray[6]+"-"+"0",
                        CommanArray.flowerNameArray[10]+"-"+"1",
-                       CommanArray.flowerNameArray[11]+"-"+"0",
-                       CommanArray.flowerNameArray[6]+"-"+"0"
+                       CommanArray.flowerNameArray[4]+"-"+"0",
+                       CommanArray.flowerNameArray[1]+"-"+"0"
                    ],
                  [
                        CommanArray.flowerNameArray[11]+"-"+"1",
-                       CommanArray.flowerNameArray[4]+"-"+"0",
+                       CommanArray.flowerNameArray[5]+"-"+"0",
                        CommanArray.flowerNameArray[0]+"-"+"0",
                        CommanArray.flowerNameArray[8]+"-"+"0"
                    ],
@@ -383,7 +383,7 @@ class TestViewController: UIViewController {
                  [
                        CommanArray.flowerNameArray[3]+"-"+"0",
                        CommanArray.flowerNameArray[13]+"-"+"1",
-                       CommanArray.flowerNameArray[5]+"-"+"0",
+                       CommanArray.flowerNameArray[4]+"-"+"0",
                        CommanArray.flowerNameArray[9]+"-"+"0"
                    ]]
             

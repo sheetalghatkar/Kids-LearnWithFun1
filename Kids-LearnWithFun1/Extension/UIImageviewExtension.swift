@@ -77,7 +77,7 @@ import UIKit
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.async {
             self.alpha = 1.0
-            UIImageView.animate(withDuration: 0.4, delay: 0.0, options: .curveLinear, animations: {
+            UIImageView.animate(withDuration: 0.2, delay: 0.0, options: .curveLinear, animations: {
                 self.alpha = 0.5
             }, completion: nil)
         }
@@ -86,7 +86,7 @@ import UIKit
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.async {
             self.alpha = 0.5
-            UIImageView.animate(withDuration: 0.4, delay: 0.0, options: .curveLinear, animations: {
+            UIImageView.animate(withDuration: 0.2, delay: 0.0, options: .curveLinear, animations: {
                 self.alpha = 1.0
             }, completion: nil)
         }

@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,PictureCollectionCellProtocol {
     
     @IBOutlet weak var btnHome: UIButton!
     @IBOutlet weak var collectionViewCard: UICollectionView!
@@ -26,7 +26,8 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     var imageArray : [UIImage] = []
     var imageNameArray : [String] = []
     var interstitial: GADInterstitial?
-    var soundStatus:Bool = false
+    //var soundStatus:Bool = false
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     
     override func viewDidLoad() {
@@ -34,6 +35,12 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         btnForward.layer.cornerRadius = 25.0
         btnBackward.layer.cornerRadius = 25.0
         btnBackward.isHidden = true
+        
+        if appDelegate.IS_Sound_ON {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+        } else {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+        }
         
         viewCollectionContainer.layer.borderWidth = 1.5
         viewCollectionContainer.layer.cornerRadius = 10.0
@@ -58,7 +65,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+       // bannerView.load(GADRequest())
     }
     func addBannerViewToView(_ bannerView: GADBannerView) {
       bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -91,11 +98,12 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureCollectionCell", for: indexPath) as? PictureCollectionCell else {
             // we failed to get a PersonCell – bail out!
             fatalError("Unable to dequeue PersonCell.")
-                
         }
-//        cell.backgroundColor = UIColor.red
+        cell.tag = indexPath.row
+        cell.delegatePictureCollection = self
         cell.imgViewCard.image = imageArray[indexPath.row]
         cell.imgViewCard.contentMode = .scaleToFill
+        
         // if we're still here it means we got a PersonCell, so we can return it
         return cell
     }
@@ -115,18 +123,32 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     }
     // MARK: - User defined Functions
     
-    @IBAction func funcSound_ON_OFF(_ sender: Any) {
-        soundStatus = !soundStatus
-        if soundStatus {
-            btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
-        } else {
-            btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+    func playSoundOnImageClick(getSound : Int ) {
+        let path = Bundle.main.path(forResource: imageNameArray[getSound], ofType : "mp3")!
+        let url = URL(fileURLWithPath : path)
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            if !btnSound.currentBackgroundImage!.isEqual(UIImage(named: "Sound-Off.png")) {
+                self.player.play()
+            }
+        } catch {
+            print ("There is an issue with this code!")
         }
     }
     
+    @IBAction func funcSound_ON_OFF(_ sender: Any) {
+        if appDelegate.IS_Sound_ON {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+            player.stop()
+        } else {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+        }
+        appDelegate.IS_Sound_ON = !appDelegate.IS_Sound_ON
+    }
+    
     @IBAction func funcGoToHome(_ sender: Any) {
-        //interstitial = createAndLoadInterstitial()
-        navigationController?.popViewController(animated: true)
+        interstitial = createAndLoadInterstitial()
+       // navigationController?.popViewController(animated: true)
     }
     
     @IBAction func funcForwardBtnClick(_ sender: Any)
@@ -277,6 +299,4 @@ extension ImagesCollectionViewController: GADInterstitialDelegate {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         print("dismiss interstitial")
     }
-    
-
 }

@@ -473,9 +473,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="BackButton"/>
                                 <connections>
-                                    <action selector="funcGoToHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="65i-uK-jbJ"/>
                                     <action selector="funcGoToHome:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="MC8-0c-Irt"/>
-                                    <action selector="funcGoToTestHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="5TR-yL-P31"/>
                                     <action selector="funcGoToTestHome:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="gZb-Xv-Ncz"/>
                                 </connections>
                             </button>
@@ -620,9 +618,8 @@
                                 </constraints>
                                 <state key="normal" image="Home_Back"/>
                                 <connections>
-                                    <action selector="funcGoToHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="QQF-ss-fEE"/>
                                     <action selector="funcGoToHome:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="oDA-kM-ODH"/>
-                                    <action selector="funcGoToTestHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="dOW-26-Iau"/>
+                                    <action selector="funcGoToTestHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="8bU-x1-jxZ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-3g-7wf" userLabel="containerView">

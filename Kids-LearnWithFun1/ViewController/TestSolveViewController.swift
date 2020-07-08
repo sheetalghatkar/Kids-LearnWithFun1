@@ -20,17 +20,17 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     var solveTestArray : [String : [UIImage:Int]] = [:]
     var showOptionsArray : [[String]] = [[]]
     var getImageNameArray : [String] = []
-
- //   var imageArray : [UIImage] = []
-   // var imageNameArray : [String] = []
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        for (key, value) in solveTestArray {
-//            print("\(key) -> \(value)")
-//        }
         btnBackward.isHidden = true
+        if appDelegate.IS_Sound_ON {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+        } else {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+        }
         collectionViewCard.register(UINib(nibName: "TestSolveCollectionCell", bundle: nil), forCellWithReuseIdentifier: "TestSolveCollectionCell")
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //depending upon direction of collection view
@@ -82,13 +82,15 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     @IBAction func funcSound_ON_OFF(_ sender: Any) {
-        soundStatus = !soundStatus
-        if soundStatus {
+        if appDelegate.IS_Sound_ON {
             btnSound.setBackgroundImage(UIImage(named: "Sound-Off.png"), for: .normal)
+            player.stop()
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
         }
+        appDelegate.IS_Sound_ON = !appDelegate.IS_Sound_ON
     }
+    
     @IBAction func funcForwardBtnClick(_ sender: Any)
     {
         if !btnForward.isHidden {

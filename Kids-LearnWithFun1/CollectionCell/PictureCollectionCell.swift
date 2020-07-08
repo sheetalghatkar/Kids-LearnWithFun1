@@ -8,14 +8,24 @@
 
 import UIKit
 
+protocol PictureCollectionCellProtocol : class {
+    func playSoundOnImageClick(getSound : Int )
+}
+
 class PictureCollectionCell: UICollectionViewCell {    
-//    @IBOutlet weak var lblCard: UILabel!
     @IBOutlet weak var imgViewCard: UIImageView!
+    weak var delegatePictureCollection : PictureCollectionCellProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         imgViewCard.contentMode = .scaleAspectFill
+        let tapGestureImgViewCard = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imgViewCard.addGestureRecognizer(tapGestureImgViewCard)
     }
-
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        delegatePictureCollection?.playSoundOnImageClick(getSound: tag)
+    }
 }

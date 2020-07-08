@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class TestViewController: UIViewController {
     @IBOutlet weak var btnHome: UIButton!
@@ -14,6 +15,8 @@ class TestViewController: UIViewController {
     @IBOutlet weak var imgVwTest2: UIImageView!
     @IBOutlet weak var imgVwTest3: UIImageView!
     @IBOutlet weak var imgVwTest4: UIImageView!
+    var interstitial: GADInterstitial?
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +39,6 @@ class TestViewController: UIViewController {
         imgVwTest4.tag = 4
 
     }
-    
-    @IBAction func funcGoToTestHome(_ sender: Any) {
-        //interstitial = createAndLoadInterstitial()
-        navigationController?.popViewController(animated: true)
-    }
-    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let setTestSolveVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestSolveViewController") as! TestSolveViewController
@@ -393,8 +390,42 @@ class TestViewController: UIViewController {
         self.navigationController?.pushViewController(setTestSolveVC, animated: true)
     }
     // MARK: - User defined Functions
-    @IBAction func funcGoToHome(_ sender: Any) {
-        //interstitial = createAndLoadInterstitial()
+        @IBAction func funcGoToTestHome(_ sender: Any) {
+            interstitial = createAndLoadInterstitial()
+    //        navigationController?.popViewController(animated: true)
+        }
+
+    private func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+
+        guard let interstitial = interstitial else {
+            return nil
+        }
+
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
+        interstitial.load(request)
+        interstitial.delegate = self
+
+        return interstitial
+    }
+
+}
+extension TestViewController: GADInterstitialDelegate {
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        ad.present(fromRootViewController: self)
         navigationController?.popViewController(animated: true)
     }
+
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("Fail to receive interstitial")
+        navigationController?.popViewController(animated: true)
+    }
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        print("dismiss interstitial")
+    }
+    
+
 }

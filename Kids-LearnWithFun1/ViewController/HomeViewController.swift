@@ -27,14 +27,19 @@ class HomeViewController: UIViewController {
 
     var player = AVAudioPlayer()
     var bannerView: GADBannerView!
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     //------------------------------------------------------------------------
 
     override func viewDidAppear(_ animated: Bool) {
-      //  playBackgroundMusic()
+        if appDelegate.IS_Sound_ON {
+            playBackgroundMusic()
+        } else {
+            player.stop()
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
-       // player.stop()
+        player.stop()
     }
     
     override func viewDidLoad() {

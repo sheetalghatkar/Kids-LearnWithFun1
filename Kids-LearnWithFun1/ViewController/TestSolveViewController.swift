@@ -77,7 +77,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
-        //interstitial = createAndLoadInterstitial()
+//        interstitial = createAndLoadInterstitial()
         navigationController?.popViewController(animated: true)
     }
     

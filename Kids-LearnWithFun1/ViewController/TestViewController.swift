@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class TestViewController: UIViewController {
+class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var btnHome: UIButton!
     @IBOutlet weak var imgVwTest1: UIImageView!
     @IBOutlet weak var imgVwTest2: UIImageView!
@@ -299,6 +299,9 @@ class TestViewController: UIViewController {
             setTestSolveVC.getImageNameArray = CommanArray.birdNameArray
         }
         else if tapGestureRecognizer.view?.tag == 4 {
+            showPaymentScreen()
+        }
+        /*{
             let solveTestArray = [[
                     CommanArray.flowerNameArray[2]+"-"+"0",
                     CommanArray.flowerNameArray[10]+"-"+"0",
@@ -386,14 +389,36 @@ class TestViewController: UIViewController {
             
             setTestSolveVC.showOptionsArray = solveTestArray
             setTestSolveVC.getImageNameArray = CommanArray.flowerNameArray
-        }
-        self.navigationController?.pushViewController(setTestSolveVC, animated: true)
+        }*/
+       // self.navigationController?.pushViewController(setTestSolveVC, animated: true)
     }
-    // MARK: - User defined Functions
-        @IBAction func funcGoToTestHome(_ sender: Any) {
-            interstitial = createAndLoadInterstitial()
-    //        navigationController?.popViewController(animated: true)
-        }
+   // MARK: - User defined Functions
+    
+    
+    //Start Payment flow
+    //Delegate method implementation
+    func showPaymentCostScreen() {
+        let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
+        self.navigationController?.pushViewController(PaymentCostVC, animated: true)
+    }
+
+    func showPaymentScreen(){
+        let paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC.view.frame = self.view.bounds
+        paymentDetailVC.delegatePayementForParent = self
+        self.view.addSubview(paymentDetailVC.view)
+        self.addChild(paymentDetailVC)
+        paymentDetailVC.didMove(toParent: self)
+
+//        self.navigationController?.pushViewController(paymentDetailVC, animated: true)
+//        paymentDetailVC.modalPresentationStyle = .overCurrentContext
+//        present(paymentDetailVC, animated: false, completion: nil)
+    }
+
+    @IBAction func funcGoToTestHome(_ sender: Any) {
+        interstitial = createAndLoadInterstitial()
+//        navigationController?.popViewController(animated: true)
+    }
 
     private func createAndLoadInterstitial() -> GADInterstitial? {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")

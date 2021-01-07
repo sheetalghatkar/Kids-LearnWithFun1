@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */; };
+		4F0D923725A6464E00CDEFC3 /* PaymentCostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */; };
+		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
+		4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */; };
 		7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */; };
 		7000C6FA24B492990024A7F7 /* Kangaroo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */; };
 		700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416E249E985D00AA3D1C /* Rhino.mp3 */; };
@@ -181,6 +185,10 @@
 		2B6D826C0F5FEBC5E32F5CFC /* Pods-Kids-LearnWithFunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFunTests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFunTests/Pods-Kids-LearnWithFunTests.release.xcconfig"; sourceTree = "<group>"; };
 		330855B7235C70D81BA9C8BA /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCostController.swift; sourceTree = "<group>"; };
+		4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCostController.xib; sourceTree = "<group>"; };
+		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
+		4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailViewController.xib; sourceTree = "<group>"; };
 		506C3AC2C26BDD790042AD8E /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
 		7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kangaroo_Question.mp3; sourceTree = "<group>"; };
@@ -381,6 +389,17 @@
 				43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FF93A0025A4393900F31353 /* PaymentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */,
+				4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */,
+				4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */,
+				4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */,
+			);
+			path = PaymentDetail;
 			sourceTree = "<group>";
 		};
 		700D416C249E980A00AA3D1C /* SoundFile */ = {
@@ -614,6 +633,7 @@
 		70FF090424962D9B002861AE /* Kids-LearnWithFun1 */ = {
 			isa = PBXGroup;
 			children = (
+				4FF93A0025A4393900F31353 /* PaymentDetail */,
 				70270FD924A34F0300EB8DAB /* ViewController */,
 				700D416C249E980A00AA3D1C /* SoundFile */,
 				70631FEE2497ED5100DAE930 /* CollectionCell */,
@@ -872,6 +892,7 @@
 				70F9022C24AF7E4A00A3AA12 /* Orchid_Question.mp3 in Resources */,
 				70D8B14A24B0D4FE00AF3D34 /* Owl_Question.mp3 in Resources */,
 				70F9022D24AF7E4A00A3AA12 /* Jasmine_Question.mp3 in Resources */,
+				4F0D923725A6464E00CDEFC3 /* PaymentCostController.xib in Resources */,
 				700D4185249E986000AA3D1C /* Hippopotamus.mp3 in Resources */,
 				70D8B14E24B0D4FE00AF3D34 /* Sparrow_Question.mp3 in Resources */,
 				700D418F249E9B2800AA3D1C /* Racoon.mp3 in Resources */,
@@ -895,6 +916,7 @@
 				701D4D6524B1DC6F00E642A6 /* Zebra_Question.mp3 in Resources */,
 				7014C1F8249F73C600D0AB52 /* Dog.mp3 in Resources */,
 				7014C1E5249F73B700D0AB52 /* Dahlia.mp3 in Resources */,
+				4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */,
 				70F9023024AF7E4A00A3AA12 /* Catharanthus_Question.mp3 in Resources */,
 				701D4D4324B1DA3A00E642A6 /* Cat_Question.mp3 in Resources */,
 				7014C1F5249F73C600D0AB52 /* Cow.mp3 in Resources */,
@@ -1064,6 +1086,7 @@
 			files = (
 				707ECA22249CB3E10024D06C /* UIViewExtension.swift in Sources */,
 				70FF093724965879002861AE /* GIFSwift.swift in Sources */,
+				4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */,
 				70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */,
 				70FF090A24962D9B002861AE /* HomeViewController.swift in Sources */,
 				70FF090624962D9B002861AE /* AppDelegate.swift in Sources */,
@@ -1072,6 +1095,7 @@
 				70E468A524A8D0E2008C8FFB /* TestSolveViewController.swift in Sources */,
 				709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */,
 				70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */,
+				4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */,
 				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,
 				701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */,
 				70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */,

@@ -213,15 +213,18 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             self.lblCard.text = self.imageNameArray[closestCellIndex]
             if closestCellIndex == self.imageArray.count - 1 {
                 self.btnForward.isHidden = true
+                self.btnBackward.isHidden = false
             }
             else if closestCellIndex == 0 {
                 self.btnBackward.isHidden = true
+                self.btnForward.isHidden = false
             } else {
                 self.btnForward.isHidden = false
                 self.btnBackward.isHidden = false
             }
         }
         playSound(getSound : imageNameArray[closestCellIndex])
+        print("###################",closestCellIndex)
     }
     
     func playSound(getSound : String) {

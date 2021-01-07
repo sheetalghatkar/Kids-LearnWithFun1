@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31W-D5-eFP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31W-D5-eFP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -78,7 +79,7 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemPinkColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -104,7 +105,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemPinkColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -121,7 +122,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemPinkColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="2"/>
@@ -185,7 +186,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemPinkColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -262,6 +263,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tbI-JC-8m4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3li-sY-dKW"/>
@@ -277,7 +279,6 @@
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="v6p-CF-nIr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbI-JC-8m4" secondAttribute="trailing" id="zHI-1I-cnZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="CR3-kV-sGc"/>
                     <connections>
@@ -366,6 +367,18 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="funcBackwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="g9b-SR-WEm"/>
@@ -383,6 +396,18 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="funcForwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="rOF-Uh-ub4"/>
@@ -391,7 +416,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-od-evF">
                                         <rect key="frame" x="75" y="419" width="244" height="0.0"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
-                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -415,7 +440,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemRedColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1.5"/>
@@ -423,7 +448,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="InH-GA-ivG"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="InH-GA-ivG" firstAttribute="trailing" secondItem="Oy1-3L-C6Q" secondAttribute="trailing" constant="10" id="2yJ-Xi-nS5"/>
                             <constraint firstItem="STt-11-OcE" firstAttribute="leading" secondItem="InH-GA-ivG" secondAttribute="leading" constant="20" id="FRT-ky-0kl"/>
@@ -437,7 +463,6 @@
                             <constraint firstItem="InH-GA-ivG" firstAttribute="trailing" secondItem="vAN-y2-CdW" secondAttribute="trailing" constant="20" id="eYM-Wz-EV1"/>
                             <constraint firstItem="InH-GA-ivG" firstAttribute="trailing" secondItem="xuo-Vu-ZmM" secondAttribute="trailing" id="ffA-M2-gB5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="InH-GA-ivG"/>
                     </view>
                     <connections>
                         <outlet property="btnBackward" destination="b3s-cv-tM9" id="2Hi-VL-Fmv"/>
@@ -562,7 +587,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="t4u-4d-A2T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="5GS-wC-DeR" secondAttribute="trailing" id="1Ig-Um-yrj"/>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="SJF-BJ-cLf" secondAttribute="trailing" id="45l-5a-ufe"/>
@@ -584,7 +610,6 @@
                             <constraint firstItem="vWo-J7-g90" firstAttribute="top" secondItem="vVn-jN-vjJ" secondAttribute="top" id="wel-Qs-m1P"/>
                             <constraint firstItem="vVn-jN-vjJ" firstAttribute="leading" secondItem="Dy7-R1-aVo" secondAttribute="trailing" constant="10" id="z1u-4w-DGJ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="t4u-4d-A2T"/>
                     </view>
                     <connections>
                         <outlet property="btnBackward" destination="tS7-5V-hFM" id="pqT-kI-xfJ"/>
@@ -761,7 +786,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -774,7 +799,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -787,7 +812,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -803,7 +828,7 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -859,7 +884,8 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ic0-qx-RYR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ic0-qx-RYR" firstAttribute="trailing" secondItem="deA-mU-UeJ" secondAttribute="trailing" id="3J7-iN-aGr"/>
                             <constraint firstItem="deA-mU-UeJ" firstAttribute="top" secondItem="XzN-Ds-EMF" secondAttribute="top" id="DTa-T0-8gz"/>
@@ -875,7 +901,6 @@
                             <constraint firstItem="ic0-qx-RYR" firstAttribute="trailing" secondItem="7nx-4Q-AWa" secondAttribute="trailing" constant="10" id="lQw-xU-4uI"/>
                             <constraint firstItem="deA-mU-UeJ" firstAttribute="leading" secondItem="ic0-qx-RYR" secondAttribute="leading" id="vZd-HK-vgz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ic0-qx-RYR"/>
                     </view>
                     <connections>
                         <outlet property="btnHome" destination="XgC-Ur-G0M" id="6xj-jc-gzj"/>
@@ -907,6 +932,86 @@
             <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Uz-4o-Evg">
+            <size key="intrinsicContentSize" width="98" height="43.5"/>
+        </designable>
+        <designable name="8jq-2D-84O">
+            <size key="intrinsicContentSize" width="57.5" height="43.5"/>
+        </designable>
+        <designable name="An0-re-XTy">
+            <size key="intrinsicContentSize" width="72" height="43.5"/>
+        </designable>
+        <designable name="E2H-lW-8J3">
+            <size key="intrinsicContentSize" width="232" height="269"/>
+        </designable>
+        <designable name="E8O-IM-5ND">
+            <size key="intrinsicContentSize" width="184" height="43.5"/>
+        </designable>
+        <designable name="GKu-8t-8yf">
+            <size key="intrinsicContentSize" width="107.5" height="43.5"/>
+        </designable>
+        <designable name="GN6-Xa-xpL">
+            <size key="intrinsicContentSize" width="75" height="75"/>
+        </designable>
+        <designable name="Hd0-Vu-A4f">
+            <size key="intrinsicContentSize" width="300" height="285.5"/>
+        </designable>
+        <designable name="KMr-CA-DSf">
+            <size key="intrinsicContentSize" width="126" height="43.5"/>
+        </designable>
+        <designable name="Y7v-yi-LeU">
+            <size key="intrinsicContentSize" width="239.5" height="260.5"/>
+        </designable>
+        <designable name="aEn-Uq-No3">
+            <size key="intrinsicContentSize" width="241.5" height="300"/>
+        </designable>
+        <designable name="aWX-21-wnP">
+            <size key="intrinsicContentSize" width="225" height="217"/>
+        </designable>
+        <designable name="b3s-cv-tM9">
+            <size key="intrinsicContentSize" width="256" height="256"/>
+        </designable>
+        <designable name="cJK-ds-x0V">
+            <size key="intrinsicContentSize" width="187" height="169"/>
+        </designable>
+        <designable name="gNh-Yt-CGX">
+            <size key="intrinsicContentSize" width="220.5" height="283"/>
+        </designable>
+        <designable name="gj8-yH-CX6">
+            <size key="intrinsicContentSize" width="112" height="43.5"/>
+        </designable>
+        <designable name="gjN-n9-wRV">
+            <size key="intrinsicContentSize" width="290" height="300"/>
+        </designable>
+        <designable name="hhw-oN-r24">
+            <size key="intrinsicContentSize" width="118" height="43.5"/>
+        </designable>
+        <designable name="pdb-61-ofa">
+            <size key="intrinsicContentSize" width="185.5" height="43.5"/>
+        </designable>
+        <designable name="qZo-4f-SIQ">
+            <size key="intrinsicContentSize" width="75" height="75"/>
+        </designable>
+        <designable name="reh-wu-V8d">
+            <size key="intrinsicContentSize" width="133.5" height="132"/>
+        </designable>
+        <designable name="sOs-RQ-CeD">
+            <size key="intrinsicContentSize" width="75" height="75"/>
+        </designable>
+        <designable name="tS7-5V-hFM">
+            <size key="intrinsicContentSize" width="256" height="256"/>
+        </designable>
+        <designable name="uBz-sN-VoN">
+            <size key="intrinsicContentSize" width="256" height="256"/>
+        </designable>
+        <designable name="wlH-pm-T5X">
+            <size key="intrinsicContentSize" width="256" height="256"/>
+        </designable>
+        <designable name="yfi-Wi-vFg">
+            <size key="intrinsicContentSize" width="75" height="75"/>
+        </designable>
+    </designables>
     <resources>
         <image name="BackButton" width="32" height="32"/>
         <image name="Backward" width="256" height="256"/>
@@ -925,5 +1030,14 @@
         <image name="Sound-On" width="50" height="50"/>
         <image name="Test" width="232" height="269"/>
         <image name="WildAnimalIcon" width="290" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

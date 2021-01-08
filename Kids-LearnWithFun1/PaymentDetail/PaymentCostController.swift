@@ -57,7 +57,7 @@ class PaymentCostController: UIViewController {
     }
     
     @IBAction func funcHomeBtnClick(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func funcOneTimeBtnClick(_ sender: Any) {
         if btnCheckBuyOneTime.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {

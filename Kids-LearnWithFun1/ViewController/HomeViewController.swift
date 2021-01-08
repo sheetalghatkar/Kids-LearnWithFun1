@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, PayementForParentProtocol {
     @IBOutlet weak var bgScreen: UIImageView!
     @IBOutlet weak var imgVwWildAnimal: UIImageView!
     @IBOutlet weak var imgVwPetAnimal: UIImageView!
@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
     var bannerView: GADBannerView!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
+    var paymentDetailVC : PaymentDetailViewController?
 
     //------------------------------------------------------------------------
 
@@ -182,7 +183,24 @@ class HomeViewController: UIViewController {
             player.stop()
         }
     }
+    //Start Payment flow
+    
     @IBAction func funcNoAds(_ sender: Any) {
+        showPaymentScreen()
+    }
+    
+    //Delegate method implementation
+    func showPaymentCostScreen() {
+        paymentDetailVC?.view.removeFromSuperview()
+        let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
+        self.navigationController?.pushViewController(PaymentCostVC, animated: true)
+    }
+
+    func showPaymentScreen(){
+        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC?.view.frame = self.view.bounds
+        paymentDetailVC?.delegatePayementForParent = self
+        self.view.addSubview(paymentDetailVC?.view ?? UIView())
     }
 }
 

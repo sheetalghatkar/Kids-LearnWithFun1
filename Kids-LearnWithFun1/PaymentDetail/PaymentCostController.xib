@@ -43,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-4A-3Jh" userLabel="lblDetail">
-                    <rect key="frame" x="38.5" y="130.5" width="337" height="0.0"/>
+                    <rect key="frame" x="38.5" y="116.5" width="337" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="337" id="Bkw-3u-5LX"/>
                     </constraints>
@@ -63,7 +63,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1D-27-SZW">
-                    <rect key="frame" x="42" y="140.5" width="330" height="450"/>
+                    <rect key="frame" x="42" y="126.5" width="330" height="450"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfF-f9-DdI" userLabel="btnOneTime" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
                             <rect key="frame" x="16.5" y="10" width="297" height="60"/>
@@ -362,10 +362,10 @@
                 <constraint firstAttribute="bottom" secondItem="Ls3-sf-2xR" secondAttribute="bottom" id="VDc-zb-Ap6"/>
                 <constraint firstItem="F1D-27-SZW" firstAttribute="top" secondItem="hzq-4A-3Jh" secondAttribute="bottom" constant="10" id="dY0-25-hkH"/>
                 <constraint firstItem="Ls3-sf-2xR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gB0-lz-FMu"/>
-                <constraint firstItem="hzq-4A-3Jh" firstAttribute="top" secondItem="2hb-Ww-MI3" secondAttribute="bottom" constant="20" id="hVc-ei-VE8"/>
                 <constraint firstAttribute="bottom" secondItem="Ls3-sf-2xR" secondAttribute="bottom" id="hjP-2L-KTp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tr8-xj-Cri" secondAttribute="trailing" constant="15" id="igo-HJ-Niy"/>
                 <constraint firstItem="2hb-Ww-MI3" firstAttribute="centerY" secondItem="tr8-xj-Cri" secondAttribute="centerY" id="ljO-Yq-hkm"/>
+                <constraint firstItem="hzq-4A-3Jh" firstAttribute="top" secondItem="tr8-xj-Cri" secondAttribute="bottom" constant="10" id="mJt-8K-bYY"/>
                 <constraint firstItem="Ls3-sf-2xR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="urr-Na-xTP"/>
             </constraints>
             <point key="canvasLocation" x="5.7971014492753632" y="49.553571428571423"/>

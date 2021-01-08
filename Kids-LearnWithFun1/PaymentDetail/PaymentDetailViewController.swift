@@ -52,7 +52,6 @@ class PaymentDetailViewController: UIViewController {
         lblParentTitle.text = "Only For Parents"
         lblCostInfo.text = "Do you want to remove Ads for $2 ?"
 
-        
         random = Int.random(in: 0 ..< arrayQuestionTest.count)
         lblQuestion.text = String(arrayQuestionTest[random][0]) + " + " + String(arrayQuestionTest[random][1])
         btnOption1.titleLabel?.font =  fontOptionBtn
@@ -69,8 +68,6 @@ class PaymentDetailViewController: UIViewController {
         btnCancel.setTitle("Cancel", for: .normal)
         btnBuy.setTitle("Buy", for: .normal)
 
-        
-        
         btnOption1.tag = 0
         btnOption2.tag = 1
         btnOption3.tag = 2
@@ -101,7 +98,6 @@ class PaymentDetailViewController: UIViewController {
             self.dismiss(animated: false, completion: nil)
         }
         UIView.animate(withDuration: 1.0, animations: {
-            print("#################")
             self.view.alpha = 0.0
         })
     }
@@ -111,41 +107,20 @@ class PaymentDetailViewController: UIViewController {
     func funcShowNextPaymentScreen() {
         if arrayQuestionTest[random][2] == optionClicked {
             delegatePayementForParent?.showPaymentCostScreen()
-        /*    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.stackView.isHidden = true
-                self.lblQuestion.isHidden = true
-                self.lblParentTitle.isHidden = true
-                self.lblAdsRemoved.isHidden = true
-                self.imgViewParent.isHidden = true
-                self.viewPaymentCostDetails.alpha = 1.0
-            }*/
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-////                self.dismiss(animated: false, completion: nil)
-//                let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
-//                self.navigationController?.pushViewController(PaymentCostVC, animated: true)
-//            }
-//            UIView.animate(withDuration: 1.0, animations: {
-//                print("#################")
-//                self.view.alpha = 0.0
-//            })
-
-            
-
         } else {
             UIView.animate(withDuration: 0.4, animations: {
-                print("#################")
                 self.btnClose.alpha = 0.0
             })
-            UIView.transition(with: self.viewPaymentFirst, duration: 2, options: .transitionFlipFromBottom, animations: nil, completion: { (_) in
+            UIView.transition(with: self.viewPaymentFirst, duration: 1, options: .transitionFlipFromBottom, animations: nil, completion: { (_) in
             })
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.stackView.isHidden = true
                 self.lblQuestion.isHidden = true
                 self.lblParentTitle.isHidden = true
                 self.imgViewParent.isHidden = true
                 self.lblWrongAns.alpha = 1.0
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.funcHidePaymentView(self)
             }
         }
@@ -155,63 +130,8 @@ class PaymentDetailViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             self.dismiss(animated: false, completion: nil)
         }
-
         UIView.animate(withDuration: 1.0, animations: {
-            print("#################")
             self.view.alpha = 0.0
         })
-        
-//        UIView.animate(withDuration: 10000000.0, animations: {
-//            self.dismiss(animated: false, completion: nil)
-//        })
-
-
-//        self.view.fadeOut()
-        
-//        self.viewPaymentFirst.fadeOut()
-        
-//        UIView.transition(with: self.viewPaymentFirst, duration: 1, options: nil, animations: nil, completion: { (_) in
-//            self.view.alpha = 0.0
-//            self.dismiss(animated: false, completion: nil)
-//        })
-
-
-//                self.btnClose.isHidden = true
-
-//                    self.dismiss(animated: true, completion: nil)
-
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-//            self.viewPaymentFirst.alpha = 0
-////            self.btnClose.alpha = 0
-////            self.viewBg.alpha = 0
-////            self.dismiss(animated: true, completion: nil)
-//        }
-
-//        UIView.transition(with: self.viewPaymentFirst, duration: 100000, options: .curveEaseInOut, animations: nil, completion: { (_) in
-//            self.dismiss(animated: false, completion: nil)
-//        })
     }
 }
-
-
-//extension UIView {
-//    /// Fade in a view with a duration
-//    ///
-//    /// Parameter duration: custom animation duration
-//    func fadeIn(withDuration duration: TimeInterval = 1.0) {
-//        UIView.animate(withDuration: duration, animations: {
-//            self.alpha = 1.0
-//        })
-//    }
-//
-//    /// Fade out a view with a duration
-//    ///
-//    /// - Parameter duration: custom animation duration
-//    func fadeOut(withDuration duration: TimeInterval = 1.0) {
-//        UIView.animate(withDuration: duration, animations: {
-//            print("#################")
-//            self.alpha = 0.0
-//        })
-//    }
-//
-//}

@@ -18,25 +18,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imgVwFlower: UIImageView!
     @IBOutlet weak var imgVwTest: UIImageView!
 
-
     @IBOutlet weak var imgVwBird1Bottom: UIImageView!
     @IBOutlet weak var imgVwBird2Bottom: UIImageView!
     @IBOutlet weak var imgVwWild1Bottom: UIImageView!
     @IBOutlet weak var imgVwWild2Bottom: UIImageView!
     @IBOutlet weak var imgVwWild3Bottom: UIImageView!
+    
+    @IBOutlet weak var btnSound: UIButton!
+    @IBOutlet weak var btnNoAds: UIButton!
+
 
     var player = AVAudioPlayer()
     var bannerView: GADBannerView!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let defaults = UserDefaults.standard
 
     //------------------------------------------------------------------------
 
     override func viewDidAppear(_ animated: Bool) {
-        if appDelegate.IS_Sound_ON {
-            playBackgroundMusic()
-        } else {
-            player.stop()
-        }
+        playBackgroundMusic()
     }
     override func viewWillDisappear(_ animated: Bool) {
         player.stop()
@@ -51,7 +51,6 @@ class HomeViewController: UIViewController {
         let wildGif2 = UIImage.gifImageWithName("ElephantGif")
         let wildGif3 = UIImage.gifImageWithName("HorseGif")
     //    let testGif = UIImage.gifImageWithName("Test")
-
         self.imgVwBird1Bottom.image  = birdGif1
         self.imgVwBird2Bottom.image  = birdGif2
         self.imgVwWild1Bottom.image  = wildGif1
@@ -93,6 +92,13 @@ class HomeViewController: UIViewController {
       //  if ScreenSize.SCREEN_MAX_LENGTH < 812.0 {
             self.imgVwWild3Bottom.isHidden = true
         //}
+        
+        if defaults.bool(forKey:"PauseHomeSound") {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
+        } else {
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
+        }
+ 
     }
     @objc func alarmAlertActivate(){
         UIView.animate(withDuration: 0.7) {
@@ -153,10 +159,30 @@ class HomeViewController: UIViewController {
         let url = URL(fileURLWithPath : path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            player.play()
+            if defaults.bool(forKey:"PauseHomeSound") {
+                btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
+                player.stop()
+            } else {
+                btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
+                player.play()
+            }
+
         } catch {
             print ("There is an issue with this code!")
         }
+    }
+    @IBAction func funcSound_ON_OFF(_ sender: Any) {
+        if defaults.bool(forKey:"PauseHomeSound") {
+            defaults.set(false, forKey: "PauseHomeSound")
+            btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
+            player.play()
+        } else {
+            defaults.set(true, forKey: "PauseHomeSound")
+            btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
+            player.stop()
+        }
+    }
+    @IBAction func funcNoAds(_ sender: Any) {
     }
 }
 

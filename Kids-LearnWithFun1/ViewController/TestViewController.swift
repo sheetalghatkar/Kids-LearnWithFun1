@@ -17,6 +17,7 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var imgVwTest4: UIImageView!
     var interstitial: GADInterstitial?
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -398,12 +399,12 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     //Start Payment flow
     //Delegate method implementation
     func showPaymentCostScreen() {
+        paymentDetailVC.removeFromParent()
         let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
         self.navigationController?.pushViewController(PaymentCostVC, animated: true)
     }
 
     func showPaymentScreen(){
-        let paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
         paymentDetailVC.view.frame = self.view.bounds
         paymentDetailVC.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC.view)

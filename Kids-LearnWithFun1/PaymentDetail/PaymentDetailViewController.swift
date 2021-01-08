@@ -127,10 +127,10 @@ class PaymentDetailViewController: UIViewController {
     }
 
     @IBAction func funcHidePaymentView(_ sender: Any) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
             self.dismiss(animated: false, completion: nil)
         }
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.alpha = 0.0
         })
     }

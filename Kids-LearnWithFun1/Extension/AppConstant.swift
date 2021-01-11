@@ -92,6 +92,7 @@ class CommanArray {
     static var paymentDetailsBgColor = UIColor(red: (110/255), green: (209/255), blue: (225/255), alpha: 1.0)
     static var paymentModeBgColor = UIColor(red: (51/255), green: (206/255), blue: (225/255), alpha: 1.0)
     static var paymentBtnTextColor = UIColor(red: (37/255), green: (160/255), blue: (187/255), alpha: 1.0)
+//    static var yellowColor = UIColor(red: (203/255), green: (161/255), blue: (46/255), alpha: 1.0)
 
     static var imageRadioCheck = UIImage(named: "radio_check.png")
     static var imageRadioUncheck = UIImage(named: "radio_uncheck.png")

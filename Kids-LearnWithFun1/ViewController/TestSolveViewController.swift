@@ -8,13 +8,20 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
 
-class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,TestSolveCollectionCellProtocol {
+class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,TestSolveCollectionCellProtocol,PayementForParentProtocol {
     @IBOutlet weak var btnSound: UIButton!
     @IBOutlet weak var collectionViewCard: UICollectionView!
     @IBOutlet weak var btnForward: UIButton!
     @IBOutlet weak var btnBackward: UIButton!
     @IBOutlet weak var lblQuestion: UILabel!
+    @IBOutlet weak var imgViewLoader: UIImageView!
+    @IBOutlet weak var viewTransperent: UIView!
+    @IBOutlet weak var btnNoAds: UIButton!
+    @IBOutlet weak var btnPlayAgain: UIButton!
+
+    var interstitial: GADInterstitial?
 
     var soundStatus:Bool = false
     var solveTestArray : [String : [UIImage:Int]] = [:]
@@ -22,7 +29,8 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     var getImageNameArray : [String] = []
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var player = AVAudioPlayer()
-
+    var paymentDetailVC : PaymentDetailViewController?
+    var currentIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         btnBackward.isHidden = true
@@ -45,6 +53,11 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionViewCard!.collectionViewLayout = layout
         self.lblQuestion.text = getImageNameArray[0]
         playSound(getSound : getImageNameArray[0]+"_Question")
+        let loaderGif = UIImage.gifImageWithName("Loading")
+        imgViewLoader.image = loaderGif
+        imgViewLoader.backgroundColor = UIColor.white
+        imgViewLoader.layer.borderWidth = 1
+        imgViewLoader.layer.borderColor = UIColor.red.cgColor
     }
     // MARK: - User defined Functions
     
@@ -75,10 +88,55 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
             print ("There is an issue with this code!")
         }
     }
+    
+    func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+
+        guard let interstitial = interstitial else {
+            return nil
+        }
+
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
+        interstitial.load(request)
+        interstitial.delegate = self
+
+        return interstitial
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+      view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                            attribute: .bottom,
+                            relatedBy: .equal,
+                            toItem: bottomLayoutGuide,
+                            attribute: .top,
+                            multiplier: 1,
+                            constant: 0),
+         NSLayoutConstraint(item: bannerView,
+                            attribute: .centerX,
+                            relatedBy: .equal,
+                            toItem: view,
+                            attribute: .centerX,
+                            multiplier: 1,
+                            constant: 0)
+        ])
+     }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
-//        interstitial = createAndLoadInterstitial()
-        navigationController?.popViewController(animated: true)
+        self.viewTransperent.isHidden = false
+        self.imgViewLoader.isHidden = false
+        interstitial = createAndLoadInterstitial()
+//        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            if !self.viewTransperent.isHidden {
+                self.viewTransperent.isHidden = true
+                self.imgViewLoader.isHidden = true
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func funcSound_ON_OFF(_ sender: Any) {
@@ -87,8 +145,13 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
             player.stop()
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+            playSound(getSound: getImageNameArray[currentIndex]+"_Question")
         }
         appDelegate.IS_Sound_ON = !appDelegate.IS_Sound_ON
+    }
+    @IBAction func funcPlayAgainClick(_ sender: Any) {
+        player.stop()
+        playSound(getSound: getImageNameArray[currentIndex]+"_Question")
     }
     
     @IBAction func funcForwardBtnClick(_ sender: Any)
@@ -100,6 +163,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
             if nextItem.row < showOptionsArray.count {
                 self.collectionViewCard.scrollToItem(at: nextItem, at: .left, animated: true)
                 self.lblQuestion.text = getImageNameArray[nextItem.row]
+                currentIndex = nextItem.row
                 playSound(getSound : getImageNameArray[nextItem.row]+"_Question")
             }
             if nextItem.row == self.showOptionsArray.count - 1 {
@@ -125,6 +189,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         if nextItem.row < showOptionsArray.count && nextItem.row >= 0{
             self.collectionViewCard.scrollToItem(at: nextItem, at: .right, animated: true)
             self.lblQuestion.text = getImageNameArray[nextItem.row]
+            currentIndex = nextItem.row
             playSound(getSound : getImageNameArray[nextItem.row]+"_Question")
         }
         if nextItem.row == 0 {
@@ -174,6 +239,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
             if let cell = self.collectionViewCard .cellForItem(at: indexPath) as? TestSolveCollectionCell {
                     cell.hideSignOnImageView()
             }
+            currentIndex = closestCellIndex
             playSound(getSound : getImageNameArray[closestCellIndex]+"_Question")
         }
     }
@@ -222,5 +288,83 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         if !decelerate {
             self.scrollToNearestVisibleCollectionViewCell()
         }
+    }
+    
+    //Start Payment flow
+    
+    @IBAction func funcNoAds(_ sender: Any) {
+        player.stop()
+        showPaymentScreen()
+    }
+    
+    //Delegate method implementation
+    func showPaymentCostScreen() {
+        paymentDetailVC?.view.removeFromSuperview()
+        let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
+        self.navigationController?.pushViewController(PaymentCostVC, animated: true)
+    }
+
+    func showPaymentScreen(){
+        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC?.view.frame = self.view.bounds
+        paymentDetailVC?.delegatePayementForParent = self
+        self.view.addSubview(paymentDetailVC?.view ?? UIView())
+    }
+
+}
+extension TestSolveViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("adViewDidReceiveAd")
+    }
+
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+        didFailToReceiveAdWithError error: GADRequestError) {
+      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("adViewWillPresentScreen")
+    }
+
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewWillDismissScreen")
+    }
+
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print("adViewWillLeaveApplication")
+    }
+}
+extension TestSolveViewController: GADInterstitialDelegate {
+    func funcHideLoader() {
+        self.viewTransperent.isHidden = true
+        self.imgViewLoader.isHidden = true
+    }
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        funcHideLoader()
+        ad.present(fromRootViewController: self)
+        navigationController?.popViewController(animated: true)
+    }
+
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        funcHideLoader()
+        print("Fail to receive interstitial")
+        navigationController?.popViewController(animated: true)
+    }
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        funcHideLoader()
+        navigationController?.popViewController(animated: true)
+        print("dismiss interstitial")
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var btnHome: UIButton!
@@ -15,7 +14,8 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var imgVwTest2: UIImageView!
     @IBOutlet weak var imgVwTest3: UIImageView!
     @IBOutlet weak var imgVwTest4: UIImageView!
-    var interstitial: GADInterstitial?
+    @IBOutlet weak var btnNoAds: UIButton!
+
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var paymentDetailVC : PaymentDetailViewController?
 
@@ -142,9 +142,12 @@ class TestViewController: UIViewController,PayementForParentProtocol {
                    ]]
             setTestSolveVC.showOptionsArray = solveTestArray
             setTestSolveVC.getImageNameArray = CommanArray.wildAnimalNameArray
+            self.navigationController?.pushViewController(setTestSolveVC, animated: true)
         }
         else if tapGestureRecognizer.view?.tag == 2 {
-            let solveTestArray = [
+            showPaymentScreen()
+
+           /* let solveTestArray = [
                   [
                      CommanArray.domesticAnimalNameArray[2]+"-"+"0",
                      CommanArray.domesticAnimalNameArray[9]+"-"+"0",
@@ -213,10 +216,11 @@ class TestViewController: UIViewController,PayementForParentProtocol {
                   ]
             ]
             setTestSolveVC.showOptionsArray = solveTestArray
-            setTestSolveVC.getImageNameArray = CommanArray.domesticAnimalNameArray
+            setTestSolveVC.getImageNameArray = CommanArray.domesticAnimalNameArray*/
         }
         else if tapGestureRecognizer.view?.tag == 3 {
-            let solveTestArray = [
+            showPaymentScreen()
+           /* let solveTestArray = [
                 [
                    CommanArray.birdNameArray[2]+"-"+"0",
                    CommanArray.birdNameArray[10]+"-"+"0",
@@ -297,7 +301,7 @@ class TestViewController: UIViewController,PayementForParentProtocol {
                 ]
             ]
             setTestSolveVC.showOptionsArray = solveTestArray
-            setTestSolveVC.getImageNameArray = CommanArray.birdNameArray
+            setTestSolveVC.getImageNameArray = CommanArray.birdNameArray*/
         }
         else if tapGestureRecognizer.view?.tag == 4 {
             showPaymentScreen()
@@ -391,12 +395,15 @@ class TestViewController: UIViewController,PayementForParentProtocol {
             setTestSolveVC.showOptionsArray = solveTestArray
             setTestSolveVC.getImageNameArray = CommanArray.flowerNameArray
         }*/
-       // self.navigationController?.pushViewController(setTestSolveVC, animated: true)
     }
    // MARK: - User defined Functions
     
     
     //Start Payment flow
+    @IBAction func funcNoAds(_ sender: Any) {
+        showPaymentScreen()
+    }
+
     //Delegate method implementation
     func showPaymentCostScreen() {
         paymentDetailVC?.view.removeFromSuperview()
@@ -412,41 +419,7 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
-        interstitial = createAndLoadInterstitial()
-//        navigationController?.popViewController(animated: true)
-    }
-
-    private func createAndLoadInterstitial() -> GADInterstitial? {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
-
-        guard let interstitial = interstitial else {
-            return nil
-        }
-
-        let request = GADRequest()
-        // Remove the following line before you upload the app
-        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
-        interstitial.load(request)
-        interstitial.delegate = self
-
-        return interstitial
-    }
-
-}
-extension TestViewController: GADInterstitialDelegate {
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        print("Interstitial loaded successfully")
-        ad.present(fromRootViewController: self)
         navigationController?.popViewController(animated: true)
     }
-
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        print("Fail to receive interstitial")
-        navigationController?.popViewController(animated: true)
-    }
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        print("dismiss interstitial")
-    }
-    
-
 }
+

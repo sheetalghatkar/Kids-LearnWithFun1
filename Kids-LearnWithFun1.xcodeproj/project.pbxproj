@@ -10,11 +10,6 @@
 		4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */; };
 		4F0D923725A6464E00CDEFC3 /* PaymentCostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */; };
 		4FF3BC8925A8967D00CF8E3C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8825A8967D00CF8E3C /* Loading.gif */; };
-		4FF3BC8E25A89C3C00CF8E3C /* loading-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8D25A89C3C00CF8E3C /* loading-2.gif */; };
-		4FF3BC9325A89CBC00CF8E3C /* loading-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC9225A89CBC00CF8E3C /* loading-1.gif */; };
-		4FF3BC9825A89D7900CF8E3C /* loading-3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC9725A89D7900CF8E3C /* loading-3.gif */; };
-		4FF3BC9D25A89DE200CF8E3C /* loading-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC9C25A89DE200CF8E3C /* loading-4.gif */; };
-		4FF3BCA525A8B79100CF8E3C /* LoaderRect.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BCA425A8B79100CF8E3C /* LoaderRect.gif */; };
 		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
 		4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */; };
 		7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */; };
@@ -162,7 +157,6 @@
 		70FF092824962DB5002861AE /* Kids_LearnWithFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF092724962DB5002861AE /* Kids_LearnWithFunUITests.swift */; };
 		70FF093724965879002861AE /* GIFSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093624965879002861AE /* GIFSwift.swift */; };
 		70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093B24966856002861AE /* UIImageviewExtension.swift */; };
-		70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70FF093F2496B43D002861AE /* Animated-bubbles.gif */; };
 		8A7A7416C3567F485DDBE8E5 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */; };
 		B33D7AA842F87C73192B57AD /* Pods_Kids_LearnWithFun1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5631CF156DFE5BE535C734 /* Pods_Kids_LearnWithFun1.framework */; };
 		E0F6A22BB4C54AA08CD4D653 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FAB8431D4E2C1E34D43FF3 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */; };
@@ -194,11 +188,6 @@
 		4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCostController.swift; sourceTree = "<group>"; };
 		4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCostController.xib; sourceTree = "<group>"; };
 		4FF3BC8825A8967D00CF8E3C /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
-		4FF3BC8D25A89C3C00CF8E3C /* loading-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-2.gif"; sourceTree = "<group>"; };
-		4FF3BC9225A89CBC00CF8E3C /* loading-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-1.gif"; sourceTree = "<group>"; };
-		4FF3BC9725A89D7900CF8E3C /* loading-3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-3.gif"; sourceTree = "<group>"; };
-		4FF3BC9C25A89DE200CF8E3C /* loading-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-4.gif"; sourceTree = "<group>"; };
-		4FF3BCA425A8B79100CF8E3C /* LoaderRect.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LoaderRect.gif; sourceTree = "<group>"; };
 		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailViewController.xib; sourceTree = "<group>"; };
 		506C3AC2C26BDD790042AD8E /* Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests/Pods-Kids-LearnWithFun-Kids-LearnWithFunUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -353,7 +342,6 @@
 		70FF092924962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FF093624965879002861AE /* GIFSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSwift.swift; sourceTree = "<group>"; };
 		70FF093B24966856002861AE /* UIImageviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageviewExtension.swift; sourceTree = "<group>"; };
-		70FF093F2496B43D002861AE /* Animated-bubbles.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animated-bubbles.gif"; sourceTree = "<group>"; };
 		8977875AE3E6E097D3D020EC /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D3BEF9F8B28EAF75AE67232 /* Pods-Kids-LearnWithFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun/Pods-Kids-LearnWithFun.release.xcconfig"; sourceTree = "<group>"; };
 		9EA9145E6BC924594E5B9FB6 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -685,17 +673,11 @@
 				707ECA23249CD9A70024D06C /* darkwds1.wav */,
 				707ECA31249CE9A40024D06C /* HorseGif.gif */,
 				707ECA2D249CE6240024D06C /* TigerGif.gif */,
-				4FF3BCA425A8B79100CF8E3C /* LoaderRect.gif */,
 				4FF3BC8825A8967D00CF8E3C /* Loading.gif */,
-				4FF3BC9C25A89DE200CF8E3C /* loading-4.gif */,
-				4FF3BC9225A89CBC00CF8E3C /* loading-1.gif */,
-				4FF3BC9725A89D7900CF8E3C /* loading-3.gif */,
 				707ECA33249CF45F0024D06C /* bird1Gif.gif */,
 				707ECA27249CDFB80024D06C /* mixaund-happy-day.mp3 */,
-				4FF3BC8D25A89C3C00CF8E3C /* loading-2.gif */,
 				707ECA2F249CE78E0024D06C /* ElephantGif.gif */,
 				707ECA25249CDAD80024D06C /* BgMusic.mp3 */,
-				70FF093F2496B43D002861AE /* Animated-bubbles.gif */,
 				707ECA35249CF4E10024D06C /* bird2Gif.gif */,
 				7095C2D2249AA2E400C1E220 /* garden.gif */,
 				70FF093624965879002861AE /* GIFSwift.swift */,
@@ -871,7 +853,6 @@
 				70F9024624AFAF5C00A3AA12 /* Wrong.mp3 in Resources */,
 				7014C1DB249F73B700D0AB52 /* Crossandra.mp3 in Resources */,
 				700D4184249E986000AA3D1C /* Giraffe.mp3 in Resources */,
-				4FF3BC8E25A89C3C00CF8E3C /* loading-2.gif in Resources */,
 				70D8B15124B0D4FE00AF3D34 /* Peacock_Question.mp3 in Resources */,
 				70F9023824AF7E4A00A3AA12 /* Sunflower_Question.mp3 in Resources */,
 				7014C1C1249F73B000D0AB52 /* Penguin.mp3 in Resources */,
@@ -882,7 +863,6 @@
 				70631FF42497F11B00DAE930 /* PictureCollectionCell.xib in Resources */,
 				70F9022B24AF7E4A00A3AA12 /* Magnolia_Question.mp3 in Resources */,
 				707ECA26249CDAD80024D06C /* BgMusic.mp3 in Resources */,
-				4FF3BC9825A89D7900CF8E3C /* loading-3.gif in Resources */,
 				700D4182249E986000AA3D1C /* Fox.mp3 in Resources */,
 				7014C1BE249F73B000D0AB52 /* Nightingale.mp3 in Resources */,
 				70D8B15624B0D4FE00AF3D34 /* Cuckoo_Question.mp3 in Resources */,
@@ -924,10 +904,8 @@
 				701D4D6724B237FD00E642A6 /* Buffalo_Question.mp3 in Resources */,
 				70D8B14B24B0D4FE00AF3D34 /* Crow_Question.mp3 in Resources */,
 				701D4D5A24B1DC6F00E642A6 /* Wolf_Question.mp3 in Resources */,
-				4FF3BCA525A8B79100CF8E3C /* LoaderRect.gif in Resources */,
 				7014C1F3249F73C600D0AB52 /* Buffalo.mp3 in Resources */,
 				7095C2D3249AA2E400C1E220 /* garden.gif in Resources */,
-				4FF3BC9325A89CBC00CF8E3C /* loading-1.gif in Resources */,
 				707ECA36249CF4E10024D06C /* bird2Gif.gif in Resources */,
 				701D4D5C24B1DC6F00E642A6 /* Fox_Question.mp3 in Resources */,
 				7014C1F2249F73C600D0AB52 /* Cat.mp3 in Resources */,
@@ -950,7 +928,6 @@
 				701D4D5E24B1DC6F00E642A6 /* Racoon_Question.mp3 in Resources */,
 				7014C1F6249F73C600D0AB52 /* Camel.mp3 in Resources */,
 				701D4D5624B1DC6F00E642A6 /* Panda_Question.mp3 in Resources */,
-				4FF3BC9D25A89DE200CF8E3C /* loading-4.gif in Resources */,
 				70F9023224AF7E4A00A3AA12 /* Lilly_Question.mp3 in Resources */,
 				700D418B249E986000AA3D1C /* Chimpanzee.mp3 in Resources */,
 				7014C1FF249F782000D0AB52 /* Pig.mp3 in Resources */,
@@ -967,7 +944,6 @@
 				7014C1E0249F73B700D0AB52 /* Jasmine.mp3 in Resources */,
 				7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */,
 				701D4D5924B1DC6F00E642A6 /* Tiger_Question.mp3 in Resources */,
-				70FF09402496B43E002861AE /* Animated-bubbles.gif in Resources */,
 				70D8B15324B0D4FE00AF3D34 /* Pigeon_Question.mp3 in Resources */,
 				700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */,
 				70D8B15224B0D4FE00AF3D34 /* Penguin_Question.mp3 in Resources */,

@@ -24,7 +24,7 @@ class TestSolveCollectionCell: UICollectionViewCell {
     @IBOutlet weak var statusSignImgView3: UIImageView!
     @IBOutlet weak var statusSignImgView4: UIImageView!
     weak var testSolveDelegate : TestSolveCollectionCellProtocol?
-    
+
     var image1Sound : String = ""
     var image2Sound : String = ""
     var image3Sound : String = ""

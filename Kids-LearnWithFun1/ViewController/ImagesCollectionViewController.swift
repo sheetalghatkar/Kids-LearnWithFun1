@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,PictureCollectionCellProtocol {
+class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,PictureCollectionCellProtocol,PayementForParentProtocol {
     
     @IBOutlet weak var btnHome: UIButton!
     @IBOutlet weak var collectionViewCard: UICollectionView!
@@ -19,13 +19,20 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     @IBOutlet weak var lblCard: UILabel!
     @IBOutlet weak var viewCollectionContainer: UIView!
     @IBOutlet weak var btnSound: UIButton!
+    @IBOutlet weak var imgViewLoader: UIImageView!
+    @IBOutlet weak var viewTransperent: UIView!
+    @IBOutlet weak var btnNoAds: UIButton!
+
 
     var player = AVAudioPlayer()
     var bannerView: GADBannerView!
+    var paymentDetailVC : PaymentDetailViewController?
 
     var imageArray : [UIImage] = []
     var imageNameArray : [String] = []
     var interstitial: GADInterstitial?
+    var currentindex = 0
+
     //var soundStatus:Bool = false
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -35,7 +42,13 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         btnForward.layer.cornerRadius = 25.0
         btnBackward.layer.cornerRadius = 25.0
         btnBackward.isHidden = true
+        let loaderGif = UIImage.gifImageWithName("Loading")
+        imgViewLoader.image = loaderGif
+        imgViewLoader.backgroundColor = UIColor.white
+        imgViewLoader.layer.borderWidth = 1
+        imgViewLoader.layer.borderColor = UIColor.red.cgColor
         
+
         if appDelegate.IS_Sound_ON {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
         } else {
@@ -142,13 +155,23 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             player.stop()
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On.png"), for: .normal)
+            playSound(getSound : self.imageNameArray[currentindex])
         }
         appDelegate.IS_Sound_ON = !appDelegate.IS_Sound_ON
     }
     
     @IBAction func funcGoToHome(_ sender: Any) {
-       // interstitial = createAndLoadInterstitial()
-        navigationController?.popViewController(animated: true)
+        self.viewTransperent.isHidden = false
+        self.imgViewLoader.isHidden = false
+        interstitial = createAndLoadInterstitial()
+//        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            if !self.viewTransperent.isHidden {
+                self.viewTransperent.isHidden = true
+                self.imgViewLoader.isHidden = true
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func funcForwardBtnClick(_ sender: Any)
@@ -168,6 +191,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             self.btnForward.isHidden = false
             self.btnBackward.isHidden = false
         }
+        currentindex = nextItem.row
         playSound(getSound : self.imageNameArray[nextItem.row])
     }
 
@@ -188,6 +212,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             self.btnBackward.isHidden = false
             self.btnForward.isHidden = false
         }
+        currentindex = nextItem.row
         playSound(getSound : self.imageNameArray[nextItem.row])
     }
     
@@ -254,6 +279,27 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
 
         return interstitial
     }
+    
+    //Start Payment flow
+    
+    @IBAction func funcNoAds(_ sender: Any) {
+        showPaymentScreen()
+    }
+    
+    //Delegate method implementation
+    func showPaymentCostScreen() {
+        paymentDetailVC?.view.removeFromSuperview()
+        let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
+        self.navigationController?.pushViewController(PaymentCostVC, animated: true)
+    }
+
+    func showPaymentScreen(){
+        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC?.view.frame = self.view.bounds
+        paymentDetailVC?.delegatePayementForParent = self
+        self.view.addSubview(paymentDetailVC?.view ?? UIView())
+    }
+
 }
 extension ImagesCollectionViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -289,17 +335,25 @@ extension ImagesCollectionViewController: GADBannerViewDelegate {
     }
 }
 extension ImagesCollectionViewController: GADInterstitialDelegate {
+    func funcHideLoader() {
+        self.viewTransperent.isHidden = true
+        self.imgViewLoader.isHidden = true
+    }
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         print("Interstitial loaded successfully")
+        funcHideLoader()
         ad.present(fromRootViewController: self)
         navigationController?.popViewController(animated: true)
     }
 
     func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        funcHideLoader()
         print("Fail to receive interstitial")
         navigationController?.popViewController(animated: true)
     }
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        funcHideLoader()
+        navigationController?.popViewController(animated: true)
         print("dismiss interstitial")
     }
 }

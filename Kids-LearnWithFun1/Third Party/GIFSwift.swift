@@ -167,7 +167,18 @@ extension UIImage {
             
             return sum
         }()
-        
+        /* let duration: Int = {
+             var sum:Double = 0
+
+             for val: Int in delays {
+                 let newVal =    Double(val) - (Double(val)/0.1)//Modified calculation to speed up the animtion in gif
+                 //sum += val :default calculation
+                 sum += newVal
+             }
+
+             return Int(sum)
+             }()*/
+
         let gcd = gcdForArray(delays)
         var frames = [UIImage]()
         
@@ -183,7 +194,7 @@ extension UIImage {
         }
         
         let animation = UIImage.animatedImage(with: frames,
-            duration: Double(duration) / 1000.0)
+                                              duration: Double(duration) / 1000.0)
         
         return animation
     }

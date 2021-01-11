@@ -126,6 +126,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
      }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
+        player.stop()
         self.viewTransperent.isHidden = false
         self.imgViewLoader.isHidden = false
         interstitial = createAndLoadInterstitial()

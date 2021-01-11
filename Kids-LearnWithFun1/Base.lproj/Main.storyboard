@@ -635,10 +635,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQW-SH-8lZ" userLabel="Btn Play Again" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
-                                <rect key="frame" x="189" y="550" width="36" height="36"/>
+                                <rect key="frame" x="188.5" y="550" width="37" height="37"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.77254901960784317" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="36" id="BUU-fG-XmE"/>
+                                    <constraint firstAttribute="width" constant="37" id="BUU-fG-XmE"/>
                                     <constraint firstAttribute="width" secondItem="fQW-SH-8lZ" secondAttribute="height" multiplier="1:1" id="LUO-4X-fjO"/>
                                 </constraints>
                                 <state key="normal" image="PlayAgain"/>

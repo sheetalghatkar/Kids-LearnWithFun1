@@ -326,7 +326,7 @@
 		70F9024024AF88AE00A3AA12 /* Excellent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Excellent.mp3; sourceTree = "<group>"; };
 		70F9024324AF88B900A3AA12 /* WellDone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WellDone.mp3; sourceTree = "<group>"; };
 		70F9024524AFAF5C00A3AA12 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
-		70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids-LearnWithFun1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF090224962D9B002861AE /* Learn Nature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Nature.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FF090524962D9B002861AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FF090724962D9B002861AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70FF090924962D9B002861AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -623,7 +623,7 @@
 		70FF090324962D9B002861AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */,
+				70FF090224962D9B002861AE /* Learn Nature.app */,
 				70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */,
 				70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */,
 			);
@@ -721,9 +721,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		70FF090124962D9B002861AE /* Kids-LearnWithFun1 */ = {
+		70FF090124962D9B002861AE /* Learn Nature */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */;
+			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */;
 			buildPhases = (
 				E2715DBA7F41857E793BD4CD /* [CP] Check Pods Manifest.lock */,
 				70FF08FE24962D9B002861AE /* Sources */,
@@ -735,9 +735,9 @@
 			);
 			dependencies = (
 			);
-			name = "Kids-LearnWithFun1";
+			name = "Learn Nature";
 			productName = "Kids-LearnWithFun";
-			productReference = 70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */;
+			productReference = 70FF090224962D9B002861AE /* Learn Nature.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */ = {
@@ -815,7 +815,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				70FF090124962D9B002861AE /* Kids-LearnWithFun1 */,
+				70FF090124962D9B002861AE /* Learn Nature */,
 				70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */,
 				70FF092224962DB5002861AE /* Kids-LearnWithFun1UITests */,
 			);
@@ -1126,12 +1126,12 @@
 /* Begin PBXTargetDependency section */
 		70FF091A24962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			target = 70FF090124962D9B002861AE /* Learn Nature */;
 			targetProxy = 70FF091924962DB5002861AE /* PBXContainerItemProxy */;
 		};
 		70FF092524962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			target = 70FF090124962D9B002861AE /* Learn Nature */;
 			targetProxy = 70FF092424962DB5002861AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1283,10 +1283,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFun";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1303,10 +1303,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sheetal.Kids-LearnWithFun";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1406,7 +1406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */ = {
+		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				70FF092D24962DB5002861AE /* Debug */,

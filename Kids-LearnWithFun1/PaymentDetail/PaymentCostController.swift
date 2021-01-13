@@ -81,7 +81,6 @@ class PaymentCostController: UIViewController {
         }
     }
     @IBAction func funcBuyBtnClick(_ sender: Any) {
-        
     }
     @IBAction func funcRestoreBtnClick(_ sender: Any) {
     }

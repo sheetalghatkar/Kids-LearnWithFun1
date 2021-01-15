@@ -58,7 +58,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         self.imgVwWild2Bottom.image  = wildGif2
         self.imgVwWild3Bottom.image  = wildGif3
        // self.imgVwTest.image  = testGif
-
+        self.view.isMultipleTouchEnabled = false
         let tapGestureRecognWildAnimal = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imgVwWildAnimal.addGestureRecognizer(tapGestureRecognWildAnimal)
         imgVwWildAnimal.tag = 1

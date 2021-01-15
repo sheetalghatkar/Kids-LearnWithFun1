@@ -20,7 +20,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var viewTransperent: UIView!
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnPlayAgain: UIButton!
-
+    var bannerView: GADBannerView!
     var interstitial: GADInterstitial?
 
     var soundStatus:Bool = false
@@ -58,6 +58,12 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         imgViewLoader.backgroundColor = UIColor.white
         imgViewLoader.layer.borderWidth = 1
         imgViewLoader.layer.borderColor = UIColor.red.cgColor
+        self.view.isMultipleTouchEnabled = false
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     // MARK: - User defined Functions
     
@@ -104,27 +110,6 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
 
         return interstitial
     }
-    func addBannerViewToView(_ bannerView: GADBannerView) {
-      bannerView.translatesAutoresizingMaskIntoConstraints = false
-      view.addSubview(bannerView)
-      view.addConstraints(
-        [NSLayoutConstraint(item: bannerView,
-                            attribute: .bottom,
-                            relatedBy: .equal,
-                            toItem: bottomLayoutGuide,
-                            attribute: .top,
-                            multiplier: 1,
-                            constant: 0),
-         NSLayoutConstraint(item: bannerView,
-                            attribute: .centerX,
-                            relatedBy: .equal,
-                            toItem: view,
-                            attribute: .centerX,
-                            multiplier: 1,
-                            constant: 0)
-        ])
-     }
-
     @IBAction func funcGoToTestHome(_ sender: Any) {
         player.stop()
         self.viewTransperent.isHidden = false
@@ -311,9 +296,57 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         paymentDetailVC?.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC?.view ?? UIView())
     }
-
 }
 extension TestSolveViewController: GADBannerViewDelegate {
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+        if #available(iOS 11.0, *) {
+          // In iOS 11, we need to constrain the view to the safe area.
+          positionBannerViewFullWidthAtBottomOfSafeArea(bannerView)
+        }
+        else {
+          // In lower iOS versions, safe area is not available so we use
+          // bottom layout guide and view edges.
+          positionBannerViewFullWidthAtBottomOfView(bannerView)
+        }
+     }
+
+    func positionBannerViewFullWidthAtBottomOfSafeArea(_ bannerView: UIView) {
+      // Position the banner. Stick it to the bottom of the Safe Area.
+      // Make it constrained to the edges of the safe area.
+      let guide = view.safeAreaLayoutGuide
+      NSLayoutConstraint.activate([
+        guide.leftAnchor.constraint(equalTo: bannerView.leftAnchor),
+        guide.rightAnchor.constraint(equalTo: bannerView.rightAnchor),
+        guide.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor)
+      ])
+    }
+
+    func positionBannerViewFullWidthAtBottomOfView(_ bannerView: UIView) {
+      view.addConstraint(NSLayoutConstraint(item: bannerView,
+                                            attribute: .leading,
+                                            relatedBy: .equal,
+                                            toItem: view,
+                                            attribute: .leading,
+                                            multiplier: 1,
+                                            constant: 0))
+      view.addConstraint(NSLayoutConstraint(item: bannerView,
+                                            attribute: .trailing,
+                                            relatedBy: .equal,
+                                            toItem: view,
+                                            attribute: .trailing,
+                                            multiplier: 1,
+                                            constant: 0))
+      view.addConstraint(NSLayoutConstraint(item: bannerView,
+                                            attribute: .bottom,
+                                            relatedBy: .equal,
+                                            toItem: bottomLayoutGuide,
+                                            attribute: .top,
+                                            multiplier: 1,
+                                            constant: 0))
+    }
+
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("adViewDidReceiveAd")
     }

@@ -223,14 +223,14 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     }
     
     @IBAction func funcSetting(_ sender: Any) {
-        self.viewtransperent.isHidden = false
-        UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
-            //Set x position what ever you want
-            self.viewParentSetting.frame = CGRect(x: -((self.circleViewwidth)/2), y: -((self.circleViewwidth)/2), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
-
-        }, completion: nil)
         if !showSetting {
             self.showSetting = true
+            self.viewtransperent.isHidden = false
+            UIView.animate(withDuration: 0.50, delay: 0.2, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+                //Set x position what ever you want
+                self.viewParentSetting.frame = CGRect(x: -((self.circleViewwidth)/2), y: -((self.circleViewwidth)/2), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
+
+            }, completion: nil)
             self.viewtransperent.isHidden = false
             UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseOut, animations: {
                 self.rotateAnimation(imageView: self.viewCircle, getToValue: (CGFloat.pi * 2))
@@ -239,28 +239,10 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
                 }
             }, completion: nil)
         } else {
-            self.showSetting = false
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
-                self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
-                    self.viewCircle.isHidden = true
-                    self.viewtransperent.isHidden = true
-                }
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
-                //Set x position what ever you want
-                self.viewParentSetting.frame = CGRect(x: -(self.circleViewwidth), y: -(self.circleViewwidth), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
-            }, completion: nil)
+            funcCloseSetting()
         }
     }
-    @IBAction func funcRateUs(_ sender: Any) {
-    }
-    @IBAction func funcShare(_ sender: Any) {
-    }
-    @IBAction func funcContactUs(_ sender: Any) {
-    }
-    @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
+    func funcCloseSetting() {
         self.showSetting = false
         UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
             self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
@@ -274,6 +256,15 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
             //Set x position what ever you want
             self.viewParentSetting.frame = CGRect(x: -(self.circleViewwidth), y: -(self.circleViewwidth), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
         }, completion: nil)
+    }
+    @IBAction func funcRateUs(_ sender: Any) {
+    }
+    @IBAction func funcShare(_ sender: Any) {
+    }
+    @IBAction func funcContactUs(_ sender: Any) {
+    }
+    @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
+        funcCloseSetting()
     }
 
     func rotateAnimation(imageView:UIView,duration: CFTimeInterval = 1.5, getToValue : CGFloat) {

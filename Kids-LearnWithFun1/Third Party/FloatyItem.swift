@@ -72,7 +72,8 @@ open class FloatyItem: UIView {
             _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
         }
     }
-    
+    var fontOptionLbl = UIFont(name: "ChalkboardSE-Bold", size: 18)
+
     /**
      Reference to parent
      */
@@ -92,7 +93,7 @@ open class FloatyItem: UIView {
      Item's title label position.
      deafult is left
      */
-    @objc open var titleLabelPosition: FloatyItemLabelPositionType = .left {
+    @objc open var titleLabelPosition: FloatyItemLabelPositionType = .right {
         didSet {
             if(titleLabelPosition == .left) {
                 titleLabel.frame.origin.x = -titleLabel.frame.size.width - 10
@@ -112,6 +113,13 @@ open class FloatyItem: UIView {
                 _titleLabel = UILabel()
                 _titleLabel?.textColor = titleColor
                 //_titleLabel?.font = FloatyManager.defaultInstance().Font
+                _titleLabel?.layer.shadowColor = UIColor.black.cgColor
+                _titleLabel?.highlightedTextColor = UIColor.red
+                _titleLabel?.layer.shadowRadius = 3.0
+                _titleLabel?.layer.shadowOpacity = 1.0
+                _titleLabel?.layer.shadowOffset = CGSize(width: 4, height: 4)
+                _titleLabel?.layer.masksToBounds = false
+                _titleLabel?.font = fontOptionLbl
                 addSubview(_titleLabel!)
             }
             return _titleLabel!
@@ -151,7 +159,7 @@ open class FloatyItem: UIView {
             if _iconImageView == nil {
                 _iconImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize.width - 6, height: imageSize.height - 6))
                 _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
-                _iconImageView?.contentMode = UIView.ContentMode.scaleToFill
+                _iconImageView?.contentMode = UIView.ContentMode.scaleAspectFit
                 _iconImageView?.backgroundColor = UIColor.clear
 
                 addSubview(_iconImageView!)

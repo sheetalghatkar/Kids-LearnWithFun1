@@ -9,7 +9,8 @@ import UIKit
 
 
 public protocol FloatingActionButtonProtocol : class{
-    func floatingActionButtonProcessDidStart()
+    func floatingActionClose()
+    func floatingActionOpen()
     func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen : Bool, message: String, statusCode: Int?)
     func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?)
 }
@@ -152,7 +153,7 @@ open class Floaty: UIView {
      Child item's default title label color.
      */
     @IBInspectable
-    @objc open var itemTitleColor: UIColor = UIColor.blue
+    @objc open var itemTitleColor: UIColor = UIColor.white
     
     /**
      Child item's image color
@@ -422,8 +423,10 @@ open class Floaty: UIView {
     @objc open func toggle() {
         if items.count > 0 {
             if closed == true {
+                floatingActionButtonDelegate!.floatingActionOpen()
                 open()
             } else {
+                floatingActionButtonDelegate!.floatingActionClose()
                 close()
             }
         } else {
@@ -665,6 +668,7 @@ open class Floaty: UIView {
             width: buttonImageView.frame.size.width + 1,
             height: buttonImageView.frame.size.height + 1
         )
+        buttonImageView.contentMode = .scaleAspectFit
         
         addSubview(buttonImageView)
     }

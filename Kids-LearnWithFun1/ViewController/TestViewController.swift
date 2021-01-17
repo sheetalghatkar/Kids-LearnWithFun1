@@ -23,6 +23,11 @@ class TestViewController: UIViewController,PayementForParentProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imgVwTest1.isExclusiveTouch = true
+        self.imgVwTest2.isExclusiveTouch = true
+        self.imgVwTest3.isExclusiveTouch = true
+        self.imgVwTest4.isExclusiveTouch = true
+
         let tapGestureRecognImgVwTest1 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imgVwTest1.addGestureRecognizer(tapGestureRecognImgVwTest1)
         imgVwTest1.tag = 1

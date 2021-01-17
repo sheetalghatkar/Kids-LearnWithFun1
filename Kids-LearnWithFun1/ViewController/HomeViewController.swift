@@ -28,7 +28,13 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnSetting: UIButton!
 
-    
+    @IBOutlet weak var floaty : Floaty!
+        {
+        didSet {
+            floaty.buttonImage = UIImage(named: "map_hashtag_gray")
+        }
+    }
+
     @IBOutlet weak var btnRateUs: UIButton!
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var btnContactUs: UIButton!
@@ -42,14 +48,20 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     var paymentDetailVC : PaymentDetailViewController?
-    var circleViewwidth = ScreenSize.SCREEN_WIDTH * 0.95
+    var circleViewwidth = ScreenSize.SCREEN_WIDTH * 1.08
     var showSetting =  false
+    
+    let hashTagImg1 = UIImage(named: "RateUs.png")
+    let hashTagImg2 = UIImage(named: "ShareApp.png")
+    let hashTagImg3 = UIImage(named: "ContactUs.png")
+    
     @IBOutlet weak var viewCircle: UIView!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var xConstraint: NSLayoutConstraint!
     @IBOutlet weak var yConstraint: NSLayoutConstraint!
     
-    
+    @IBOutlet weak var xSettingIConConst: NSLayoutConstraint!
+
     @IBOutlet weak var xTranViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var yTranViewConstraint: NSLayoutConstraint!
 
@@ -61,9 +73,13 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     override func viewWillDisappear(_ animated: Bool) {
         player.stop()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imgVwWildAnimal.isExclusiveTouch = true
+        self.imgVwBird.isExclusiveTouch = true
+        self.imgVwFlower.isExclusiveTouch = true
+        self.imgVwPetAnimal.isExclusiveTouch = true
+        self.imgVwTest.isExclusiveTouch = true
         widthConstraint.constant = circleViewwidth
         xConstraint.constant = -(circleViewwidth/2)
         yConstraint.constant = -(circleViewwidth/2)
@@ -128,7 +144,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         }
         viewParentSetting.backgroundColor = UIColor.white
         viewParentSetting.layer.cornerRadius = (circleViewwidth/2)
-        self.viewParentSetting.alpha = 0.7
+        self.viewtransperent.alpha = 1.0
         self.viewtransperent.isHidden = true
 
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickTransperentView (_:)))
@@ -137,6 +153,27 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         
         xTranViewConstraint.constant = -(circleViewwidth)
         yTranViewConstraint.constant = -(circleViewwidth)
+        self.floaty.floatingActionButtonDelegate = self
+
+        viewtransperent.backgroundColor = CommanArray.paymentBtnTextColor
+        viewtransperent.alpha = 0.9
+        
+        self.floaty.addItem(icon: hashTagImg1, handler: {_ in
+            self.floaty.close()
+        })
+        self.floaty.addItem(icon: hashTagImg2, handler: {_ in
+            self.floaty.close()
+        })
+        self.floaty.addItem(icon: hashTagImg3, handler: {_ in
+            self.floaty.close()
+        })
+//        floaty.items[0].titleLabel.text = "Rate & Review"
+//        floaty.items[1].titleLabel.text = "Share App"
+//        floaty.items[2].titleLabel.text = "Contact Us"
+        floaty.items[0].title = "Rate & Review"
+        floaty.items[1].title = "Share App"
+        floaty.items[2].title = "Contact Us"
+
     }
     
     @objc func alarmAlertActivate(){
@@ -225,6 +262,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     @IBAction func funcSetting(_ sender: Any) {
         if !showSetting {
             self.showSetting = true
+         //   xSettingIConConst.constant = 35
             self.viewtransperent.isHidden = false
             UIView.animate(withDuration: 0.50, delay: 0.2, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
                 //Set x position what ever you want
@@ -247,6 +285,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
             self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
+              //  xSettingIConConst.constant = 15
                 self.viewCircle.isHidden = true
                 self.viewtransperent.isHidden = true
             }
@@ -264,7 +303,8 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     @IBAction func funcContactUs(_ sender: Any) {
     }
     @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
-        funcCloseSetting()
+        self.viewtransperent.isHidden = true
+      //  funcCloseSetting()
     }
 
     func rotateAnimation(imageView:UIView,duration: CFTimeInterval = 1.5, getToValue : CGFloat) {
@@ -279,44 +319,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     
     @IBAction func funcNoAds(_ sender: Any) {
         showPaymentScreen()
-
-//        print("@@@@@@",ScreenSize.SCREEN_WIDTH)
-//        rotateAnimation(imageView: viewCircle)
-
-//        UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut, animations: {
-//            self.imgViewRing.alpha = 1.0
-//        }, completion: nil)
-
-       // showPaymentScreen()
-        /*let imgShareApp = UIImage(named: "map_green_color")
-        let imgRatingApp = UIImage(named: "map_hashtag_gray")
-        let imgContactUs = UIImage(name
-         d: "map_hashtag_blue")
-
-        
-        imgViewRing.backgroundColor = UIColor.red
-        imgViewRing.frame = CGRect(x: 0, y: 0, width: 150.0, height: 150.0)
-        imgViewRing.layer.cornerRadius = 75.0
-        imgViewRing.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
-        rotateAnimation(imageView: imgViewRing)
-        self.view.addSubview(imgViewRing)
-        
-        let imgViewShareApp = UIImageView(frame: CGRect(x: 80, y: 60, width: 25.0, height: 25.0))
-        imgViewShareApp.image = imgShareApp
-        imgViewRing.addSubview(imgViewShareApp)
-        
-        
-        let imgViewimgRatingApp = UIImageView(frame: CGRect(x: 85, y: 75, width: 25.0, height: 25.0))
-        imgViewimgRatingApp.image = imgRatingApp
-        imgViewRing.addSubview(imgViewimgRatingApp)
-
-        
-        let imgViewContactUs = UIImageView(frame: CGRect(x: 80, y: 100, width: 25.0, height: 25.0))
-        imgViewContactUs.image = imgContactUs
-        imgViewRing.addSubview(imgViewContactUs)*/
-
-//        rotateAnimation(imageView: imgViewRing)
-
     }
 
     //Delegate method implementation
@@ -369,8 +371,13 @@ extension HomeViewController: GADBannerViewDelegate {
 }
 extension HomeViewController : FloatingActionButtonProtocol {
     
-    func floatingActionButtonProcessDidStart() {
+    func floatingActionOpen() {
+        viewtransperent.isHidden = false
     }
+    func floatingActionClose() {
+        viewtransperent.isHidden = true
+    }
+
     func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen: Bool,message: String, statusCode: Int?){
     }
     func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?) {

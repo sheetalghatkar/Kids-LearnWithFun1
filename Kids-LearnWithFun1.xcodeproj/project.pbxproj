@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */; };
 		4F0D923725A6464E00CDEFC3 /* PaymentCostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */; };
+		4F0F7F6F25B2011C006D8951 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */; };
+		4F0F7F7025B2011C006D8951 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6E25B2011C006D8951 /* FloatyManager.swift */; };
+		4F0F7F7125B2011C006D8951 /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6925B2011C006D8951 /* FloatyViewController.swift */; };
+		4F0F7F7225B2011C006D8951 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6B25B2011C006D8951 /* FloatyWindow.swift */; };
+		4F0F7F7325B2011C006D8951 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6D25B2011C006D8951 /* Floaty.swift */; };
+		4F0F7F7425B2011C006D8951 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6A25B2011C006D8951 /* FloatyItem.swift */; };
 		4FF3BC8925A8967D00CF8E3C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8825A8967D00CF8E3C /* Loading.gif */; };
 		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
 		4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */; };
@@ -187,6 +193,12 @@
 		43810BEC004FAB8751538E97 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCostController.swift; sourceTree = "<group>"; };
 		4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCostController.xib; sourceTree = "<group>"; };
+		4F0F7F6925B2011C006D8951 /* FloatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
+		4F0F7F6A25B2011C006D8951 /* FloatyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyItem.swift; sourceTree = "<group>"; };
+		4F0F7F6B25B2011C006D8951 /* FloatyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
+		4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyDelegate.swift; sourceTree = "<group>"; };
+		4F0F7F6D25B2011C006D8951 /* Floaty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floaty.swift; sourceTree = "<group>"; };
+		4F0F7F6E25B2011C006D8951 /* FloatyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
 		4FF3BC8825A8967D00CF8E3C /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailViewController.xib; sourceTree = "<group>"; };
@@ -670,6 +682,12 @@
 		70FF09352496450E002861AE /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				4F0F7F6D25B2011C006D8951 /* Floaty.swift */,
+				4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */,
+				4F0F7F6A25B2011C006D8951 /* FloatyItem.swift */,
+				4F0F7F6E25B2011C006D8951 /* FloatyManager.swift */,
+				4F0F7F6925B2011C006D8951 /* FloatyViewController.swift */,
+				4F0F7F6B25B2011C006D8951 /* FloatyWindow.swift */,
 				707ECA23249CD9A70024D06C /* darkwds1.wav */,
 				707ECA31249CE9A40024D06C /* HorseGif.gif */,
 				707ECA2D249CE6240024D06C /* TigerGif.gif */,
@@ -1084,6 +1102,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0F7F7225B2011C006D8951 /* FloatyWindow.swift in Sources */,
+				4F0F7F7025B2011C006D8951 /* FloatyManager.swift in Sources */,
+				4F0F7F7325B2011C006D8951 /* Floaty.swift in Sources */,
 				707ECA22249CB3E10024D06C /* UIViewExtension.swift in Sources */,
 				70FF093724965879002861AE /* GIFSwift.swift in Sources */,
 				4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */,
@@ -1097,11 +1118,14 @@
 				70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */,
 				4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */,
 				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,
+				4F0F7F6F25B2011C006D8951 /* FloatyDelegate.swift in Sources */,
+				4F0F7F7425B2011C006D8951 /* FloatyItem.swift in Sources */,
 				701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */,
 				70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */,
 				7068EFD424AB5DCE00B448C3 /* TestSolveCollectionCell.swift in Sources */,
 				70FF090824962D9B002861AE /* SceneDelegate.swift in Sources */,
 				70277DD224A4B59100072D57 /* UILabelExtension.swift in Sources */,
+				4F0F7F7125B2011C006D8951 /* FloatyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

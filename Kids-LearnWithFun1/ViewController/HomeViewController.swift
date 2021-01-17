@@ -23,9 +23,18 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     @IBOutlet weak var imgVwWild1Bottom: UIImageView!
     @IBOutlet weak var imgVwWild2Bottom: UIImageView!
     @IBOutlet weak var imgVwWild3Bottom: UIImageView!
-    
+
     @IBOutlet weak var btnSound: UIButton!
     @IBOutlet weak var btnNoAds: UIButton!
+    @IBOutlet weak var btnSetting: UIButton!
+
+    
+    @IBOutlet weak var btnRateUs: UIButton!
+    @IBOutlet weak var btnShare: UIButton!
+    @IBOutlet weak var btnContactUs: UIButton!
+
+    @IBOutlet weak var viewParentSetting: UIView!
+    @IBOutlet weak var viewtransperent: UIView!
 
 
     var player = AVAudioPlayer()
@@ -33,6 +42,16 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     var paymentDetailVC : PaymentDetailViewController?
+    var circleViewwidth = ScreenSize.SCREEN_WIDTH * 0.95
+    var showSetting =  false
+    @IBOutlet weak var viewCircle: UIView!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var xConstraint: NSLayoutConstraint!
+    @IBOutlet weak var yConstraint: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var xTranViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var yTranViewConstraint: NSLayoutConstraint!
 
     //------------------------------------------------------------------------
 
@@ -45,6 +64,14 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        widthConstraint.constant = circleViewwidth
+        xConstraint.constant = -(circleViewwidth/2)
+        yConstraint.constant = -(circleViewwidth/2)
+        viewCircle.layer.cornerRadius = circleViewwidth/2
+        self.viewCircle.isHidden = true
+        self.viewCircle.backgroundColor = UIColor.clear
+
+
         // Do any additional setup after loading the view.
         let birdGif1 = UIImage.gifImageWithName("bird1Gif")
         let birdGif2 = UIImage.gifImageWithName("bird2Gif")
@@ -99,8 +126,19 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
         }
- 
+        viewParentSetting.backgroundColor = UIColor.white
+        viewParentSetting.layer.cornerRadius = (circleViewwidth/2)
+        self.viewParentSetting.alpha = 0.7
+        self.viewtransperent.isHidden = true
+
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickTransperentView (_:)))
+        self.viewtransperent.addGestureRecognizer(gesture)
+        
+        
+        xTranViewConstraint.constant = -(circleViewwidth)
+        yTranViewConstraint.constant = -(circleViewwidth)
     }
+    
     @objc func alarmAlertActivate(){
         UIView.animate(withDuration: 0.7) {
             self.imgVwTest.alpha = self.imgVwTest.alpha == 1.0 ? 0.0 : 1.0
@@ -183,12 +221,113 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
             player.stop()
         }
     }
+    
+    @IBAction func funcSetting(_ sender: Any) {
+        self.viewtransperent.isHidden = false
+        UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+            //Set x position what ever you want
+            self.viewParentSetting.frame = CGRect(x: -((self.circleViewwidth)/2), y: -((self.circleViewwidth)/2), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
+
+        }, completion: nil)
+        if !showSetting {
+            self.showSetting = true
+            self.viewtransperent.isHidden = false
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseOut, animations: {
+                self.rotateAnimation(imageView: self.viewCircle, getToValue: (CGFloat.pi * 2))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.viewCircle.isHidden = false
+                }
+            }, completion: nil)
+        } else {
+            self.showSetting = false
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
+                self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
+                    self.viewCircle.isHidden = true
+                    self.viewtransperent.isHidden = true
+                }
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+                //Set x position what ever you want
+                self.viewParentSetting.frame = CGRect(x: -(self.circleViewwidth), y: -(self.circleViewwidth), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
+            }, completion: nil)
+        }
+    }
+    @IBAction func funcRateUs(_ sender: Any) {
+    }
+    @IBAction func funcShare(_ sender: Any) {
+    }
+    @IBAction func funcContactUs(_ sender: Any) {
+    }
+    @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
+        self.showSetting = false
+        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
+            self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
+                self.viewCircle.isHidden = true
+                self.viewtransperent.isHidden = true
+            }
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+            //Set x position what ever you want
+            self.viewParentSetting.frame = CGRect(x: -(self.circleViewwidth), y: -(self.circleViewwidth), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
+        }, completion: nil)
+    }
+
+    func rotateAnimation(imageView:UIView,duration: CFTimeInterval = 1.5, getToValue : CGFloat) {
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = getToValue
+        rotateAnimation.duration = duration
+        imageView.layer.add(rotateAnimation, forKey: nil)
+    }
+
     //Start Payment flow
     
     @IBAction func funcNoAds(_ sender: Any) {
         showPaymentScreen()
+
+//        print("@@@@@@",ScreenSize.SCREEN_WIDTH)
+//        rotateAnimation(imageView: viewCircle)
+
+//        UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut, animations: {
+//            self.imgViewRing.alpha = 1.0
+//        }, completion: nil)
+
+       // showPaymentScreen()
+        /*let imgShareApp = UIImage(named: "map_green_color")
+        let imgRatingApp = UIImage(named: "map_hashtag_gray")
+        let imgContactUs = UIImage(name
+         d: "map_hashtag_blue")
+
+        
+        imgViewRing.backgroundColor = UIColor.red
+        imgViewRing.frame = CGRect(x: 0, y: 0, width: 150.0, height: 150.0)
+        imgViewRing.layer.cornerRadius = 75.0
+        imgViewRing.center = CGPoint(x: self.view.frame.size.width/2.0, y: self.view.frame.size.height/2.0)
+        rotateAnimation(imageView: imgViewRing)
+        self.view.addSubview(imgViewRing)
+        
+        let imgViewShareApp = UIImageView(frame: CGRect(x: 80, y: 60, width: 25.0, height: 25.0))
+        imgViewShareApp.image = imgShareApp
+        imgViewRing.addSubview(imgViewShareApp)
+        
+        
+        let imgViewimgRatingApp = UIImageView(frame: CGRect(x: 85, y: 75, width: 25.0, height: 25.0))
+        imgViewimgRatingApp.image = imgRatingApp
+        imgViewRing.addSubview(imgViewimgRatingApp)
+
+        
+        let imgViewContactUs = UIImageView(frame: CGRect(x: 80, y: 100, width: 25.0, height: 25.0))
+        imgViewContactUs.image = imgContactUs
+        imgViewRing.addSubview(imgViewContactUs)*/
+
+//        rotateAnimation(imageView: imgViewRing)
+
     }
-    
+
     //Delegate method implementation
     func showPaymentCostScreen() {
         paymentDetailVC?.view.removeFromSuperview()
@@ -235,5 +374,14 @@ extension HomeViewController: GADBannerViewDelegate {
     /// the App Store), backgrounding the current app.
     func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
       print("adViewWillLeaveApplication")
+    }
+}
+extension HomeViewController : FloatingActionButtonProtocol {
+    
+    func floatingActionButtonProcessDidStart() {
+    }
+    func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen: Bool,message: String, statusCode: Int?){
+    }
+    func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?) {
     }
 }

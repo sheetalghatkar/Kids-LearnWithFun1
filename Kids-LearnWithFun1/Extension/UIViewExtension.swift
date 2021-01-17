@@ -13,6 +13,7 @@ import UIKit
     private var _round = false
     private var _borderColor = UIColor.clear
     private var _borderWidth: CGFloat = 0
+    private var _isShowShadow = false
 
     @IBInspectable var round: Bool {
         set {
@@ -103,5 +104,28 @@ import UIKit
             }, completion: nil)
         }
     }
+    
+    @IBInspectable var isShowShadow: Bool {
+        set {
+            _isShowShadow = newValue
+            makeShodow()
+        }
+        get {
+            return self._isShowShadow
+        }
+    }
+
+
+    
+    private func makeShodow() {
+        if self.isShowShadow {
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowRadius = 5.0
+            self.layer.shadowOpacity = 0.8
+            self.layer.shadowOffset = CGSize(width: 4, height: 4)
+            self.layer.masksToBounds = false
+        }
+    }
+
     
 }

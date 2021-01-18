@@ -11,6 +11,7 @@ import UIKit
 public protocol FloatingActionButtonProtocol : class{
     func floatingActionClose()
     func floatingActionOpen()
+    func rotateSettingButtonRotate()
     func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen : Bool, message: String, statusCode: Int?)
     func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?)
 }
@@ -424,9 +425,11 @@ open class Floaty: UIView {
     @objc open func toggle() {
         if items.count > 0 {
             if closed == true {
+                floatingActionButtonDelegate!.rotateSettingButtonRotate()
                 floatingActionButtonDelegate!.floatingActionOpen()
                 open()
             } else {
+                floatingActionButtonDelegate!.rotateSettingButtonRotate()
                 floatingActionButtonDelegate!.floatingActionClose()
                 close()
             }

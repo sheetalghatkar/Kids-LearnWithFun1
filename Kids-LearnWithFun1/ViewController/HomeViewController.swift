@@ -377,7 +377,16 @@ extension HomeViewController : FloatingActionButtonProtocol {
     func floatingActionClose() {
         viewtransperent.isHidden = true
     }
-
+    func rotateSettingButtonRotate() {
+        UIView.animate(withDuration: 0.5, animations: {
+            if self.btnSetting.transform == .identity {
+                self.btnSetting.transform = CGAffineTransform(rotationAngle: .pi * 0.999)
+            } else {
+                self.btnSetting.transform = CGAffineTransform.identity
+            }
+        })
+    }
+    
     func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen: Bool,message: String, statusCode: Int?){
     }
     func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?) {

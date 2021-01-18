@@ -211,12 +211,14 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         }
         if closestCellIndex != -1 {
             self.collectionViewCard.scrollToItem(at: IndexPath(row: closestCellIndex, section: 0), at: .centeredHorizontally, animated: true)
-          self.lblQuestion.text = getImageNameArray[closestCellIndex]
+            self.lblQuestion.text = getImageNameArray[closestCellIndex]
             if closestCellIndex == self.showOptionsArray.count - 1 {
                 self.btnForward.isHidden = true
+                self.btnBackward.isHidden = false
             }
             else if closestCellIndex == 0 {
                 self.btnBackward.isHidden = true
+                self.btnForward.isHidden = false
             } else {
                 self.btnForward.isHidden = false
                 self.btnBackward.isHidden = false

@@ -415,6 +415,7 @@ open class Floaty: UIView {
         }
         fabDelegate?.floatyClosed?(self)
         closed = true
+        floatingActionButtonDelegate?.floatingActionClose()
     }
     
     /**

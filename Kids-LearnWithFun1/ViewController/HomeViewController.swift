@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
-
-class HomeViewController: UIViewController, PayementForParentProtocol {
+import MessageUI
+class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComposeViewControllerDelegate {
     @IBOutlet weak var bgScreen: UIImageView!
     @IBOutlet weak var imgVwWildAnimal: UIImageView!
     @IBOutlet weak var imgVwPetAnimal: UIImageView!
@@ -142,10 +142,11 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         } else {
             btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
         }
-        viewParentSetting.backgroundColor = UIColor.white
-        viewParentSetting.layer.cornerRadius = (circleViewwidth/2)
-        self.viewtransperent.alpha = 1.0
+        viewParentSetting.backgroundColor = UIColor.black
+        viewParentSetting.alpha = 0.1
+
         self.viewtransperent.isHidden = true
+        self.viewParentSetting.isHidden = false
 
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickTransperentView (_:)))
         self.viewtransperent.addGestureRecognizer(gesture)
@@ -155,16 +156,51 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         yTranViewConstraint.constant = -(circleViewwidth)
         self.floaty.floatingActionButtonDelegate = self
 
-        viewtransperent.backgroundColor = CommanArray.paymentBtnTextColor
-        viewtransperent.alpha = 0.9
+        viewtransperent.backgroundColor =  UIColor.clear  //CommanArray.paymentBtnTextColor
+        viewtransperent.alpha = 1.0
         
         self.floaty.addItem(icon: hashTagImg1, handler: {_ in
             self.floaty.close()
+            // 1.
+            var components = URLComponents(url: CommanArray.app_AppStoreLink!, resolvingAgainstBaseURL: false)
+
+            // 2.
+            components?.queryItems = [
+              URLQueryItem(name: "action", value: "write-review")
+            ]
+
+            // 3.
+            guard let writeReviewURL = components?.url else {
+              return
+            }
+
+            // 4.
+            UIApplication.shared.open(writeReviewURL)
         })
         self.floaty.addItem(icon: hashTagImg2, handler: {_ in
+            let activityViewController = UIActivityViewController(
+                activityItems: [CommanArray.app_AppStoreLink!],
+              applicationActivities: nil)
+
+            // 2.
+            self.present(activityViewController, animated: true, completion: nil)
             self.floaty.close()
         })
-        self.floaty.addItem(icon: hashTagImg3, handler: {_ in
+        self.floaty.addItem(icon: hashTagImg3, handler: { [self]_ in
+            let mailComposeViewController = configureMailComposer()
+              if MFMailComposeViewController.canSendMail(){
+                  self.present(mailComposeViewController, animated: true, completion: nil)
+              }else{
+                  print("Can't send email")
+                let alert = UIAlertController(title: "", message: "Please setup mail account.", preferredStyle: UIAlertController.Style.alert)
+
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+
+              }
             self.floaty.close()
         })
 //        floaty.items[0].titleLabel.text = "Rate & Review"
@@ -173,9 +209,60 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         floaty.items[0].title = "Rate & Review"
         floaty.items[1].title = "Share App"
         floaty.items[2].title = "Contact Us"
+        
+        addWaveBackground(to :viewtransperent)
 
     }
-    
+    func addWaveBackground(to view: UIView){
+          let multipler = CGFloat(0.13)
+          let leftDrop:CGFloat = 0.4 + multipler
+          let rightDrop: CGFloat = 0.3 +  multipler
+          let leftInflexionX: CGFloat = 0.4 + multipler
+          let leftInflexionY: CGFloat = 0.47 + multipler
+          let rightInflexionX: CGFloat = 0.6  +  multipler
+          let rightInflexionY: CGFloat = 0.22 + multipler
+
+          let backView = UIView(frame: view.frame)
+          backView.backgroundColor = .clear
+          view.addSubview(backView)
+          let backLayer = CAShapeLayer()
+          let path = UIBezierPath()
+          path.move(to: CGPoint(x: 0, y: 0))
+          path.addLine(to: CGPoint(x:0, y: view.frame.height * leftDrop))
+          path.addCurve(to: CGPoint(x:225, y: view.frame.height * rightDrop),
+                        controlPoint1: CGPoint(x: view.frame.width * leftInflexionX, y: view.frame.height * leftInflexionY),
+                        controlPoint2: CGPoint(x: view.frame.width * rightInflexionX, y: view.frame.height * rightInflexionY))
+          path.addLine(to: CGPoint(x:225, y: 0))
+          path.close()
+          backLayer.fillColor = CommanArray.settingBgColor.cgColor //UIColor.blue.cgColor
+          backLayer.path = path.cgPath
+          backView.layer.addSublayer(backLayer)
+       }
+
+    func configureMailComposer() -> MFMailComposeViewController{
+        let mailComposeVC = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setToRecipients(["sheetal22july@gmail.com"])
+        mailComposeVC.setSubject("sdasd asasd")
+        mailComposeVC.setMessageBody("sadsaDASd asDasdsa", isHTML: false)
+        return mailComposeVC
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["support@yoursite.com"])
+            mail.setMessageBody("Feedback - Learn Nature App", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
     @objc func alarmAlertActivate(){
         UIView.animate(withDuration: 0.7) {
             self.imgVwTest.alpha = self.imgVwTest.alpha == 1.0 ? 0.0 : 1.0
@@ -259,43 +346,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
         }
     }
     
-    @IBAction func funcSetting(_ sender: Any) {
-        if !showSetting {
-            self.showSetting = true
-         //   xSettingIConConst.constant = 35
-            self.viewtransperent.isHidden = false
-            UIView.animate(withDuration: 0.50, delay: 0.2, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
-                //Set x position what ever you want
-                self.viewParentSetting.frame = CGRect(x: -((self.circleViewwidth)/2), y: -((self.circleViewwidth)/2), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
-
-            }, completion: nil)
-            self.viewtransperent.isHidden = false
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseOut, animations: {
-                self.rotateAnimation(imageView: self.viewCircle, getToValue: (CGFloat.pi * 2))
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.viewCircle.isHidden = false
-                }
-            }, completion: nil)
-        } else {
-            funcCloseSetting()
-        }
-    }
-    func funcCloseSetting() {
-        self.showSetting = false
-        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
-            self.rotateAnimation(imageView: self.viewCircle, getToValue: -(CGFloat.pi * 2))
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
-              //  xSettingIConConst.constant = 15
-                self.viewCircle.isHidden = true
-                self.viewtransperent.isHidden = true
-            }
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.50, delay: 0.5, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
-            //Set x position what ever you want
-            self.viewParentSetting.frame = CGRect(x: -(self.circleViewwidth), y: -(self.circleViewwidth), width: self.viewParentSetting.frame.size.width, height: self.viewParentSetting.frame.size.height)
-        }, completion: nil)
-    }
     @IBAction func funcRateUs(_ sender: Any) {
     }
     @IBAction func funcShare(_ sender: Any) {
@@ -304,6 +354,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol {
     }
     @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
         self.viewtransperent.isHidden = true
+        self.viewParentSetting.isHidden = true
       //  funcCloseSetting()
     }
 

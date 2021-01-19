@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class CommanArray {
+    static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
     static var wildAnimalImageArray: [UIImage] = [
         UIImage(named: "Tiger.png")!,
         UIImage(named: "Lion.png")!,
@@ -93,7 +94,7 @@ class CommanArray {
     static var paymentModeBgColor = UIColor(red: (51/255), green: (206/255), blue: (225/255), alpha: 1.0)
     static var paymentBtnTextColor = UIColor(red: (37/255), green: (160/255), blue: (187/255), alpha: 1.0)
 //    static var yellowColor = UIColor(red: (203/255), green: (161/255), blue: (46/255), alpha: 1.0)
-
+    static var settingBgColor = UIColor(red: (113/255), green: (200/255), blue: (92/255), alpha: 1.0)
     static var imageRadioCheck = UIImage(named: "radio_check.png")
     static var imageRadioUncheck = UIImage(named: "radio_uncheck.png")
 }

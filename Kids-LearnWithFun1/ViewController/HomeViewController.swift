@@ -34,11 +34,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             floaty.buttonImage = UIImage(named: "map_hashtag_gray")
         }
     }
-
-    @IBOutlet weak var btnRateUs: UIButton!
-    @IBOutlet weak var btnShare: UIButton!
-    @IBOutlet weak var btnContactUs: UIButton!
-
     @IBOutlet weak var viewParentSetting: UIView!
     @IBOutlet weak var viewtransperent: UIView!
 
@@ -51,19 +46,9 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     var circleViewwidth = ScreenSize.SCREEN_WIDTH * 1.08
     var showSetting =  false
     
-    let hashTagImg1 = UIImage(named: "RateUs.png")
-    let hashTagImg2 = UIImage(named: "ShareApp.png")
-    let hashTagImg3 = UIImage(named: "ContactUs.png")
-    
-    @IBOutlet weak var viewCircle: UIView!
-    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var xConstraint: NSLayoutConstraint!
-    @IBOutlet weak var yConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var xSettingIConConst: NSLayoutConstraint!
-
-    @IBOutlet weak var xTranViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var yTranViewConstraint: NSLayoutConstraint!
+    let rateUsImg = UIImage(named: "RateUs.png")
+    let shareAppImg = UIImage(named: "ShareApp.png")
+    let contactUsImg = UIImage(named: "ContactUs.png")
 
     //------------------------------------------------------------------------
 
@@ -80,13 +65,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         self.imgVwFlower.isExclusiveTouch = true
         self.imgVwPetAnimal.isExclusiveTouch = true
         self.imgVwTest.isExclusiveTouch = true
-        widthConstraint.constant = circleViewwidth
-        xConstraint.constant = -(circleViewwidth/2)
-        yConstraint.constant = -(circleViewwidth/2)
-        viewCircle.layer.cornerRadius = circleViewwidth/2
-        self.viewCircle.isHidden = true
-        self.viewCircle.backgroundColor = UIColor.clear
-
 
         // Do any additional setup after loading the view.
         let birdGif1 = UIImage.gifImageWithName("bird1Gif")
@@ -143,23 +121,15 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
         }
         viewParentSetting.backgroundColor = UIColor.black
-        viewParentSetting.alpha = 0.1
+        viewParentSetting.alpha = 0.4
 
         self.viewtransperent.isHidden = true
-        self.viewParentSetting.isHidden = false
+        self.viewParentSetting.isHidden = true
 
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickTransperentView (_:)))
-        self.viewtransperent.addGestureRecognizer(gesture)
-        
-        
-        xTranViewConstraint.constant = -(circleViewwidth)
-        yTranViewConstraint.constant = -(circleViewwidth)
+        self.viewParentSetting.addGestureRecognizer(gesture)
         self.floaty.floatingActionButtonDelegate = self
-
-        viewtransperent.backgroundColor =  UIColor.clear  //CommanArray.paymentBtnTextColor
-        viewtransperent.alpha = 1.0
-        
-        self.floaty.addItem(icon: hashTagImg1, handler: {_ in
+        self.floaty.addItem(icon: rateUsImg, handler: {_ in
             self.floaty.close()
             // 1.
             var components = URLComponents(url: CommanArray.app_AppStoreLink!, resolvingAgainstBaseURL: false)
@@ -177,7 +147,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             // 4.
             UIApplication.shared.open(writeReviewURL)
         })
-        self.floaty.addItem(icon: hashTagImg2, handler: {_ in
+        self.floaty.addItem(icon: shareAppImg, handler: {_ in
             let activityViewController = UIActivityViewController(
                 activityItems: [CommanArray.app_AppStoreLink!],
               applicationActivities: nil)
@@ -186,7 +156,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             self.present(activityViewController, animated: true, completion: nil)
             self.floaty.close()
         })
-        self.floaty.addItem(icon: hashTagImg3, handler: { [self]_ in
+        self.floaty.addItem(icon: contactUsImg, handler: { [self]_ in
             let mailComposeViewController = configureMailComposer()
               if MFMailComposeViewController.canSendMail(){
                   self.present(mailComposeViewController, animated: true, completion: nil)
@@ -215,10 +185,12 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     }
     func addWaveBackground(to view: UIView){
           let multipler = CGFloat(0.13)
+        
           let leftDrop:CGFloat = 0.4 + multipler
-          let rightDrop: CGFloat = 0.3 +  multipler
           let leftInflexionX: CGFloat = 0.4 + multipler
           let leftInflexionY: CGFloat = 0.47 + multipler
+
+          let rightDrop: CGFloat = 0.3 +  multipler
           let rightInflexionX: CGFloat = 0.6  +  multipler
           let rightInflexionY: CGFloat = 0.22 + multipler
 
@@ -231,7 +203,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
           path.addLine(to: CGPoint(x:0, y: view.frame.height * leftDrop))
           path.addCurve(to: CGPoint(x:225, y: view.frame.height * rightDrop),
                         controlPoint1: CGPoint(x: view.frame.width * leftInflexionX, y: view.frame.height * leftInflexionY),
-                        controlPoint2: CGPoint(x: view.frame.width * rightInflexionX, y: view.frame.height * rightInflexionY))
+                        controlPoint2: CGPoint(x: view.frame.width * rightInflexionX, y: view.frame.height * rightInflexionY+30))
           path.addLine(to: CGPoint(x:225, y: 0))
           path.close()
           backLayer.fillColor = CommanArray.settingBgColor.cgColor //UIColor.blue.cgColor
@@ -346,16 +318,9 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         }
     }
     
-    @IBAction func funcRateUs(_ sender: Any) {
-    }
-    @IBAction func funcShare(_ sender: Any) {
-    }
-    @IBAction func funcContactUs(_ sender: Any) {
-    }
     @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
         self.viewtransperent.isHidden = true
         self.viewParentSetting.isHidden = true
-      //  funcCloseSetting()
     }
 
     func rotateAnimation(imageView:UIView,duration: CFTimeInterval = 1.5, getToValue : CGFloat) {
@@ -423,23 +388,17 @@ extension HomeViewController: GADBannerViewDelegate {
 extension HomeViewController : FloatingActionButtonProtocol {
     
     func floatingActionOpen() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.btnSetting.transform = CGAffineTransform(rotationAngle: .pi * 0.999)
+        })
         viewtransperent.isHidden = false
+        viewParentSetting.isHidden = false
     }
     func floatingActionClose() {
-        viewtransperent.isHidden = true
-    }
-    func rotateSettingButtonRotate() {
         UIView.animate(withDuration: 0.5, animations: {
-            if self.btnSetting.transform == .identity {
-                self.btnSetting.transform = CGAffineTransform(rotationAngle: .pi * 0.999)
-            } else {
-                self.btnSetting.transform = CGAffineTransform.identity
-            }
+            self.btnSetting.transform = CGAffineTransform.identity
         })
-    }
-    
-    func floatingActionButtonProcessDidCompleteSuccessfully(refreshMapScreen: Bool,message: String, statusCode: Int?){
-    }
-    func floatingActionButtonDidFail(errorMessage: String, statusCode: Int?) {
+        viewtransperent.isHidden = true
+        viewParentSetting.isHidden = true
     }
 }

@@ -214,7 +214,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jq-2D-84O" userLabel="Test" customClass="UILabelExtension" customModule="Learn_Nature" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jq-2D-84O" userLabel="Test" customClass="UILabelExtension" customModule="Learn_Nature" customModuleProvider="target">
                                         <rect key="frame" x="92" y="571" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="DGZ-Bp-q6J"/>
@@ -285,107 +285,16 @@
                                     <constraint firstAttribute="height" constant="128" id="xQD-ZU-dKj"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-wB-Fvr" userLabel="transperentView">
-                                <rect key="frame" x="0.0" y="0.0" width="214" height="646"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-Kp-m0Z" customClass="UIViewExtend" customModule="Learn_Nature" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-Kp-m0Z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowShadow" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="round" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTA-sJ-99e">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-YP-QV8" userLabel="rateButton" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                        <rect key="frame" x="332" y="246" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="qEJ-YP-QV8" secondAttribute="height" id="FaE-kv-8Ui"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="ShareApp"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="4" height="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.80000000000000004"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="funcRateUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYG-Vs-cIX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muF-Yr-IL7" userLabel="shareButton" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                        <rect key="frame" x="285" y="306" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="muF-Yr-IL7" secondAttribute="height" id="EBl-0U-60t"/>
-                                            <constraint firstAttribute="width" constant="40" id="lVs-0O-5yc"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="ShareApp"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.80000000000000004"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="4" height="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="funcShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aC5-Yo-xmt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qME-xw-JQ6" userLabel="ContactUsButton" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                        <rect key="frame" x="215" y="343" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="qME-xw-JQ6" secondAttribute="height" id="4zU-rB-LDL"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="ShareApp"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.16078431369999999" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="0.80000000000000004"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="4" height="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="funcContactUs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRl-dZ-ng1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-wB-Fvr" userLabel="transperentView">
+                                <rect key="frame" x="0.0" y="0.0" width="230" height="630"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="muF-Yr-IL7" secondAttribute="bottom" constant="54" id="Ch9-CG-4vN"/>
-                                    <constraint firstItem="qME-xw-JQ6" firstAttribute="top" secondItem="muF-Yr-IL7" secondAttribute="bottom" constant="-3" id="Dig-bq-ueo"/>
-                                    <constraint firstAttribute="width" constant="400" id="Hxo-4o-vS1"/>
-                                    <constraint firstAttribute="trailing" secondItem="muF-Yr-IL7" secondAttribute="trailing" constant="75" id="Ma5-5c-8Af"/>
-                                    <constraint firstItem="qME-xw-JQ6" firstAttribute="width" secondItem="muF-Yr-IL7" secondAttribute="width" id="OxZ-N0-dnr"/>
-                                    <constraint firstItem="qEJ-YP-QV8" firstAttribute="width" secondItem="muF-Yr-IL7" secondAttribute="width" id="Y5c-ZI-5uY"/>
-                                    <constraint firstItem="muF-Yr-IL7" firstAttribute="top" secondItem="qEJ-YP-QV8" secondAttribute="bottom" constant="20" id="dqY-2F-4BX"/>
-                                    <constraint firstAttribute="trailing" secondItem="qEJ-YP-QV8" secondAttribute="trailing" constant="28" id="eHc-JB-ckt"/>
-                                    <constraint firstAttribute="trailing" secondItem="qME-xw-JQ6" secondAttribute="trailing" constant="145" id="gL3-Mn-Gxx"/>
-                                    <constraint firstAttribute="width" secondItem="OTA-sJ-99e" secondAttribute="height" multiplier="1:1" id="y0I-QZ-wV2"/>
+                                    <constraint firstAttribute="height" constant="630" id="FKC-XP-0Wa"/>
+                                    <constraint firstAttribute="width" constant="230" id="tbJ-J2-93F"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-uF-oBi" customClass="Floaty" customModule="Learn_Nature" customModuleProvider="target">
@@ -404,29 +313,18 @@
                                     <constraint firstAttribute="width" secondItem="SbC-dm-NYg" secondAttribute="height" id="HPr-AH-Xcl"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Setting"/>
-                                <connections>
-                                    <action selector="funcSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayv-7e-p8W"/>
-                                </connections>
                             </button>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SettingBox" translatesAutoresizingMaskIntoConstraints="NO" id="vV2-sE-g1m">
-                                <rect key="frame" x="5" y="104.5" width="300" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="tHN-lV-XqF"/>
-                                    <constraint firstAttribute="height" constant="250" id="yXS-GD-eM7"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9V3-wB-Fvr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="23A-jz-gNa"/>
                             <constraint firstItem="tbI-JC-8m4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3li-sY-dKW"/>
                             <constraint firstAttribute="trailing" secondItem="6Zr-Kp-m0Z" secondAttribute="trailing" id="92a-mX-ifF"/>
-                            <constraint firstItem="vV2-sE-g1m" firstAttribute="top" secondItem="SbC-dm-NYg" secondAttribute="bottom" constant="5" id="Byy-oc-Ipx"/>
                             <constraint firstItem="6Zr-Kp-m0Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fyf-vx-l1c"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ice-uh-YRq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8kK-0q-VHh" secondAttribute="trailing" constant="15" id="IeB-fL-bBl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="maV-i8-77x" secondAttribute="bottom" constant="20" id="IxE-kI-knO"/>
-                            <constraint firstItem="vV2-sE-g1m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Jzw-gx-DXg"/>
                             <constraint firstItem="SbC-dm-NYg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="KgV-Vf-leB"/>
                             <constraint firstAttribute="bottom" secondItem="tbI-JC-8m4" secondAttribute="bottom" id="L54-Pr-K99"/>
                             <constraint firstItem="2cV-I3-eQU" firstAttribute="leading" secondItem="Fv5-dM-EDz" secondAttribute="trailing" constant="25" id="LTp-TW-sED"/>
@@ -434,21 +332,16 @@
                             <constraint firstItem="F0c-uF-oBi" firstAttribute="centerY" secondItem="Fv5-dM-EDz" secondAttribute="centerY" id="Mv6-fb-dWJ"/>
                             <constraint firstItem="maV-i8-77x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-30" id="Ppa-Yk-94O"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="2cV-I3-eQU" secondAttribute="bottom" constant="5" id="Tec-F7-bt4"/>
-                            <constraint firstItem="9V3-wB-Fvr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ux6-Na-egc"/>
                             <constraint firstItem="F0c-uF-oBi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="VLt-lx-bAM"/>
-                            <constraint firstAttribute="bottom" secondItem="9V3-wB-Fvr" secondAttribute="bottom" constant="250" id="VTc-SP-iL7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9V3-wB-Fvr" secondAttribute="trailing" constant="200" id="aTd-KT-DfW"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1.35" id="cMY-YL-saR"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="cN1-TA-3mz"/>
                             <constraint firstItem="Fv5-dM-EDz" firstAttribute="centerY" secondItem="2cV-I3-eQU" secondAttribute="centerY" id="dlX-9G-EPQ"/>
                             <constraint firstAttribute="bottom" secondItem="6Zr-Kp-m0Z" secondAttribute="bottom" id="gBZ-Fl-KYM"/>
                             <constraint firstItem="SbC-dm-NYg" firstAttribute="centerY" secondItem="Fv5-dM-EDz" secondAttribute="centerY" id="gaq-CJ-Pr5"/>
                             <constraint firstItem="tbI-JC-8m4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hSy-co-r57"/>
-                            <constraint firstItem="OTA-sJ-99e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lmD-hx-WG6"/>
+                            <constraint firstItem="9V3-wB-Fvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kLq-KK-DE1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8kK-0q-VHh" secondAttribute="bottom" constant="20" id="rCY-eS-a0b"/>
-                            <constraint firstItem="OTA-sJ-99e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sUz-EN-05n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebZ-X7-GUd" secondAttribute="trailing" constant="15" id="tvr-rt-c75"/>
-                            <constraint firstItem="9V3-wB-Fvr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="upX-6T-qF0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cV-I3-eQU" secondAttribute="trailing" constant="15" id="x9z-48-Run"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tbI-JC-8m4" secondAttribute="trailing" id="zHI-1I-cnZ"/>
                             <constraint firstItem="6Zr-Kp-m0Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="znp-RA-TkN"/>
@@ -457,11 +350,8 @@
                     <navigationItem key="navigationItem" id="CR3-kV-sGc"/>
                     <connections>
                         <outlet property="bgScreen" destination="tbI-JC-8m4" id="o0Y-dj-nuh"/>
-                        <outlet property="btnContactUs" destination="qME-xw-JQ6" id="nWs-oX-25L"/>
                         <outlet property="btnNoAds" destination="Fv5-dM-EDz" id="P2a-zs-5Vw"/>
-                        <outlet property="btnRateUs" destination="qEJ-YP-QV8" id="uhq-lp-nQ1"/>
                         <outlet property="btnSetting" destination="SbC-dm-NYg" id="P1y-Pj-K0I"/>
-                        <outlet property="btnShare" destination="muF-Yr-IL7" id="dOF-A4-HIG"/>
                         <outlet property="btnSound" destination="2cV-I3-eQU" id="kBd-Pf-ngJ"/>
                         <outlet property="floaty" destination="F0c-uF-oBi" id="gFg-ns-bzC"/>
                         <outlet property="imgVwBird" destination="cJK-ds-x0V" id="WmK-8M-uf2"/>
@@ -474,14 +364,8 @@
                         <outlet property="imgVwWild2Bottom" destination="8kK-0q-VHh" id="CQJ-OI-V6U"/>
                         <outlet property="imgVwWild3Bottom" destination="CVT-sM-aGd" id="gTF-My-qR6"/>
                         <outlet property="imgVwWildAnimal" destination="gjN-n9-wRV" id="jax-Ga-SeV"/>
-                        <outlet property="viewCircle" destination="OTA-sJ-99e" id="PaG-Jg-NPF"/>
                         <outlet property="viewParentSetting" destination="6Zr-Kp-m0Z" id="wTM-HT-4ku"/>
                         <outlet property="viewtransperent" destination="9V3-wB-Fvr" id="wjp-1T-IRx"/>
-                        <outlet property="widthConstraint" destination="Hxo-4o-vS1" id="Auq-PP-OtD"/>
-                        <outlet property="xConstraint" destination="sUz-EN-05n" id="uDT-6i-HVu"/>
-                        <outlet property="xTranViewConstraint" destination="znp-RA-TkN" id="CUP-73-LK1"/>
-                        <outlet property="yConstraint" destination="lmD-hx-WG6" id="Ah6-hR-7Ry"/>
-                        <outlet property="yTranViewConstraint" destination="Fyf-vx-l1c" id="oIG-uN-XPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -508,7 +392,6 @@
                                 <state key="normal" backgroundImage="No-Ads"/>
                                 <connections>
                                     <action selector="funcNoAds:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="3tX-Yj-yfb"/>
-                                    <action selector="funcNoAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTo-sn-rTZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAN-y2-CdW" userLabel="BtnSound">
@@ -749,7 +632,6 @@
                                 <state key="normal" backgroundImage="No-Ads"/>
                                 <connections>
                                     <action selector="funcNoAds:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="0SI-qq-95X"/>
-                                    <action selector="funcNoAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud4-YV-ODx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVn-jN-vjJ" userLabel="BtnSound">
@@ -993,7 +875,6 @@
                                 <state key="normal" backgroundImage="No-Ads"/>
                                 <connections>
                                     <action selector="funcNoAds:" destination="1oa-lM-swm" eventType="touchUpInside" id="Cse-r1-rVd"/>
-                                    <action selector="funcNoAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgU-RW-soP"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-3g-7wf" userLabel="containerView">
@@ -1290,7 +1171,7 @@
             <size key="intrinsicContentSize" width="98" height="43.5"/>
         </designable>
         <designable name="8jq-2D-84O">
-            <size key="intrinsicContentSize" width="57.5" height="43.5"/>
+            <size key="intrinsicContentSize" width="71.5" height="43.5"/>
         </designable>
         <designable name="An0-re-XTy">
             <size key="intrinsicContentSize" width="72" height="43.5"/>
@@ -1343,17 +1224,8 @@
         <designable name="hhw-oN-r24">
             <size key="intrinsicContentSize" width="118" height="43.5"/>
         </designable>
-        <designable name="muF-Yr-IL7">
-            <size key="intrinsicContentSize" width="1300" height="1300"/>
-        </designable>
         <designable name="pdb-61-ofa">
             <size key="intrinsicContentSize" width="185.5" height="43.5"/>
-        </designable>
-        <designable name="qEJ-YP-QV8">
-            <size key="intrinsicContentSize" width="1300" height="1300"/>
-        </designable>
-        <designable name="qME-xw-JQ6">
-            <size key="intrinsicContentSize" width="1300" height="1300"/>
         </designable>
         <designable name="qZo-4f-SIQ">
             <size key="intrinsicContentSize" width="75" height="75"/>
@@ -1395,8 +1267,6 @@
         <image name="PlayAgain" width="2255" height="2255"/>
         <image name="Question" width="235.5" height="256"/>
         <image name="Setting" width="2295" height="2295"/>
-        <image name="SettingBox" width="150" height="150"/>
-        <image name="ShareApp" width="1300" height="1300"/>
         <image name="Sound-On" width="113" height="113"/>
         <image name="Sound-On_home" width="113" height="113"/>
         <image name="Test" width="232" height="269"/>

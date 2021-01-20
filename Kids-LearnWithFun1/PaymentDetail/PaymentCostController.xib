@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentCostController" customModule="Learn_Nature" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentCostController" customModule="Kids_LearnWithFun1" customModuleProvider="target">
             <connections>
                 <outlet property="btnMonthlyPayment" destination="JhY-Ug-2fs" id="LSW-la-acJ"/>
                 <outlet property="btnRadioNonRecurringMonthly" destination="PJu-XK-rRh" id="eJd-Sj-DkJ"/>
@@ -45,7 +45,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature" translatesAutoresizingMaskIntoConstraints="NO" id="Ls3-sf-2xR">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-xj-Cri" userLabel="lblTitle">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-xj-Cri" userLabel="lblTitle">
                     <rect key="frame" x="75" y="64" width="324" height="38.5"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,7 +65,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-dd-9sK" userLabel="paymentDetailView">
                     <rect key="frame" x="41.5" y="127.5" width="331" height="450"/>
                     <subviews>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E02-Ny-Yef" userLabel="emptyView" customClass="UIViewExtend" customModule="Learn_Nature" customModuleProvider="target">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E02-Ny-Yef" userLabel="emptyView" customClass="UIViewExtend" customModule="Kids_LearnWithFun1" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="331" height="200"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
@@ -143,7 +143,7 @@
                                         <action selector="funcRadioNonRecurringYearlyClick:" destination="-1" eventType="touchUpInside" id="LLO-ff-28l"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56Q-H6-g3c" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56Q-H6-g3c" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
                                     <rect key="frame" x="115.5" y="139.5" width="100" height="37"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -216,7 +216,7 @@
                                 <constraint firstItem="Cyy-yr-2NX" firstAttribute="leading" secondItem="V4i-5P-jP6" secondAttribute="leading" constant="12" id="sbU-JV-ea2"/>
                             </constraints>
                         </view>
-                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hD-0d-pxV" userLabel="emptyView" customClass="UIViewExtend" customModule="Learn_Nature" customModuleProvider="target">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hD-0d-pxV" userLabel="emptyView" customClass="UIViewExtend" customModule="Kids_LearnWithFun1" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="225" width="331" height="200"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
@@ -293,7 +293,7 @@
                                         <action selector="funcRadioNonRecurringMonthlyClick:" destination="-1" eventType="touchUpInside" id="Fcz-Kv-2F5"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-Ug-2fs" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-Ug-2fs" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
                                     <rect key="frame" x="115.5" y="139.5" width="100" height="37"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
@@ -392,14 +392,17 @@
                         <constraint firstAttribute="width" constant="200" id="LHK-pd-itG"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVY-mD-cqk" userLabel="lblAlreadyBuy">
-                    <rect key="frame" x="169" y="604.5" width="76" height="42.5"/>
-                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVY-mD-cqk" userLabel="lblAlreadyBuy" customClass="UILabelExtension" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                    <rect key="frame" x="174" y="604.5" width="66" height="37"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShowShadow" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-ma-3Tf" userLabel="btnRestore" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                    <rect key="frame" x="157" y="662" width="100" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-ma-3Tf" userLabel="btnRestore" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                    <rect key="frame" x="157" y="656.5" width="100" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="4HX-si-tLG"/>
@@ -477,6 +480,9 @@
         </designable>
         <designable name="XAh-ma-3Tf">
             <size key="intrinsicContentSize" width="30" height="44"/>
+        </designable>
+        <designable name="kVY-mD-cqk">
+            <size key="intrinsicContentSize" width="66" height="37"/>
         </designable>
     </designables>
     <resources>

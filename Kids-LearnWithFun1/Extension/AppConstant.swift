@@ -97,4 +97,5 @@ class CommanArray {
     static var settingBgColor = UIColor(red: (113/255), green: (200/255), blue: (92/255), alpha: 1.0)
     static var imageRadioCheck = UIImage(named: "radio_check.png")
     static var imageRadioUncheck = UIImage(named: "radio_uncheck.png")
+    static var cancelSubscriptionBgColor = UIColor(red: (143/255), green: (237/255), blue: (242/255), alpha: 1.0)
 }

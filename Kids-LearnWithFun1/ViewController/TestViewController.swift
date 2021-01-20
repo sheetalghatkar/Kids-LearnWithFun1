@@ -425,6 +425,8 @@ class TestViewController: UIViewController,PayementForParentProtocol {
         let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
         self.navigationController?.pushViewController(PaymentCostVC, animated: true)
     }
+    func showSubscriptionDetailScreen() {
+    }
 
     func showPaymentScreen(){
         paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)

@@ -27,6 +27,8 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     @IBOutlet weak var btnSound: UIButton!
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnSetting: UIButton!
+    @IBOutlet weak var btnCancelSubscription: UIButton!
+
 
     @IBOutlet weak var floaty : Floaty!
         {
@@ -333,19 +335,33 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 
     //Start Payment flow
     
+    @IBAction func funcCancelSubscription(_ sender: Any) {
+        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC?.showSubscriptionScreen = true
+        showPaymentScreen()
+    }
+
+    
     @IBAction func funcNoAds(_ sender: Any) {
+        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+        paymentDetailVC?.showSubscriptionScreen = false
         showPaymentScreen()
     }
 
     //Delegate method implementation
     func showPaymentCostScreen() {
         paymentDetailVC?.view.removeFromSuperview()
-        let PaymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
-        self.navigationController?.pushViewController(PaymentCostVC, animated: true)
+        let paymentCostVC = PaymentCostController(nibName: "PaymentCostController", bundle: nil)
+        self.navigationController?.pushViewController(paymentCostVC, animated: true)
+    }
+    
+    func showSubscriptionDetailScreen() {
+        paymentDetailVC?.view.removeFromSuperview()
+        let paymenSubscriptionVC = SubscriptionDetailsController(nibName: "SubscriptionDetailsController", bundle: nil)
+        self.navigationController?.pushViewController(paymenSubscriptionVC, animated: true)
     }
 
     func showPaymentScreen(){
-        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
         paymentDetailVC?.view.frame = self.view.bounds
         paymentDetailVC?.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC?.view ?? UIView())

@@ -21,6 +21,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-dM-EDz">
+                                <rect key="frame" x="290" y="57" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fv5-dM-EDz" secondAttribute="height" multiplier="1:1" id="1GX-WJ-EEJ"/>
+                                    <constraint firstAttribute="width" constant="43" id="723-i8-EWD"/>
+                                    <constraint firstAttribute="width" secondItem="Fv5-dM-EDz" secondAttribute="height" multiplier="1:1" id="AI1-72-zg3"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="No-Ads"/>
+                                <connections>
+                                    <action selector="funcNoAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCg-GL-NfC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cV-I3-eQU">
                                 <rect key="frame" x="358" y="58" width="41" height="41"/>
                                 <constraints>
@@ -32,16 +44,16 @@
                                     <action selector="funcSound_ON_OFF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIL-dh-uRd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-dM-EDz">
-                                <rect key="frame" x="290" y="57" width="43" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-B4-Aq7">
+                                <rect key="frame" x="285" y="56" width="48" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fv5-dM-EDz" secondAttribute="height" multiplier="1:1" id="1GX-WJ-EEJ"/>
-                                    <constraint firstAttribute="width" constant="43" id="723-i8-EWD"/>
-                                    <constraint firstAttribute="width" secondItem="Fv5-dM-EDz" secondAttribute="height" multiplier="1:1" id="AI1-72-zg3"/>
+                                    <constraint firstAttribute="width" secondItem="bfj-B4-Aq7" secondAttribute="height" constant="10" id="ELO-c0-7tN"/>
+                                    <constraint firstAttribute="width" constant="48" id="LzJ-St-UJ7"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="No-Ads"/>
+                                <state key="normal" backgroundImage="PaymentDetail"/>
                                 <connections>
-                                    <action selector="funcNoAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCg-GL-NfC"/>
+                                    <action selector="funcCancelSubscription:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btv-dN-Vtz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebZ-X7-GUd" userLabel="containerView">
@@ -330,9 +342,11 @@
                             <constraint firstItem="2cV-I3-eQU" firstAttribute="leading" secondItem="Fv5-dM-EDz" secondAttribute="trailing" constant="25" id="LTp-TW-sED"/>
                             <constraint firstItem="2cV-I3-eQU" firstAttribute="width" secondItem="2cV-I3-eQU" secondAttribute="height" multiplier="1:1" id="Mr7-rg-1Hs"/>
                             <constraint firstItem="F0c-uF-oBi" firstAttribute="centerY" secondItem="Fv5-dM-EDz" secondAttribute="centerY" id="Mv6-fb-dWJ"/>
+                            <constraint firstItem="bfj-B4-Aq7" firstAttribute="trailing" secondItem="Fv5-dM-EDz" secondAttribute="trailing" id="O3d-DZ-pZ5"/>
                             <constraint firstItem="maV-i8-77x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-30" id="Ppa-Yk-94O"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="2cV-I3-eQU" secondAttribute="bottom" constant="5" id="Tec-F7-bt4"/>
                             <constraint firstItem="F0c-uF-oBi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="VLt-lx-bAM"/>
+                            <constraint firstItem="bfj-B4-Aq7" firstAttribute="top" secondItem="2cV-I3-eQU" secondAttribute="top" constant="-2" id="Yx7-ft-0G5"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1.35" id="cMY-YL-saR"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="cN1-TA-3mz"/>
                             <constraint firstItem="Fv5-dM-EDz" firstAttribute="centerY" secondItem="2cV-I3-eQU" secondAttribute="centerY" id="dlX-9G-EPQ"/>
@@ -350,6 +364,7 @@
                     <navigationItem key="navigationItem" id="CR3-kV-sGc"/>
                     <connections>
                         <outlet property="bgScreen" destination="tbI-JC-8m4" id="o0Y-dj-nuh"/>
+                        <outlet property="btnCancelSubscription" destination="bfj-B4-Aq7" id="flR-Fg-wsx"/>
                         <outlet property="btnNoAds" destination="Fv5-dM-EDz" id="P2a-zs-5Vw"/>
                         <outlet property="btnSetting" destination="SbC-dm-NYg" id="P1y-Pj-K0I"/>
                         <outlet property="btnSound" destination="2cV-I3-eQU" id="kBd-Pf-ngJ"/>
@@ -1263,6 +1278,7 @@
         <image name="Lock" width="75" height="75"/>
         <image name="Nature" width="228" height="228"/>
         <image name="No-Ads" width="613" height="613"/>
+        <image name="PaymentDetail" width="564" height="442"/>
         <image name="PetAnimal" width="300" height="285.5"/>
         <image name="PlayAgain" width="2255" height="2255"/>
         <image name="Question" width="235.5" height="256"/>

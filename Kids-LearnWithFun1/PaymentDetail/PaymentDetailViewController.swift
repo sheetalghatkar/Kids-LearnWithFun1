@@ -10,6 +10,7 @@ import UIKit
 
 protocol PayementForParentProtocol : class {
     func showPaymentCostScreen()
+    func showSubscriptionDetailScreen()
 }
 
 
@@ -43,6 +44,7 @@ class PaymentDetailViewController: UIViewController {
     var fontOptionBtn = UIFont(name: "Noteworthy-Bold", size: 18)
     var random = 0
     var optionClicked = 0
+    var showSubscriptionScreen = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,7 +108,11 @@ class PaymentDetailViewController: UIViewController {
 
     func funcShowNextPaymentScreen() {
         if arrayQuestionTest[random][2] == optionClicked {
-            delegatePayementForParent?.showPaymentCostScreen()
+            if showSubscriptionScreen {
+                delegatePayementForParent?.showSubscriptionDetailScreen()
+            } else {
+                delegatePayementForParent?.showPaymentCostScreen()
+            }
         } else {
             UIView.animate(withDuration: 0.4, animations: {
                 self.btnClose.alpha = 0.0

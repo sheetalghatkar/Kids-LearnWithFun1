@@ -18,7 +18,6 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     //----------------------------------------
     //New
     @IBOutlet weak var viewBgYearly: UIView!
-    @IBOutlet weak var viewBgMonthly: UIView!
     
     @IBOutlet weak var viewYearly: UIView!
     @IBOutlet weak var viewMonthly: UIView!
@@ -29,7 +28,6 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var lblYearlyPriceRecurring: UILabel!
     @IBOutlet weak var lblYearlyNonRecurring: UILabel!
     @IBOutlet weak var lblYearlyNonPriceRecurring: UILabel!
-    @IBOutlet weak var btnYearlyPayment: UIButton!
     @IBOutlet weak var btnRadioRecurringYearly: UIButton!
     @IBOutlet weak var btnRadioNonRecurringYearly: UIButton!
 
@@ -43,7 +41,7 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var btnRadioNonRecurringMonthly: UIButton!
 
    // var product_id = "com.mobiapps360.LearnNature.YearlyAutoRenew"
-    var selectedProductId = ""
+    var selectedProductId = CommanArray.productId_Year_Auto_Recurring
     
     var product_ids = [CommanArray.productId_Year_Auto_Recurring,CommanArray.productId_Year_Non_Recurring,CommanArray.productId_Month_Auto_Recurring,CommanArray.productId_Month_Non_Recurring]
 
@@ -62,113 +60,71 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         
         //Views
         viewBgYearly.backgroundColor = CommanArray.paymentModeBgColor
-        viewBgMonthly.backgroundColor = CommanArray.paymentModeBgColor
         
         //Buttons
-        btnYearlyPayment.setTitle("Buy", for: .normal)
         btnMonthlyPayment.setTitle("Buy", for: .normal)
         
-        btnYearlyPayment.setTitleColor(CommanArray.paymentBtnTextColor, for: .normal)
         btnMonthlyPayment.setTitleColor(CommanArray.paymentBtnTextColor, for: .normal)
         
         //Label
         lblYearlyTitle.text = "Yearly Subscription"
         lblYearlyRecurring.text = "Recurring Payment"
-        lblYearlyPriceRecurring.text = "$8"
+        lblYearlyPriceRecurring.text = "$3.99"
         lblYearlyNonRecurring.text = "Non-Recurring Payment"
-        lblYearlyNonPriceRecurring.text = "$10"
+        lblYearlyNonPriceRecurring.text = "$5.99"
         
         lblMonthlyTitle.text = "Monthly Subscription"
         lblMonthlyRecurring.text = "Recurring Payment "
-        lblMonthlyPriceRecurring.text = "$1"
+        lblMonthlyPriceRecurring.text = "$0.49"
         lblMonthlyNonRecurring.text = "Non-Recurring Payment"
-        lblMonthlyPriceNonRecurring.text = "$1.25"
+        lblMonthlyPriceNonRecurring.text = "$0.99"
         
-        self.viewBgYearly.layer.shadowColor = UIColor.white.cgColor
-        self.viewBgYearly.layer.borderWidth = 2.5
+//        self.viewBgYearly.layer.shadowColor = UIColor.white.cgColor
+//        self.viewBgYearly.layer.borderWidth = 2.5
         
-        
-        let tapGestureRecognYearView = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        viewYearly.addGestureRecognizer(tapGestureRecognYearView)
-        viewYearly.tag = 1000
-        
-        
-        let tapGestureRecognMonthView = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        viewMonthly.addGestureRecognizer(tapGestureRecognMonthView)
-        viewMonthly.tag = 1001
-
+//        self.viewBgMonthly.layer.shadowColor = UIColor.black.cgColor
+//        self.viewBgMonthly.layer.borderWidth = 1.5
     }
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        if tapGestureRecognizer.view?.tag == 1000 {
-            funcGlowYearView()
-        } else {
-            funcGlowMonthView()
-        }
-    }
-    
     @IBAction func funcRadioRecurringYearlyClick(_ sender: Any) {
-        funcGlowYearView()
         if btnRadioRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioRecurringYearly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
             selectedProductId = CommanArray.productId_Year_Auto_Recurring
         }
     }
     @IBAction func funcRadioNonRecurringYearlyClick(_ sender: Any) {
-        funcGlowYearView()
         if btnRadioNonRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
             selectedProductId = CommanArray.productId_Year_Non_Recurring
         }
     }
-
-    @IBAction func funcYearlyPaymentBtnClick(_ sender: Any) {
-        funcGlowYearView()
-        if selectedProductId == "" {
-            selectedProductId = CommanArray.productId_Year_Auto_Recurring
-        }
-        buyConsumable()
-    }
     
     @IBAction func funcRadioRecurringMonthlyClick(_ sender: Any) {
-        funcGlowMonthView()
         if btnRadioRecurringMonthly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioRecurringMonthly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
             selectedProductId = CommanArray.productId_Month_Auto_Recurring
         }
     }
     @IBAction func funcRadioNonRecurringMonthlyClick(_ sender: Any) {
-        funcGlowMonthView()
         if btnRadioNonRecurringMonthly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
             selectedProductId = CommanArray.productId_Month_Non_Recurring
         }
     }
-    @IBAction func funcMonthlyPaymentBtnClick(_ sender: Any) {
-        funcGlowMonthView()
-        if selectedProductId == "" {
-            selectedProductId = CommanArray.productId_Month_Auto_Recurring
-        }
+    @IBAction func funcPaymentBtnClick(_ sender: Any) {
         buyConsumable()
     }
-
-    func funcGlowYearView() {
-        self.viewBgYearly.layer.shadowColor = UIColor.white.cgColor
-        self.viewBgYearly.layer.borderWidth = 2.5
-        self.viewBgMonthly.layer.shadowColor = UIColor.black.cgColor
-        self.viewBgMonthly.layer.borderWidth = 1.5
-    }
-    
-    func funcGlowMonthView() {
-        self.viewBgMonthly.layer.shadowColor = UIColor.white.cgColor
-        self.viewBgYearly.layer.shadowColor = UIColor.black.cgColor
-        self.viewBgMonthly.layer.borderWidth = 2.5
-        self.viewBgYearly.layer.borderWidth = 1.5
-    }
-
     @IBAction func funcHomeBtnClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "70FF090124962D9B002861AE"
-               BuildableName = "Kids-LearnWithFun1.app"
-               BlueprintName = "Kids-LearnWithFun1"
+               BuildableName = "Learn Nature.app"
+               BlueprintName = "Learn Nature"
                ReferencedContainer = "container:Kids-LearnWithFun1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "70FF090124962D9B002861AE"
-            BuildableName = "Kids-LearnWithFun1.app"
-            BlueprintName = "Kids-LearnWithFun1"
+            BuildableName = "Learn Nature.app"
+            BlueprintName = "Learn Nature"
             ReferencedContainer = "container:Kids-LearnWithFun1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "70FF090124962D9B002861AE"
-            BuildableName = "Kids-LearnWithFun1.app"
-            BlueprintName = "Kids-LearnWithFun1"
+            BuildableName = "Learn Nature.app"
+            BlueprintName = "Learn Nature"
             ReferencedContainer = "container:Kids-LearnWithFun1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

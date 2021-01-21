@@ -98,4 +98,10 @@ class CommanArray {
     static var imageRadioCheck = UIImage(named: "radio_check.png")
     static var imageRadioUncheck = UIImage(named: "radio_uncheck.png")
     static var cancelSubscriptionBgColor = UIColor(red: (143/255), green: (237/255), blue: (242/255), alpha: 1.0)
+    
+    static var productId_Year_Auto_Recurring = "com.mobiapps360.LearnNature.YearlyAutoRenew"
+    static var productId_Year_Non_Recurring = "com.mobiapps360.LearnNature.YearlyNonRenew"
+    static var productId_Month_Auto_Recurring = "com.mobiapps360.LearnNature.MonthlyAutoRenew"
+    static var productId_Month_Non_Recurring = "com.mobiapps360.LearnNature.MonthlyNonRenew"
+
 }

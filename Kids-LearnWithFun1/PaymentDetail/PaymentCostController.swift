@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import StoreKit
 
-class PaymentCostController: UIViewController {
+class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaymentTransactionObserver {
+    
     @IBOutlet weak var lblCostTitle: UILabel!
     @IBOutlet weak var btnRestore: UIButton!
     @IBOutlet weak var lblAlredyPurchased: UILabel!
@@ -40,9 +42,14 @@ class PaymentCostController: UIViewController {
     @IBOutlet weak var btnRadioRecurringMonthly: UIButton!
     @IBOutlet weak var btnRadioNonRecurringMonthly: UIButton!
 
+   // var product_id = "com.mobiapps360.LearnNature.YearlyAutoRenew"
+    var selectedProductId = ""
+    
+    var product_ids = [CommanArray.productId_Year_Auto_Recurring,CommanArray.productId_Year_Non_Recurring,CommanArray.productId_Month_Auto_Recurring,CommanArray.productId_Month_Non_Recurring]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SKPaymentQueue.default().add(self)
         lblAlredyPurchased.text = "Already Purchased?"
         lblCostTitle.text = "Unlock Premium Features"
         btnRestore.setTitle("Restore", for: .normal)
@@ -104,6 +111,7 @@ class PaymentCostController: UIViewController {
         if btnRadioRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioRecurringYearly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            selectedProductId = CommanArray.productId_Year_Auto_Recurring
         }
     }
     @IBAction func funcRadioNonRecurringYearlyClick(_ sender: Any) {
@@ -111,10 +119,16 @@ class PaymentCostController: UIViewController {
         if btnRadioNonRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioNonRecurringYearly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioRecurringYearly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            selectedProductId = CommanArray.productId_Year_Non_Recurring
         }
     }
+
     @IBAction func funcYearlyPaymentBtnClick(_ sender: Any) {
         funcGlowYearView()
+        if selectedProductId == "" {
+            selectedProductId = CommanArray.productId_Year_Auto_Recurring
+        }
+        buyConsumable()
     }
     
     @IBAction func funcRadioRecurringMonthlyClick(_ sender: Any) {
@@ -122,6 +136,7 @@ class PaymentCostController: UIViewController {
         if btnRadioRecurringMonthly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioRecurringMonthly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            selectedProductId = CommanArray.productId_Month_Auto_Recurring
         }
     }
     @IBAction func funcRadioNonRecurringMonthlyClick(_ sender: Any) {
@@ -129,10 +144,15 @@ class PaymentCostController: UIViewController {
         if btnRadioNonRecurringMonthly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioNonRecurringMonthly.setImage(CommanArray.imageRadioCheck, for: .normal)
             btnRadioRecurringMonthly.setImage(CommanArray.imageRadioUncheck, for: .normal)
+            selectedProductId = CommanArray.productId_Month_Non_Recurring
         }
     }
     @IBAction func funcMonthlyPaymentBtnClick(_ sender: Any) {
         funcGlowMonthView()
+        if selectedProductId == "" {
+            selectedProductId = CommanArray.productId_Month_Auto_Recurring
+        }
+        buyConsumable()
     }
 
     func funcGlowYearView() {
@@ -154,4 +174,86 @@ class PaymentCostController: UIViewController {
     }
     @IBAction func funcRestoreBtnClick(_ sender: Any) {
     }
+}
+
+extension PaymentCostController {
+    func buyConsumable(){
+        print("About to fetch the products");
+        // We check that we are allow to make the purchase.
+        if (SKPaymentQueue.canMakePayments())
+        {
+            let productsRequest = SKProductsRequest(productIdentifiers: Set(self.product_ids))
+            productsRequest.delegate = self
+            productsRequest.start()
+            print("Fething Products")
+        }else{
+            print("can't make purchases");
+        }
+    }
+    
+    // Helper Methods
+    
+    func buyProduct(product: SKProduct){
+        print("Sending the Payment Request to Apple")
+        let payment = SKPayment(product: product)
+        SKPaymentQueue.default().add(payment)
+        
+    }
+    
+
+    // Delegate Methods for IAP
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        print("got the request from Apple")
+        var isProductFound = false
+        let count : Int = response.products.count
+        if (count>0) {
+            print("Success@@@@@@@")
+            for getProductId in response.products {
+                let validProduct: SKProduct = getProductId as SKProduct
+                if (validProduct.productIdentifier == selectedProductId) {
+                    isProductFound = true
+                    print(validProduct.localizedTitle)
+                    print(validProduct.localizedDescription)
+                    print(validProduct.price)
+                    buyProduct(product: validProduct)
+                }
+            }
+            if !isProductFound {
+                print("Product not found.")
+            }
+        } else {
+            print("Nothing")
+        }
+    }
+    
+    
+    func request(request: SKRequest!, didFailWithError error: NSError!) {
+        print("La vaina fallo");
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        print("Received Payment Transaction Response from Apple");
+        
+        for transaction:AnyObject in transactions {
+            if let trans:SKPaymentTransaction = transaction as? SKPaymentTransaction{
+                switch trans.transactionState {
+                case .purchased:
+                    print("Product Purchased");
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    break;
+                case .failed:
+                    print("Purchased Failed");
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    break;
+                    // case .Restored:
+                    //[self restoreTransaction:transaction];
+                default:
+                    break;
+                }
+            }
+        }
+        
+    }
+
 }

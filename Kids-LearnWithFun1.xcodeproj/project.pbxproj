@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,16 @@
 		4FF3BC8925A8967D00CF8E3C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8825A8967D00CF8E3C /* Loading.gif */; };
 		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
 		4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */; };
+		4FFA604325B88DE100DDEFE8 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA603825B88DE100DDEFE8 /* nanopb.xcframework */; };
+		4FFA604425B88DE100DDEFE8 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA603925B88DE100DDEFE8 /* GoogleAppMeasurement.framework */; };
+		4FFA604525B88DE100DDEFE8 /* Promises-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4FFA603B25B88DE100DDEFE8 /* Promises-LICENSE */; };
+		4FFA604625B88DE100DDEFE8 /* NanoPB-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4FFA603C25B88DE100DDEFE8 /* NanoPB-LICENSE */; };
+		4FFA604725B88DE100DDEFE8 /* OpenMeasurement-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4FFA603D25B88DE100DDEFE8 /* OpenMeasurement-LICENSE */; };
+		4FFA604825B88DE100DDEFE8 /* GoogleUtilities-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4FFA603E25B88DE100DDEFE8 /* GoogleUtilities-LICENSE */; };
+		4FFA604925B88DE100DDEFE8 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA603F25B88DE100DDEFE8 /* PromisesObjC.xcframework */; };
+		4FFA604A25B88DE100DDEFE8 /* UserMessagingPlatform.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604025B88DE100DDEFE8 /* UserMessagingPlatform.xcframework */; };
+		4FFA604B25B88DE100DDEFE8 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604125B88DE100DDEFE8 /* GoogleMobileAds.xcframework */; };
+		4FFA604C25B88DE100DDEFE8 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604225B88DE100DDEFE8 /* GoogleUtilities.xcframework */; };
 		7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */; };
 		7000C6FA24B492990024A7F7 /* Kangaroo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */; };
 		700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416E249E985D00AA3D1C /* Rhino.mp3 */; };
@@ -165,9 +175,6 @@
 		70FF092824962DB5002861AE /* Kids_LearnWithFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF092724962DB5002861AE /* Kids_LearnWithFunUITests.swift */; };
 		70FF093724965879002861AE /* GIFSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093624965879002861AE /* GIFSwift.swift */; };
 		70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF093B24966856002861AE /* UIImageviewExtension.swift */; };
-		90887C518182929B73D0AA68 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811F3878C922BCA67DD392CC /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */; };
-		D750A8C427061129BF6F5362 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677AA8B8EEE748FD9296CC73 /* Pods_Kids_LearnWithFun1Tests.framework */; };
-		E5BB1BA52BC9AD6A7756A228 /* Pods_Kids_LearnWithFun1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7946BC2D388CC4023D12FFBA /* Pods_Kids_LearnWithFun1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,9 +195,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10B798395EA20983AC1A247D /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		12F7CB748FB4DCFCE0E6E9F9 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; sourceTree = "<group>"; };
-		461DFA5CEAD4510990828B88 /* Pods-Kids-LearnWithFun1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCostController.swift; sourceTree = "<group>"; };
 		4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCostController.xib; sourceTree = "<group>"; };
 		4F0F7F6925B2011C006D8951 /* FloatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
@@ -204,9 +208,16 @@
 		4FF3BC8825A8967D00CF8E3C /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailViewController.xib; sourceTree = "<group>"; };
-		5E1E438F978931EF23AFE4BF /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5EEE05AA9F0C14150D364BDB /* Pods-Kids-LearnWithFun1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.release.xcconfig"; sourceTree = "<group>"; };
-		677AA8B8EEE748FD9296CC73 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFA603825B88DE100DDEFE8 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
+		4FFA603925B88DE100DDEFE8 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		4FFA603B25B88DE100DDEFE8 /* Promises-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Promises-LICENSE"; sourceTree = "<group>"; };
+		4FFA603C25B88DE100DDEFE8 /* NanoPB-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NanoPB-LICENSE"; sourceTree = "<group>"; };
+		4FFA603D25B88DE100DDEFE8 /* OpenMeasurement-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenMeasurement-LICENSE"; sourceTree = "<group>"; };
+		4FFA603E25B88DE100DDEFE8 /* GoogleUtilities-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GoogleUtilities-LICENSE"; sourceTree = "<group>"; };
+		4FFA603F25B88DE100DDEFE8 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
+		4FFA604025B88DE100DDEFE8 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		4FFA604125B88DE100DDEFE8 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		4FFA604225B88DE100DDEFE8 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
 		7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
 		7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kangaroo_Question.mp3; sourceTree = "<group>"; };
 		700D416E249E985D00AA3D1C /* Rhino.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhino.mp3; sourceTree = "<group>"; };
@@ -358,9 +369,6 @@
 		70FF092924962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FF093624965879002861AE /* GIFSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSwift.swift; sourceTree = "<group>"; };
 		70FF093B24966856002861AE /* UIImageviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageviewExtension.swift; sourceTree = "<group>"; };
-		7946BC2D388CC4023D12FFBA /* Pods_Kids_LearnWithFun1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		811F3878C922BCA67DD392CC /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9379E6A7F81C4F9BB6BA2AF /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,7 +376,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5BB1BA52BC9AD6A7756A228 /* Pods_Kids_LearnWithFun1.framework in Frameworks */,
+				4FFA604925B88DE100DDEFE8 /* PromisesObjC.xcframework in Frameworks */,
+				4FFA604B25B88DE100DDEFE8 /* GoogleMobileAds.xcframework in Frameworks */,
+				4FFA604425B88DE100DDEFE8 /* GoogleAppMeasurement.framework in Frameworks */,
+				4FFA604A25B88DE100DDEFE8 /* UserMessagingPlatform.xcframework in Frameworks */,
+				4FFA604325B88DE100DDEFE8 /* nanopb.xcframework in Frameworks */,
+				4FFA604C25B88DE100DDEFE8 /* GoogleUtilities.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +389,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D750A8C427061129BF6F5362 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +396,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90887C518182929B73D0AA68 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +413,31 @@
 				4F13A66F25B72AC300C7EFDD /* SubscriptionDetailsController.xib */,
 			);
 			path = PaymentDetail;
+			sourceTree = "<group>";
+		};
+		4FFA603725B88DE100DDEFE8 /* GoogleMobileAdsSdkiOS-7.69.0 */ = {
+			isa = PBXGroup;
+			children = (
+				4FFA603825B88DE100DDEFE8 /* nanopb.xcframework */,
+				4FFA603925B88DE100DDEFE8 /* GoogleAppMeasurement.framework */,
+				4FFA603A25B88DE100DDEFE8 /* Licenses */,
+				4FFA603F25B88DE100DDEFE8 /* PromisesObjC.xcframework */,
+				4FFA604025B88DE100DDEFE8 /* UserMessagingPlatform.xcframework */,
+				4FFA604125B88DE100DDEFE8 /* GoogleMobileAds.xcframework */,
+				4FFA604225B88DE100DDEFE8 /* GoogleUtilities.xcframework */,
+			);
+			path = "GoogleMobileAdsSdkiOS-7.69.0";
+			sourceTree = "<group>";
+		};
+		4FFA603A25B88DE100DDEFE8 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				4FFA603B25B88DE100DDEFE8 /* Promises-LICENSE */,
+				4FFA603C25B88DE100DDEFE8 /* NanoPB-LICENSE */,
+				4FFA603D25B88DE100DDEFE8 /* OpenMeasurement-LICENSE */,
+				4FFA603E25B88DE100DDEFE8 /* GoogleUtilities-LICENSE */,
+			);
+			path = Licenses;
 			sourceTree = "<group>";
 		};
 		700D416C249E980A00AA3D1C /* SoundFile */ = {
@@ -617,8 +653,6 @@
 				70FF091B24962DB5002861AE /* Kids-LearnWithFunTests */,
 				70FF092624962DB5002861AE /* Kids-LearnWithFunUITests */,
 				70FF090324962D9B002861AE /* Products */,
-				DF1EE3988B9B9140F9599561 /* Pods */,
-				E37D0FD61DE90A5E8A3B52E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -672,6 +706,7 @@
 		70FF09352496450E002861AE /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				4FFA603725B88DE100DDEFE8 /* GoogleMobileAdsSdkiOS-7.69.0 */,
 				4F0F7F6D25B2011C006D8951 /* Floaty.swift */,
 				4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */,
 				4F0F7F6A25B2011C006D8951 /* FloatyItem.swift */,
@@ -707,29 +742,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		DF1EE3988B9B9140F9599561 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				461DFA5CEAD4510990828B88 /* Pods-Kids-LearnWithFun1.debug.xcconfig */,
-				5EEE05AA9F0C14150D364BDB /* Pods-Kids-LearnWithFun1.release.xcconfig */,
-				10B798395EA20983AC1A247D /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */,
-				12F7CB748FB4DCFCE0E6E9F9 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */,
-				C9379E6A7F81C4F9BB6BA2AF /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */,
-				5E1E438F978931EF23AFE4BF /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		E37D0FD61DE90A5E8A3B52E4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7946BC2D388CC4023D12FFBA /* Pods_Kids_LearnWithFun1.framework */,
-				811F3878C922BCA67DD392CC /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */,
-				677AA8B8EEE748FD9296CC73 /* Pods_Kids_LearnWithFun1Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -737,11 +749,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */;
 			buildPhases = (
-				E2C1A8BB453D228206A5EE16 /* [CP] Check Pods Manifest.lock */,
 				70FF08FE24962D9B002861AE /* Sources */,
 				70FF08FF24962D9B002861AE /* Frameworks */,
 				70FF090024962D9B002861AE /* Resources */,
-				DCA2E863F1A77ED02CCA9847 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -756,7 +766,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70FF092F24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1Tests" */;
 			buildPhases = (
-				8CD0C898CF3F4BC2D5BC781E /* [CP] Check Pods Manifest.lock */,
 				70FF091424962DB5002861AE /* Sources */,
 				70FF091524962DB5002861AE /* Frameworks */,
 				70FF091624962DB5002861AE /* Resources */,
@@ -775,11 +784,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70FF093224962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1UITests" */;
 			buildPhases = (
-				746785BB25F32C3E36F080AB /* [CP] Check Pods Manifest.lock */,
 				70FF091F24962DB5002861AE /* Sources */,
 				70FF092024962DB5002861AE /* Frameworks */,
 				70FF092124962DB5002861AE /* Resources */,
-				40FB8943AF10947DB4272214 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -873,6 +880,7 @@
 				70F9023124AF7E4A00A3AA12 /* Bluebell_Question.mp3 in Resources */,
 				70AF537924A0CCCF00AD4794 /* Main.storyboard in Resources */,
 				70631FF42497F11B00DAE930 /* PictureCollectionCell.xib in Resources */,
+				4FFA604525B88DE100DDEFE8 /* Promises-LICENSE in Resources */,
 				70F9022B24AF7E4A00A3AA12 /* Magnolia_Question.mp3 in Resources */,
 				707ECA26249CDAD80024D06C /* BgMusic.mp3 in Resources */,
 				700D4182249E986000AA3D1C /* Fox.mp3 in Resources */,
@@ -913,6 +921,7 @@
 				701D4D6124B1DC6F00E642A6 /* Lion_Question.mp3 in Resources */,
 				707ECA34249CF45F0024D06C /* bird1Gif.gif in Resources */,
 				701D4D3B24B1DA3A00E642A6 /* Horse_Question.mp3 in Resources */,
+				4FFA604725B88DE100DDEFE8 /* OpenMeasurement-LICENSE in Resources */,
 				700D4186249E986000AA3D1C /* Deer.mp3 in Resources */,
 				701D4D6724B237FD00E642A6 /* Buffalo_Question.mp3 in Resources */,
 				70D8B14B24B0D4FE00AF3D34 /* Crow_Question.mp3 in Resources */,
@@ -932,6 +941,7 @@
 				7014C1E5249F73B700D0AB52 /* Dahlia.mp3 in Resources */,
 				4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */,
 				70F9023024AF7E4A00A3AA12 /* Catharanthus_Question.mp3 in Resources */,
+				4FFA604625B88DE100DDEFE8 /* NanoPB-LICENSE in Resources */,
 				701D4D4324B1DA3A00E642A6 /* Cat_Question.mp3 in Resources */,
 				7014C1F5249F73C600D0AB52 /* Cow.mp3 in Resources */,
 				7014C1FB249F758600D0AB52 /* Chicken.mp3 in Resources */,
@@ -959,6 +969,7 @@
 				701D4D5924B1DC6F00E642A6 /* Tiger_Question.mp3 in Resources */,
 				70D8B15324B0D4FE00AF3D34 /* Pigeon_Question.mp3 in Resources */,
 				700D417E249E986000AA3D1C /* Cheetah.mp3 in Resources */,
+				4FFA604825B88DE100DDEFE8 /* GoogleUtilities-LICENSE in Resources */,
 				70D8B15224B0D4FE00AF3D34 /* Penguin_Question.mp3 in Resources */,
 				701D4D6024B1DC6F00E642A6 /* Deer_Question.mp3 in Resources */,
 				70F9022F24AF7E4A00A3AA12 /* Hibiscus_Question.mp3 in Resources */,
@@ -988,109 +999,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		40FB8943AF10947DB4272214 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		746785BB25F32C3E36F080AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8CD0C898CF3F4BC2D5BC781E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCA2E863F1A77ED02CCA9847 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2C1A8BB453D228206A5EE16 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70FF08FE24962D9B002861AE /* Sources */ = {
@@ -1294,7 +1202,6 @@
 		};
 		70FF092D24962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 461DFA5CEAD4510990828B88 /* Pods-Kids-LearnWithFun1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -1302,12 +1209,17 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M9C32R6P4U;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kids-LearnWithFun1/Third\\ Party/GoogleMobileAdsSdkiOS-7.69.0",
+				);
 				INFOPLIST_FILE = "Kids-LearnWithFun1/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "development profile";
@@ -1318,7 +1230,6 @@
 		};
 		70FF092E24962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EEE05AA9F0C14150D364BDB /* Pods-Kids-LearnWithFun1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -1326,6 +1237,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M9C32R6P4U;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kids-LearnWithFun1/Third\\ Party/GoogleMobileAdsSdkiOS-7.69.0",
+				);
 				INFOPLIST_FILE = "Kids-LearnWithFun1/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1333,6 +1248,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "development profile";
@@ -1343,7 +1259,6 @@
 		};
 		70FF093024962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9379E6A7F81C4F9BB6BA2AF /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1368,7 +1283,6 @@
 		};
 		70FF093124962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E1E438F978931EF23AFE4BF /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1393,7 +1307,6 @@
 		};
 		70FF093324962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10B798395EA20983AC1A247D /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -1416,7 +1329,6 @@
 		};
 		70FF093424962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12F7CB748FB4DCFCE0E6E9F9 /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;

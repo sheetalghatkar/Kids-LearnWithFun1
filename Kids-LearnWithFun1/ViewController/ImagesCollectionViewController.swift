@@ -35,6 +35,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
 
     //var soundStatus:Bool = false
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let defaults = UserDefaults.standard
 
     
     override func viewDidLoad() {
@@ -81,6 +82,20 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if defaults.bool(forKey:"IsPrimeUser") {
+            if let _ = btnNoAds {
+                self.btnNoAds.isHidden = true
+                bannerView.removeFromSuperview()
+            }
+        } else {
+            if let _ = btnNoAds {
+                self.btnNoAds.isHidden = false
+            }
+        }
+    }
+
     // MARK: - CollectionView Functions
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -143,13 +158,16 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     @IBAction func funcGoToHome(_ sender: Any) {
         self.viewTransperent.isHidden = false
         self.imgViewLoader.isHidden = false
-        interstitial = createAndLoadInterstitial()
-//        navigationController?.popViewController(animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            if !self.viewTransperent.isHidden {
-                self.viewTransperent.isHidden = true
-                self.imgViewLoader.isHidden = true
-                self.navigationController?.popViewController(animated: true)
+        if defaults.bool(forKey:"IsPrimeUser") {
+            navigationController?.popViewController(animated: true)
+        } else {
+            interstitial = createAndLoadInterstitial()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                if !self.viewTransperent.isHidden {
+                    self.viewTransperent.isHidden = true
+                    self.imgViewLoader.isHidden = true
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }

@@ -54,8 +54,19 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 
     //------------------------------------------------------------------------
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         playBackgroundMusic()
+        if defaults.bool(forKey:"IsPrimeUser") {
+            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
+                self.btnCancelSubscription.isHidden = false
+                self.btnNoAds.isHidden = true
+            }
+        } else {
+            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
+                self.btnCancelSubscription.isHidden = true
+                self.btnNoAds.isHidden = false
+            }
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
         player.stop()

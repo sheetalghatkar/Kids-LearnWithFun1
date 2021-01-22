@@ -39,10 +39,13 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var btnMonthlyPayment: UIButton!
     @IBOutlet weak var btnRadioRecurringMonthly: UIButton!
     @IBOutlet weak var btnRadioNonRecurringMonthly: UIButton!
+    
+    @IBOutlet weak var viewTrasperentDisabled: UIView!
 
    // var product_id = "com.mobiapps360.LearnNature.YearlyAutoRenew"
     var selectedProductId = CommanArray.productId_Year_Auto_Recurring
-    
+    let defaults = UserDefaults.standard
+
     var product_ids = [CommanArray.productId_Year_Auto_Recurring,CommanArray.productId_Year_Non_Recurring,CommanArray.productId_Month_Auto_Recurring,CommanArray.productId_Month_Non_Recurring]
 
     override func viewDidLoad() {
@@ -123,12 +126,14 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         }
     }
     @IBAction func funcPaymentBtnClick(_ sender: Any) {
+        self.viewTrasperentDisabled.isHidden = false
         buyConsumable()
     }
     @IBAction func funcHomeBtnClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func funcRestoreBtnClick(_ sender: Any) {
+        restore()
     }
 }
 
@@ -197,19 +202,80 @@ extension PaymentCostController {
                 case .purchased:
                     print("Product Purchased");
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    defaults.set(true, forKey: "IsPrimeUser")
+                    self.viewTrasperentDisabled.isHidden = true
+                    self.navigationController?.popViewController(animated: true)
+                    let alert = UIAlertController(title: "", message: "Payment transaction Successful..", preferredStyle: UIAlertController.Style.alert)
+
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                        self.viewTrasperentDisabled.isHidden = true
+
+                    }))
+
                     break;
                 case .failed:
+//                    defaults.set(true, forKey: "IsPrimeUser")
                     print("Purchased Failed");
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+//                    self.navigationController?.popViewController(animated: true)
+                    let alert = UIAlertController(title: "", message: "Payment transaction failed. Please Try again.", preferredStyle: UIAlertController.Style.alert)
+                    self.viewTrasperentDisabled.isHidden = true
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                    }))
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                     break;
-                    // case .Restored:
-                    //[self restoreTransaction:transaction];
+                case .restored:
+                    print("Already Purchased")
+                    defaults.set(true, forKey: "IsPrimeUser")
+                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
+                    self.viewTrasperentDisabled.isHidden = true
+                    let alert = UIAlertController(title: "", message: "Product Restored Successfully.", preferredStyle: UIAlertController.Style.alert)
+                    self.viewTrasperentDisabled.isHidden = true
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                        self.navigationController?.popViewController(animated: true)
+                    }))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                 default:
                     break;
                 }
             }
         }
-        
+        //If an error occurs, the code will go to this function
+        func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
+            print("transactions restored error")
+
+            //Handle Error
+        }
+    }
+    func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue) {
+        print("transactions restored")
+            for transaction in queue.transactions {
+                let t: SKPaymentTransaction = transaction
+                let prodID = t.payment.productIdentifier as String
+//                if prodID == "product ID" {
+//                    print("action for restored")
+//                    queue.finishTransaction(t)
+//                    //code here what to restore
+//            }
+        }
+    }
+    //Step 1 Call from button Restore Purchase
+    func restore() {
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
 
+    //Step 2 Get transactions
+
+    //If an error occurs, the code will go to this function
+    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
+        //Handle Error
+        print("transactions restored queue error")
+    }
 }

@@ -44,12 +44,12 @@
                                     <action selector="funcSound_ON_OFF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIL-dh-uRd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-B4-Aq7">
-                                <rect key="frame" x="285" y="56" width="48" height="38"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-B4-Aq7">
+                                <rect key="frame" x="288" y="59" width="45" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bfj-B4-Aq7" secondAttribute="height" constant="10" id="ELO-c0-7tN"/>
-                                    <constraint firstAttribute="width" constant="48" id="LzJ-St-UJ7"/>
+                                    <constraint firstAttribute="width" constant="45" id="LzJ-St-UJ7"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="PaymentDetail"/>
                                 <connections>
@@ -346,7 +346,6 @@
                             <constraint firstItem="maV-i8-77x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-30" id="Ppa-Yk-94O"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="2cV-I3-eQU" secondAttribute="bottom" constant="5" id="Tec-F7-bt4"/>
                             <constraint firstItem="F0c-uF-oBi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="VLt-lx-bAM"/>
-                            <constraint firstItem="bfj-B4-Aq7" firstAttribute="top" secondItem="2cV-I3-eQU" secondAttribute="top" constant="-2" id="Yx7-ft-0G5"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1.35" id="cMY-YL-saR"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="cN1-TA-3mz"/>
                             <constraint firstItem="Fv5-dM-EDz" firstAttribute="centerY" secondItem="2cV-I3-eQU" secondAttribute="centerY" id="dlX-9G-EPQ"/>
@@ -354,6 +353,7 @@
                             <constraint firstItem="SbC-dm-NYg" firstAttribute="centerY" secondItem="Fv5-dM-EDz" secondAttribute="centerY" id="gaq-CJ-Pr5"/>
                             <constraint firstItem="tbI-JC-8m4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hSy-co-r57"/>
                             <constraint firstItem="9V3-wB-Fvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kLq-KK-DE1"/>
+                            <constraint firstItem="bfj-B4-Aq7" firstAttribute="centerY" secondItem="2cV-I3-eQU" secondAttribute="centerY" constant="-2" id="mZh-hk-ggZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8kK-0q-VHh" secondAttribute="bottom" constant="20" id="rCY-eS-a0b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebZ-X7-GUd" secondAttribute="trailing" constant="15" id="tvr-rt-c75"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cV-I3-eQU" secondAttribute="trailing" constant="15" id="x9z-48-Run"/>
@@ -398,7 +398,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature" translatesAutoresizingMaskIntoConstraints="NO" id="xuo-Vu-ZmM">
                                 <rect key="frame" x="0.0" y="-10" width="414" height="906"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsm-Ko-SaF" userLabel="BtnAds">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsm-Ko-SaF" userLabel="BtnAds">
                                 <rect key="frame" x="293" y="46.5" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bsm-Ko-SaF" secondAttribute="height" multiplier="1:1" id="1uR-lL-Cpv"/>
@@ -638,7 +638,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-9E-2qy" userLabel="BtnAds">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-9E-2qy" userLabel="BtnAds">
                                 <rect key="frame" x="297" y="54" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="UPd-B0-4fu"/>
@@ -850,6 +850,7 @@
                         <outlet property="collectionViewCard" destination="STg-pl-LbE" id="MwD-eO-KX1"/>
                         <outlet property="imgViewLoader" destination="cNg-UR-hYW" id="Gqh-6s-rXB"/>
                         <outlet property="lblQuestion" destination="Dy7-R1-aVo" id="HgU-Zi-59V"/>
+                        <outlet property="trailingConstraintTitle" destination="P6d-aC-QdF" id="ugH-IB-A1i"/>
                         <outlet property="viewTransperent" destination="XCn-eV-i8v" id="uxE-ek-pMB"/>
                     </connections>
                 </viewController>
@@ -881,7 +882,7 @@
                                     <action selector="funcGoToTestHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="8bU-x1-jxZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-hC-y5c" userLabel="BtnAds">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-hC-y5c" userLabel="BtnAds">
                                 <rect key="frame" x="357" y="45.5" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HbB-hC-y5c" secondAttribute="height" multiplier="1:1" id="B42-w7-aZw"/>
@@ -1153,6 +1154,9 @@
                     <connections>
                         <outlet property="btnHome" destination="XgC-Ur-G0M" id="6xj-jc-gzj"/>
                         <outlet property="btnNoAds" destination="HbB-hC-y5c" id="MLL-c3-TQE"/>
+                        <outlet property="imgViewLock2" destination="qZo-4f-SIQ" id="rgO-3U-U2D"/>
+                        <outlet property="imgViewLock3" destination="yfi-Wi-vFg" id="Nll-qb-FJs"/>
+                        <outlet property="imgViewLock4" destination="GN6-Xa-xpL" id="fQS-CC-WTD"/>
                         <outlet property="imgVwTest1" destination="gNh-Yt-CGX" id="mCN-dS-20x"/>
                         <outlet property="imgVwTest2" destination="aEn-Uq-No3" id="Nkh-U4-cRa"/>
                         <outlet property="imgVwTest3" destination="aWX-21-wnP" id="CUT-2e-dET"/>

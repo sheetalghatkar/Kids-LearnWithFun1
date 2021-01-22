@@ -20,8 +20,11 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var viewTransperent: UIView!
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnPlayAgain: UIButton!
+    @IBOutlet weak var trailingConstraintTitle: NSLayoutConstraint!
+
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial?
+    let defaults = UserDefaults.standard
 
     var soundStatus:Bool = false
     var solveTestArray : [String : [UIImage:Int]] = [:]
@@ -63,8 +66,25 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        if !defaults.bool(forKey:"IsPrimeUser") {
+            bannerView.load(GADRequest())
+        }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if defaults.bool(forKey:"IsPrimeUser") {
+            if let _ = btnNoAds{
+                self.trailingConstraintTitle.constant = -60
+                self.btnNoAds.isHidden = true
+                self.bannerView.removeFromSuperview()
+            }
+        } else {
+            if let _ = btnNoAds{
+                self.btnNoAds.isHidden = false
+            }
+        }
+    }
+
     // MARK: - User defined Functions
     
     func playSound(getSound : String, isShowNextCell : Bool = false) {
@@ -114,13 +134,16 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         player.stop()
         self.viewTransperent.isHidden = false
         self.imgViewLoader.isHidden = false
-        interstitial = createAndLoadInterstitial()
-//        navigationController?.popViewController(animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            if !self.viewTransperent.isHidden {
-                self.viewTransperent.isHidden = true
-                self.imgViewLoader.isHidden = true
-                self.navigationController?.popViewController(animated: true)
+        if defaults.bool(forKey:"IsPrimeUser") {
+            navigationController?.popViewController(animated: true)
+        } else {
+            interstitial = createAndLoadInterstitial()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+                if !self.viewTransperent.isHidden {
+                    self.viewTransperent.isHidden = true
+                    self.imgViewLoader.isHidden = true
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }

@@ -246,6 +246,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
                 self.btnBackward.isHidden = false
             }
         }
+        currentindex = closestCellIndex
         playSound(getSound : imageNameArray[closestCellIndex])
         print("###################",closestCellIndex)
     }

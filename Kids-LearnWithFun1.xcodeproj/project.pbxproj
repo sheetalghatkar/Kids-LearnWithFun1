@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17FD447131A9EEBADB071BAD /* Pods_Kids_LearnWithFun1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D17B5B6D2C84FDE91BC30CD /* Pods_Kids_LearnWithFun1.framework */; };
-		47BBC1E1AEE83064A9141DA4 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F26DDC7860F0120C2EFC3 /* Pods_Kids_LearnWithFun1Tests.framework */; };
 		4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */; };
 		4F0D923725A6464E00CDEFC3 /* PaymentCostController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */; };
 		4F0F7F6F25B2011C006D8951 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */; };
@@ -33,7 +31,21 @@
 		4FFA604A25B88DE100DDEFE8 /* UserMessagingPlatform.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604025B88DE100DDEFE8 /* UserMessagingPlatform.xcframework */; };
 		4FFA604B25B88DE100DDEFE8 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604125B88DE100DDEFE8 /* GoogleMobileAds.xcframework */; };
 		4FFA604C25B88DE100DDEFE8 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA604225B88DE100DDEFE8 /* GoogleUtilities.xcframework */; };
-		6E33FE33AC2DD1E3E30D8921 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F849843683E414FFB1439D3E /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */; };
+		4FFFF88A25C32DA100CE0855 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF87B25C32DA100CE0855 /* SKProduct+LocalizedPrice.swift */; };
+		4FFFF88B25C32DA100CE0855 /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF87C25C32DA100CE0855 /* InAppProductQueryRequest.swift */; };
+		4FFFF88C25C32DA100CE0855 /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF87D25C32DA100CE0855 /* InAppReceiptRefreshRequest.swift */; };
+		4FFFF88D25C32DA100CE0855 /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF87E25C32DA100CE0855 /* SwiftyStoreKit+Types.swift */; };
+		4FFFF88E25C32DA100CE0855 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF87F25C32DA100CE0855 /* InAppReceipt.swift */; };
+		4FFFF88F25C32DA100CE0855 /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88025C32DA100CE0855 /* SwiftyStoreKit.swift */; };
+		4FFFF89025C32DA100CE0855 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88125C32DA100CE0855 /* ProductsInfoController.swift */; };
+		4FFFF89125C32DA100CE0855 /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88225C32DA100CE0855 /* CompleteTransactionsController.swift */; };
+		4FFFF89225C32DA100CE0855 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88325C32DA100CE0855 /* PaymentsController.swift */; };
+		4FFFF89325C32DA100CE0855 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88425C32DA100CE0855 /* OS.swift */; };
+		4FFFF89425C32DA100CE0855 /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88525C32DA100CE0855 /* RestorePurchasesController.swift */; };
+		4FFFF89525C32DA100CE0855 /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88625C32DA100CE0855 /* PaymentQueueController.swift */; };
+		4FFFF89625C32DA100CE0855 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88725C32DA100CE0855 /* InAppReceiptVerificator.swift */; };
+		4FFFF89725C32DA100CE0855 /* SKProductDiscount+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88825C32DA100CE0855 /* SKProductDiscount+LocalizedPrice.swift */; };
+		4FFFF89825C32DA100CE0855 /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFF88925C32DA100CE0855 /* AppleReceiptValidator.swift */; };
 		7000C6F824B47A260024A7F7 /* Camel_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */; };
 		7000C6FA24B492990024A7F7 /* Kangaroo_Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */; };
 		700D417D249E986000AA3D1C /* Rhino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 700D416E249E985D00AA3D1C /* Rhino.mp3 */; };
@@ -199,11 +211,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D17B5B6D2C84FDE91BC30CD /* Pods_Kids_LearnWithFun1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AF7187A9298CBDA60D2A0CF /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig"; sourceTree = "<group>"; };
-		3155307668D6291DBBF1D4FA /* Pods-Kids-LearnWithFun1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.release.xcconfig"; sourceTree = "<group>"; };
-		375A53E768138D1653C8D4AB /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E3A431B9E445831787FF29D /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCostController.swift; sourceTree = "<group>"; };
 		4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCostController.xib; sourceTree = "<group>"; };
 		4F0F7F6925B2011C006D8951 /* FloatyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +235,21 @@
 		4FFA604025B88DE100DDEFE8 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
 		4FFA604125B88DE100DDEFE8 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		4FFA604225B88DE100DDEFE8 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		4FFFF87B25C32DA100CE0855 /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		4FFFF87C25C32DA100CE0855 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppProductQueryRequest.swift; sourceTree = "<group>"; };
+		4FFFF87D25C32DA100CE0855 /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		4FFFF87E25C32DA100CE0855 /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
+		4FFFF87F25C32DA100CE0855 /* InAppReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
+		4FFFF88025C32DA100CE0855 /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStoreKit.swift; sourceTree = "<group>"; };
+		4FFFF88125C32DA100CE0855 /* ProductsInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsInfoController.swift; sourceTree = "<group>"; };
+		4FFFF88225C32DA100CE0855 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTransactionsController.swift; sourceTree = "<group>"; };
+		4FFFF88325C32DA100CE0855 /* PaymentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
+		4FFFF88425C32DA100CE0855 /* OS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
+		4FFFF88525C32DA100CE0855 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePurchasesController.swift; sourceTree = "<group>"; };
+		4FFFF88625C32DA100CE0855 /* PaymentQueueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentQueueController.swift; sourceTree = "<group>"; };
+		4FFFF88725C32DA100CE0855 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppReceiptVerificator.swift; sourceTree = "<group>"; };
+		4FFFF88825C32DA100CE0855 /* SKProductDiscount+LocalizedPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKProductDiscount+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		4FFFF88925C32DA100CE0855 /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptValidator.swift; sourceTree = "<group>"; };
 		7000C6F724B47A250024A7F7 /* Camel_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Camel_Question.mp3; sourceTree = "<group>"; };
 		7000C6F924B492990024A7F7 /* Kangaroo_Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kangaroo_Question.mp3; sourceTree = "<group>"; };
 		700D416E249E985D00AA3D1C /* Rhino.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhino.mp3; sourceTree = "<group>"; };
@@ -363,7 +385,7 @@
 		70F9024024AF88AE00A3AA12 /* Excellent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Excellent.mp3; sourceTree = "<group>"; };
 		70F9024324AF88B900A3AA12 /* WellDone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WellDone.mp3; sourceTree = "<group>"; };
 		70F9024524AFAF5C00A3AA12 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
-		70FF090224962D9B002861AE /* Learn Nature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Nature.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids-LearnWithFun1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FF090524962D9B002861AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FF090724962D9B002861AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70FF090924962D9B002861AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -379,10 +401,6 @@
 		70FF092924962DB5002861AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FF093624965879002861AE /* GIFSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSwift.swift; sourceTree = "<group>"; };
 		70FF093B24966856002861AE /* UIImageviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageviewExtension.swift; sourceTree = "<group>"; };
-		803B675C5525BA7F1AB4BA72 /* Pods-Kids-LearnWithFun1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1.debug.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1.debug.xcconfig"; sourceTree = "<group>"; };
-		8571F3E30F28958D813C4AD6 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids-LearnWithFun1Tests.release.xcconfig"; path = "Target Support Files/Pods-Kids-LearnWithFun1Tests/Pods-Kids-LearnWithFun1Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B07F26DDC7860F0120C2EFC3 /* Pods_Kids_LearnWithFun1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F849843683E414FFB1439D3E /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,7 +415,6 @@
 				4FFA604A25B88DE100DDEFE8 /* UserMessagingPlatform.xcframework in Frameworks */,
 				4FFA604325B88DE100DDEFE8 /* nanopb.xcframework in Frameworks */,
 				4FFA604C25B88DE100DDEFE8 /* GoogleUtilities.xcframework in Frameworks */,
-				17FD447131A9EEBADB071BAD /* Pods_Kids_LearnWithFun1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +422,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47BBC1E1AEE83064A9141DA4 /* Pods_Kids_LearnWithFun1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +429,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E33FE33AC2DD1E3E30D8921 /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,12 +438,6 @@
 		303A3930735628C54EAD680D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				803B675C5525BA7F1AB4BA72 /* Pods-Kids-LearnWithFun1.debug.xcconfig */,
-				3155307668D6291DBBF1D4FA /* Pods-Kids-LearnWithFun1.release.xcconfig */,
-				375A53E768138D1653C8D4AB /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */,
-				2AF7187A9298CBDA60D2A0CF /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */,
-				3E3A431B9E445831787FF29D /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */,
-				8571F3E30F28958D813C4AD6 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -437,9 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				4F39A12A25B984DA0090C73E /* StoreKit.framework */,
-				0D17B5B6D2C84FDE91BC30CD /* Pods_Kids_LearnWithFun1.framework */,
-				F849843683E414FFB1439D3E /* Pods_Kids_LearnWithFun1_Kids_LearnWithFun1UITests.framework */,
-				B07F26DDC7860F0120C2EFC3 /* Pods_Kids_LearnWithFun1Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -480,6 +486,28 @@
 				4FFA603E25B88DE100DDEFE8 /* GoogleUtilities-LICENSE */,
 			);
 			path = Licenses;
+			sourceTree = "<group>";
+		};
+		4FFFF87A25C32DA100CE0855 /* SwiftyStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				4FFFF87B25C32DA100CE0855 /* SKProduct+LocalizedPrice.swift */,
+				4FFFF87C25C32DA100CE0855 /* InAppProductQueryRequest.swift */,
+				4FFFF87D25C32DA100CE0855 /* InAppReceiptRefreshRequest.swift */,
+				4FFFF87E25C32DA100CE0855 /* SwiftyStoreKit+Types.swift */,
+				4FFFF87F25C32DA100CE0855 /* InAppReceipt.swift */,
+				4FFFF88025C32DA100CE0855 /* SwiftyStoreKit.swift */,
+				4FFFF88125C32DA100CE0855 /* ProductsInfoController.swift */,
+				4FFFF88225C32DA100CE0855 /* CompleteTransactionsController.swift */,
+				4FFFF88325C32DA100CE0855 /* PaymentsController.swift */,
+				4FFFF88425C32DA100CE0855 /* OS.swift */,
+				4FFFF88525C32DA100CE0855 /* RestorePurchasesController.swift */,
+				4FFFF88625C32DA100CE0855 /* PaymentQueueController.swift */,
+				4FFFF88725C32DA100CE0855 /* InAppReceiptVerificator.swift */,
+				4FFFF88825C32DA100CE0855 /* SKProductDiscount+LocalizedPrice.swift */,
+				4FFFF88925C32DA100CE0855 /* AppleReceiptValidator.swift */,
+			);
+			path = SwiftyStoreKit;
 			sourceTree = "<group>";
 		};
 		700D416C249E980A00AA3D1C /* SoundFile */ = {
@@ -703,7 +731,7 @@
 		70FF090324962D9B002861AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70FF090224962D9B002861AE /* Learn Nature.app */,
+				70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */,
 				70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */,
 				70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */,
 			);
@@ -750,6 +778,7 @@
 		70FF09352496450E002861AE /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				4FFFF87A25C32DA100CE0855 /* SwiftyStoreKit */,
 				4FFA603725B88DE100DDEFE8 /* GoogleMobileAdsSdkiOS-7.69.0 */,
 				4F0F7F6D25B2011C006D8951 /* Floaty.swift */,
 				4F0F7F6C25B2011C006D8951 /* FloatyDelegate.swift */,
@@ -789,30 +818,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		70FF090124962D9B002861AE /* Learn Nature */ = {
+		70FF090124962D9B002861AE /* Kids-LearnWithFun1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */;
+			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */;
 			buildPhases = (
-				CF1F7A39BC41FBD7B517F132 /* [CP] Check Pods Manifest.lock */,
 				70FF08FE24962D9B002861AE /* Sources */,
 				70FF08FF24962D9B002861AE /* Frameworks */,
 				70FF090024962D9B002861AE /* Resources */,
-				CA06741DE386D8775CE32F04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Learn Nature";
+			name = "Kids-LearnWithFun1";
 			productName = "Kids-LearnWithFun";
-			productReference = 70FF090224962D9B002861AE /* Learn Nature.app */;
+			productReference = 70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70FF092F24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1Tests" */;
 			buildPhases = (
-				4431BBC0397867CE8DA78C03 /* [CP] Check Pods Manifest.lock */,
 				70FF091424962DB5002861AE /* Sources */,
 				70FF091524962DB5002861AE /* Frameworks */,
 				70FF091624962DB5002861AE /* Resources */,
@@ -831,11 +857,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70FF093224962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1UITests" */;
 			buildPhases = (
-				C90C422E30FC79EA328DB879 /* [CP] Check Pods Manifest.lock */,
 				70FF091F24962DB5002861AE /* Sources */,
 				70FF092024962DB5002861AE /* Frameworks */,
 				70FF092124962DB5002861AE /* Resources */,
-				E3CCC76A74F1FDF23A112303 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -883,7 +907,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				70FF090124962D9B002861AE /* Learn Nature */,
+				70FF090124962D9B002861AE /* Kids-LearnWithFun1 */,
 				70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */,
 				70FF092224962DB5002861AE /* Kids-LearnWithFun1UITests */,
 			);
@@ -1049,109 +1073,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4431BBC0397867CE8DA78C03 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C90C422E30FC79EA328DB879 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA06741DE386D8775CE32F04 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1/Pods-Kids-LearnWithFun1-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF1F7A39BC41FBD7B517F132 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kids-LearnWithFun1-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3CCC76A74F1FDF23A112303 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests/Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		70FF08FE24962D9B002861AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1159,28 +1080,43 @@
 			files = (
 				4F0F7F7225B2011C006D8951 /* FloatyWindow.swift in Sources */,
 				4F0F7F7025B2011C006D8951 /* FloatyManager.swift in Sources */,
+				4FFFF89425C32DA100CE0855 /* RestorePurchasesController.swift in Sources */,
+				4FFFF89225C32DA100CE0855 /* PaymentsController.swift in Sources */,
+				4FFFF89325C32DA100CE0855 /* OS.swift in Sources */,
 				4F0F7F7325B2011C006D8951 /* Floaty.swift in Sources */,
 				707ECA22249CB3E10024D06C /* UIViewExtension.swift in Sources */,
 				70FF093724965879002861AE /* GIFSwift.swift in Sources */,
 				4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */,
 				70FF093C24966856002861AE /* UIImageviewExtension.swift in Sources */,
+				4FFFF89825C32DA100CE0855 /* AppleReceiptValidator.swift in Sources */,
 				70FF090A24962D9B002861AE /* HomeViewController.swift in Sources */,
 				70FF090624962D9B002861AE /* AppDelegate.swift in Sources */,
+				4FFFF89625C32DA100CE0855 /* InAppReceiptVerificator.swift in Sources */,
+				4FFFF88B25C32DA100CE0855 /* InAppProductQueryRequest.swift in Sources */,
 				70631FED2497AA3000DAE930 /* UIButtonExtension.swift in Sources */,
+				4FFFF88E25C32DA100CE0855 /* InAppReceipt.swift in Sources */,
 				7068EFCF24AB4C6900B448C3 /* AppConstant.swift in Sources */,
 				70E468A524A8D0E2008C8FFB /* TestSolveViewController.swift in Sources */,
 				709D3379249B712B002B1114 /* UiCollectionViewExtension.swift in Sources */,
 				70631FEB249776AB00DAE930 /* ImagesCollectionViewController.swift in Sources */,
+				4FFFF89725C32DA100CE0855 /* SKProductDiscount+LocalizedPrice.swift in Sources */,
+				4FFFF89525C32DA100CE0855 /* PaymentQueueController.swift in Sources */,
 				4F0D923625A6464E00CDEFC3 /* PaymentCostController.swift in Sources */,
 				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,
 				4F0F7F6F25B2011C006D8951 /* FloatyDelegate.swift in Sources */,
 				4F0F7F7425B2011C006D8951 /* FloatyItem.swift in Sources */,
 				701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */,
+				4FFFF88F25C32DA100CE0855 /* SwiftyStoreKit.swift in Sources */,
 				70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */,
 				7068EFD424AB5DCE00B448C3 /* TestSolveCollectionCell.swift in Sources */,
+				4FFFF88A25C32DA100CE0855 /* SKProduct+LocalizedPrice.swift in Sources */,
 				4F13A67025B72AC300C7EFDD /* SubscriptionDetailsController.swift in Sources */,
 				70FF090824962D9B002861AE /* SceneDelegate.swift in Sources */,
+				4FFFF89025C32DA100CE0855 /* ProductsInfoController.swift in Sources */,
+				4FFFF88D25C32DA100CE0855 /* SwiftyStoreKit+Types.swift in Sources */,
 				70277DD224A4B59100072D57 /* UILabelExtension.swift in Sources */,
+				4FFFF89125C32DA100CE0855 /* CompleteTransactionsController.swift in Sources */,
+				4FFFF88C25C32DA100CE0855 /* InAppReceiptRefreshRequest.swift in Sources */,
 				4F0F7F7125B2011C006D8951 /* FloatyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1206,12 +1142,12 @@
 /* Begin PBXTargetDependency section */
 		70FF091A24962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Learn Nature */;
+			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
 			targetProxy = 70FF091924962DB5002861AE /* PBXContainerItemProxy */;
 		};
 		70FF092524962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Learn Nature */;
+			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
 			targetProxy = 70FF092424962DB5002861AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1354,7 +1290,6 @@
 		};
 		70FF092D24962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803B675C5525BA7F1AB4BA72 /* Pods-Kids-LearnWithFun1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -1383,7 +1318,6 @@
 		};
 		70FF092E24962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3155307668D6291DBBF1D4FA /* Pods-Kids-LearnWithFun1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -1413,7 +1347,6 @@
 		};
 		70FF093024962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E3A431B9E445831787FF29D /* Pods-Kids-LearnWithFun1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1438,7 +1371,6 @@
 		};
 		70FF093124962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8571F3E30F28958D813C4AD6 /* Pods-Kids-LearnWithFun1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1463,7 +1395,6 @@
 		};
 		70FF093324962DB5002861AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 375A53E768138D1653C8D4AB /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -1486,7 +1417,6 @@
 		};
 		70FF093424962DB5002861AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AF7187A9298CBDA60D2A0CF /* Pods-Kids-LearnWithFun1-Kids-LearnWithFun1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -1519,7 +1449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */ = {
+		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				70FF092D24962DB5002861AE /* Debug */,

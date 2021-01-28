@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import SwiftyStoreKit
+//import SwiftyStoreKit
 class CommanArray {
     static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
     static var wildAnimalImageArray: [UIImage] = [
@@ -107,5 +107,6 @@ class CommanArray {
     
     static var environment = AppleReceiptValidator.VerifyReceiptURLType.sandbox
     static var secretKey = "d277e87d60d84a40b35c1e58295d7860"
+
 
 }

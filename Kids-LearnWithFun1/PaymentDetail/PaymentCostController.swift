@@ -8,7 +8,7 @@
 
 import UIKit
 import StoreKit
-import SwiftyStoreKit
+//import SwiftyStoreKit
 class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     @IBOutlet weak var lblCostTitle: UILabel!

@@ -5,13 +5,14 @@
 //  Created by sheetal shinde on 14/06/20.
 //  Copyright © 2020 sheetal shinde. All rights reserved.
 //    /*pod 'Google-Mobile-Ads-SDK'*/
+/*pod 'SwiftyStoreKit'*/
+
 
 
 import UIKit
 import AVFoundation
 import GoogleMobileAds
 import MessageUI
-import SwiftyStoreKit
 
 class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComposeViewControllerDelegate {
     @IBOutlet weak var bgScreen: UIImageView!
@@ -53,7 +54,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     
     let rateUsImg = UIImage(named: "RateUs.png")
     let shareAppImg = UIImage(named: "ShareApp.png")
-    let contactUsImg = UIImage(named: "ContactUs.png")
+//    let contactUsImg = UIImage(named: "ContactUs.png")
 
     //------------------------------------------------------------------------
 
@@ -162,26 +163,26 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             self.present(activityViewController, animated: true, completion: nil)
             self.floaty.close()
         })
-        self.floaty.addItem(icon: contactUsImg, handler: { [self]_ in
-            let mailComposeViewController = configureMailComposer()
-              if MFMailComposeViewController.canSendMail(){
-                  self.present(mailComposeViewController, animated: true, completion: nil)
-              }else{
-                  print("Can't send email")
-                let alert = UIAlertController(title: "", message: "Please setup mail account.", preferredStyle: UIAlertController.Style.alert)
-
-                // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                // show the alert
-                self.present(alert, animated: true, completion: nil)
-
-              }
-            self.floaty.close()
-        })
+//        self.floaty.addItem(icon: contactUsImg, handler: { [self]_ in
+//            let mailComposeViewController = configureMailComposer()
+//              if MFMailComposeViewController.canSendMail(){
+//                  self.present(mailComposeViewController, animated: true, completion: nil)
+//              }else{
+//                  print("Can't send email")
+//                let alert = UIAlertController(title: "", message: "Please setup mail account.", preferredStyle: UIAlertController.Style.alert)
+//
+//                // add an action (button)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                // show the alert
+//                self.present(alert, animated: true, completion: nil)
+//
+//              }
+//            self.floaty.close()
+//        })
         floaty.items[0].title = "Rate & Review"
         floaty.items[1].title = "Share App"
-        floaty.items[2].title = "Contact Us"
+//        floaty.items[2].title = "Contact Us"
         
         addWaveBackground(to :viewtransperent)
         //-----------------------------------
@@ -373,7 +374,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 //    }
 
     func addWaveBackground(to view: UIView){
-          let multipler = CGFloat(0.13)
+          let multipler = CGFloat(0.07)  //0.13
         
           let leftDrop:CGFloat = 0.4 + multipler
           let leftInflexionX: CGFloat = 0.4 + multipler

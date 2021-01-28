@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionDetailsController" customModule="Learn_Nature" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionDetailsController" customModule="Kids_LearnWithFun1" customModuleProvider="target">
             <connections>
                 <outlet property="btnCancelSubscription" destination="hZa-MS-hHk" id="n7M-IK-90l"/>
                 <outlet property="heightPaymentDetail" destination="Ccl-0A-yoD" id="EGj-7C-84N"/>
@@ -47,38 +47,38 @@
                         <action selector="funcHomeBtnClick:" destination="-1" eventType="touchUpInside" id="pkP-ob-0LE"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-Uc-mdQ" userLabel="paymentDetailView" customClass="UIViewExtend" customModule="Learn_Nature" customModuleProvider="target">
-                    <rect key="frame" x="41.5" y="137.5" width="331" height="190"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-Uc-mdQ" userLabel="paymentDetailView" customClass="UIViewExtend" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                    <rect key="frame" x="41.5" y="137.5" width="331" height="175"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-LH-FOb" userLabel="yearlyView">
-                            <rect key="frame" x="0.0" y="0.0" width="331" height="190"/>
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="175"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-63-ibV" userLabel="lblTitleYearly">
-                                    <rect key="frame" x="15" y="15" width="61" height="34"/>
-                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                                    <rect key="frame" x="15" y="15" width="55.5" height="31.5"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-oa-mi2" userLabel="lblRecurring">
-                                    <rect key="frame" x="15" y="65" width="52" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <rect key="frame" x="15" y="62.5" width="44" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kw-uF-B9m" userLabel="lblPriceRecurring">
-                                    <rect key="frame" x="260" y="65" width="56" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <rect key="frame" x="269" y="62.5" width="47" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-MS-hHk" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                    <rect key="frame" x="50.5" y="116.5" width="230" height="42"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-MS-hHk" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                                    <rect key="frame" x="50.5" y="109" width="230" height="42"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="230" id="DIV-T5-WZe"/>
                                         <constraint firstAttribute="height" constant="42" id="eTi-Ft-TsZ"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
                                     <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
                                     <state key="normal">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +126,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="190" id="Ccl-0A-yoD"/>
+                        <constraint firstAttribute="height" constant="175" id="Ccl-0A-yoD"/>
                         <constraint firstItem="3qe-LH-FOb" firstAttribute="width" secondItem="IAd-Uc-mdQ" secondAttribute="width" id="dlo-JT-MBd"/>
                         <constraint firstItem="3qe-LH-FOb" firstAttribute="top" secondItem="IAd-Uc-mdQ" secondAttribute="top" id="n4b-wh-dn2"/>
                         <constraint firstItem="3qe-LH-FOb" firstAttribute="height" secondItem="IAd-Uc-mdQ" secondAttribute="height" id="pgH-Do-SeK"/>
@@ -171,7 +171,7 @@
     </objects>
     <designables>
         <designable name="hZa-MS-hHk">
-            <size key="intrinsicContentSize" width="30" height="42"/>
+            <size key="intrinsicContentSize" width="30" height="41"/>
         </designable>
     </designables>
     <resources>

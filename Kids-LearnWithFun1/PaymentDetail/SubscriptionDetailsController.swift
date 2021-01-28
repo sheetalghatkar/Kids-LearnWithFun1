@@ -23,22 +23,38 @@ class SubscriptionDetailsController: UIViewController {
     @IBOutlet weak var heightPaymentDetail: NSLayoutConstraint!
     
     var isNonRecurringSubscription = false
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTitle.text = "Subscription Details"
-        
+        let getPurchaseDetails = self.defaults.value(forKey: "PurchaseDetails") as? [String:String]
+        if getPurchaseDetails != nil {
+            if(getPurchaseDetails!.count != 0) {
+                if(getPurchaseDetails!["ProductId"] == CommanArray.productId_Year_Auto_Recurring) {
+                    lblSubscriptionTitle.text = "Yearly Subscription"
+                    lblSubscriptionSubtitle.text = "Recurring Payment"
+                } else if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Year_Non_Recurring) {
+                    lblSubscriptionTitle.text = "Yearly Subscription"
+                    lblSubscriptionSubtitle.text = "Non-Recurring Payment"
+                } else if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Auto_Recurring) {
+                    lblSubscriptionTitle.text = "Monthly Subscription"
+                    lblSubscriptionSubtitle.text = "Recurring Payment"
+                } else if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Non_Recurring) {
+                    lblSubscriptionTitle.text = "Monthly Subscription"
+                    lblSubscriptionSubtitle.text = "Non-Recurring Payment"
+                }
+                lblSubscriptionPrice.text = getPurchaseDetails?["SubscriptionPrice"]
+            }
+        }
         //Views
         viewSubscriptionBg.backgroundColor = CommanArray.paymentModeBgColor
 
         //Buttons
-        btnCancelSubscription.setTitle("Cancel Subscription", for: .normal)
+        btnCancelSubscription.setTitle("Manage Subscription", for: .normal)
         btnCancelSubscription.setTitleColor(CommanArray.paymentBtnTextColor, for: .normal)
         
         //Label
-        lblSubscriptionTitle.text = "Yearly Subscription"
-        lblSubscriptionSubtitle.text = "Recurring Payment"
-        lblSubscriptionPrice.text = "$8"
                 
         self.viewSubscriptionBg.layer.shadowColor = UIColor.white.cgColor
         self.viewSubscriptionBg.layer.borderWidth = 2.5
@@ -50,6 +66,8 @@ class SubscriptionDetailsController: UIViewController {
     }
     
     @IBAction func funcCancelSubscriptionClick(_ sender: Any) {
+        guard let urlStr = URL(string: "itms://apps.apple.com/account/subscriptions") else { return }
+        UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
     }
     
     @IBAction func funcHomeBtnClick(_ sender: Any) {

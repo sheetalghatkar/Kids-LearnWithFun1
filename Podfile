@@ -6,7 +6,7 @@ target 'Kids-LearnWithFun1' do
   use_frameworks!
 
   # Pods for Kids-LearnWithFun1
-	pod 'Google-Mobile-Ads-SDK'
+	pod 'SwiftyStoreKit' 
 
   target 'Kids-LearnWithFun1Tests' do
     inherit! :search_paths

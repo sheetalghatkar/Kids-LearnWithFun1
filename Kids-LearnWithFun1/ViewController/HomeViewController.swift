@@ -4,12 +4,15 @@
 //
 //  Created by sheetal shinde on 14/06/20.
 //  Copyright © 2020 sheetal shinde. All rights reserved.
-//
+//    /*pod 'Google-Mobile-Ads-SDK'*/
+
 
 import UIKit
 import AVFoundation
 import GoogleMobileAds
 import MessageUI
+import SwiftyStoreKit
+
 class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComposeViewControllerDelegate {
     @IBOutlet weak var bgScreen: UIImageView!
     @IBOutlet weak var imgVwWildAnimal: UIImageView!
@@ -56,17 +59,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 
     override func viewWillAppear(_ animated: Bool) {
         playBackgroundMusic()
-        if defaults.bool(forKey:"IsPrimeUser") {
-            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
-                self.btnCancelSubscription.isHidden = false
-                self.btnNoAds.isHidden = true
-            }
-        } else {
-            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
-                self.btnCancelSubscription.isHidden = true
-                self.btnNoAds.isHidden = false
-            }
-        }
+        showHideAdsButton()
     }
     override func viewWillDisappear(_ animated: Bool) {
         player.stop()
@@ -186,16 +179,199 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
               }
             self.floaty.close()
         })
-//        floaty.items[0].titleLabel.text = "Rate & Review"
-//        floaty.items[1].titleLabel.text = "Share App"
-//        floaty.items[2].titleLabel.text = "Contact Us"
         floaty.items[0].title = "Rate & Review"
         floaty.items[1].title = "Share App"
         floaty.items[2].title = "Contact Us"
         
         addWaveBackground(to :viewtransperent)
-
+        //-----------------------------------
+        if self.defaults.bool(forKey: "IsPrimeUser") {
+            handlingdForPrimeIser()
+        }
     }
+    
+    func showHideAdsButton() {
+        if defaults.bool(forKey:"IsPrimeUser") {
+            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
+                self.btnCancelSubscription.isHidden = false
+                self.btnNoAds.isHidden = true
+            }
+        } else {
+            if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
+                self.btnCancelSubscription.isHidden = true
+                self.btnNoAds.isHidden = false
+            }
+        }
+    }
+    
+    func handlingdForPrimeIser() {
+      let getPurchaseDetails = self.defaults.value(forKey: "PurchaseDetails") as? [String:String]
+      if getPurchaseDetails != nil {
+        if ((getPurchaseDetails!.count != 0) && ((getPurchaseDetails!["CancellationDate"])!.count) != 0) {
+            defaults.set(false, forKey: "IsPrimeUser")
+            showHideAdsButton()
+        } else if ((getPurchaseDetails!.count != 0) && (getPurchaseDetails!["ProductId"] == CommanArray.productId_Year_Non_Recurring) && ((getPurchaseDetails!["ExpirationDate"])!.count) != 0) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let getExpireDate = formatter.date(from: (getPurchaseDetails?["ExpirationDate"]!)! as String)!
+            let getRemainingDays = daysRemainingOnSubscription(getExpireDate: getExpireDate)
+            if getRemainingDays >= 0 {
+                if getRemainingDays == 0 {
+                    if isRefreshRequired() {
+                        defaults.setValue(Date(), forKey: "RefreshedDate")
+                        let alert = UIAlertController(title: "", message: "Your yearly subscription is expiring today.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                } else if getRemainingDays < 6 {
+                    if isRefreshRequired() {
+                        defaults.setValue(Date(), forKey: "RefreshedDate")
+                        let alert = UIAlertController(title: "", message: "Your yearly subscription will expire in \(getRemainingDays) day(s).", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            } else {
+                defaults.set(false, forKey: "IsPrimeUser")
+            }
+            showHideAdsButton()
+        } else if ((getPurchaseDetails!.count != 0) && (getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Non_Recurring) && ((getPurchaseDetails!["ExpirationDate"])!.count) != 0) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let getExpireDate = formatter.date(from: getPurchaseDetails!["ExpirationDate"]! as String)!
+            let getRemainingDays = daysRemainingOnSubscription(getExpireDate: getExpireDate)
+            if getRemainingDays >= 0 {
+                if getRemainingDays == 0 {
+                    if isRefreshRequired() {
+                        defaults.setValue(Date(), forKey: "RefreshedDate")
+                        let alert = UIAlertController(title: "", message: "Your monthly subscription is expiring today.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                } else if getRemainingDays < 6 {
+                    if isRefreshRequired() {
+                        defaults.setValue(Date(), forKey: "RefreshedDate")
+                        let alert = UIAlertController(title: "", message: "Your monthly subscription will expire in \(getRemainingDays) day(s).", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            } else {
+                defaults.set(false, forKey: "IsPrimeUser")
+            }
+            showHideAdsButton()
+        } else if((getPurchaseDetails!.count != 0) && ((getPurchaseDetails!["ProductId"] == CommanArray.productId_Year_Auto_Recurring)||(getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Auto_Recurring)) && ((getPurchaseDetails!["SubscriptionExpirationDate"])!.count) != 0) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let getExpireDate = formatter.date(from: getPurchaseDetails!["SubscriptionExpirationDate"]! as String)!
+            let getRemainingDays = daysRemainingOnSubscription(getExpireDate: getExpireDate)
+            if getRemainingDays >= 0 {
+                if ((getRemainingDays == 1)||(getRemainingDays == 2)) {
+                    if isRefreshRequired() {
+                        defaults.setValue(Date(), forKey: "RefreshedDate")
+                        if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Year_Auto_Recurring) {
+                            let alert = UIAlertController(title: "", message: "Your yearly subscription will renew in \(getRemainingDays) day(s).", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        } else if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Auto_Recurring) {
+                            let alert = UIAlertController(title: "", message: "Your monthly subscription will renew in \(getRemainingDays) day(s).", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                }
+                showHideAdsButton()
+            } else {
+                var productIdAutoRenew = ""
+                var productPriceAutoRenew = ""
+                if (getPurchaseDetails!["ProductId"] == CommanArray.productId_Month_Auto_Recurring) {
+                    productIdAutoRenew = CommanArray.productId_Month_Auto_Recurring
+                    productPriceAutoRenew = "$0.49"
+                } else {
+                    productIdAutoRenew = CommanArray.productId_Year_Auto_Recurring
+                    productPriceAutoRenew = "$3.99"
+                }
+                let appleValidator = AppleReceiptValidator(service: CommanArray.environment, sharedSecret: CommanArray.secretKey)
+                SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+                    switch result {
+                    case .success(let receipt):
+                        let purchaseResult = SwiftyStoreKit.verifySubscription(
+                            ofType: .autoRenewable,
+                            productId: productIdAutoRenew,
+                            inReceipt: receipt)
+                            
+                        switch purchaseResult {
+                        case .purchased(let expiryDate, let items):
+                            let getReceiptItem = items[0] as ReceiptItem
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                            let pucrhaseDateString = formatter.string(from: getReceiptItem.purchaseDate as Date)
+                            let originalPurchasedDateString = formatter.string(from: getReceiptItem.originalPurchaseDate as Date)
+                            var subscriptionExpirationDateString = ""
+                            if getReceiptItem.subscriptionExpirationDate != nil {
+                                subscriptionExpirationDateString = formatter.string(from: getReceiptItem.subscriptionExpirationDate! as Date)
+                            }
+                            var expirationDateString = ""
+                            expirationDateString = formatter.string(from: expiryDate as Date)
+
+                            var cancelDateString = ""
+                            if getReceiptItem.cancellationDate != nil {
+                                cancelDateString = formatter.string(from: getReceiptItem.cancellationDate! as Date)
+                            }
+                            let dictPurchaseDetail = [
+                                "ProductId": productIdAutoRenew,
+                                "OriginalPurchasedDate": originalPurchasedDateString,
+                                "PurchasedDate": pucrhaseDateString,
+                                "ExpirationDate": expirationDateString,
+                                "CancellationDate": cancelDateString,
+                                "SubscriptionExpirationDate": subscriptionExpirationDateString,
+                                "SubscriptionPrice":productPriceAutoRenew
+                            ] as [String:Any]
+                            self.defaults.set(dictPurchaseDetail, forKey: "PurchaseDetails")
+                            self.defaults.set(true, forKey: "IsPrimeUser")
+                        case .expired( _,  _):
+                            self.defaults.set(false, forKey: "IsPrimeUser")
+                        case .notPurchased:
+                            self.defaults.set(false, forKey: "IsPrimeUser")
+                        }
+                        self.showHideAdsButton()
+                    case .error(let error):
+                        print("Receipt verification failed: \(error)")
+                    }
+                }
+            }
+        }
+      }
+    }
+    func isRefreshRequired() -> Bool {
+
+        guard let lastRefreshDate = defaults.object(forKey: "RefreshedDate") as? Date else {
+            return true
+        }
+
+        if let diff = Calendar.current.dateComponents([.hour], from: lastRefreshDate, to: Date()).hour, diff > 24 {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    
+    func daysRemainingOnSubscription(getExpireDate: Date) -> Int {
+
+        return Calendar.current.dateComponents([.day], from: Date(), to: getExpireDate).day!
+    }
+//
+//    public static func getExpiryDateString() -> String {
+//      let remaining = daysRemainingOnSubscription()
+//      if remaining > 0, let expiryDate = UserSettings.shared.expirationDate {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd/MM/yyyy"
+//        return "Subscribed! \nExpires: \(dateFormatter.string(from: expiryDate)) (\(remaining) Days)"
+//      }
+//      return "Not Subscribed"
+//    }
+
     func addWaveBackground(to view: UIView){
           let multipler = CGFloat(0.13)
         
@@ -428,4 +604,60 @@ extension HomeViewController : FloatingActionButtonProtocol {
         viewtransperent.isHidden = true
         viewParentSetting.isHidden = true
     }
+}
+
+
+extension HomeViewController {
+    func verifyReciptOfPayment(getProductId : String, getProductPrice : String) {
+            let appleValidator = AppleReceiptValidator(service: CommanArray.environment, sharedSecret: CommanArray.secretKey)
+            SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+                switch result {
+                case .success(let receipt):
+                    let purchaseResult = SwiftyStoreKit.verifySubscription(
+                        ofType: .autoRenewable,
+                        productId: getProductId,
+                        inReceipt: receipt)
+                        
+                    switch purchaseResult {
+                    case .purchased(let expiryDate, let items):
+                        let getReceiptItem = items[0] as ReceiptItem
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                        let pucrhaseDateString = formatter.string(from: getReceiptItem.purchaseDate as Date)
+                        let originalPurchasedDateString = formatter.string(from: getReceiptItem.originalPurchaseDate as Date)
+                        var subscriptionExpirationDateString = ""
+                        if getReceiptItem.subscriptionExpirationDate != nil {
+                            subscriptionExpirationDateString = formatter.string(from: getReceiptItem.subscriptionExpirationDate! as Date)
+                        }
+                        var expirationDateString = ""
+                        expirationDateString = formatter.string(from: expiryDate as Date)
+
+                        var cancelDateString = ""
+                        if getReceiptItem.cancellationDate != nil {
+                            cancelDateString = formatter.string(from: getReceiptItem.cancellationDate! as Date)
+                        }
+                        let dictPurchaseDetail = [
+                            "ProductId": getProductId,
+                            "OriginalPurchasedDate": originalPurchasedDateString,
+                            "PurchasedDate": pucrhaseDateString,
+                            "ExpirationDate": expirationDateString,
+                            "CancellationDate": cancelDateString,
+                            "SubscriptionExpirationDate": subscriptionExpirationDateString,
+                            "SubscriptionPrice":getProductPrice
+                        ] as [String:Any]
+                        self.defaults.set(dictPurchaseDetail, forKey: "PurchaseDetails")
+                        self.defaults.set(true, forKey: "IsPrimeUser")
+                    case .expired(let expiryDate, let items):
+                        print("\(getProductId) is expired since \(expiryDate)\n\(items)\n")
+                        self.defaults.set(false, forKey: "IsPrimeUser")
+                    case .notPurchased:
+                        print("The user has never purchased \(getProductId)")
+                        self.defaults.set(false, forKey: "IsPrimeUser")
+                        
+                    }
+                case .error(let error):
+                    print("Receipt verification failed: \(error)")
+                }
+            }
+        }
 }

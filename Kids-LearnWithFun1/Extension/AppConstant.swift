@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SwiftyStoreKit
 class CommanArray {
     static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
     static var wildAnimalImageArray: [UIImage] = [
@@ -103,5 +103,9 @@ class CommanArray {
     static var productId_Year_Non_Recurring = "com.mobiapps360.LearnNature.YearlyNonRenew"
     static var productId_Month_Auto_Recurring = "com.mobiapps360.LearnNature.MonthlyAutoRenew"
     static var productId_Month_Non_Recurring = "com.mobiapps360.LearnNature.MonthlyNonRenew"
+    
+    
+    static var environment = AppleReceiptValidator.VerifyReceiptURLType.sandbox
+    static var secretKey = "d277e87d60d84a40b35c1e58295d7860"
 
 }

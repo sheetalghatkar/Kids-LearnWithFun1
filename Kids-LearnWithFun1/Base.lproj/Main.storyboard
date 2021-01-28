@@ -691,12 +691,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQW-SH-8lZ" userLabel="Btn Play Again" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                <rect key="frame" x="188.5" y="550" width="37" height="37"/>
+                                <rect key="frame" x="182" y="555" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.77254901960784317" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="BUU-fG-XmE"/>
+                                    <constraint firstAttribute="width" constant="50" id="BUU-fG-XmE"/>
                                     <constraint firstAttribute="width" secondItem="fQW-SH-8lZ" secondAttribute="height" multiplier="1:1" id="LUO-4X-fjO"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="PlayAgain"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -727,12 +728,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-5V-hFM" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                <rect key="frame" x="20" y="550" width="35" height="35"/>
+                                <rect key="frame" x="20" y="550" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tS7-5V-hFM" secondAttribute="height" multiplier="1:1" id="FnH-EQ-8SC"/>
-                                    <constraint firstAttribute="height" constant="35" id="Mjc-5i-ZwW"/>
+                                    <constraint firstAttribute="height" constant="60" id="Mjc-5i-ZwW"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="Backward"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -753,16 +755,15 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="funcBackwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="6Cf-Ho-l1I"/>
-                                    <action selector="funcBackwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="jM2-WO-Dj4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-sN-VoN" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
-                                <rect key="frame" x="359" y="550" width="35" height="35"/>
+                                <rect key="frame" x="334" y="550" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uBz-sN-VoN" secondAttribute="height" multiplier="1:1" id="Kdy-hH-kJH"/>
-                                    <constraint firstAttribute="height" constant="35" id="qDV-iU-Htb"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="Forward"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -782,8 +783,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="funcBackwardBtnClick:" destination="1hM-HW-ZOh" eventType="touchUpInside" id="4PD-S1-WGO"/>
-                                    <action selector="funcBackwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="KBe-uS-dOC"/>
                                     <action selector="funcForwardBtnClick:" destination="ZUf-gF-lCX" eventType="touchUpInside" id="56M-YP-Dj4"/>
                                 </connections>
                             </button>
@@ -814,13 +813,13 @@
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="SJF-BJ-cLf" secondAttribute="trailing" id="45l-5a-ufe"/>
                             <constraint firstItem="5GS-wC-DeR" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="7HP-ma-UsB"/>
                             <constraint firstItem="Dy7-R1-aVo" firstAttribute="centerY" secondItem="vWo-J7-g90" secondAttribute="centerY" id="7MA-Rx-Hhu"/>
-                            <constraint firstItem="fQW-SH-8lZ" firstAttribute="top" secondItem="uBz-sN-VoN" secondAttribute="top" id="8YK-hE-39w"/>
                             <constraint firstAttribute="bottom" secondItem="XCn-eV-i8v" secondAttribute="bottom" id="Eir-wA-Yga"/>
                             <constraint firstItem="t4u-4d-A2T" firstAttribute="trailing" secondItem="uBz-sN-VoN" secondAttribute="trailing" constant="20" id="F99-VS-RmZ"/>
                             <constraint firstItem="vVn-jN-vjJ" firstAttribute="leading" secondItem="Y0A-9E-2qy" secondAttribute="trailing" constant="20" id="H2o-bh-MaO"/>
                             <constraint firstItem="XCn-eV-i8v" firstAttribute="trailing" secondItem="t4u-4d-A2T" secondAttribute="trailing" id="IGr-Yd-7Ag"/>
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="top" secondItem="kra-sA-SsD" secondAttribute="top" id="Iy0-zu-XeQ"/>
                             <constraint firstItem="5GS-wC-DeR" firstAttribute="top" secondItem="vWo-J7-g90" secondAttribute="bottom" constant="20" id="JjY-Pa-CnY"/>
+                            <constraint firstItem="uBz-sN-VoN" firstAttribute="height" secondItem="tS7-5V-hFM" secondAttribute="height" id="ORg-qq-j5k"/>
                             <constraint firstItem="XCn-eV-i8v" firstAttribute="top" secondItem="kra-sA-SsD" secondAttribute="top" id="OW0-8m-8mr"/>
                             <constraint firstItem="Y0A-9E-2qy" firstAttribute="leading" secondItem="Dy7-R1-aVo" secondAttribute="trailing" constant="10" id="P6d-aC-QdF"/>
                             <constraint firstItem="SJF-BJ-cLf" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="Sd4-1N-CEp"/>
@@ -835,7 +834,7 @@
                             <constraint firstItem="vWo-J7-g90" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" constant="15" id="gmO-nV-sm2"/>
                             <constraint firstItem="uBz-sN-VoN" firstAttribute="top" secondItem="tS7-5V-hFM" secondAttribute="top" id="lE6-kJ-LBb"/>
                             <constraint firstItem="XCn-eV-i8v" firstAttribute="leading" secondItem="t4u-4d-A2T" secondAttribute="leading" id="sFh-Rh-UTU"/>
-                            <constraint firstItem="uBz-sN-VoN" firstAttribute="width" secondItem="uBz-sN-VoN" secondAttribute="height" multiplier="1:1" id="uD8-cd-5iW"/>
+                            <constraint firstItem="fQW-SH-8lZ" firstAttribute="centerY" secondItem="tS7-5V-hFM" secondAttribute="centerY" id="sy7-Jv-ksO"/>
                             <constraint firstItem="tS7-5V-hFM" firstAttribute="top" secondItem="5GS-wC-DeR" secondAttribute="bottom" constant="20" id="uOF-11-jWR"/>
                             <constraint firstItem="cNg-UR-hYW" firstAttribute="centerX" secondItem="kra-sA-SsD" secondAttribute="centerX" id="us2-2l-ja3"/>
                             <constraint firstItem="vWo-J7-g90" firstAttribute="top" secondItem="vVn-jN-vjJ" secondAttribute="top" id="wel-Qs-m1P"/>

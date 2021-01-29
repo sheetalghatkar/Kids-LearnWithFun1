@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionDetailsController" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionDetailsController" customModule="Learn_Nature" customModuleProvider="target">
             <connections>
                 <outlet property="btnCancelSubscription" destination="hZa-MS-hHk" id="n7M-IK-90l"/>
                 <outlet property="heightPaymentDetail" destination="Ccl-0A-yoD" id="EGj-7C-84N"/>
@@ -20,6 +20,7 @@
                 <outlet property="view" destination="Nby-87-0iV" id="v2T-gr-xjQ"/>
                 <outlet property="viewSubscription" destination="3qe-LH-FOb" id="g4N-vw-jgE"/>
                 <outlet property="viewSubscriptionBg" destination="IAd-Uc-mdQ" id="cmI-FM-eVf"/>
+                <outlet property="widthHome" destination="l6f-68-AlM" id="WFL-cC-ukV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -47,7 +48,7 @@
                         <action selector="funcHomeBtnClick:" destination="-1" eventType="touchUpInside" id="pkP-ob-0LE"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-Uc-mdQ" userLabel="paymentDetailView" customClass="UIViewExtend" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-Uc-mdQ" userLabel="paymentDetailView" customClass="UIViewExtend" customModule="Learn_Nature" customModuleProvider="target">
                     <rect key="frame" x="41.5" y="137.5" width="331" height="175"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-LH-FOb" userLabel="yearlyView">
@@ -71,7 +72,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-MS-hHk" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Kids_LearnWithFun1" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZa-MS-hHk" userLabel="btnYearRecurringBuy" customClass="RoundButton" customModule="Learn_Nature" customModuleProvider="target">
                                     <rect key="frame" x="50.5" y="109" width="230" height="42"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

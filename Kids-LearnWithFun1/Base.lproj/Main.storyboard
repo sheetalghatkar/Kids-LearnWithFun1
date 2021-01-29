@@ -54,6 +54,20 @@
                                     <action selector="funcCancelSubscription:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btv-dN-Vtz"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="maV-i8-77x">
+                                <rect key="frame" x="-30" y="717" width="170" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="mRq-sW-qfD"/>
+                                    <constraint firstAttribute="width" constant="170" id="o2i-DX-tPS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kK-0q-VHh">
+                                <rect key="frame" x="231" y="714" width="170" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="YwT-Lp-qkL"/>
+                                    <constraint firstAttribute="height" constant="128" id="xQD-ZU-dKj"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebZ-X7-GUd" userLabel="containerView">
                                 <rect key="frame" x="15" y="104" width="384" height="663.5"/>
                                 <subviews>
@@ -281,20 +295,6 @@
                                     <constraint firstItem="gjN-n9-wRV" firstAttribute="top" secondItem="ebZ-X7-GUd" secondAttribute="top" constant="10" id="ypE-M8-ag7"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="maV-i8-77x">
-                                <rect key="frame" x="-30" y="717" width="170" height="125"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="mRq-sW-qfD"/>
-                                    <constraint firstAttribute="width" constant="170" id="o2i-DX-tPS"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kK-0q-VHh">
-                                <rect key="frame" x="229" y="714" width="170" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="YwT-Lp-qkL"/>
-                                    <constraint firstAttribute="height" constant="128" id="xQD-ZU-dKj"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zr-Kp-m0Z">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -332,7 +332,7 @@
                             <constraint firstAttribute="trailing" secondItem="6Zr-Kp-m0Z" secondAttribute="trailing" id="92a-mX-ifF"/>
                             <constraint firstItem="6Zr-Kp-m0Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fyf-vx-l1c"/>
                             <constraint firstItem="ebZ-X7-GUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ice-uh-YRq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8kK-0q-VHh" secondAttribute="trailing" constant="15" id="IeB-fL-bBl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8kK-0q-VHh" secondAttribute="trailing" constant="13" id="IeB-fL-bBl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="maV-i8-77x" secondAttribute="bottom" constant="20" id="IxE-kI-knO"/>
                             <constraint firstItem="SbC-dm-NYg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="KgV-Vf-leB"/>
                             <constraint firstAttribute="bottom" secondItem="tbI-JC-8m4" secondAttribute="bottom" id="L54-Pr-K99"/>

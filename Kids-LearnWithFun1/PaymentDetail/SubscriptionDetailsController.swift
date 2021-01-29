@@ -21,7 +21,8 @@ class SubscriptionDetailsController: UIViewController {
     @IBOutlet weak var lblSubscriptionPrice: UILabel!
     @IBOutlet weak var btnCancelSubscription: UIButton!
     @IBOutlet weak var heightPaymentDetail: NSLayoutConstraint!
-    
+    @IBOutlet weak var  widthHome: NSLayoutConstraint!
+
     var isNonRecurringSubscription = false
     let defaults = UserDefaults.standard
 
@@ -62,6 +63,9 @@ class SubscriptionDetailsController: UIViewController {
         if isNonRecurringSubscription {
             self.heightPaymentDetail.constant = 115
             self.btnCancelSubscription.isHidden = true
+        }
+        if !(UIDevice.current.hasNotch) {
+            widthHome.constant = 40
         }
     }
     

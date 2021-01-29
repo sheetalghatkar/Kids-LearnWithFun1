@@ -22,10 +22,12 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnPlayAgain: UIButton!
     @IBOutlet weak var trailingConstraintTitle: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraintHome: NSLayoutConstraint!
 
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial?
     let defaults = UserDefaults.standard
+    var fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 26)
 
     var soundStatus:Bool = false
     var solveTestArray : [String : [UIImage:Int]] = [:]
@@ -70,6 +72,11 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         if !defaults.bool(forKey:"IsPrimeUser") {
             bannerView.load(GADRequest())
         }
+        if !(UIDevice.current.hasNotch) {
+            widthConstraintHome.constant = 38
+            lblQuestion.font = fontImageTitleLbl
+        }
+        btnPlayAgain.layer.cornerRadius = (widthConstraintHome.constant + 6)/2
     }
     
     override func viewWillAppear(_ animated: Bool) {

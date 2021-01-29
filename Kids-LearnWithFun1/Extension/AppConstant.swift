@@ -11,7 +11,6 @@ import UIKit
 //import SwiftyStoreKit
 
 class CommanArray {
-    static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
     static var wildAnimalImageArray: [UIImage] = [
         UIImage(named: "Tiger.png")!,
         UIImage(named: "Lion.png")!,
@@ -106,10 +105,15 @@ class CommanArray {
     static var productId_Month_Non_Recurring = "com.mobiapps360.LearnNature.MonthlyNonRenew"
     
     
-    static var environment = AppleReceiptValidator.VerifyReceiptURLType.sandbox
+    //Related to review and rating
+    static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
+
+    //Related to InAppPurchase
+    static var environment = AppleReceiptValidator.VerifyReceiptURLType.production
     static var secretKey = "d277e87d60d84a40b35c1e58295d7860"
     
     
+    //Related to Ads
     static var Banner_AdUnitId = "ca-app-pub-7546454767986772/5041407646"
     static var Interstitial_AdUnitId = "ca-app-pub-7546454767986772/7256507444"
     static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"

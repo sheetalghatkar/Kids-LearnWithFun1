@@ -17,6 +17,8 @@
 		4F0F7F7425B2011C006D8951 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0F7F6A25B2011C006D8951 /* FloatyItem.swift */; };
 		4F13A67025B72AC300C7EFDD /* SubscriptionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13A66E25B72AC300C7EFDD /* SubscriptionDetailsController.swift */; };
 		4F13A67125B72AC300C7EFDD /* SubscriptionDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F13A66F25B72AC300C7EFDD /* SubscriptionDetailsController.xib */; };
+		4F2592E625C3EAF10090F6D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2592E525C3EAF10090F6D7 /* AudioToolbox.framework */; };
+		4F2592E825C3EAFA0090F6D7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2592E725C3EAFA0090F6D7 /* AdSupport.framework */; };
 		4F39A12B25B984DA0090C73E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F39A12A25B984DA0090C73E /* StoreKit.framework */; };
 		4FF3BC8925A8967D00CF8E3C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8825A8967D00CF8E3C /* Loading.gif */; };
 		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
@@ -221,6 +223,8 @@
 		4F0F7F6E25B2011C006D8951 /* FloatyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
 		4F13A66E25B72AC300C7EFDD /* SubscriptionDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailsController.swift; sourceTree = "<group>"; };
 		4F13A66F25B72AC300C7EFDD /* SubscriptionDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionDetailsController.xib; sourceTree = "<group>"; };
+		4F2592E525C3EAF10090F6D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4F2592E725C3EAFA0090F6D7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4F39A12A25B984DA0090C73E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4FF3BC8825A8967D00CF8E3C /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
@@ -385,7 +389,7 @@
 		70F9024024AF88AE00A3AA12 /* Excellent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Excellent.mp3; sourceTree = "<group>"; };
 		70F9024324AF88B900A3AA12 /* WellDone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WellDone.mp3; sourceTree = "<group>"; };
 		70F9024524AFAF5C00A3AA12 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
-		70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids-LearnWithFun1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FF090224962D9B002861AE /* Learn Nature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Nature.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FF090524962D9B002861AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FF090724962D9B002861AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70FF090924962D9B002861AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -410,7 +414,9 @@
 			files = (
 				4FFA604925B88DE100DDEFE8 /* PromisesObjC.xcframework in Frameworks */,
 				4F39A12B25B984DA0090C73E /* StoreKit.framework in Frameworks */,
+				4F2592E825C3EAFA0090F6D7 /* AdSupport.framework in Frameworks */,
 				4FFA604B25B88DE100DDEFE8 /* GoogleMobileAds.xcframework in Frameworks */,
+				4F2592E625C3EAF10090F6D7 /* AudioToolbox.framework in Frameworks */,
 				4FFA604425B88DE100DDEFE8 /* GoogleAppMeasurement.framework in Frameworks */,
 				4FFA604A25B88DE100DDEFE8 /* UserMessagingPlatform.xcframework in Frameworks */,
 				4FFA604325B88DE100DDEFE8 /* nanopb.xcframework in Frameworks */,
@@ -435,16 +441,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		303A3930735628C54EAD680D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		4F39A12325B975590090C73E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F2592E725C3EAFA0090F6D7 /* AdSupport.framework */,
+				4F2592E525C3EAF10090F6D7 /* AudioToolbox.framework */,
 				4F39A12A25B984DA0090C73E /* StoreKit.framework */,
 			);
 			name = Frameworks;
@@ -724,14 +725,13 @@
 				70FF092624962DB5002861AE /* Kids-LearnWithFunUITests */,
 				70FF090324962D9B002861AE /* Products */,
 				4F39A12325B975590090C73E /* Frameworks */,
-				303A3930735628C54EAD680D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		70FF090324962D9B002861AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */,
+				70FF090224962D9B002861AE /* Learn Nature.app */,
 				70FF091824962DB5002861AE /* Kids-LearnWithFun1Tests.xctest */,
 				70FF092324962DB5002861AE /* Kids-LearnWithFun1UITests.xctest */,
 			);
@@ -818,9 +818,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		70FF090124962D9B002861AE /* Kids-LearnWithFun1 */ = {
+		70FF090124962D9B002861AE /* Learn Nature */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */;
+			buildConfigurationList = 70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */;
 			buildPhases = (
 				70FF08FE24962D9B002861AE /* Sources */,
 				70FF08FF24962D9B002861AE /* Frameworks */,
@@ -830,9 +830,9 @@
 			);
 			dependencies = (
 			);
-			name = "Kids-LearnWithFun1";
+			name = "Learn Nature";
 			productName = "Kids-LearnWithFun";
-			productReference = 70FF090224962D9B002861AE /* Kids-LearnWithFun1.app */;
+			productReference = 70FF090224962D9B002861AE /* Learn Nature.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */ = {
@@ -907,7 +907,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				70FF090124962D9B002861AE /* Kids-LearnWithFun1 */,
+				70FF090124962D9B002861AE /* Learn Nature */,
 				70FF091724962DB5002861AE /* Kids-LearnWithFun1Tests */,
 				70FF092224962DB5002861AE /* Kids-LearnWithFun1UITests */,
 			);
@@ -1142,12 +1142,12 @@
 /* Begin PBXTargetDependency section */
 		70FF091A24962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			target = 70FF090124962D9B002861AE /* Learn Nature */;
 			targetProxy = 70FF091924962DB5002861AE /* PBXContainerItemProxy */;
 		};
 		70FF092524962DB5002861AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 70FF090124962D9B002861AE /* Kids-LearnWithFun1 */;
+			target = 70FF090124962D9B002861AE /* Learn Nature */;
 			targetProxy = 70FF092424962DB5002861AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1449,7 +1449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Kids-LearnWithFun1" */ = {
+		70FF092C24962DB5002861AE /* Build configuration list for PBXNativeTarget "Learn Nature" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				70FF092D24962DB5002861AE /* Debug */,

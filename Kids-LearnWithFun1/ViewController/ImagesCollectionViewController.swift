@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
+import AudioToolbox
 
 class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,PictureCollectionCellProtocol,PayementForParentProtocol {
     
@@ -22,6 +23,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     @IBOutlet weak var imgViewLoader: UIImageView!
     @IBOutlet weak var viewTransperent: UIView!
     @IBOutlet weak var btnNoAds: UIButton!
+    @IBOutlet weak var  heightHome: NSLayoutConstraint!
 
 
     var player = AVAudioPlayer()
@@ -78,9 +80,12 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = CommanArray.Banner_AdUnitId
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        if !(UIDevice.current.hasNotch) {
+            self.heightHome.constant = 38
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -264,7 +269,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         }
     }
     private func createAndLoadInterstitial() -> GADInterstitial? {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+        interstitial = GADInterstitial(adUnitID: CommanArray.Interstitial_AdUnitId)
 
         guard let interstitial = interstitial else {
             return nil
@@ -272,7 +277,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
 
         let request = GADRequest()
         // Remove the following line before you upload the app
-        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
+//        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
         interstitial.load(request)
         interstitial.delegate = self
 

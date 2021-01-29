@@ -12,6 +12,7 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
+import AudioToolbox
 import MessageUI
 
 class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComposeViewControllerDelegate {
@@ -21,6 +22,14 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     @IBOutlet weak var imgVwBird: UIImageView!
     @IBOutlet weak var imgVwFlower: UIImageView!
     @IBOutlet weak var imgVwTest: UIImageView!
+    
+    
+    @IBOutlet weak var lblWildAnimal: UILabel!
+    @IBOutlet weak var lblPetAnimal: UILabel!
+    @IBOutlet weak var lblBirdAnimal: UILabel!
+    @IBOutlet weak var lblFlowerAnimal: UILabel!
+    @IBOutlet weak var lblTestAnimal: UILabel!
+
 
     @IBOutlet weak var imgVwBird1Bottom: UIImageView!
     @IBOutlet weak var imgVwBird2Bottom: UIImageView!
@@ -32,6 +41,11 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     @IBOutlet weak var btnNoAds: UIButton!
     @IBOutlet weak var btnSetting: UIButton!
     @IBOutlet weak var btnCancelSubscription: UIButton!
+    @IBOutlet weak var widthWildAnimal: NSLayoutConstraint!
+    @IBOutlet weak var  WidthSound: NSLayoutConstraint!
+
+    
+    var fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 24)
 
 
     @IBOutlet weak var floaty : Floaty!
@@ -112,7 +126,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         
         bannerView = GADBannerView(adSize: kGADAdSizeFullBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = CommanArray.Banner_AdUnitId
         bannerView.rootViewController = self
        // bannerView.load(GADRequest())
 //        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.alarmAlertActivate), userInfo: nil, repeats: true)
@@ -188,6 +202,21 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         //-----------------------------------
         if self.defaults.bool(forKey: "IsPrimeUser") {
             handlingdForPrimeIser()
+        }
+        
+        if !(UIDevice.current.hasNotch) {
+            self.WidthSound.constant = 36
+            lblWildAnimal.font = fontImageTitleLbl
+            lblPetAnimal.font = fontImageTitleLbl
+            lblBirdAnimal.font = fontImageTitleLbl
+            lblFlowerAnimal.font = fontImageTitleLbl
+            lblTestAnimal.font = fontImageTitleLbl
+            widthWildAnimal.constant = 100
+            imgVwWildAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwPetAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwBird.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwFlower.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwTest.layer.cornerRadius = (widthWildAnimal.constant)/2
         }
     }
     

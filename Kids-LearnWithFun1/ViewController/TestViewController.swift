@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import AudioToolbox
 
 class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var btnHome: UIButton!
@@ -19,12 +20,23 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var imgViewLock2: UIImageView!
     @IBOutlet weak var imgViewLock3: UIImageView!
     @IBOutlet weak var imgViewLock4: UIImageView!
+    
+    
+    @IBOutlet weak var  heightHome: NSLayoutConstraint!
+    @IBOutlet weak var  heightQuestionMarkImg: NSLayoutConstraint!
 
+
+    @IBOutlet weak var lblWildAnimal: UILabel!
+    @IBOutlet weak var lblPetAnimal: UILabel!
+    @IBOutlet weak var lblBirdAnimal: UILabel!
+    @IBOutlet weak var lblFlowerAnimal: UILabel!
 
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var paymentDetailVC : PaymentDetailViewController?
     var bannerView: GADBannerView!
     let defaults = UserDefaults.standard
+    var fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 24)
+    @IBOutlet weak var widthWildAnimal: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +68,21 @@ class TestViewController: UIViewController,PayementForParentProtocol {
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = CommanArray.Banner_AdUnitId
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        if !(UIDevice.current.hasNotch) {
+            heightHome.constant = 38
+            widthWildAnimal.constant = 100
+            heightQuestionMarkImg.constant = 220
+            lblWildAnimal.font = fontImageTitleLbl
+            lblPetAnimal.font = fontImageTitleLbl
+            lblBirdAnimal.font = fontImageTitleLbl
+            lblFlowerAnimal.font = fontImageTitleLbl
+            imgViewLock2.layer.cornerRadius = ((heightHome.constant)+10)/2
+            imgViewLock3.layer.cornerRadius = ((heightHome.constant)+10)/2
+            imgViewLock4.layer.cornerRadius = ((heightHome.constant)+10)/2
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

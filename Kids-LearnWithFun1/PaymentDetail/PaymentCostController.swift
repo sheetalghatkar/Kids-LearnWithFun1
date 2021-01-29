@@ -14,7 +14,8 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var lblCostTitle: UILabel!
     @IBOutlet weak var btnRestore: UIButton!
     @IBOutlet weak var lblAlredyPurchased: UILabel!
-    
+    @IBOutlet weak var  widthHome: NSLayoutConstraint!
+
     //----------------------------------------
     //New
     @IBOutlet weak var viewBgYearly: UIView!
@@ -96,6 +97,10 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         
 //        self.viewBgMonthly.layer.shadowColor = UIColor.black.cgColor
 //        self.viewBgMonthly.layer.borderWidth = 1.5
+        
+        if !(UIDevice.current.hasNotch) {
+            widthHome.constant = 40
+        }
     }
     @IBAction func funcRadioRecurringYearlyClick(_ sender: Any) {
         if btnRadioRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {

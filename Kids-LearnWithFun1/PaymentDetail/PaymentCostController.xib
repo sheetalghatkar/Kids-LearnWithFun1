@@ -34,6 +34,7 @@
                 <outlet property="viewMonthly" destination="WkC-On-84P" id="laC-5a-Mvq"/>
                 <outlet property="viewTrasperentDisabled" destination="zBr-mT-UYg" id="q0l-oJ-TiH"/>
                 <outlet property="viewYearly" destination="V4i-5P-jP6" id="7lJ-x1-F7d"/>
+                <outlet property="widthHome" destination="La9-A3-lff" id="c5b-1w-jFA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

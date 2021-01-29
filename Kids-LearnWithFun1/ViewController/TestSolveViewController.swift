@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
+import AudioToolbox
 
 class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,TestSolveCollectionCellProtocol,PayementForParentProtocol {
     @IBOutlet weak var btnSound: UIButton!
@@ -64,7 +65,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
         self.view.isMultipleTouchEnabled = false
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = CommanArray.Banner_AdUnitId
         bannerView.rootViewController = self
         if !defaults.bool(forKey:"IsPrimeUser") {
             bannerView.load(GADRequest())
@@ -116,7 +117,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func createAndLoadInterstitial() -> GADInterstitial? {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8501671653071605/2568258533")
+        interstitial = GADInterstitial(adUnitID: CommanArray.Interstitial_AdUnitId)
 
         guard let interstitial = interstitial else {
             return nil
@@ -124,7 +125,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
 
         let request = GADRequest()
         // Remove the following line before you upload the app
-        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
+//        request.testDevices = ["E16216BC-AA11-4924-A93F-5011846DFFA4"]
         interstitial.load(request)
         interstitial.delegate = self
 

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 //import SwiftyStoreKit
+
 class CommanArray {
     static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
     static var wildAnimalImageArray: [UIImage] = [
@@ -107,6 +108,16 @@ class CommanArray {
     
     static var environment = AppleReceiptValidator.VerifyReceiptURLType.sandbox
     static var secretKey = "d277e87d60d84a40b35c1e58295d7860"
+    
+    
+    static var Banner_AdUnitId = "ca-app-pub-7546454767986772/5041407646"
+    static var Interstitial_AdUnitId = "ca-app-pub-7546454767986772/7256507444"
+    static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"
+}
 
-
+extension UIDevice {
+    var hasNotch: Bool {
+        let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        return bottom > 0
+    }
 }

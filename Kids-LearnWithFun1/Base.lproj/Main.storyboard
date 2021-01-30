@@ -1218,34 +1218,34 @@
             <size key="intrinsicContentSize" width="107.5" height="43.5"/>
         </designable>
         <designable name="GN6-Xa-xpL">
-            <size key="intrinsicContentSize" width="75" height="75"/>
+            <size key="intrinsicContentSize" width="50" height="50"/>
         </designable>
         <designable name="Hd0-Vu-A4f">
-            <size key="intrinsicContentSize" width="300" height="285.5"/>
+            <size key="intrinsicContentSize" width="200" height="190.33333333333334"/>
         </designable>
         <designable name="KMr-CA-DSf">
             <size key="intrinsicContentSize" width="126" height="43.5"/>
         </designable>
         <designable name="Y7v-yi-LeU">
-            <size key="intrinsicContentSize" width="239.5" height="260.5"/>
+            <size key="intrinsicContentSize" width="159.66666666666666" height="173.66666666666666"/>
         </designable>
         <designable name="aEn-Uq-No3">
-            <size key="intrinsicContentSize" width="241.5" height="300"/>
+            <size key="intrinsicContentSize" width="161" height="200"/>
         </designable>
         <designable name="aWX-21-wnP">
-            <size key="intrinsicContentSize" width="225" height="217"/>
+            <size key="intrinsicContentSize" width="150" height="144.66666666666666"/>
         </designable>
         <designable name="b3s-cv-tM9">
-            <size key="intrinsicContentSize" width="256" height="256"/>
+            <size key="intrinsicContentSize" width="170.5" height="170.5"/>
         </designable>
         <designable name="cJK-ds-x0V">
-            <size key="intrinsicContentSize" width="187" height="169"/>
+            <size key="intrinsicContentSize" width="124.66666666666667" height="112.66666666666667"/>
         </designable>
         <designable name="fQW-SH-8lZ">
             <size key="intrinsicContentSize" width="2255" height="2255"/>
         </designable>
         <designable name="gNh-Yt-CGX">
-            <size key="intrinsicContentSize" width="220.5" height="283"/>
+            <size key="intrinsicContentSize" width="147" height="188.66666666666666"/>
         </designable>
         <designable name="gj8-yH-CX6">
             <size key="intrinsicContentSize" width="112" height="43.5"/>
@@ -1260,45 +1260,45 @@
             <size key="intrinsicContentSize" width="185.5" height="43.5"/>
         </designable>
         <designable name="qZo-4f-SIQ">
-            <size key="intrinsicContentSize" width="75" height="75"/>
+            <size key="intrinsicContentSize" width="50" height="50"/>
         </designable>
         <designable name="reh-wu-V8d">
-            <size key="intrinsicContentSize" width="133.5" height="132"/>
+            <size key="intrinsicContentSize" width="89" height="88"/>
         </designable>
         <designable name="sOs-RQ-CeD">
-            <size key="intrinsicContentSize" width="75" height="75"/>
+            <size key="intrinsicContentSize" width="50" height="50"/>
         </designable>
         <designable name="tS7-5V-hFM">
-            <size key="intrinsicContentSize" width="256" height="256"/>
+            <size key="intrinsicContentSize" width="170.5" height="170.5"/>
         </designable>
         <designable name="uBz-sN-VoN">
-            <size key="intrinsicContentSize" width="256" height="256"/>
+            <size key="intrinsicContentSize" width="170.5" height="170.5"/>
         </designable>
         <designable name="wlH-pm-T5X">
-            <size key="intrinsicContentSize" width="256" height="256"/>
+            <size key="intrinsicContentSize" width="170.5" height="170.5"/>
         </designable>
         <designable name="yfi-Wi-vFg">
-            <size key="intrinsicContentSize" width="75" height="75"/>
+            <size key="intrinsicContentSize" width="50" height="50"/>
         </designable>
     </designables>
     <resources>
-        <image name="BackButton" width="32" height="32"/>
-        <image name="Backward" width="256" height="256"/>
-        <image name="BirdIcon" width="187" height="169"/>
-        <image name="Cartoon-Bird" width="225" height="217"/>
-        <image name="Cartoon-Dog" width="241.5" height="300"/>
-        <image name="Cartoon-Flower" width="239.5" height="260.5"/>
-        <image name="Cartoon_Tiger" width="220.5" height="283"/>
-        <image name="FlowerIcon" width="133.5" height="132"/>
-        <image name="Forward" width="256" height="256"/>
+        <image name="BackButton" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Backward" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="BirdIcon" width="124.66666412353516" height="112.66666412353516"/>
+        <image name="Cartoon-Bird" width="150" height="144.66667175292969"/>
+        <image name="Cartoon-Dog" width="161" height="200"/>
+        <image name="Cartoon-Flower" width="159.66667175292969" height="173.66667175292969"/>
+        <image name="Cartoon_Tiger" width="147" height="188.66667175292969"/>
+        <image name="FlowerIcon" width="89" height="88"/>
+        <image name="Forward" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Home_Back" width="1042" height="1042"/>
-        <image name="Lock" width="75" height="75"/>
-        <image name="Nature" width="228" height="228"/>
+        <image name="Lock" width="50" height="50"/>
+        <image name="Nature" width="152" height="152"/>
         <image name="No-Ads" width="613" height="613"/>
         <image name="PaymentDetail" width="564" height="442"/>
-        <image name="PetAnimal" width="300" height="285.5"/>
+        <image name="PetAnimal" width="200" height="190.33332824707031"/>
         <image name="PlayAgain" width="2255" height="2255"/>
-        <image name="Question" width="235.5" height="256"/>
+        <image name="Question" width="157" height="170.66667175292969"/>
         <image name="Setting" width="2295" height="2295"/>
         <image name="Sound-On" width="113" height="113"/>
         <image name="Sound-On_home" width="113" height="113"/>

@@ -491,6 +491,13 @@ class TestViewController: UIViewController,PayementForParentProtocol {
         paymentDetailVC?.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC?.view ?? UIView())
     }
+    
+    func appstoreRateAndReview() {
+    }
+    
+    func shareApp() {
+        
+    }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
         navigationController?.popViewController(animated: true)

@@ -81,6 +81,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         self.imgVwWildAnimal.isExclusiveTouch = true
         self.imgVwBird.isExclusiveTouch = true
         self.imgVwFlower.isExclusiveTouch = true
@@ -150,31 +151,16 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickTransperentView (_:)))
         self.viewParentSetting.addGestureRecognizer(gesture)
         self.floaty.floatingActionButtonDelegate = self
-        self.floaty.addItem(icon: rateUsImg, handler: {_ in
+        self.floaty.addItem(icon: rateUsImg, handler: { [self]_ in
             self.floaty.close()
-            // 1.
-            var components = URLComponents(url: CommanArray.app_AppStoreLink!, resolvingAgainstBaseURL: false)
-
-            // 2.
-            components?.queryItems = [
-              URLQueryItem(name: "action", value: "write-review")
-            ]
-
-            // 3.
-            guard let writeReviewURL = components?.url else {
-              return
-            }
-
-            // 4.
-            UIApplication.shared.open(writeReviewURL)
+            self.paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+            self.paymentDetailVC?.showHomeScreenRateReview = true
+            self.showPaymentScreen()
         })
         self.floaty.addItem(icon: shareAppImg, handler: {_ in
-            let activityViewController = UIActivityViewController(
-                activityItems: [CommanArray.app_AppStoreLink!],
-              applicationActivities: nil)
-
-            // 2.
-            self.present(activityViewController, animated: true, completion: nil)
+            self.paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+            self.paymentDetailVC?.showHomeScreenShareApp = true
+            self.showPaymentScreen()
             self.floaty.close()
         })
 //        self.floaty.addItem(icon: contactUsImg, handler: { [self]_ in
@@ -219,7 +205,11 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             imgVwTest.layer.cornerRadius = (widthWildAnimal.constant)/2
         }
     }
-    
+    @objc func appDidEnterBackground() {
+        // stop counter
+        floaty.close()
+    }
+
     func showHideAdsButton() {
         if defaults.bool(forKey:"IsPrimeUser") {
             if let _ = btnCancelSubscription, let _ = btnCancelSubscription {
@@ -582,6 +572,28 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         paymentDetailVC?.view.frame = self.view.bounds
         paymentDetailVC?.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC?.view ?? UIView())
+    }
+    
+    func appstoreRateAndReview() {
+        paymentDetailVC?.view.removeFromSuperview()
+        var components = URLComponents(url: CommanArray.app_AppStoreLink!, resolvingAgainstBaseURL: false)
+        components?.queryItems = [
+          URLQueryItem(name: "action", value: "write-review")
+        ]
+        guard let writeReviewURL = components?.url else {
+          return
+        }
+        UIApplication.shared.open(writeReviewURL)
+    }
+    
+    func shareApp() {
+        paymentDetailVC?.view.removeFromSuperview()
+        let activityViewController = UIActivityViewController(
+            activityItems: [CommanArray.app_AppStoreLink!],
+          applicationActivities: nil)
+
+        // 2.
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }
 

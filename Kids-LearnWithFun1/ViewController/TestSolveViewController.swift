@@ -325,6 +325,13 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func showSubscriptionDetailScreen() {
     }
+    
+    func appstoreRateAndReview() {
+    }
+    
+    func shareApp() {
+        
+    }
 
     func showPaymentScreen(){
         paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)

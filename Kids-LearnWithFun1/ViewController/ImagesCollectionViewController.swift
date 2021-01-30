@@ -253,7 +253,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         }
         currentindex = closestCellIndex
         playSound(getSound : imageNameArray[closestCellIndex])
-        print("###################",closestCellIndex)
+//        print("###################",closestCellIndex)
     }
     
     func playSound(getSound : String) {
@@ -304,6 +304,13 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         paymentDetailVC?.view.frame = self.view.bounds
         paymentDetailVC?.delegatePayementForParent = self
         self.view.addSubview(paymentDetailVC?.view ?? UIView())
+    }
+    
+    func appstoreRateAndReview() {
+    }
+    
+    func shareApp() {
+        
     }
 
 }

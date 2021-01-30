@@ -11,6 +11,8 @@ import UIKit
 protocol PayementForParentProtocol : class {
     func showPaymentCostScreen()
     func showSubscriptionDetailScreen()
+    func appstoreRateAndReview()
+    func shareApp()
 }
 
 
@@ -45,6 +47,9 @@ class PaymentDetailViewController: UIViewController {
     var random = 0
     var optionClicked = 0
     var showSubscriptionScreen = false
+    var showHomeScreenRateReview = false
+    var showHomeScreenShareApp = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -108,7 +113,11 @@ class PaymentDetailViewController: UIViewController {
 
     func funcShowNextPaymentScreen() {
         if arrayQuestionTest[random][2] == optionClicked {
-            if showSubscriptionScreen {
+            if showHomeScreenRateReview {
+                delegatePayementForParent?.appstoreRateAndReview()
+            } else if showHomeScreenShareApp {
+                delegatePayementForParent?.shareApp()
+            } else if showSubscriptionScreen {
                 delegatePayementForParent?.showSubscriptionDetailScreen()
             } else {
                 delegatePayementForParent?.showPaymentCostScreen()

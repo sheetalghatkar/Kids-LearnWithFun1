@@ -19,6 +19,8 @@
 		4F13A67125B72AC300C7EFDD /* SubscriptionDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F13A66F25B72AC300C7EFDD /* SubscriptionDetailsController.xib */; };
 		4F2592E625C3EAF10090F6D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2592E525C3EAF10090F6D7 /* AudioToolbox.framework */; };
 		4F39A12B25B984DA0090C73E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F39A12A25B984DA0090C73E /* StoreKit.framework */; };
+		4F64BAC225C69C0000672C98 /* CustomLiceneModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BAC025C69C0000672C98 /* CustomLiceneModelController.swift */; };
+		4F64BAC325C69C0000672C98 /* CustomLiceneModelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F64BAC125C69C0000672C98 /* CustomLiceneModelController.xib */; };
 		4FF3BC8925A8967D00CF8E3C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BC8825A8967D00CF8E3C /* Loading.gif */; };
 		4FF93A1725A4414700F31353 /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */; };
 		4FF93A1825A4414700F31353 /* PaymentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */; };
@@ -225,6 +227,8 @@
 		4F2592E525C3EAF10090F6D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4F2592E725C3EAFA0090F6D7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4F39A12A25B984DA0090C73E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4F64BAC025C69C0000672C98 /* CustomLiceneModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLiceneModelController.swift; sourceTree = "<group>"; };
+		4F64BAC125C69C0000672C98 /* CustomLiceneModelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLiceneModelController.xib; sourceTree = "<group>"; };
 		4FF3BC8825A8967D00CF8E3C /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailViewController.xib; sourceTree = "<group>"; };
@@ -454,6 +458,8 @@
 			children = (
 				4FF93A1525A4414700F31353 /* PaymentDetailViewController.swift */,
 				4FF93A1625A4414700F31353 /* PaymentDetailViewController.xib */,
+				4F64BAC025C69C0000672C98 /* CustomLiceneModelController.swift */,
+				4F64BAC125C69C0000672C98 /* CustomLiceneModelController.xib */,
 				4F0D923425A6464E00CDEFC3 /* PaymentCostController.swift */,
 				4F0D923525A6464E00CDEFC3 /* PaymentCostController.xib */,
 				4F13A66E25B72AC300C7EFDD /* SubscriptionDetailsController.swift */,
@@ -925,6 +931,7 @@
 				7014C1BD249F73B000D0AB52 /* Goldfinch.mp3 in Resources */,
 				701D4D4124B1DA3A00E642A6 /* Pig_Question.mp3 in Resources */,
 				7014C1F9249F73C600D0AB52 /* Rabbit.mp3 in Resources */,
+				4F64BAC325C69C0000672C98 /* CustomLiceneModelController.xib in Resources */,
 				7014C1DE249F73B700D0AB52 /* Tulip.mp3 in Resources */,
 				7014C1C8249F73B000D0AB52 /* Peacock.mp3 in Resources */,
 				707ECA2E249CE6250024D06C /* TigerGif.gif in Resources */,
@@ -1103,6 +1110,7 @@
 				70631FF32497F11B00DAE930 /* PictureCollectionCell.swift in Sources */,
 				4F0F7F6F25B2011C006D8951 /* FloatyDelegate.swift in Sources */,
 				4F0F7F7425B2011C006D8951 /* FloatyItem.swift in Sources */,
+				4F64BAC225C69C0000672C98 /* CustomLiceneModelController.swift in Sources */,
 				701EF78124A294C5006C0A36 /* UIExtension.swift in Sources */,
 				4FFFF88F25C32DA100CE0855 /* SwiftyStoreKit.swift in Sources */,
 				70270FDB24A369A900EB8DAB /* TestViewController.swift in Sources */,
@@ -1291,7 +1299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M9C32R6P4U;
@@ -1309,7 +1317,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution Porfile";
+				PROVISIONING_PROFILE_SPECIFIER = "development profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1320,7 +1328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M9C32R6P4U;
@@ -1339,7 +1347,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiapps360.Learn-Nature";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution Porfile";
+				PROVISIONING_PROFILE_SPECIFIER = "development profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

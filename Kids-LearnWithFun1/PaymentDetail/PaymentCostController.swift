@@ -9,7 +9,7 @@
 import UIKit
 import StoreKit
 //import SwiftyStoreKit
-class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaymentTransactionObserver {
+class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaymentTransactionObserver,CustomLiceneProtocol {
     
     @IBOutlet weak var lblCostTitle: UILabel!
     @IBOutlet weak var btnRestore: UIButton!
@@ -40,7 +40,8 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var btnMonthlyPayment: UIButton!
     @IBOutlet weak var btnRadioRecurringMonthly: UIButton!
     @IBOutlet weak var btnRadioNonRecurringMonthly: UIButton!
-    
+    var licenseAgreementVC : CustomLiceneModelController?
+
     @IBOutlet weak var viewTrasperentDisabled: UIView!
 
    // var product_id = "com.mobiapps360.LearnNature.YearlyAutoRenew"
@@ -101,7 +102,17 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         if !(UIDevice.current.hasNotch) {
             widthHome.constant = 40
         }
+        viewTrasperentDisabled.isHidden = false
+        licenseAgreementVC = CustomLiceneModelController(nibName: "CustomLiceneModelController", bundle: nil)
+        licenseAgreementVC?.delegateCustomLicene = self
+        self.view.addSubview(licenseAgreementVC?.view ?? UIView())
     }
+    
+    func removeViewFromApp() {
+        viewTrasperentDisabled.isHidden = true
+        licenseAgreementVC?.view.removeFromSuperview()
+    }
+
     @IBAction func funcRadioRecurringYearlyClick(_ sender: Any) {
         if btnRadioRecurringYearly.currentImage!.pngData() == (CommanArray.imageRadioUncheck!).pngData() {
             btnRadioRecurringYearly.setImage(CommanArray.imageRadioCheck, for: .normal)

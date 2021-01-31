@@ -24,6 +24,7 @@
                 <outlet property="lblMonthlyPriceRecurring" destination="ksY-X7-Vns" id="g7j-Hj-HYV"/>
                 <outlet property="lblMonthlyRecurring" destination="KC0-wj-DX0" id="NNV-hA-ekI"/>
                 <outlet property="lblMonthlyTitle" destination="Ah3-Vf-Cd9" id="pH7-2p-FBe"/>
+                <outlet property="lblPrivacyPolicy" destination="zBx-wy-ygg" id="IYo-4I-C5s"/>
                 <outlet property="lblYearlyNonPriceRecurring" destination="sNx-3b-cbB" id="BYH-FZ-BkM"/>
                 <outlet property="lblYearlyNonRecurring" destination="6eq-0E-j7v" id="Ysi-0b-3op"/>
                 <outlet property="lblYearlyPriceRecurring" destination="3gb-zj-0wR" id="SVv-uw-fg8"/>
@@ -381,6 +382,20 @@
                         <action selector="funcRestoreBtnClick:" destination="-1" eventType="touchUpInside" id="o7T-mw-DaU"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-wy-ygg">
+                    <rect key="frame" x="133.5" y="666.5" width="147" height="28"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Privacy Policy">
+                            <attributes>
+                                <color key="NSColor" red="0.26419638634907278" green="0.34812374378463334" blue="0.86211340206185572" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <font key="NSFont" size="25" name=".SFNS-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <integer key="NSUnderline" value="1"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBr-mT-UYg" userLabel="viewTransperentDisabled">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -398,6 +413,7 @@
                 <constraint firstItem="V4i-5P-jP6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Alk-cJ-8f4"/>
                 <constraint firstItem="tr8-xj-Cri" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="DJn-CS-xCW"/>
                 <constraint firstAttribute="bottom" secondItem="zBr-mT-UYg" secondAttribute="bottom" id="DkU-m5-bHX"/>
+                <constraint firstItem="zBx-wy-ygg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DvX-7I-gFP"/>
                 <constraint firstItem="H4V-dd-9sK" firstAttribute="top" secondItem="tr8-xj-Cri" secondAttribute="bottom" constant="25" id="HKC-sk-0d6"/>
                 <constraint firstItem="zBr-mT-UYg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JpQ-c9-ag4"/>
                 <constraint firstItem="Ls3-sf-2xR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lij-yn-X5q"/>
@@ -414,6 +430,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tr8-xj-Cri" secondAttribute="trailing" constant="15" id="igo-HJ-Niy"/>
                 <constraint firstItem="2hb-Ww-MI3" firstAttribute="centerY" secondItem="tr8-xj-Cri" secondAttribute="centerY" id="ljO-Yq-hkm"/>
                 <constraint firstItem="XAh-ma-3Tf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mce-C8-YEx"/>
+                <constraint firstItem="zBx-wy-ygg" firstAttribute="top" secondItem="XAh-ma-3Tf" secondAttribute="bottom" constant="50" id="uSa-cq-VTL"/>
                 <constraint firstItem="XAh-ma-3Tf" firstAttribute="top" secondItem="kVY-mD-cqk" secondAttribute="bottom" constant="15" id="uTn-Wx-AJ9"/>
                 <constraint firstItem="Ls3-sf-2xR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="urr-Na-xTP"/>
             </constraints>
@@ -433,7 +450,7 @@
     </designables>
     <resources>
         <image name="Home_Payment" width="200" height="200"/>
-        <image name="Nature" width="228" height="228"/>
+        <image name="Nature" width="152" height="152"/>
         <image name="radio_check" width="512" height="512"/>
         <image name="radio_uncheck" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">

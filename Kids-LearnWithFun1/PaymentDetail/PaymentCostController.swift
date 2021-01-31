@@ -40,6 +40,9 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var btnMonthlyPayment: UIButton!
     @IBOutlet weak var btnRadioRecurringMonthly: UIButton!
     @IBOutlet weak var btnRadioNonRecurringMonthly: UIButton!
+    
+    @IBOutlet weak var lblPrivacyPolicy: UILabel!
+
     var licenseAgreementVC : CustomLiceneModelController?
 
     @IBOutlet weak var viewTrasperentDisabled: UIView!
@@ -106,6 +109,10 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         licenseAgreementVC = CustomLiceneModelController(nibName: "CustomLiceneModelController", bundle: nil)
         licenseAgreementVC?.delegateCustomLicene = self
         self.view.addSubview(licenseAgreementVC?.view ?? UIView())
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.privacyLinkClicked(sender:)))
+        lblPrivacyPolicy.isUserInteractionEnabled = true
+        lblPrivacyPolicy.addGestureRecognizer(tap)
     }
     
     func removeViewFromApp() {
@@ -481,4 +488,15 @@ extension PaymentCostController {
         SKPaymentQueue.default().restoreCompletedTransactions()
 
     }
+    
+    @objc func privacyLinkClicked(sender:UITapGestureRecognizer) {
+        openUrl(urlStr: "https://mobiapps360.com/privacy")
+    }
+
+    func openUrl(urlStr: String!) {
+        if let url = URL(string:urlStr), !url.absoluteString.isEmpty {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+
 }

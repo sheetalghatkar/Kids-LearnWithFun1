@@ -114,9 +114,18 @@ class CommanArray {
     
     
     //Related to Ads
-    static var Banner_AdUnitId = "ca-app-pub-7546454767986772/5041407646"
+   /* static var Banner_AdUnitId = "ca-app-pub-7546454767986772/5041407646"
     static var Interstitial_AdUnitId = "ca-app-pub-7546454767986772/7256507444"
-    static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"
+    static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"*/
+    
+     static var Banner_AdUnitId = "ca-app-pub-3940256099942544/2934735716"
+     static var Interstitial_AdUnitId = "ca-app-pub-3940256099942544/4411468910"
+     static var Ad_App_ID = "ca-app-pub-3940256099942544~1458002511"
+
+    
+    
+    
+    
 }
 
 extension UIDevice {

@@ -34,7 +34,6 @@ class CustomLiceneModelController: UIViewController {
         
         texViewAttrString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16, weight: .regular),range: NSRange(location: 0, length:texViewAttrString.length))
         
-        print("@@@@",UIScreen.main.bounds.height)
         if UIScreen.main.bounds.height < 700 {
             texViewAttrString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14, weight: .regular),range: NSRange(location: 0, length:texViewAttrString.length))
         } else if UIScreen.main.bounds.height < 820 {

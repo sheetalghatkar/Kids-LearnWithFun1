@@ -30,13 +30,15 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     @IBOutlet weak var lblPetAnimal: UILabel!
     @IBOutlet weak var lblBirdAnimal: UILabel!
     @IBOutlet weak var lblFlowerAnimal: UILabel!
+    @IBOutlet weak var widthWildAnimal: NSLayoutConstraint!
 
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var paymentDetailVC : PaymentDetailViewController?
     var bannerView: GADBannerView!
     let defaults = UserDefaults.standard
     var fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 24)
-    @IBOutlet weak var widthWildAnimal: NSLayoutConstraint!
+    var timer: Timer?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +68,24 @@ class TestViewController: UIViewController,PayementForParentProtocol {
         self.view.isMultipleTouchEnabled = false
         
         
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        addBannerViewToView(bannerView)
-        bannerView.adUnitID = CommanArray.Banner_AdUnitId
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        if !(defaults.bool(forKey:"IsPrimeUser")) {
+            bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            addBannerViewToView(bannerView)
+            bannerView.adUnitID = CommanArray.Banner_AdUnitId
+            bannerView.rootViewController = self
+            bannerView.delegate = self
+            if Reachability.isConnectedToNetwork() {
+                bannerView.load(GADRequest())
+            } else {
+                let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                    if self.timer == nil {
+                        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                    }
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
         if !(UIDevice.current.hasNotch) {
             heightHome.constant = 38
             widthWildAnimal.constant = 100
@@ -92,7 +107,9 @@ class TestViewController: UIViewController,PayementForParentProtocol {
                 self.imgViewLock2.isHidden = true
                 self.imgViewLock3.isHidden = true
                 self.imgViewLock4.isHidden = true
-                bannerView.removeFromSuperview()
+                if bannerView != nil {
+                    bannerView.removeFromSuperview()
+                }
             }
         } else {
             if let _ = btnNoAds, let _ = imgViewLock2, let _ = imgViewLock3, let _ = imgViewLock4 {
@@ -470,10 +487,28 @@ class TestViewController: UIViewController,PayementForParentProtocol {
             }
         }
     }
-   // MARK: - User defined Functions    
+   // MARK: - User defined Functions
+    
+    @objc func alarmToLoadBannerAds(){
+        print("Inside alarmToLoadBannerAds")
+        if Reachability.isConnectedToNetwork() {
+            if bannerView != nil {
+                print("Inside Load bannerView")
+                bannerView.load(GADRequest())
+            }
+        }
+    }
+
     //Start Payment flow
     @IBAction func funcNoAds(_ sender: Any) {
         showPaymentScreen()
+    }
+    func stopTimer() {
+        print("Inside stopTimer")
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
     }
 
     //Delegate method implementation
@@ -500,6 +535,7 @@ class TestViewController: UIViewController,PayementForParentProtocol {
     }
 
     @IBAction func funcGoToTestHome(_ sender: Any) {
+        stopTimer()
         navigationController?.popViewController(animated: true)
     }
 }
@@ -553,9 +589,13 @@ extension TestViewController: GADBannerViewDelegate {
                                             multiplier: 1,
                                             constant: 0))
     }
-    
+
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("adViewDidReceiveAd")
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+        }
+
     }
 
     /// Tells the delegate an ad request failed.

@@ -99,33 +99,32 @@ class CommanArray {
     static var imageRadioUncheck = UIImage(named: "radio_uncheck.png")
     static var cancelSubscriptionBgColor = UIColor(red: (143/255), green: (237/255), blue: (242/255), alpha: 1.0)
     
-    static var productId_Year_Auto_Recurring = "com.mobiapps360.LearnNature.YearlyAutoRenew"
-    static var productId_Year_Non_Recurring = "com.mobiapps360.LearnNature.YearlyNonRenew"
-    static var productId_Month_Auto_Recurring = "com.mobiapps360.LearnNature.MonthlyAutoRenew"
-    static var productId_Month_Non_Recurring = "com.mobiapps360.LearnNature.MonthlyNonRenew"
+    static var productId_Year_Auto_Recurring = "com.mobiapps360.LearnNature.YearlyAutoRecurring"
+    static var productId_Year_Non_Recurring = "com.mobiapps360.LearnNature.YearlyNonRecurring"
+    static var productId_Month_Auto_Recurring = "com.mobiapps360.LearnNature.MonthlyAutoRecurring"
+    static var productId_Month_Non_Recurring = "com.mobiapps360.LearnNature.MonthlyNonRecurring"
     
+    static var imgCancelSubscription = UIImage(named: "PaymentDetail.png")!
+    static var imgCancelSubscription1 = UIImage(named: "PaymentDetail-1.png")!
+
     
     //Related to review and rating
-    static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1548498641")
+    static let app_AppStoreLink = URL(string: "https://apps.apple.com/app/id1553868347")
 
     //Related to InAppPurchase
     static var environment = AppleReceiptValidator.VerifyReceiptURLType.production
-    static var secretKey = "d277e87d60d84a40b35c1e58295d7860"
+    static var secretKey = "f22ce8f6a4b74465af34c670cf87e7cb"
     
     
-    //Related to Ads
-   /* static var Banner_AdUnitId = "ca-app-pub-7546454767986772/5041407646"
-    static var Interstitial_AdUnitId = "ca-app-pub-7546454767986772/7256507444"
-    static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"*/
+    //Related to Ads Production
+    static var Banner_AdUnitId = "ca-app-pub-7546454767986772/4399662828"
+    static var Interstitial_AdUnitId = "ca-app-pub-7546454767986772/8147336147"
+    static var Ad_App_ID = "ca-app-pub-7546454767986772~4303041040"
     
-     static var Banner_AdUnitId = "ca-app-pub-3940256099942544/2934735716"
-     static var Interstitial_AdUnitId = "ca-app-pub-3940256099942544/4411468910"
-     static var Ad_App_ID = "ca-app-pub-3940256099942544~1458002511"
-
-    
-    
-    
-    
+    //Related to Ads Sandbox/Test
+//     static var Banner_AdUnitId = "ca-app-pub-3940256099942544/2934735716"
+//     static var Interstitial_AdUnitId = "ca-app-pub-3940256099942544/4411468910"
+//     static var Ad_App_ID = "ca-app-pub-3940256099942544~1458002511"
 }
 
 extension UIDevice {
@@ -134,3 +133,33 @@ extension UIDevice {
         return bottom > 0
     }
 }
+/**
+ * Check if internet connection is available
+ */
+class Reachability {
+    class func isConnectedToNetwork() -> Bool {
+        var status:Bool = false
+        let url = NSURL(string: "http://google.com")
+        let request = NSMutableURLRequest(url: url! as URL)
+        request.httpMethod = "HEAD"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
+        request.timeoutInterval = 10.0
+        var response1:URLResponse?
+        
+        let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
+            response1 = response
+            semaphore.signal()
+        }
+        task.resume()
+        semaphore.wait()
+        if let httpResponse = response1 as? HTTPURLResponse {
+            if httpResponse.statusCode == 200 {
+                status = true
+            }
+        }
+        return status
+      }
+}
+
+

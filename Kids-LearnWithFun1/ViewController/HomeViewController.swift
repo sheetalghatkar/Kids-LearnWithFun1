@@ -11,7 +11,6 @@
 
 import UIKit
 import AVFoundation
-import GoogleMobileAds
 import AudioToolbox
 import MessageUI
 
@@ -46,6 +45,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 
     
     var fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 24)
+    var fromShareApp = false
 
 
     @IBOutlet weak var floaty : Floaty!
@@ -59,7 +59,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
 
 
     var player = AVAudioPlayer()
-    var bannerView: GADBannerView!
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     var paymentDetailVC : PaymentDetailViewController?
@@ -125,10 +124,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         imgVwTest.addGestureRecognizer(tapGestureRecognTest)
 
         
-        bannerView = GADBannerView(adSize: kGADAdSizeFullBanner)
-        addBannerViewToView(bannerView)
-        bannerView.adUnitID = CommanArray.Banner_AdUnitId
-        bannerView.rootViewController = self
        // bannerView.load(GADRequest())
 //        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.alarmAlertActivate), userInfo: nil, repeats: true)
         
@@ -449,28 +444,6 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             self.imgVwTest.alpha = self.imgVwTest.alpha == 1.0 ? 0.0 : 1.0
         }
     }
-
-    func addBannerViewToView(_ bannerView: GADBannerView) {
-      bannerView.translatesAutoresizingMaskIntoConstraints = false
-      view.addSubview(bannerView)
-      view.addConstraints(
-        [NSLayoutConstraint(item: bannerView,
-                            attribute: .bottom,
-                            relatedBy: .equal,
-                            toItem: bottomLayoutGuide,
-                            attribute: .top,
-                            multiplier: 1,
-                            constant: 0),
-         NSLayoutConstraint(item: bannerView,
-                            attribute: .centerX,
-                            relatedBy: .equal,
-                            toItem: view,
-                            attribute: .centerX,
-                            multiplier: 1,
-                            constant: 0)
-        ])
-     }
-
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let setPictureVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImagesCollectionViewController") as! ImagesCollectionViewController
@@ -516,15 +489,24 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         }
     }
     @IBAction func funcSound_ON_OFF(_ sender: Any) {
-        if defaults.bool(forKey:"PauseHomeSound") {
-            defaults.set(false, forKey: "PauseHomeSound")
-            btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
-            player.play()
-        } else {
-            defaults.set(true, forKey: "PauseHomeSound")
-            btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
-            player.stop()
-        }
+      /*  if fromShareApp {
+            fromShareApp = false
+            if defaults.bool(forKey:"PauseHomeSound") {
+                btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home-1.png"), for: .normal)
+            } else {
+                btnSound.setBackgroundImage(UIImage(named: "Sound-On_home-1.png"), for: .normal)
+            }
+        } else {*/
+            if defaults.bool(forKey:"PauseHomeSound") {
+                defaults.set(false, forKey: "PauseHomeSound")
+                btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
+                player.play()
+            } else {
+                defaults.set(true, forKey: "PauseHomeSound")
+                btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
+                player.stop()
+            }
+        //}
     }
     
     @objc func clickTransperentView(_ sender:UITapGestureRecognizer){
@@ -543,9 +525,19 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
     //Start Payment flow
     
     @IBAction func funcCancelSubscription(_ sender: Any) {
-        paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
-        paymentDetailVC?.showSubscriptionScreen = true
-        showPaymentScreen()
+        if btnCancelSubscription.currentImage!.pngData() == (CommanArray.imgCancelSubscription).pngData() {
+            btnCancelSubscription.setImage(CommanArray.imgCancelSubscription1, for: .normal)
+        } else {
+            btnCancelSubscription.setImage(CommanArray.imgCancelSubscription, for: .normal)
+        }
+
+        if fromShareApp {
+            fromShareApp = false
+        } else {
+            paymentDetailVC = PaymentDetailViewController(nibName: "PaymentDetailViewController", bundle: nil)
+            paymentDetailVC?.showSubscriptionScreen = true
+            showPaymentScreen()
+        }
     }
 
     
@@ -591,45 +583,15 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         let activityViewController = UIActivityViewController(
             activityItems: [CommanArray.app_AppStoreLink!],
           applicationActivities: nil)
-
-        // 2.
+        activityViewController.completionWithItemsHandler = { (activity, success, items, error) in
+             print(success ? "SUCCESS!" : "FAILURE")
+            self.fromShareApp = true
+            self.btnCancelSubscription.sendActions(for: .touchUpInside)
+        }
         self.present(activityViewController, animated: true, completion: nil)
     }
 }
 
-extension HomeViewController: GADBannerViewDelegate {
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
-    }
-
-    /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-        didFailToReceiveAdWithError error: GADRequestError) {
-      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-    /// Tells the delegate that a full-screen view will be presented in response
-    /// to the user clicking on an ad.
-    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("adViewWillPresentScreen")
-    }
-
-    /// Tells the delegate that the full-screen view will be dismissed.
-    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewWillDismissScreen")
-    }
-
-    /// Tells the delegate that the full-screen view has been dismissed.
-    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("adViewDidDismissScreen")
-    }
-
-    /// Tells the delegate that a user click will open another app (such as
-    /// the App Store), backgrounding the current app.
-    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-      print("adViewWillLeaveApplication")
-    }
-}
 extension HomeViewController : FloatingActionButtonProtocol {
     
     func floatingActionOpen() {

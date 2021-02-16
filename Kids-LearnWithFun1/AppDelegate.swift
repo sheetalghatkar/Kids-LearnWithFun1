@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GADMobileAds.sharedInstance().start(completionHandler: nil)
 //        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["be7447c497b60ba64fc56dee96be1e89"]
-        
+        GADMobileAds.sharedInstance().requestConfiguration.tag(forChildDirectedTreatment: true)
+        GADMobileAds.sharedInstance().requestConfiguration.tagForUnderAge(ofConsent: true)
+        GADMobileAds.sharedInstance().requestConfiguration.maxAdContentRating =
+            GADMaxAdContentRating.general
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         } catch {

@@ -70,8 +70,15 @@ class SubscriptionDetailsController: UIViewController {
     }
     
     @IBAction func funcCancelSubscriptionClick(_ sender: Any) {
-        guard let urlStr = URL(string: "itms://apps.apple.com/account/subscriptions") else { return }
-        UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+        if Reachability.isConnectedToNetwork() {
+            guard let urlStr = URL(string: "itms://apps.apple.com/account/subscriptions") else { return }
+            UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+        } else {
+            let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func funcHomeBtnClick(_ sender: Any) {

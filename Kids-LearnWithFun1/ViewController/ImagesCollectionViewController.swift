@@ -38,8 +38,10 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     //var soundStatus:Bool = false
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
-
-    
+    var timer: Timer?
+    var clickCount = 0
+    var checkCurrentindex = 0
+    var fromHomeClick = false
     override func viewDidLoad() {
         super.viewDidLoad()
         btnForward.layer.cornerRadius = 25.0
@@ -78,13 +80,26 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         self.lblCard.text = imageNameArray[0]
         playSound(getSound : self.imageNameArray[0])
         
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        addBannerViewToView(bannerView)
-        bannerView.adUnitID = CommanArray.Banner_AdUnitId
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
         if !(UIDevice.current.hasNotch) {
             self.heightHome.constant = 38
+        }
+        if !(defaults.bool(forKey:"IsPrimeUser")) {
+            bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            addBannerViewToView(bannerView)
+            bannerView.adUnitID = CommanArray.Banner_AdUnitId
+            bannerView.rootViewController = self
+            bannerView.delegate = self
+            if Reachability.isConnectedToNetwork() {
+                bannerView.load(GADRequest())
+            } else {
+                let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                    if self.timer == nil {
+                        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                    }
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -92,7 +107,9 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         if defaults.bool(forKey:"IsPrimeUser") {
             if let _ = btnNoAds {
                 self.btnNoAds.isHidden = true
-                bannerView.removeFromSuperview()
+                if bannerView != nil {
+                    bannerView.removeFromSuperview()
+                }
             }
         } else {
             if let _ = btnNoAds {
@@ -129,12 +146,34 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         self.scrollToNearestVisibleCollectionViewCell()
     }
 
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            self.scrollToNearestVisibleCollectionViewCell()
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let visibleIndex = Int(targetContentOffset.pointee.x / scrollView.frame.width)
+
+        print("Inside scrollViewDidEndDragging")
+        if !(defaults.bool(forKey:"IsPrimeUser")) {
+            if checkCurrentindex != visibleIndex {
+                clickCount = clickCount + 1
+                print("!!!!!!!!!!!!clickCount",clickCount)
+                if clickCount >= 10 {
+                    clickCount = 0
+                    callInterstitialOn10Tap()
+                }
+            }
+            checkCurrentindex = visibleIndex
         }
     }
     // MARK: - User defined Functions
+    
+    @objc func alarmToLoadBannerAds(){
+        print("Inside alarmToLoadBannerAds")
+        if Reachability.isConnectedToNetwork() {
+            if bannerView != nil {
+                print("Inside Load bannerView")
+                bannerView.load(GADRequest())
+            }
+        }
+    }
+
     
     func playSoundOnImageClick(getSound : Int ) {
         let path = Bundle.main.path(forResource: imageNameArray[getSound], ofType : "mp3")!
@@ -161,24 +200,66 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     }
     
     @IBAction func funcGoToHome(_ sender: Any) {
-        self.viewTransperent.isHidden = false
-        self.imgViewLoader.isHidden = false
+        stopTimer()
+        fromHomeClick = true
         if defaults.bool(forKey:"IsPrimeUser") {
             navigationController?.popViewController(animated: true)
         } else {
+            self.viewTransperent.isHidden = false
+            self.imgViewLoader.isHidden = false
+            if Reachability.isConnectedToNetwork() {
+                interstitial = createAndLoadInterstitial()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                    if !self.viewTransperent.isHidden {
+                        self.viewTransperent.isHidden = true
+                        self.imgViewLoader.isHidden = true
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                    self.funcHideLoader()
+                    let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                        self.navigationController?.popViewController(animated: true)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                })
+            }
+        }
+    }
+    func callInterstitialOn10Tap(){
+        self.viewTransperent.isHidden = false
+        self.imgViewLoader.isHidden = false
+        if Reachability.isConnectedToNetwork() {
             interstitial = createAndLoadInterstitial()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                 if !self.viewTransperent.isHidden {
                     self.viewTransperent.isHidden = true
                     self.imgViewLoader.isHidden = true
-                    self.navigationController?.popViewController(animated: true)
                 }
             }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                self.funcHideLoader()
+                let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                }))
+                self.present(alert, animated: true, completion: nil)
+            })
         }
     }
     
     @IBAction func funcForwardBtnClick(_ sender: Any)
     {
+        if !(defaults.bool(forKey:"IsPrimeUser")) {
+            clickCount = clickCount + 1
+            print("!!!!!!!!!!!!clickCount",clickCount)
+            if clickCount >= 10 {
+                clickCount = 0
+                callInterstitialOn10Tap()
+            }
+        }
         let visibleItems: NSArray = self.collectionViewCard.indexPathsForVisibleItems as NSArray
         let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
         let nextItem: IndexPath = IndexPath(item: currentItem.item + 1, section: 0)
@@ -195,11 +276,21 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             self.btnBackward.isHidden = false
         }
         currentindex = nextItem.row
+        checkCurrentindex = currentindex
         playSound(getSound : self.imageNameArray[nextItem.row])
     }
 
     @IBAction func funcBackwardBtnClick(_ sender: Any)
     {
+        if !(defaults.bool(forKey:"IsPrimeUser")) {
+            clickCount = clickCount + 1
+            print("!!!!!!!!!!!!clickCount",clickCount)
+            if clickCount >= 10 {
+                clickCount = 0
+                callInterstitialOn10Tap()
+            }
+        }
+
         let visibleItems: NSArray = self.collectionViewCard.indexPathsForVisibleItems as NSArray
         let currentItem: IndexPath = visibleItems.object(at: 0) as! IndexPath
         let nextItem: IndexPath = IndexPath(item: currentItem.item - 1, section: 0)
@@ -216,6 +307,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
             self.btnForward.isHidden = false
         }
         currentindex = nextItem.row
+        checkCurrentindex = currentindex
         playSound(getSound : self.imageNameArray[nextItem.row])
     }
     
@@ -312,7 +404,18 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
     func shareApp() {
         
     }
+    func stopTimer() {
+        print("Inside stopTimer")
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
 
+    func funcHideLoader() {
+        self.viewTransperent.isHidden = true
+        self.imgViewLoader.isHidden = true
+    }
 }
 extension ImagesCollectionViewController: GADBannerViewDelegate {
     func addBannerViewToView(_ bannerView: GADBannerView) {
@@ -366,6 +469,10 @@ extension ImagesCollectionViewController: GADBannerViewDelegate {
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("adViewDidReceiveAd")
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+        }
+
     }
 
     /// Tells the delegate an ad request failed.
@@ -397,25 +504,27 @@ extension ImagesCollectionViewController: GADBannerViewDelegate {
     }
 }
 extension ImagesCollectionViewController: GADInterstitialDelegate {
-    func funcHideLoader() {
-        self.viewTransperent.isHidden = true
-        self.imgViewLoader.isHidden = true
-    }
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         print("Interstitial loaded successfully")
         funcHideLoader()
         ad.present(fromRootViewController: self)
-        navigationController?.popViewController(animated: true)
+        if fromHomeClick {
+            navigationController?.popViewController(animated: true)
+        }
     }
 
     func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
         funcHideLoader()
         print("Fail to receive interstitial")
-        navigationController?.popViewController(animated: true)
+        if fromHomeClick {
+            navigationController?.popViewController(animated: true)
+        }
     }
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         funcHideLoader()
-        navigationController?.popViewController(animated: true)
+        if fromHomeClick {
+            navigationController?.popViewController(animated: true)
+        }
         print("dismiss interstitial")
     }
 }

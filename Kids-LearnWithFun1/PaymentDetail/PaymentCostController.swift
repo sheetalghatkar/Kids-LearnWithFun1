@@ -47,7 +47,6 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
 
     @IBOutlet weak var viewTrasperentDisabled: UIView!
 
-   // var product_id = "com.mobiapps360.LearnNature.YearlyAutoRenew"
     var selectedProductId = CommanArray.productId_Year_Auto_Recurring
     var isAutoRenewPurchase = true
     var selectedSubscriptionPrice = "$3.99"
@@ -170,28 +169,46 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     }
     @IBAction func funcPaymentBtnClick(_ sender: Any) {
         self.viewTrasperentDisabled.isHidden = false
-        buyConsumable()
+        if Reachability.isConnectedToNetwork() {
+            buyConsumable()
+        } else {
+          let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+          // add an action (button)
+          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+              self.viewTrasperentDisabled.isHidden = true
+          }))
+          self.present(alert, animated: true, completion: nil)
+      }
     }
     
     @IBAction func funcRestoreBtnClick(_ sender: Any) {
-        print("Restore clicked.")
         self.viewTrasperentDisabled.isHidden = false
-        let appleValidator = AppleReceiptValidator(service: CommanArray.environment, sharedSecret: CommanArray.secretKey)
-        let iCount = 0
-        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
-            switch result {
-            case .success(let receipt):
-                self.getPurchaseResult(getProductCount: iCount, getReceipt: receipt)
-            case .error(let error):
-                print("Receipt verification failed: \(error)")
-                self.viewTrasperentDisabled.isHidden = true
-                let alert = UIAlertController(title: "", message: "Something went wrong. Please try after some time.", preferredStyle: UIAlertController.Style.alert)
-                // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
-                }))
-                self.present(alert, animated: true, completion: nil)
+        if Reachability.isConnectedToNetwork() {
+            print("Restore clicked.")
+            let appleValidator = AppleReceiptValidator(service: CommanArray.environment, sharedSecret: CommanArray.secretKey)
+            let iCount = 0
+            SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+                switch result {
+                case .success(let receipt):
+                    self.getPurchaseResult(getProductCount: iCount, getReceipt: receipt)
+                case .error(let error):
+                    print("Receipt verification failed: \(error)")
+                    self.viewTrasperentDisabled.isHidden = true
+                    let alert = UIAlertController(title: "Something went wrong. Please try after some time.", message: "\(error)", preferredStyle: UIAlertController.Style.alert)
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
-        }
+        } else {
+          let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
+          // add an action (button)
+          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
+              self.viewTrasperentDisabled.isHidden = true
+          }))
+          self.present(alert, animated: true, completion: nil)
+      }
     }
     
     func getPurchaseResult(getProductCount : Int, getReceipt: ReceiptInfo) {

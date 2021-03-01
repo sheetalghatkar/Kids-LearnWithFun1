@@ -80,7 +80,8 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
         self.lblCard.text = imageNameArray[0]
         playSound(getSound : self.imageNameArray[0])
         
-        if !(UIDevice.current.hasNotch) {
+        if (!(UIDevice.current.hasNotch) && !(UIDevice.current.userInterfaceIdiom == .pad))
+        {
             self.heightHome.constant = 38
         }
         if !(defaults.bool(forKey:"IsPrimeUser")) {
@@ -95,7 +96,7 @@ class ImagesCollectionViewController: UIViewController, UICollectionViewDelegate
                 let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
                     if self.timer == nil {
-                        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                        self.timer = Timer.scheduledTimer(timeInterval: CommanArray.timerForAds, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
                     }
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -468,12 +469,15 @@ extension ImagesCollectionViewController: GADBannerViewDelegate {
     }
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
-        if timer == nil {
-            timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
-        }
-
-    }
+          if let visibleViewCtrl = UIApplication.shared.keyWindow?.visibleViewController {
+              if(visibleViewCtrl.isKind(of: ImagesCollectionViewController.self)){
+                  if timer == nil {
+                      print("adViewDidReceiveAd Success")
+                      timer = Timer.scheduledTimer(timeInterval: CommanArray.timerForAds, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                  }
+              }
+          }
+      }
 
     /// Tells the delegate an ad request failed.
     func adView(_ bannerView: GADBannerView,

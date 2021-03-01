@@ -15,6 +15,7 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var btnRestore: UIButton!
     @IBOutlet weak var lblAlredyPurchased: UILabel!
     @IBOutlet weak var  widthHome: NSLayoutConstraint!
+    @IBOutlet weak var imgViewBottomBg: UIImageView!
 
     //----------------------------------------
     //New
@@ -50,6 +51,7 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
     var selectedProductId = CommanArray.productId_Year_Auto_Recurring
     var isAutoRenewPurchase = true
     var selectedSubscriptionPrice = "$3.99"
+    var fontImageTitleLbl = UIFont(name: "System-Regular", size: 17)
 
     let defaults = UserDefaults.standard
     
@@ -65,7 +67,7 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         super.viewDidLoad()
         SKPaymentQueue.default().add(self)
         lblAlredyPurchased.text = "Already Purchased?"
-        lblCostTitle.text = "Unlock Premium Features"
+        lblCostTitle.text = "Remove Ads"
         btnRestore.setTitle("Restore", for: .normal)
 
         /*var textBuyOneTime = NSMutableAttributedString(string:"One-time Payment" + "    " + "$15")
@@ -94,13 +96,7 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         lblMonthlyPriceRecurring.text = "$0.49"
         lblMonthlyNonRecurring.text = "Non-Recurring Payment"
         lblMonthlyPriceNonRecurring.text = "$0.99"
-        
-//        self.viewBgYearly.layer.shadowColor = UIColor.white.cgColor
-//        self.viewBgYearly.layer.borderWidth = 2.5
-        
-//        self.viewBgMonthly.layer.shadowColor = UIColor.black.cgColor
-//        self.viewBgMonthly.layer.borderWidth = 1.5
-        
+                
         if !(UIDevice.current.hasNotch) {
             widthHome.constant = 40
         }
@@ -112,6 +108,28 @@ class PaymentCostController: UIViewController ,SKProductsRequestDelegate, SKPaym
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.privacyLinkClicked(sender:)))
         lblPrivacyPolicy.isUserInteractionEnabled = true
         lblPrivacyPolicy.addGestureRecognizer(tap)
+        
+      //  lblCostTitle.textColor = CommanArray.paymentBtnTextColor
+//        lblAlredyPurchased.textColor = CommanArray.paymentBtnTextColor
+        
+//        lblAlredyPurchased.layer.shadowColor = UIColor.white.cgColor
+////        lblAlredyPurchased.highlightedTextColor = UIColor.red
+//        lblAlredyPurchased.layer.shadowRadius = 3.0
+//        lblAlredyPurchased.layer.shadowOpacity = 1.0
+//        lblAlredyPurchased.layer.shadowOffset = CGSize(width: 4, height: 4)
+//        lblAlredyPurchased.layer.masksToBounds = false
+        
+        if UIScreen.main.bounds.size.height < 700.0 {
+            imgViewBottomBg.isHidden = true
+            lblYearlyRecurring.font = fontImageTitleLbl
+            lblYearlyNonRecurring.font = fontImageTitleLbl
+            lblMonthlyRecurring.font = fontImageTitleLbl
+            lblMonthlyNonRecurring.font = fontImageTitleLbl
+        }
+        
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            widthHome.constant = 65
+        }
     }
     
     func removeViewFromApp() {
@@ -372,10 +390,10 @@ extension PaymentCostController {
                     print("Product Purchased");
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
                     self.verifyReciptOfPayment(getProductId: selectedProductId, getProductPrice: selectedSubscriptionPrice)
-                    let alert = UIAlertController(title: "", message: "Payment transaction Successful..", preferredStyle: UIAlertController.Style.alert)
+                  /*  let alert = UIAlertController(title: "", message: "Payment transaction Successful..", preferredStyle: UIAlertController.Style.alert)
                     // add an action (button)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
-                    }))
+                    }))*/
                     break;
                 case .failed:
                     print("Purchased Failed");

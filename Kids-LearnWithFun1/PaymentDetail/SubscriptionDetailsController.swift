@@ -29,6 +29,7 @@ class SubscriptionDetailsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTitle.text = "Subscription Details"
+        lblTitle.textColor = UIColor.white
         let getPurchaseDetails = self.defaults.value(forKey: "PurchaseDetails") as? [String:String]
         if getPurchaseDetails != nil {
             if(getPurchaseDetails!.count != 0) {
@@ -66,6 +67,9 @@ class SubscriptionDetailsController: UIViewController {
         }
         if !(UIDevice.current.hasNotch) {
             widthHome.constant = 40
+        }
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            widthHome.constant = 65
         }
     }
     

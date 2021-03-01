@@ -30,6 +30,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nature" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-C7-7Xb">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kF-IY-gQv" userLabel="lblTitle">
                     <rect key="frame" x="75" y="64" width="324" height="38.5"/>
@@ -41,7 +42,9 @@
                     <rect key="frame" x="15" y="58.5" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="RgC-wH-EKY" secondAttribute="height" multiplier="1:1" id="Myv-5q-x2I"/>
-                        <constraint firstAttribute="width" constant="50" id="l6f-68-AlM"/>
+                        <constraint firstAttribute="width" constant="50" id="l6f-68-AlM">
+                            <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                        </constraint>
                     </constraints>
                     <state key="normal" image="Home_Payment"/>
                     <connections>
@@ -177,7 +180,7 @@
     </designables>
     <resources>
         <image name="Home_Payment" width="200" height="200"/>
-        <image name="Nature" width="228" height="228"/>
+        <image name="Nature" width="152" height="152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -23,6 +23,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var btnPlayAgain: UIButton!
     @IBOutlet weak var trailingConstraintTitle: NSLayoutConstraint!
     @IBOutlet weak var widthConstraintHome: NSLayoutConstraint!
+    @IBOutlet weak var bgImgView: UIImageView!
 
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial?
@@ -81,7 +82,7 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
                 let alert = UIAlertController(title: "", message: "No Internet Connection.", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
                     if self.timer == nil {
-                        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                        self.timer = Timer.scheduledTimer(timeInterval: CommanArray.timerForAds, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
                     }
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -91,6 +92,14 @@ class TestSolveViewController: UIViewController, UICollectionViewDelegate, UICol
             widthConstraintHome.constant = 38
             lblQuestion.font = fontImageTitleLbl
         }
+        
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            widthConstraintHome.constant = 58
+            fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 42)
+            lblQuestion.font = fontImageTitleLbl
+            bgImgView.image = UIImage(named: "Nature_wo_Bottom")
+        }
+
         btnPlayAgain.layer.cornerRadius = (widthConstraintHome.constant + 6)/2
     }
     
@@ -493,11 +502,15 @@ extension TestSolveViewController: GADBannerViewDelegate {
     }
 
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("adViewDidReceiveAd")
-        if timer == nil {
-            timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+//      print("adViewDidReceiveAd")
+        if let visibleViewCtrl = UIApplication.shared.keyWindow?.visibleViewController {
+            if(visibleViewCtrl.isKind(of: TestSolveViewController.self)){
+                print("adViewDidReceiveAd Success")
+                if timer == nil {
+                    timer = Timer.scheduledTimer(timeInterval: CommanArray.timerForAds, target: self, selector: #selector(self.alarmToLoadBannerAds), userInfo: nil, repeats: true)
+                }
+            }
         }
-
     }
 
     /// Tells the delegate an ad request failed.

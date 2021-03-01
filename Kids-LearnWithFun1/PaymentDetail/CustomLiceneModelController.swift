@@ -55,6 +55,12 @@ class CustomLiceneModelController: UIViewController {
         txtViewLicenseInfo.isScrollEnabled = false
         txtViewLicenseInfo.isEditable = false
         txtViewLicenseInfo.isUserInteractionEnabled = false
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            texViewAttrString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 27, weight: .regular),range: NSRange(location: 0, length:texViewAttrString.length))
+            texViewAttrString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 32, weight: .semibold),range: NSRange(location: 0, length:textAutoRenewable.length))
+            texViewAttrString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 32, weight: .semibold),range: NSRange(location: 582, length:textNonRenewable.length))
+        }
     }
     
     @IBAction func funcOK(_ sender: UIButton) {

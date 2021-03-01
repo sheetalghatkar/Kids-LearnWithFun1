@@ -185,7 +185,7 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             handlingdForPrimeIser()
         }
         
-        if !(UIDevice.current.hasNotch) {
+        if (!(UIDevice.current.hasNotch) && !(UIDevice.current.userInterfaceIdiom == .pad)) {
             self.WidthSound.constant = 36
             lblWildAnimal.font = fontImageTitleLbl
             lblPetAnimal.font = fontImageTitleLbl
@@ -193,6 +193,26 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
             lblFlowerAnimal.font = fontImageTitleLbl
             lblTestAnimal.font = fontImageTitleLbl
             widthWildAnimal.constant = 100
+            imgVwWildAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwPetAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwBird.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwFlower.layer.cornerRadius = (widthWildAnimal.constant)/2
+            imgVwTest.layer.cornerRadius = (widthWildAnimal.constant)/2
+        }
+        
+        if (UIDevice.current.userInterfaceIdiom == .pad) {
+            self.floaty.isHidden = true
+            self.btnSetting.isHidden = true
+            widthWildAnimal.constant = 150
+            if UIScreen.main.bounds.height > 1100 {
+                widthWildAnimal.constant = 200
+                fontImageTitleLbl = UIFont(name: "ChalkboardSE-Bold", size: 42)
+                lblWildAnimal.font = fontImageTitleLbl
+                lblPetAnimal.font = fontImageTitleLbl
+                lblBirdAnimal.font = fontImageTitleLbl
+                lblFlowerAnimal.font = fontImageTitleLbl
+                lblTestAnimal.font = fontImageTitleLbl
+            }
             imgVwWildAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
             imgVwPetAnimal.layer.cornerRadius = (widthWildAnimal.constant)/2
             imgVwBird.layer.cornerRadius = (widthWildAnimal.constant)/2
@@ -476,14 +496,14 @@ class HomeViewController: UIViewController, PayementForParentProtocol,MFMailComp
         let url = URL(fileURLWithPath : path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
+            player.delegate = self
             if defaults.bool(forKey:"PauseHomeSound") {
-                btnSound.setBackgroundImage(UIImage(named: "Sound-Off_home.png"), for: .normal)
+                btnSound.setBackgroundImage(CommanArray.homeImgSoundOff, for: .normal)
                 player.stop()
             } else {
-                btnSound.setBackgroundImage(UIImage(named: "Sound-On_home.png"), for: .normal)
+                btnSound.setBackgroundImage(CommanArray.homeImgSoundOn, for: .normal)
                 player.play()
             }
-
         } catch {
             print ("There is an issue with this code!")
         }
@@ -664,4 +684,10 @@ extension HomeViewController {
                 }
             }
         }
+}
+extension HomeViewController : AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("finished")//It is working now! printed "finished"!
+        playBackgroundMusic()
+    }
 }

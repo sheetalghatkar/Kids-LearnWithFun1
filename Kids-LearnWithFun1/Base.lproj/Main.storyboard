@@ -941,6 +941,18 @@
                                     <action selector="funcGoToTestHome:" destination="1oa-lM-swm" eventType="touchUpInside" id="8bU-x1-jxZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Your Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2l-11-kT4" customClass="UILabelExtension" customModule="Learn_Nature" customModuleProvider="target">
+                                <rect key="frame" x="89.5" y="52.5" width="235" height="48.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShowShadow" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="44"/>
+                                </variation>
+                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-hC-y5c" userLabel="BtnAds">
                                 <rect key="frame" x="357" y="57.5" width="42" height="42"/>
                                 <constraints>
@@ -952,7 +964,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYC-3g-7wf" userLabel="containerView">
-                                <rect key="frame" x="15" y="94" width="384" height="663.5"/>
+                                <rect key="frame" x="15" y="114" width="384" height="663.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msK-ba-gNv" userLabel="verticalSepView">
                                         <rect key="frame" x="191.5" y="0.0" width="1" height="663.5"/>
@@ -1182,8 +1194,10 @@
                         <viewLayoutGuide key="safeArea" id="ic0-qx-RYR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="b2l-11-kT4" firstAttribute="centerX" secondItem="XzN-Ds-EMF" secondAttribute="centerX" id="37b-BK-sIY"/>
                             <constraint firstItem="ic0-qx-RYR" firstAttribute="trailing" secondItem="deA-mU-UeJ" secondAttribute="trailing" id="3J7-iN-aGr"/>
                             <constraint firstItem="HbB-hC-y5c" firstAttribute="height" secondItem="XgC-Ur-G0M" secondAttribute="height" constant="-3" id="AGN-h1-vBY"/>
+                            <constraint firstItem="b2l-11-kT4" firstAttribute="centerY" secondItem="XgC-Ur-G0M" secondAttribute="centerY" id="D5M-JQ-MyA"/>
                             <constraint firstItem="deA-mU-UeJ" firstAttribute="top" secondItem="XzN-Ds-EMF" secondAttribute="top" id="DTa-T0-8gz"/>
                             <constraint firstItem="XgC-Ur-G0M" firstAttribute="top" secondItem="ic0-qx-RYR" secondAttribute="top" constant="10" id="EfJ-hD-1tl">
                                 <variation key="heightClass=regular-widthClass=regular" constant="15"/>
@@ -1193,7 +1207,7 @@
                             <constraint firstItem="FYC-3g-7wf" firstAttribute="height" secondItem="XzN-Ds-EMF" secondAttribute="height" multiplier="0.740513" id="Uk4-cg-uuI"/>
                             <constraint firstItem="ic0-qx-RYR" firstAttribute="trailing" secondItem="FYC-3g-7wf" secondAttribute="trailing" constant="15" id="aQr-gK-V1H"/>
                             <constraint firstItem="7nx-4Q-AWa" firstAttribute="leading" secondItem="ic0-qx-RYR" secondAttribute="leading" constant="10" id="agY-rO-I9l"/>
-                            <constraint firstItem="FYC-3g-7wf" firstAttribute="top" secondItem="ic0-qx-RYR" secondAttribute="top" constant="50" id="cJw-dS-eff">
+                            <constraint firstItem="FYC-3g-7wf" firstAttribute="top" secondItem="ic0-qx-RYR" secondAttribute="top" constant="70" id="cJw-dS-eff">
                                 <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                             </constraint>
                             <constraint firstItem="sOs-RQ-CeD" firstAttribute="height" secondItem="XgC-Ur-G0M" secondAttribute="height" constant="10" id="dB1-Be-jqB"/>
@@ -1287,6 +1301,9 @@
         </designable>
         <designable name="aWX-21-wnP">
             <size key="intrinsicContentSize" width="150" height="144.66666666666666"/>
+        </designable>
+        <designable name="b2l-11-kT4">
+            <size key="intrinsicContentSize" width="235" height="48.5"/>
         </designable>
         <designable name="b3s-cv-tM9">
             <size key="intrinsicContentSize" width="170.5" height="170.5"/>
